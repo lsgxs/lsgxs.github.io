@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>http://example.org/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Jul 2022 14:14:21 +0800</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jul 2022 14:14:21 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用静态网站生成器hugo在github上搭建个人博客</title>
-      <link>http://example.org/posts/%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>/posts/%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 16 Jul 2022 14:14:21 +0800</pubDate>
       
-      <guid>http://example.org/posts/%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>/posts/%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;h4 id=&#34;使用静态网站生成器hugo在github上搭建个人博客&#34;&gt;使用静态网站生成器hugo在github上搭建个人博客&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -31,10 +31,10 @@
     
     <item>
       <title>Usehugo</title>
-      <link>http://example.org/posts/usehugo/</link>
+      <link>/posts/usehugo/</link>
       <pubDate>Sat, 16 Jul 2022 13:56:58 +0800</pubDate>
       
-      <guid>http://example.org/posts/usehugo/</guid>
+      <guid>/posts/usehugo/</guid>
       <description>使用hugo建立静态站点 hugo 是一款简单且功能强大的静态站点生成器，让新手很快上手制作自己的静态博客，下面是具体的使用方法要点：
 step1: 下载windows平台的hugo可执行文件,把hugo可执行文件所在目录添加到path环境变量.建立一个保存hugo站点的目录，比如g:\hugo\ 在g:\hugo\bin目录下保存hugo.exe可执行文件；在g:\hugo\sites下保存站点。具体目结构如下 g:\hugo\bin\hugo.exe g:\hugo\sites step2: 切换到g:\hugo\sites目录下，在cmd窗口下按顺序运行下面的语句 hugo new site quickstart --创建站点 cd quickstart git init --用git init 初始化站点，纳入git管理 git submodule add https://github.com/hugo-theme-xx.git themes/hugo-theme-xx --下载自己喜欢的theme，这里是通用写法 将 theme = ‘hugo-theme-xx’添加到config.toml --在配置文件中标注theme step3：hugo new posts/my-first-post.md ----创建markdown格式的文档 step4:hugo server -D 启动服务器 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) Press Ctrl+C to stop step5: hugo -D 会自动生成静态站点保存在public目录下 ----生成静态的站点，默认目录是public，可以在config.toml文件中通过publishdir=‘xxxxxx- path’来指明自定义的发布路径，比如你可以发布在git clone下来的目录，直接就可以通过git add. ;git commit -m &amp;#34;&amp;#34;;git push origin提交到 github.com. 官方文档说明：在使用huog -D发布静态站点之前删除public下的内容，否则可能会出错。 Output will be in .</description>
     </item>
