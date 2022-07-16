@@ -41,7 +41,7 @@ Step 1: Install Hugo Homebrew and MacPorts, package managers for macOS, can be i
     </item>
     
     <item>
-      <title>在windows下的安装静态网站生成器hugo</title>
+      <title>在windows下安装静态站点生成器hugo</title>
       <link>https://lsgxs.github.io/posts/install-hugo/</link>
       <pubDate>Sat, 16 Jul 2022 14:14:21 +0800</pubDate>
       

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>在windows下的安装静态网站生成器hugo | Hugo Site</title>
+    <title>在windows下安装静态站点生成器hugo | Hugo Site</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="下载并安装hugo的windows安装包
 这里要说的是，hugo的本地配置相对要简单点。Binary (Cross-platform)
@@ -33,7 +33,7 @@ Install Hugo | Hugo (gohugo.">
 
     
     
-    <meta property="og:title" content="在windows下的安装静态网站生成器hugo" />
+    <meta property="og:title" content="在windows下安装静态站点生成器hugo" />
 <meta property="og:description" content="下载并安装hugo的windows安装包
 这里要说的是，hugo的本地配置相对要简单点。Binary (Cross-platform)
 Download the appropriate version for your platform from Hugo Releases. Once downloaded, the binary can be run from anywhere. You don’t need to install it into a global location. This works well for shared hosts and other systems where you don’t have a privileged account.
@@ -44,16 +44,16 @@ Install Hugo | Hugo (gohugo." />
 <meta property="article:published_time" content="2022-07-16T14:14:21+08:00" />
 <meta property="article:modified_time" content="2022-07-16T14:14:21+08:00" />
 
-<meta itemprop="name" content="在windows下的安装静态网站生成器hugo">
+<meta itemprop="name" content="在windows下安装静态站点生成器hugo">
 <meta itemprop="description" content="下载并安装hugo的windows安装包
 这里要说的是，hugo的本地配置相对要简单点。Binary (Cross-platform)
 Download the appropriate version for your platform from Hugo Releases. Once downloaded, the binary can be run from anywhere. You don’t need to install it into a global location. This works well for shared hosts and other systems where you don’t have a privileged account.
 Ideally, you should install it somewhere in your PATH for easy use. /usr/local/bin is the most probable location.
 Install Hugo | Hugo (gohugo."><meta itemprop="datePublished" content="2022-07-16T14:14:21+08:00" />
 <meta itemprop="dateModified" content="2022-07-16T14:14:21+08:00" />
-<meta itemprop="wordCount" content="71">
+<meta itemprop="wordCount" content="766">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在windows下的安装静态网站生成器hugo"/>
+<meta name="twitter:title" content="在windows下安装静态站点生成器hugo"/>
 <meta name="twitter:description" content="下载并安装hugo的windows安装包
 这里要说的是，hugo的本地配置相对要简单点。Binary (Cross-platform)
 Download the appropriate version for your platform from Hugo Releases. Once downloaded, the binary can be run from anywhere. You don’t need to install it into a global location. This works well for shared hosts and other systems where you don’t have a privileged account.
@@ -70,7 +70,7 @@ Install Hugo | Hugo (gohugo."/>
   
 
   
-  <header class="cover bg-top" style="background-image: url('https://lsgxs.github.io/images/second.png');">
+  <header class="cover bg-top" style="background-image: url('https://lsgxs.github.io/images/install-hugo.png');">
     <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -94,7 +94,7 @@ Install Hugo | Hugo (gohugo."/>
 
       <div class="tc-l pv6 ph3 ph4-ns">
         
-          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">在windows下的安装静态网站生成器hugo</h1>
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">在windows下安装静态站点生成器hugo</h1>
           
         
       </div>
@@ -128,7 +128,7 @@ Install Hugo | Hugo (gohugo."/>
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">在windows下的安装静态网站生成器hugo</h1>
+      <h1 class="f1 athelas mt3 mb1">在windows下安装静态站点生成器hugo</h1>
       
       
       
@@ -152,6 +152,80 @@ Install Hugo | Hugo (gohugo."/>
 </ul>
 </li>
 </ul>
+<h3 id="assumptions">Assumptions</h3>
+<ol>
+<li>You will use <code>C:\Hugo\Sites</code> as the starting point for your new project.</li>
+<li>You will use <code>C:\Hugo\bin</code> to store executable files.</li>
+</ol>
+<h3 id="set-up-your-directories">Set up Your Directories</h3>
+<p>You’ll need a place to store the Hugo executable, your <a href="https://gohugo.io/content-management/">content</a>, and the generated Hugo website:</p>
+<ol>
+<li>Open Windows Explorer.</li>
+<li>Create a new folder: <code>C:\Hugo</code>, assuming you want Hugo on your C drive, although this can go anywhere</li>
+<li>Create a subfolder in the Hugo folder: <code>C:\Hugo\bin</code></li>
+<li>Create another subfolder in Hugo: <code>C:\Hugo\Sites</code></li>
+</ol>
+<h3 id="technical-users">Technical Users</h3>
+<ol>
+<li>Download the latest zipped Hugo executable from <a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a>.</li>
+<li>Extract all contents to your <code>..\Hugo\bin</code> folder.</li>
+<li>In PowerShell or your preferred CLI, add the <code>hugo.exe</code> executable to your PATH by navigating to <code>C:\Hugo\bin</code> (or the location of your hugo.exe file) and use the command <code>set PATH=%PATH%;C:\Hugo\bin</code>. If the <code>hugo</code> command does not work after a reboot, you may have to run the command prompt as administrator.</li>
+</ol>
+<h3 id="less-technical-users">Less-technical Users</h3>
+<ol>
+<li>Go to the <a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a> page.</li>
+<li>The latest release is announced on top. Scroll to the bottom of the release announcement to see the downloads. They’re all ZIP files.</li>
+<li>Find the Windows files near the bottom (they’re in alphabetical order, so Windows is last) – download either the 32-bit or 64-bit file depending on whether you have 32-bit or 64-bit Windows. (If you don’t know, <a href="https://esupport.trendmicro.com/en-us/home/pages/technical-support/1038680.aspx">see here</a>.)</li>
+<li>Move the ZIP file into your <code>C:\Hugo\bin</code> folder.</li>
+<li>Double-click on the ZIP file and extract its contents. Be sure to extract the contents into the same <code>C:\Hugo\bin</code> folder – Windows will do this by default unless you tell it to extract somewhere else.</li>
+<li>You should now have three new files: The hugo executable (<code>hugo.exe</code>), <code>LICENSE</code>, and <code>README.md</code>.</li>
+</ol>
+<p>Now you need to add Hugo to your Windows PATH settings:</p>
+<h4 id="for-windows-10-users">For Windows 10 Users:</h4>
+<ul>
+<li>Right click on the <strong>Start</strong> button.</li>
+<li>Click on <strong>System</strong>.</li>
+<li>Click on <strong>Advanced System Settings</strong> on the right.</li>
+<li>Click on the <strong>Environment Variables…</strong> button on the bottom.</li>
+<li>In the User variables section, select the row labeled “Path” and click the <strong>Edit…</strong> button.</li>
+<li>Click the <strong>Browse…</strong> button and select the directory to which <code>hugo.exe</code> was extracted, which is <code>C:\Hugo\bin</code> if you went by the instructions above. <em>The path entry should be the folder where Hugo lives and not the binary itself.</em></li>
+<li>Click OK at every window to exit.</li>
+</ul>
+<h4 id="for-windows-7-and-8x-users">For Windows 7 and 8.x users:</h4>
+<p>Windows 7 and 8.1 do not include the easy path editor included in Windows 10, so non-technical users on those platforms are advised to install a free third-party path editor like <a href="https://eveditor.com/">Windows Environment Variables Editor</a>.</p>
+<h3 id="verify-the-executable">Verify the Executable</h3>
+<p>Run a few commands to verify that the executable is ready to run, and then build a sample site to get started.</p>
+<h4 id="1-open-a-command-prompt">1. Open a Command Prompt</h4>
+<p>At the prompt, type <code>hugo help</code> and press the Enter key. You should see output that starts with:</p>
+<pre tabindex="0"><code>hugo is the main command, used to build your Hugo site.
+
+Hugo is a Fast and Flexible Static Site Generator
+built with love by spf13 and friends in Go.
+
+Complete documentation is available at https://gohugo.io/.
+</code></pre><p>If you do, then the installation is complete. If you don’t, double-check the path that you placed the <code>hugo.exe</code> file in and that you typed that path correctly when you added it to your <code>PATH</code> variable. If you’re still not getting the output, search the <a href="https://discourse.gohugo.io/">Hugo discussion forum</a> to see if others have already figured out our problem. If not, add a note—in the “Support” category—and be sure to include your command and the output.</p>
+<p>At the prompt, change your directory to the <code>Sites</code> directory.</p>
+<pre tabindex="0"><code>C:\Program Files&gt; cd C:\Hugo\Sites
+C:\Hugo\Sites&gt;
+</code></pre><h4 id="2-run-the-command">2. Run the Command</h4>
+<p>Run the command to generate a new site. I’m using <code>example.com</code> as the name of the site.</p>
+<pre tabindex="0"><code>C:\Hugo\Sites&gt; hugo new site example.com
+</code></pre><p>You should now have a directory at <code>C:\Hugo\Sites\example.com</code>. Change into that directory and list the contents. You should get output similar to the following:</p>
+<pre tabindex="0"><code>C:\Hugo\Sites&gt; cd example.com
+C:\Hugo\Sites\example.com&gt; dir
+Directory of C:\hugo\sites\example.com
+
+04/13/2015  10:44 PM    &lt;DIR&gt;          .
+04/13/2015  10:44 PM    &lt;DIR&gt;          ..
+04/13/2015  10:44 PM    &lt;DIR&gt;          archetypes
+04/13/2015  10:44 PM                83 config.toml
+04/13/2015  10:44 PM    &lt;DIR&gt;          content
+04/13/2015  10:44 PM    &lt;DIR&gt;          data
+04/13/2015  10:44 PM    &lt;DIR&gt;          layouts
+04/13/2015  10:44 PM    &lt;DIR&gt;          static
+               1 File(s)             83 bytes
+               7 Dir(s)   6,273,331,200 bytes free
+</code></pre><h3 id="troubleshoot-windows-installation">Troubleshoot Windows Installation</h3>
 <ul class="pa0">
   
 </ul>
