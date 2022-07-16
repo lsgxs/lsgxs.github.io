@@ -7,7 +7,14 @@
     <title>Hugo站点几个主要的设置项目 | Hugo Site</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="hugo站点几个主要的设置项目 在设置好站点配置之后，经常打交道的主要就是下面几个项目
-目录结构 新建markdown文档 保存图像文件 上传到github ">
+目录结构
+新建markdown文档
+在windows的cmd窗口，使用hugo new post/xxxx.md来新建markdown文档。生成的.md文件保存在./content/posts目录下。
+保存图像文件
+需要添加在文档边栏或者在文章内部引用的图片，可以保存在./static/images目录下。新建的hugo站点项目，static目录是空的，需要自己在static目录下新建images目录
+上传到github
+在config.noml文件中使用publishdir=&ldquo;paht&quot;来指定hugo -D的发布路径。我这指向的是togithub，已经使用git init初始化了，发布完成后，直接使用
+add . git commit -m &#34;xxx&#34; git push origin main 推送到github。 ">
     <meta name="generator" content="Hugo 0.101.0" />
     
     
@@ -32,7 +39,14 @@
     
     <meta property="og:title" content="Hugo站点几个主要的设置项目" />
 <meta property="og:description" content="hugo站点几个主要的设置项目 在设置好站点配置之后，经常打交道的主要就是下面几个项目
-目录结构 新建markdown文档 保存图像文件 上传到github " />
+目录结构
+新建markdown文档
+在windows的cmd窗口，使用hugo new post/xxxx.md来新建markdown文档。生成的.md文件保存在./content/posts目录下。
+保存图像文件
+需要添加在文档边栏或者在文章内部引用的图片，可以保存在./static/images目录下。新建的hugo站点项目，static目录是空的，需要自己在static目录下新建images目录
+上传到github
+在config.noml文件中使用publishdir=&ldquo;paht&quot;来指定hugo -D的发布路径。我这指向的是togithub，已经使用git init初始化了，发布完成后，直接使用
+add . git commit -m &#34;xxx&#34; git push origin main 推送到github。 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lsgxs.github.io/posts/hugo%E7%AB%99%E7%82%B9%E5%87%A0%E4%B8%AA%E4%B8%BB%E8%A6%81%E7%9A%84%E8%AE%BE%E7%BD%AE%E9%A1%B9%E7%9B%AE/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-16T18:32:57+08:00" />
@@ -40,13 +54,27 @@
 
 <meta itemprop="name" content="Hugo站点几个主要的设置项目">
 <meta itemprop="description" content="hugo站点几个主要的设置项目 在设置好站点配置之后，经常打交道的主要就是下面几个项目
-目录结构 新建markdown文档 保存图像文件 上传到github "><meta itemprop="datePublished" content="2022-07-16T18:32:57+08:00" />
+目录结构
+新建markdown文档
+在windows的cmd窗口，使用hugo new post/xxxx.md来新建markdown文档。生成的.md文件保存在./content/posts目录下。
+保存图像文件
+需要添加在文档边栏或者在文章内部引用的图片，可以保存在./static/images目录下。新建的hugo站点项目，static目录是空的，需要自己在static目录下新建images目录
+上传到github
+在config.noml文件中使用publishdir=&ldquo;paht&quot;来指定hugo -D的发布路径。我这指向的是togithub，已经使用git init初始化了，发布完成后，直接使用
+add . git commit -m &#34;xxx&#34; git push origin main 推送到github。 "><meta itemprop="datePublished" content="2022-07-16T18:32:57+08:00" />
 <meta itemprop="dateModified" content="2022-07-16T18:32:57+08:00" />
-<meta itemprop="wordCount" content="6">
+<meta itemprop="wordCount" content="24">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo站点几个主要的设置项目"/>
 <meta name="twitter:description" content="hugo站点几个主要的设置项目 在设置好站点配置之后，经常打交道的主要就是下面几个项目
-目录结构 新建markdown文档 保存图像文件 上传到github "/>
+目录结构
+新建markdown文档
+在windows的cmd窗口，使用hugo new post/xxxx.md来新建markdown文档。生成的.md文件保存在./content/posts目录下。
+保存图像文件
+需要添加在文档边栏或者在文章内部引用的图片，可以保存在./static/images目录下。新建的hugo站点项目，static目录是空的，需要自己在static目录下新建images目录
+上传到github
+在config.noml文件中使用publishdir=&ldquo;paht&quot;来指定hugo -D的发布路径。我这指向的是togithub，已经使用git init初始化了，发布完成后，直接使用
+add . git commit -m &#34;xxx&#34; git push origin main 推送到github。 "/>
 
 	
   </head>
@@ -129,10 +157,26 @@
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h4 id="hugo站点几个主要的设置项目">hugo站点几个主要的设置项目</h4>
 <p>在设置好站点配置之后，经常打交道的主要就是下面几个项目</p>
 <ul>
-<li>目录结构</li>
-<li>新建markdown文档</li>
-<li>保存图像文件</li>
-<li>上传到github</li>
+<li>
+<p>目录结构</p>
+<p><img src="/images/keys1.png" alt="img"></p>
+</li>
+<li>
+<p>新建markdown文档</p>
+<p><img src="/images/post.png" alt="img"></p>
+<p>在windows的cmd窗口，使用hugo new post/xxxx.md来新建markdown文档。生成的.md文件保存在./content/posts目录下。</p>
+</li>
+<li>
+<p>保存图像文件</p>
+<p>需要添加在文档边栏或者在文章内部引用的图片，可以保存在./static/images目录下。新建的hugo站点项目，static目录是空的，需要自己在static目录下新建images目录</p>
+</li>
+<li>
+<p>上传到github</p>
+<p>在config.noml文件中使用publishdir=&ldquo;paht&quot;来指定hugo -D的发布路径。我这指向的是togithub，已经使用git init初始化了，发布完成后，直接使用</p>
+<pre tabindex="0"><code>add .
+git commit -m &#34;xxx&#34;
+git push origin main 推送到github。
+</code></pre></li>
 </ul>
 <ul class="pa0">
   

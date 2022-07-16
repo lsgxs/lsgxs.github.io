@@ -100,7 +100,14 @@
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       hugo站点几个主要的设置项目 在设置好站点配置之后，经常打交道的主要就是下面几个项目
-目录结构 新建markdown文档 保存图像文件 上传到github 
+目录结构
+新建markdown文档
+在windows的cmd窗口，使用hugo new post/xxxx.md来新建markdown文档。生成的.md文件保存在./content/posts目录下。
+保存图像文件
+需要添加在文档边栏或者在文章内部引用的图片，可以保存在./static/images目录下。新建的hugo站点项目，static目录是空的，需要自己在static目录下新建images目录
+上传到github
+在config.noml文件中使用publishdir=&ldquo;paht&quot;来指定hugo -D的发布路径。我这指向的是togithub，已经使用git init初始化了，发布完成后，直接使用
+add . git commit -m &#34;xxx&#34; git push origin main 推送到github。 
     </div>
   </div>
 </div>
@@ -133,25 +140,16 @@ Step 1: Install Hugo Homebrew and MacPorts, package managers for macOS, can be i
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="/posts/%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="link black dim">
-        使用静态网站生成器hugo在github上搭建个人博客
+      <a href="/posts/install-hugo/" class="link black dim">
+        在windows下的安装静态网站生成器hugo
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h4 id="使用静态网站生成器hugo在github上搭建个人博客">使用静态网站生成器hugo在github上搭建个人博客</h4>
-<ul>
-<li>
-<p>下载并安装hugo的windows安装包</p>
-<ul>
-<li>
-<p>这里要说的是，hugo的本地配置相对要简单点。Binary (Cross-platform)</p>
-<p>Download the appropriate version for your platform from <a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a>. Once downloaded, the binary can be run from anywhere. You don’t need to install it into a global location. This works well for shared hosts and other systems where you don’t have a privileged account.</p>
-<p>Ideally, you should install it somewhere in your <code>PATH</code> for easy use. <code>/usr/local/bin</code> is the most probable location.</p>
-<p><a href="https://gohugo.io/getting-started/installing/">Install Hugo | Hugo (gohugo.io)</a></p>
-</li>
-</ul>
-</li>
-</ul>
+      下载并安装hugo的windows安装包
+这里要说的是，hugo的本地配置相对要简单点。Binary (Cross-platform)
+Download the appropriate version for your platform from Hugo Releases. Once downloaded, the binary can be run from anywhere. You don’t need to install it into a global location. This works well for shared hosts and other systems where you don’t have a privileged account.
+Ideally, you should install it somewhere in your PATH for easy use. /usr/local/bin is the most probable location.
+Install Hugo | Hugo (gohugo.
     </div>
   </div>
 </div>

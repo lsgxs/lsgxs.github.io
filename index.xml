@@ -14,7 +14,14 @@
       
       <guid>https://lsgxs.github.io/posts/hugo%E7%AB%99%E7%82%B9%E5%87%A0%E4%B8%AA%E4%B8%BB%E8%A6%81%E7%9A%84%E8%AE%BE%E7%BD%AE%E9%A1%B9%E7%9B%AE/</guid>
       <description>hugo站点几个主要的设置项目 在设置好站点配置之后，经常打交道的主要就是下面几个项目
-目录结构 新建markdown文档 保存图像文件 上传到github </description>
+目录结构
+新建markdown文档
+在windows的cmd窗口，使用hugo new post/xxxx.md来新建markdown文档。生成的.md文件保存在./content/posts目录下。
+保存图像文件
+需要添加在文档边栏或者在文章内部引用的图片，可以保存在./static/images目录下。新建的hugo站点项目，static目录是空的，需要自己在static目录下新建images目录
+上传到github
+在config.noml文件中使用publishdir=&amp;ldquo;paht&amp;quot;来指定hugo -D的发布路径。我这指向的是togithub，已经使用git init初始化了，发布完成后，直接使用
+add . git commit -m &amp;#34;xxx&amp;#34; git push origin main 推送到github。 </description>
     </item>
     
     <item>
@@ -31,25 +38,16 @@ Step 1: Install Hugo Homebrew and MacPorts, package managers for macOS, can be i
     </item>
     
     <item>
-      <title>使用静态网站生成器hugo在github上搭建个人博客</title>
-      <link>https://lsgxs.github.io/posts/%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <title>在windows下的安装静态网站生成器hugo</title>
+      <link>https://lsgxs.github.io/posts/install-hugo/</link>
       <pubDate>Sat, 16 Jul 2022 14:14:21 +0800</pubDate>
       
-      <guid>https://lsgxs.github.io/posts/%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo%E5%9C%A8github%E4%B8%8A%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
-      <description>&lt;h4 id=&#34;使用静态网站生成器hugo在github上搭建个人博客&#34;&gt;使用静态网站生成器hugo在github上搭建个人博客&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;下载并安装hugo的windows安装包&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;这里要说的是，hugo的本地配置相对要简单点。Binary (Cross-platform)&lt;/p&gt;
-&lt;p&gt;Download the appropriate version for your platform from &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;Hugo Releases&lt;/a&gt;. Once downloaded, the binary can be run from anywhere. You don’t need to install it into a global location. This works well for shared hosts and other systems where you don’t have a privileged account.&lt;/p&gt;
-&lt;p&gt;Ideally, you should install it somewhere in your &lt;code&gt;PATH&lt;/code&gt; for easy use. &lt;code&gt;/usr/local/bin&lt;/code&gt; is the most probable location.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;Install Hugo | Hugo (gohugo.io)&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <guid>https://lsgxs.github.io/posts/install-hugo/</guid>
+      <description>下载并安装hugo的windows安装包
+这里要说的是，hugo的本地配置相对要简单点。Binary (Cross-platform)
+Download the appropriate version for your platform from Hugo Releases. Once downloaded, the binary can be run from anywhere. You don’t need to install it into a global location. This works well for shared hosts and other systems where you don’t have a privileged account.
+Ideally, you should install it somewhere in your PATH for easy use. /usr/local/bin is the most probable location.
+Install Hugo | Hugo (gohugo.</description>
     </item>
     
     <item>
