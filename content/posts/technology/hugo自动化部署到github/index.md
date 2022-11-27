@@ -2,14 +2,48 @@
 title: "Hugo自动化部署到github"
 date: 2022-11-13T21:53:09+08:00
 draft: false
+tags: ["actions","部署","博客"]
+# author: ["Me", "You"] # multiple authors
+showToc: true
+TocOpen: true
+draft: false
+hidemeta: false
+comments: false
+description: "Desc Text."
+canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: false
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+UseHugoToc: false 
 cover:
   image: "images/山川-2.jpg"
-tags: ["actions","部署","博客"]
 ---
 
 ####  使用github的actions workflow把hugo博客自动化部署到github
 
-部署静态博客站点到github一般有两种方法，第一种是手动建立项目，添加文档，最后使用git命令部署到github仓库。第二种方法是使用github提供的actions  flow实现自动化部署，一般可以通过两个分支来实现。
+部署静态博客站点到github一般有三种方法，第一种是使用git命令手动部署到github仓库；第二种是使用github自带的actions workflow自动部署到默认的gh-pages分支；第三种是在一个仓库的两个分支之间完成自动化发布，同时是使用actions workflow。
+
+##### 使用git命令手动推送到github仓库
+
+手动建立项目，添加文档，最后使用git命令部署到github仓库。
+
+##### 使用github提供的actions  flow和推荐的hugo workflow自动化部署
+
+* 在gihhub上新建username.github.io的仓库，不选择添加readme.md来初始化仓库，这样就新建了一个空仓，从本地推送到github时很方便，不必运行git pull  origin main 就可以直接推送本地仓库到远程。
+
+* 设置仓库的Github Pages 发布源
+
+  ![](images/gihub-pages-deployment-source.png)
+  在新建好空仓之后，设置Github Pages Build and Deployment source为Github Actions。然后再把本地带有\.github\workflow\hugo.yml的仓库git-add-commit-push到空仓，完成自动化部署。如果没有设置好Build and Deployment为Github Actions，然后推送到新建的空仓，在浏览器输入https://username.github.io 时就会出现404页面，因为仓库新建之后默认的Github Pages Build and Deployment是Deploy from Branch 。hugo actions workflow正确执行后就会建立一个github-pages，在后台以压缩包的形式显示（点击仓库的updates记录)，如果没有显示这个文件，多半原因是没有设置Github Pages Build and Deployment为Github Acionts.如下图:
+  
+  ![](images/Artifacts-github-pages.png)
+  一句话总结：首先建里空仓，然后设置github pages发布源为github actions,最后从本地推送项目到github仓库。
+
+#### 使用github提供的actions  flow实现自动化部署，一般可以通过两个分支来实现。
 
 * 一个分支保存项目源文件、
 
