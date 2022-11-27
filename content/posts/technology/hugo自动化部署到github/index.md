@@ -43,7 +43,7 @@ cover:
   ![](images/Artifacts-github-pages.png)
   一句话总结：首先建里空仓，然后设置github pages发布源为github actions,最后从本地推送项目到github仓库。
 
-#### 使用github提供的actions  flow实现自动化部署，一般可以通过两个分支来实现。
+##### 使用github提供的actions  flow实现自动化部署，一般可以通过两个分支来实现。
 
 * 一个分支保存项目源文件、
 
