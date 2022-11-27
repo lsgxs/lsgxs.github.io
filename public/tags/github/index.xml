@@ -9,7 +9,16 @@
       <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 01 Nov 2022 22:03:27 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Nov 2022 16:36:14 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>善用github之git Pull Request</title>
+      <link>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
     <item>
       <title>在一台计算机上用git管理多个github账号</title>
       <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>

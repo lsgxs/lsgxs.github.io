@@ -19,6 +19,7 @@ searchHidden: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 UseHugoToc: false
+ShowCodeCopyButtons: true
 cover:
     image: "<image path/url>" # image path/url
     alt: "<alt text>" # alt text

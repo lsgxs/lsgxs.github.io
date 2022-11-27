@@ -9,7 +9,25 @@
       <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 17:42:04 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Nov 2022 16:36:14 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>github</title>
+      <link>https://lsgxs.github.io/tags/github/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pull request</title>
+      <link>https://lsgxs.github.io/tags/pull-request/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/tags/pull-request/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>first</title>
       <link>https://lsgxs.github.io/tags/first/</link>
@@ -83,29 +101,11 @@
     </item>
     
     <item>
-      <title>PaperMod</title>
-      <link>https://lsgxs.github.io/tags/papermod/</link>
-      <pubDate>Wed, 02 Nov 2022 13:09:03 +0000</pubDate>
-      
-      <guid>https://lsgxs.github.io/tags/papermod/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>git</title>
       <link>https://lsgxs.github.io/tags/git/</link>
       <pubDate>Tue, 01 Nov 2022 22:03:27 +0800</pubDate>
       
       <guid>https://lsgxs.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://lsgxs.github.io/tags/github/</link>
-      <pubDate>Tue, 01 Nov 2022 22:03:27 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/tags/github/</guid>
       <description></description>
     </item>
     
