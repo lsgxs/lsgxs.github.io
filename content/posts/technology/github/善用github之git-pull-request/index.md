@@ -1,5 +1,5 @@
 ---
-title: "善用github之git Pull Request"
+title: "善用github之Pull Request"
 date: 2022-11-27T16:36:14+08:00
 draft: false
 tags: ["pull request","github"]
@@ -35,21 +35,35 @@ cover:
 
 ##### 用自己的项目实践Pull request
 
-看到了通过一个完整的pull request就可以在github上查看修改明细，修改了哪几个文件，每个文件修改了什么内容，通过在编辑框左边显示+或者-号表示增加或者删除（大概是这意思，我猜测，看官方文档再下结论吧）。把sulv大佬帮我修改的博客项目（实现另外一个功能，在代码区显示纵向的滚动条）作为一个修改后的commit ，推送到我fork自己的整个博客项目，重要看到自己想要的结果了，直接显示了修改了哪几个文件，修改了什么地方，对照整个清单把原来的文件修改好，localhost:1313测试成功。
+学会通过pull request在github上查看修改明细，修改了哪几个文件，每个文件修改了什么内容，在编辑框左边显示+或者-号表示增加或者删除（大概是这意思，我猜测，看官方文档再理解）。把sulv大佬帮我修改的博客项目（实现另外一个功能，在代码区显示纵向的滚动条）作为一个修改后的commit ，推送到我fork自己的博客项目仓库，看到自己想要的结果了，直接显示了修改了哪几个文件，修改了什么地方，对照整个清单把原来的文件修改好，localhost:1313测试成功。
+
+下面记录一下自己第一次完成pull request，通过New pull request生成明细信息，观察Files Changed逐个修改自己的文件，或者找到commit的源仓库，找到变化的文件，给项目增加对应版本的功能。当然，我这里只是纯粹处于学习目的，找出别人帮忙修改的源文件和修改的具体内容，如果是真实的项目协作可能并不需要这么麻烦。
 
 * 首先把自己的未经修改的博客项目推送到username.github.io仓库
 
 * 用自己另外一个github账户的登录，fork第一个账户的博客项目仓库
 
 * 把大佬帮助修改好的仓库项目修改origin 链接，指向第二个github账号fork的仓库。（其实修改的项目已经可以使用，只是我好奇到底是怎么修改的^-^）
-  * git remote remove  origin 
+  
+  ![](images/git-remote-add.png)
+  
+  * git remote remove  origin     --通过git remote -v 查看仓库链接指向，如果链接的仓库URL不正确的话，就用这条语句删除，下面再新建正确的链接。
   
   * git remote add origin git@hexo:username/fork-repository-name.git 
   
   * git add-commit-push --这里是几个步骤的简写。
   
-  * 到这里就可以看到那个pull request的清单了。没有帮助别人修改项目的技术，只能在自己的项目上学习一下，也挺好。初学pull request，一点点成就感，所有的进步不就是这些成就感驱动的吗？继续前进，做自己喜欢的事情，坚持下去
-* 登录github选择fork的仓库，点击pull request，选择右侧的New  pull  request新建一个pull request，显示两个分支的比较，正常的话显示可以合并，确定后即可看到commt之后的文件变化细节。
+  * 登录github，选择源仓库(也就是Fork到的仓库的源仓库），选择pull request,选择New pull request。下面会显示本次commit所涉及的所有变更明细清单：
+  
+    ![](images/new-pull-request.png)
+  
+    ![](images/new-pull-request-comment.png)
+  
+  ​           在这里填写pull request的注释信息后，点击右下角的绿色按钮Create pull request。重新选择仓库，如下图所示，Pull requests的右侧会显示数量，点击后显示pull reques列表，如果注释信息直观的话，可以清楚看到每个pull request的基本功能。
+  
+  ​        ![](images/new-pull-request-list.png)
+  
+  初学pull request，一点点成就感，所有的进步不就是这些成就感驱动的吗？继续前进，做自己喜欢的事情，坚持下去
 ##### 如何学习计算机知识  
 * 自己对github、request的认识还很肤浅。有多大的需求，才有多么复杂的项目，才会有更多一点的知识。如果能从众多的知识中抽象出一点智慧，那就又进步了一点^-^。
 
