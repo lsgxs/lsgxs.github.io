@@ -33,76 +33,77 @@ cover:
 
 #### URL
 
-#### 熟悉html文件基本结构，能在记事本手动写一个完整准确的html代码框架。
+#### 熟悉html文件基本结构，在记事本手动写一个完整准确的html代码框架。
 
+
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>This is the title of page"</title>
+    </head>
+    <body>
+        <header> the header </header>
+             <main> 
+                 <article>
+                   <p> a paragraph </p>
+                 </article>
+            </main>
+   
+        <footer> the footer </footer>
+   </body>
+</html>
+```
+
+   可以看出，通过对文档结构化、对象化，实现一个文档的树状描述，为dom构建数据结构。从大到小的记忆这个文档结构：
+
+* `<!DOCTYPE html>      `一条指令告诉浏览器这个文档的类型是html
+
+* `<html> </html>`一对`html`标签作为整个文档元素的根,是网页中其他元素的容器。
+
+* `<head> </head>`一对`<head>`标签作为html文档的头部，标签的内容不会显示在网页上，只是为浏览器网页渲染提供元数据。
+
+  * `<head>`标签内可以容纳`<meta>`、`<style>`、`<script>`等元素
+
+* `<body> </body>`一对`<body>`标签作为html文档的主体
+
+  * 在`body`区域又可以分为`<header>`、`<main>`、`<footer>`三个部分,对应与日常编辑文档的页眉、正文、页脚。
+  
+  * 简化一下结构： 
     
+      
+    
+    ```html
     <!DOCTYPE html>
     <html lang="zh-CN">
-        <head>
-            <meta charset="utf-8">
-            <title>This is the title of page"</title>
-        </head>
-        <body>
-            <header> the header </header>
-                 <main> 
-                     <article>
-                       <p> a paragraph </p>
-                     </article>
-                </main>
-       
-            <footer> the footer </footer>
-       </body>
+      <head>
+        <meta charset="utf-8" >
+        <title> hello </title>
+      </head>
+    
+      <body>
+         <p> hello world!</p>
+      <body>
+    
     </html>
-    ~~~
+    ```
     
-    可以看出，通过对文档结构化、对象化，实现一个文档的树状描述，为dom构建数据结构。从大到小的记忆这个文档结构：
-    
-    * `<!DOCTYPE html>      `一条指令告诉浏览器这个文档的类型是html
-    
-    * `<html> </html>`一对`html`标签作为整个文档元素的根,是网页中其他元素的容器。
-    
-    * `<head> </head>`一对`<head>`标签作为html文档的头部，标签的内容不会显示在网页上，只是为浏览器网页渲染提供元数据。
-    
-      * `<head>`标签内可以容纳`<meta>`、`<style>`、`<script>`等元素
-    
-    * `<body> </body>`一对`<body>`标签作为html文档的主体
-    
-      * 在`body`区域又可以分为`<header>`、`<main>`、`<footer>`三个部分,对应与日常编辑文档的页眉、正文、页脚。
-      
-      * 简化一下结构：
-      
-        ~~~
-        <!DOCTYPE html>
-        <html lang="zh-CN">
-          <head>
-            <meta charset="utf-8" >
-            <title> hello </title>
-          </head>
-        
-          <body>
-             <p> hello world!</p>
-          <body>
-        
-        </html>
-        ~~~
-       ~~~
-       ~~~
-
   * 常用html元素 
-
+  
     *  文本类标签
-
+  
       * `<div>`
-
+  
       * `<p>`
-
+  
       * `<br>`适用在一个段落内换行，段落之间的换行应该使用CSS完成。
-
+  
       * `<span>`
-
+  
       * `<pre>`、`<code>`
-
-        ~~~
+  
+        ~~~html
         <pre>
         <code>
           let a = 1;
@@ -151,23 +152,23 @@ cover:
           ```
       
     * 图像类标签
-
+  
     * 多媒体类标签
-
+  
     * 列表类标签  (list)
-
+  
       * ol  ordered list
-
+  
       * ul  unordered list
-
+  
       * li   list item
       
     * 表格类标签 （tabular）
-
+  
     * 表单类标签（Form）
-
+  
       * Form
-
+  
         ~~~
         <form action="https://www.username.com" method="post">
           <label for="POST-name">username：</label>
@@ -175,18 +176,18 @@ cover:
           <input type="submit" value="commit">
         </form>
         ~~~
-
+  
         
-
+  
       * lable
-
+  
       * input  input标签有众多的类型，根据type的不同，提供了一组功能强大的表单交互组件。
-
+  
         ~~~
         <input type="text" id="name" name="name" required
                minlength="4" maxlength="8" size="10">
         ~~~
-
+  
         ~~~
         <input type="image" alt="登陆" src="login-button.png">
         ~~~
