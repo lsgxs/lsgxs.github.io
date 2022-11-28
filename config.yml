@@ -75,12 +75,12 @@ params:
     imageHeight: 120
     imageTitle: my image
     buttons:
+      - name: 阅读
+        url: posts/read  
       - name: 技术
         url: posts/technology
       - name: 财经
         url: posts/stock
-      - name: 阅读
-        url: posts/read  
       - name: 运动
         url: posts/sport  
       - name: 感悟
