@@ -154,12 +154,45 @@ cover:
         * ```
           <script src="javascript-filename.js"></script>
           ```
+      
     * 图像类标签
     
-    * 媒体类标签
+    * 多媒体类标签
     
     * 列表类标签  (list)
     
+      * ol  ordered list
+    
+      * ul  unordered list
+    
+      * li   list item
+      
     * 表格类标签 （tabular）
     
     * 表单类标签（Form）
+    
+      * Form
+    
+        ~~~
+        <form action="https://www.username.com" method="post">
+          <label for="POST-name">username：</label>
+          <input id="POST-name" type="text" name="user">
+          <input type="submit" value="commit">
+        </form>
+        ~~~
+    
+        
+    
+      * lable
+    
+      * input  input标签有众多的类型，根据type的不同，提供了一组功能强大的表单交互组件。
+    
+        ~~~
+        <input type="text" id="name" name="name" required
+               minlength="4" maxlength="8" size="10">
+        ~~~
+    
+        ~~~
+        <input type="image" alt="登陆" src="login-button.png">
+        ~~~
+      * button
