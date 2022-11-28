@@ -63,7 +63,7 @@ params:
   label:
     text: "My Blog"
     icon: /images/likesun.png
-    iconHeight: 35
+    iconHeight: 34
 
   # profile-mode
   profileMode:
