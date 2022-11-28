@@ -1,9 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Todolist"
+date: 2022-11-28T10:11:27+08:00
 draft: false
-# weight: 2
 tags: ["first"]
+weight: 1
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
@@ -20,12 +20,9 @@ searchHidden: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 UseHugoToc: false
-ShowCodeCopyButtons: true
+ShowCodeCopyButtons: false
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    image: "<image path/url>" 
+  
 ---
 
