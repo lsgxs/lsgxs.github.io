@@ -92,6 +92,8 @@ params:
     Content: Welcome to my blog
 
   socialIcons:
+    - name: neeva 
+      url: https://neeva.com/
     - name: 必应
       url: "https://cn.bing.com/?mkt=zh-CN"
     - name: stackoverflow
