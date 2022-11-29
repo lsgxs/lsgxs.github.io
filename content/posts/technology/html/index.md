@@ -86,12 +86,12 @@ cover:
 
 #### 常用html元素 
 
-   *  文本类标签
-     `<div>`
-     `<p>`
-     `<br>`适用在一个段落内换行，段落之间的换行应该使用CSS完成。
-     `<span>`
-     `<pre>`、`<code>`
+   * 文本类标签     
+     * `<div>`  division
+     * `<p>`   paragrahp
+     * `<br>`  break 适用在一个段落内换行，段落之间的换行应该使用CSS完成。
+     * `<span>`
+     * `<pre>`、`<code>`
      
      ~~~html
         <pre>
@@ -100,6 +100,7 @@ cover:
           console.log(a);
         </code>
         </pre>
+     ~~~
 
 
    * 链接类标签
@@ -142,9 +143,9 @@ cover:
 
   * 列表类标签  (list)
 
-     * ol  ordered list
-     * ul  unordered list
-     * li   list item
+     * ol    ordered list
+     * ul    unordered list
+     * li     list item
 
   *  表格类标签 （tabular）
 

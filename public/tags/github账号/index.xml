@@ -24,8 +24,8 @@ git config --global --unset user.email &amp;ldquo;your-mailbox-for-github&amp;rd
 ssh-keygen -t ed25519 -f id_ed25519_hexo -C &amp;quot;mailbox-for-github&amp;quot;
 ssh-keygen -t ed25519 -f id_ed25519_hugo -C &amp;quot;mailbox-for-github&amp;quot;
 ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C &amp;quot;mailbox-for-github&amp;quot;
-1 2 3 4 1、 把对应账号的公钥添加在github的settings-&amp;gt;ssh 2、启动ssh-agent添加私钥 eval $(ssh-agent) ssh-add id_xxxxxx --后面的参数是对应的私钥文件名 在~/.ssh目录下新建config文件（没有扩展名的文本文件），内容如下：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 #first Host hexo HostName github.</description>
+1、 把对应账号的公钥添加在github的settings-&amp;gt;ssh 2、启动ssh-agent添加私钥 eval $(ssh-agent) ssh-add id_xxxxxx --后面的参数是对应的私钥文件名 在~/.ssh目录下新建config文件（没有扩展名的文本文件），内容如下：
+#first Host hexo HostName github.com User username_for_githbu IdentityFile ~/.ssh/id_xxxxxx #second Host hugo HostName github.com User username_for_github IdentityFile ~/.ssh/id_ed25xxxxxx #Third Host tiddlywiki HostName github.</description>
     </item>
     
   </channel>

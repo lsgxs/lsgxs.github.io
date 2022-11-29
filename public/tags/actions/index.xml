@@ -19,8 +19,8 @@
       <description>使用自定义的actons workflow,在仓库的两个分支之间实现hugo博客站点自动化部署 用仓库的main分支保存博客项目源文件，用仓库的另外一个手动建立的独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。
 在github上新建username.github.io形式的空仓
 在本地根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目
-1 2 3 4 5 6 7 8 9 10 hugo new site hugo cd hugo git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke 编辑config.toml文件，在最后新增 theme = &amp;#34;ananke&amp;#34; 修改baseURL = &amp;#34;https://username.github.io&amp;#34; hugo new posts/文档名称作为目录名/index.md --编辑自己的文档 git add . git commit -m &amp;#34;新增文档&amp;#34; git push -u origin main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数 在本地新建一个独立分支gh-pages
-1 2 3 4 5 6 git checkout --orphan gh-pages echo &amp;#34;hello github gh-pages&amp;#34; &amp;gt; readme.md git add .</description>
+hugo new site hugo cd hugo git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke 编辑config.toml文件，在最后新增 theme = &amp;#34;ananke&amp;#34; 修改baseURL = &amp;#34;https://username.github.io&amp;#34; hugo new posts/文档名称作为目录名/index.md --编辑自己的文档 git add . git commit -m &amp;#34;新增文档&amp;#34; git push -u origin main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数 在本地新建一个独立分支gh-pages
+git checkout --orphan gh-pages echo &amp;#34;hello github gh-pages&amp;#34; &amp;gt; readme.md git add . git commit -m &amp;#34;add gh-pages branch&amp;#34; git push origin gh-pages --在新建分支后推送到远程仓库分支，要指定源分支，系统会自动建立同名分支，并建立关联。以后再推送分支可以不必再指定源分支。 git branch -a --此时就可以看到新建的独立分支gh-pages。如果不在新建的分支下增加变化并git-add-commit-push ，就不会真正建立分支。 经过上面两个步骤，username.</description>
     </item>
     
     <item>
@@ -38,12 +38,7 @@
       <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
       
       <guid>https://lsgxs.github.io/posts/technology/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
-      <description>使用github的actions workflow把hugo博客自动化部署到github 部署静态博客站点到github一般有两种方法，第一种是手动建立项目，添加文档，最后使用git命令部署到github仓库。第二种方法是使用github提供的actions flow实现自动化部署，一般可以通过两个分支来实现。
-一个分支保存项目源文件、
-一般为main分支，把项目的源文件推送到这个分支，既可以保存源文件，又可以从这里开始执行自动化部署到本仓库的另外一个分支。
-手动建立一个独立的gh-pages分支
-1 2 3 4 5 6 7 8 git checkout --orphan gh-pages echo &amp;#34;hello gh-pages&amp;#34; &amp;gt; readme.md git add . git commit -m &amp;#34;udpate with orphan branch gh-pages&amp;#34; git push origin gh-pages git branch -a --经过上面的创建新的独立分支到最后的提交、推送，到这里才可以看到这个新建的分支 -- 然后可以把gh-pages分支下除了.git目录之外的所有目录和文件删除，推送到远程，专门来保存自动部署生成的静态站点文件 -- 当然可以试一下不必手动删除这些目录和文件，看看系统是不是会自动清理删除这些目录和文件。 编写actions自动部署脚本
-首先在项目的根目录下新建脚本文件：.github\workflows\hugo-actions.yml。如果提示不能新建.开头的目录，就从别的地方复制过来，编辑一下路径和文件名。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 name: Deploy Hugo on: push: branches: - main jobs: build-deploy: runs-on: ubuntu-18.</description>
+      <description>Desc Text.</description>
     </item>
     
   </channel>

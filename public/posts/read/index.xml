@@ -9,7 +9,16 @@
       <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 13:19:38 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/posts/read/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Nov 2022 10:11:27 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/posts/read/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Todolist</title>
+      <link>https://lsgxs.github.io/posts/read/todolist/</link>
+      <pubDate>Mon, 28 Nov 2022 10:11:27 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/read/todolist/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
     <item>
       <title>阅读计划</title>
       <link>https://lsgxs.github.io/posts/read/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/</link>

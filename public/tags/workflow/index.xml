@@ -19,8 +19,8 @@
       <description>使用自定义的actons workflow,在仓库的两个分支之间实现hugo博客站点自动化部署 用仓库的main分支保存博客项目源文件，用仓库的另外一个手动建立的独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。
 在github上新建username.github.io形式的空仓
 在本地根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目
-1 2 3 4 5 6 7 8 9 10 hugo new site hugo cd hugo git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke 编辑config.toml文件，在最后新增 theme = &amp;#34;ananke&amp;#34; 修改baseURL = &amp;#34;https://username.github.io&amp;#34; hugo new posts/文档名称作为目录名/index.md --编辑自己的文档 git add . git commit -m &amp;#34;新增文档&amp;#34; git push -u origin main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数 在本地新建一个独立分支gh-pages
-1 2 3 4 5 6 git checkout --orphan gh-pages echo &amp;#34;hello github gh-pages&amp;#34; &amp;gt; readme.md git add .</description>
+hugo new site hugo cd hugo git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke 编辑config.toml文件，在最后新增 theme = &amp;#34;ananke&amp;#34; 修改baseURL = &amp;#34;https://username.github.io&amp;#34; hugo new posts/文档名称作为目录名/index.md --编辑自己的文档 git add . git commit -m &amp;#34;新增文档&amp;#34; git push -u origin main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数 在本地新建一个独立分支gh-pages
+git checkout --orphan gh-pages echo &amp;#34;hello github gh-pages&amp;#34; &amp;gt; readme.md git add . git commit -m &amp;#34;add gh-pages branch&amp;#34; git push origin gh-pages --在新建分支后推送到远程仓库分支，要指定源分支，系统会自动建立同名分支，并建立关联。以后再推送分支可以不必再指定源分支。 git branch -a --此时就可以看到新建的独立分支gh-pages。如果不在新建的分支下增加变化并git-add-commit-push ，就不会真正建立分支。 经过上面两个步骤，username.</description>
     </item>
     
     <item>

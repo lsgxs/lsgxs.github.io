@@ -9,7 +9,7 @@
       <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Nov 2022 16:36:14 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/posts/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Nov 2022 22:04:58 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/posts/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Papermod参数设置</title>
       <link>https://lsgxs.github.io/posts/technology/hugo/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</link>
@@ -43,7 +43,7 @@ url: /search/
 weight: 10
 ​ 这里对应的是模板文件：archives、posts、search
 先记录这些，基本可以让博客运行起来，其他的可以再测试。
-Front Matter区域的参数设置 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 itle: &amp;#34;{{ replace .</description>
+Front Matter区域的参数设置 itle: &amp;#34;{{ replace .</description>
     </item>
     
     <item>
@@ -56,7 +56,16 @@ Front Matter区域的参数设置 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 1
     </item>
     
     <item>
-      <title>善用github之git Pull Request</title>
+      <title>Html简要学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/html/</link>
+      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/html/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>善用github之Pull Request</title>
       <link>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</link>
       <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
       
@@ -88,7 +97,7 @@ Front Matter区域的参数设置 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 1
       <pubDate>Fri, 18 Nov 2022 23:06:19 +0800</pubDate>
       
       <guid>https://lsgxs.github.io/posts/technology/examplesite/</guid>
-      <description>关于Themes中自带ExampleSite的使用方法 学习一个新的hugo博客站点主题，可以使用主题中自带的ExampleSite站点 1 2 3 4 5 6 7 8 $ mkdir your-site $ cd your-site $ mkdir themes $ cd themes $ git clone https://github.com/repository-url.git $ cp -r themes-name/exampleSite/** ../ --把ExampleSite站点目录下的所有内容复制到你的站点根目录 $ cd .. $ hugo serve 如果你的站点已经是一个git 仓库项目了，可以使用git submoudle 的方法添加这个主题。 1 2 3 git submodule add https://github.com/repository-name themes/theme-name hugo serve -t hugo-theme-name http://localhost:1313 </description>
+      <description>关于Themes中自带ExampleSite的使用方法 学习一个新的hugo博客站点主题，可以使用主题中自带的ExampleSite站点 $ mkdir your-site $ cd your-site $ mkdir themes $ cd themes $ git clone https://github.com/repository-url.git $ cp -r themes-name/exampleSite/** ../ --把ExampleSite站点目录下的所有内容复制到你的站点根目录 $ cd .. $ hugo serve 如果你的站点已经是一个git 仓库项目了，可以使用git submoudle 的方法添加这个主题。 git submodule add https://github.com/repository-name themes/theme-name hugo serve -t hugo-theme-name http://localhost:1313 </description>
     </item>
     
     <item>
@@ -100,8 +109,8 @@ Front Matter区域的参数设置 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 1
       <description>使用自定义的actons workflow,在仓库的两个分支之间实现hugo博客站点自动化部署 用仓库的main分支保存博客项目源文件，用仓库的另外一个手动建立的独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。
 在github上新建username.github.io形式的空仓
 在本地根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目
-1 2 3 4 5 6 7 8 9 10 hugo new site hugo cd hugo git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke 编辑config.toml文件，在最后新增 theme = &amp;#34;ananke&amp;#34; 修改baseURL = &amp;#34;https://username.github.io&amp;#34; hugo new posts/文档名称作为目录名/index.md --编辑自己的文档 git add . git commit -m &amp;#34;新增文档&amp;#34; git push -u origin main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数 在本地新建一个独立分支gh-pages
-1 2 3 4 5 6 git checkout --orphan gh-pages echo &amp;#34;hello github gh-pages&amp;#34; &amp;gt; readme.md git add .</description>
+hugo new site hugo cd hugo git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke 编辑config.toml文件，在最后新增 theme = &amp;#34;ananke&amp;#34; 修改baseURL = &amp;#34;https://username.github.io&amp;#34; hugo new posts/文档名称作为目录名/index.md --编辑自己的文档 git add . git commit -m &amp;#34;新增文档&amp;#34; git push -u origin main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数 在本地新建一个独立分支gh-pages
+git checkout --orphan gh-pages echo &amp;#34;hello github gh-pages&amp;#34; &amp;gt; readme.md git add . git commit -m &amp;#34;add gh-pages branch&amp;#34; git push origin gh-pages --在新建分支后推送到远程仓库分支，要指定源分支，系统会自动建立同名分支，并建立关联。以后再推送分支可以不必再指定源分支。 git branch -a --此时就可以看到新建的独立分支gh-pages。如果不在新建的分支下增加变化并git-add-commit-push ，就不会真正建立分支。 经过上面两个步骤，username.</description>
     </item>
     
     <item>
@@ -138,12 +147,7 @@ Front Matter区域的参数设置 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 1
       <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
       
       <guid>https://lsgxs.github.io/posts/technology/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
-      <description>使用github的actions workflow把hugo博客自动化部署到github 部署静态博客站点到github一般有两种方法，第一种是手动建立项目，添加文档，最后使用git命令部署到github仓库。第二种方法是使用github提供的actions flow实现自动化部署，一般可以通过两个分支来实现。
-一个分支保存项目源文件、
-一般为main分支，把项目的源文件推送到这个分支，既可以保存源文件，又可以从这里开始执行自动化部署到本仓库的另外一个分支。
-手动建立一个独立的gh-pages分支
-1 2 3 4 5 6 7 8 git checkout --orphan gh-pages echo &amp;#34;hello gh-pages&amp;#34; &amp;gt; readme.md git add . git commit -m &amp;#34;udpate with orphan branch gh-pages&amp;#34; git push origin gh-pages git branch -a --经过上面的创建新的独立分支到最后的提交、推送，到这里才可以看到这个新建的分支 -- 然后可以把gh-pages分支下除了.git目录之外的所有目录和文件删除，推送到远程，专门来保存自动部署生成的静态站点文件 -- 当然可以试一下不必手动删除这些目录和文件，看看系统是不是会自动清理删除这些目录和文件。 编写actions自动部署脚本
-首先在项目的根目录下新建脚本文件：.github\workflows\hugo-actions.yml。如果提示不能新建.开头的目录，就从别的地方复制过来，编辑一下路径和文件名。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 name: Deploy Hugo on: push: branches: - main jobs: build-deploy: runs-on: ubuntu-18.</description>
+      <description>Desc Text.</description>
     </item>
     
     <item>
@@ -159,7 +163,7 @@ hugo -D
 git add .
 git commit -m &amp;quot;updates $(date)&amp;quot;
 git push origin 也可以把下面这几条命令写在批处理文件中，写完文档后直接运行这个批处理就可以完成发布，稍等使用https://username.github.io/hugo浏览最新发布的博客文章。
-1 2 3 4 hugo git add . git commit -m &amp;#34;updates $(date)&amp;#34; git push origin </description>
+hugo git add . git commit -m &amp;#34;updates $(date)&amp;#34; git push origin </description>
     </item>
     
     <item>
@@ -220,9 +224,9 @@ Step 1: Install Hugo Install the extended version of Hugo (this is required for 
       <guid>https://lsgxs.github.io/posts/technology/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/</guid>
       <description>安装hugo hugo一个快速的博客生成器，只需要下载一个二进制的可执行文件即可。下载后可以保持下面的目录结构：
 c:/hugo/bin &amp;ndash;把这个目录的路径添加在Windows的系统path里。 c:/hugo/sites 新建一个hugo 站点
-1 2 3 4 5 6 cd sites hugo new site quickstart cd quickstart git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke -- 修改config.toml文件，添加theme = &amp;#34;theme-name&amp;#34; 新建一个文档
+cd sites hugo new site quickstart cd quickstart git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke -- 修改config.toml文件，添加theme = &amp;#34;theme-name&amp;#34; 新建一个文档
 hugo new posts/your-first-post.md &amp;ndash;posts是hugo项目保存marddown文档的目录
-1 2 3 4 hugo new posts/以文档的名字作为目录名称-不能包含空格/index.md --真正的markdown文档是index.md ，以目录为核心来组织文档，在index.md的同级目录下建立image目录，保存文档引用的图片。 --用这种方式来组织hugo文档，在渲染文档引用的图片时不易出错。 hugo server -D &amp;ndash;注意这里是大写字母D &amp;ndash;把生成的静态网页文件保存在public目录，然后
+hugo new posts/以文档的名字作为目录名称-不能包含空格/index.md --真正的markdown文档是index.md ，以目录为核心来组织文档，在index.md的同级目录下建立image目录，保存文档引用的图片。 --用这种方式来组织hugo文档，在渲染文档引用的图片时不易出错。 hugo server -D &amp;ndash;注意这里是大写字母D &amp;ndash;把生成的静态网页文件保存在public目录，然后
 ​ &amp;ndash;在浏览器用http://localhost:1313可以浏览文档
 一般可以采用hugo --cleanDestinationDir 来全新生成博客文档</description>
     </item>
@@ -236,7 +240,7 @@ hugo new posts/your-first-post.md &amp;ndash;posts是hugo项目保存marddown文
       <description>在hugo的post中如何引用图片 第一个引用图片的位置是在文章的front matter区域，一般使用featured_image: &amp;quot;images/xxx.png&amp;quot;
 这个图片默认显示在文章的左边，相当于一个缩略图，装饰作用。
 在这个位置显示的图片，如果在static目录下建立images目录保存引用的图片的话，发布到github的username.github.io时，却因为无法找到文件而不能渲染。以文章名字新建目录，然后在这个目录下修改markdown文档的名字为index.md，在同级别的目录下新建一个image目录，用来保存在front matte区域显示的缩略图图片。目录结构如下
-1 2 3 4 5 6 1+----Hugo-Post中的图像资源引用方法 以文档的名字作为目录名新建目录 2+----image 3+----冰山.png 2+----index.md 上面的1、2、3代表3个层级,在index.md内用image/冰山.png的格式引用图片，index.md与image目录同级，直接引用就可以了。 hugo new posts/文档的名字-保持目录名字不能有空格/index.md 第二个引用图片的位置是在正文区域，一般使用![](/images/xxx.png)
+1+----Hugo-Post中的图像资源引用方法 以文档的名字作为目录名新建目录 2+----image 3+----冰山.png 2+----index.md 上面的1、2、3代表3个层级,在index.md内用image/冰山.png的格式引用图片，index.md与image目录同级，直接引用就可以了。 hugo new posts/文档的名字-保持目录名字不能有空格/index.md 第二个引用图片的位置是在正文区域，一般使用![](/images/xxx.png)
 这个位置引用的图片可以在static目录下新建一个images目录，在images目录下保存要引用的图片。 </description>
     </item>
     
@@ -254,8 +258,8 @@ git config --global --unset user.email &amp;ldquo;your-mailbox-for-github&amp;rd
 ssh-keygen -t ed25519 -f id_ed25519_hexo -C &amp;quot;mailbox-for-github&amp;quot;
 ssh-keygen -t ed25519 -f id_ed25519_hugo -C &amp;quot;mailbox-for-github&amp;quot;
 ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C &amp;quot;mailbox-for-github&amp;quot;
-1 2 3 4 1、 把对应账号的公钥添加在github的settings-&amp;gt;ssh 2、启动ssh-agent添加私钥 eval $(ssh-agent) ssh-add id_xxxxxx --后面的参数是对应的私钥文件名 在~/.ssh目录下新建config文件（没有扩展名的文本文件），内容如下：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 #first Host hexo HostName github.</description>
+1、 把对应账号的公钥添加在github的settings-&amp;gt;ssh 2、启动ssh-agent添加私钥 eval $(ssh-agent) ssh-add id_xxxxxx --后面的参数是对应的私钥文件名 在~/.ssh目录下新建config文件（没有扩展名的文本文件），内容如下：
+#first Host hexo HostName github.com User username_for_githbu IdentityFile ~/.ssh/id_xxxxxx #second Host hugo HostName github.com User username_for_github IdentityFile ~/.ssh/id_ed25xxxxxx #Third Host tiddlywiki HostName github.</description>
     </item>
     
   </channel>
