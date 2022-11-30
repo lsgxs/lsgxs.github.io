@@ -83,6 +83,15 @@ Front Matter区域的参数设置 itle: &amp;#34;{{ replace .</description>
     </item>
     
     <item>
+      <title>文件下载</title>
+      <link>https://lsgxs.github.io/posts/download/mydownload/</link>
+      <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/download/mydownload/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
       <title>阅读计划</title>
       <link>https://lsgxs.github.io/posts/read/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/</link>
       <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>

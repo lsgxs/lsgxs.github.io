@@ -85,7 +85,8 @@ params:
         url: posts/sport  
       - name: 感悟
         url: posts/think
-      
+      - name: download
+        url: posts/download
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
