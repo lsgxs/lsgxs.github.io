@@ -34,3 +34,5 @@ cover:
   目前才看到103页，加油。没有硬性指标，每天看多少页，但是每天都要看。
 
 #### 2022年12月阅读计划
+
+* [Fullstackpython](https://www.fullstackpython.com/)

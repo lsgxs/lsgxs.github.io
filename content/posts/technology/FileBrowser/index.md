@@ -45,6 +45,8 @@ localhost:2016 {
 --在真实的场景下用主机的ip地址替代localhost,端口根据实际调整。
 ~~~
 
+![](/images/caddy-file-browser.png)
+
 早期的caddy是直接支持filebrower，不过现在需要使用反向代理的方法使用FileBrowser。在这里看到了关于canddy和filebrowser的信息，写个链接有空再来看看。https://caddy.community/t/file-browser-says-goodbye-to-caddy-for-now/5676
 
 
