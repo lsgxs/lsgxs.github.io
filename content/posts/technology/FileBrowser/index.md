@@ -33,7 +33,7 @@ cover:
 
 #### caddy
 
-最早使用过caddy的file_server 功能，没有深究，只是在配置文件Caddyfile里编辑了几个参数，实现了单位内部可以基于浏览器实现文件下载功能。由于自己的应用场景没有那么复杂，所以再没有深入学习和使用caddy。
+最早使用过caddy的file_server 功能，没有深究，只是在配置文件Caddyfile里编辑了几个参数，在单位内部可以基于浏览器实现文件下载功能。由于自己的应用场景没有那么复杂，再没有深入学习和使用caddy。
 
 Caddyfile
 
@@ -45,7 +45,7 @@ localhost:2016 {
 --在真实的场景下用主机的ip地址替代localhost,端口根据实际调整。
 ~~~
 
-![](/images/caddy-file-browser.png)
+![](images/caddy-file-browser.png)
 
 早期的caddy是直接支持filebrower，不过现在需要使用反向代理的方法使用FileBrowser。在这里看到了关于canddy和filebrowser的信息，写个链接有空再来看看。https://caddy.community/t/file-browser-says-goodbye-to-caddy-for-now/5676
 
