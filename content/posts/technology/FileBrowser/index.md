@@ -47,7 +47,7 @@ localhost:2016 {
 
 ![](images/caddy-file-browser.png)
 
-早期的caddy是直接支持filebrower，不过现在需要使用反向代理的方法使用FileBrowser。在这里看到了关于canddy和filebrowser的信息，写个链接有空再来看看。https://caddy.community/t/file-browser-says-goodbye-to-caddy-for-now/5676
+这是以前的用法，早期的caddy是直接支持filebrower。现在需要使用反向代理的方法使用FileBrowser。在这里看到了[关于canddy和filebrowser](https://caddy.community/t/file-browser-says-goodbye-to-caddy-for-now/5676)的信息，写个链接有空再来看看。
 
 
 
