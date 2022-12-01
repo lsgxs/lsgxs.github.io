@@ -54,20 +54,20 @@ cover:
 ~~~
 sc.exe create caddy start= auto binPath= "C:\myrepos\caddy\caddy.exe run"
 sc.exe start caddy
-sc.exe stop  caddy
+--sc.exe stop  caddy
 --也可以在Windows的服务界面里设置；或者用Win+R打开运行界面，输入services.ms 打开Windows服务窗口启动或者停止caddy服务
 ~~~
 
 caddy的配置文件Caddyfile设置如下：
 
 ~~~
-127.0.0.1：2080,localhost
+127.0.0.1:2080
 reverse_proxy   127.0.0.1:8080
 ~~~
 
 Caddyfile文件的第一行是要访问的服务所在主机的IP地址或者域名，或者叫主机地址。
 
-Caddyfile文件的第二行用reverse_proxy表明了反向代理的路径，把https的请求转发到主机127.0.0.1上端口为8080的进程,而FileBrowser运行启动后，默认就是127.0.0.1:8080，所以在浏览器输入：https://127.0.0.1:2080时(或者https://localhost)，就会被caddy转发给占用127.0.0.1:8080端口的FileBrowser,打开FileBrowser应用，如下图：
+Caddyfile文件的第二行用reverse_proxy表明了反向代理的路径，把https的请求转发到主机127.0.0.1上端口为8080的进程,而FileBrowser运行启动后，默认是127.0.0.1:8080，所以在浏览器输入：https://127.0.0.1:2080，就会被caddy转发给占用127.0.0.1:8080端口的FileBrowser,打开FileBrowser应用，如下图：
 
 ![](images/caddy-reverse-proxy.png)
 
