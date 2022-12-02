@@ -95,7 +95,10 @@ file_server
 #这两行命令是显示站点根目录下的index.html，如果没有自然是空白，以为是哪里出错了。
 #以Caddyfile配置文件的方式使用caddy run 启动，会自动转换为https协议
 ~~~
+`caddy  run `
+
 如果站点根目录下没有index.html文件，但是想显示文件列表的话，就在file_server后添加browse参数。关于file_server的详细用法，看最后的官方文档链接。
+
 ~~~
 localhost
 file_server browse
