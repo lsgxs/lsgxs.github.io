@@ -41,13 +41,11 @@ cover:
 
 * 应用场景 公司内部局域网的计算机通过代理服务器(与防火墙搭配)访问互联网资源。正向代理服务器和其他客户端同属于内部网络，通过防火墙的设置，只有代理服务器可以访问外部互联网，其他计算机通过代理服务器访问外部互联网。代理服务器是同网段其他客户端的代理，这样的模型应用称作为正向代理。
 
-  https://pic3.zhimg.com/v2-90c1a94c740472c5b144d0eb2f74717e_b.gif
 
 ##### 反向代理
 
 * 应用场景 外部计算机通过互联网访问公司内部网络服务。公司内部有多个后端服务器，但是不能直接开放给外部通过互联网访问的计算机，而是通过一个代理服务器设置服务转发调度表，把公司内部的服务展示给外部计算机。也就是说，外部的计算机通过互联网只能访问到公司内部服务器的代理，由这台代理服务调度外部的服务请求，这样的应用模式叫做反向代理。反向代理是公司内部一组服务器的代理，通过这个代理服务器，把内部的服务开放给互联网用户。
 
-  https://pic4.zhimg.com/v2-2fc11bfae16b55d5241c0d15456976b3_b.gif
 
 ##### 应用实践
 
@@ -79,7 +77,7 @@ Caddyfile文件的第二行用reverse_proxy表明了反向代理的路径，把1
 
 这里只是以FIleBrowser为例学习caddy的反向代理功能，如果只需要File Browser，单独使用File Brower就可以，而caddy是一个web服务器。
 
-把caddy 安装为Windows系统服务后，每次启动计算机caddy就会自动运行，提供反向代理服务，把外部的https请求转发给指定的指定的内部服务器。上面的Caddyfile中的reverse_proxy就是设置反向代理设置的。可以用命令行来实现更容易理解反向代理的原理：
+把caddy 安装为Windows系统服务后，每次启动计算机caddy就会自动运行，提供反向代理服务，把外部的https请求转发给指定的指定的内部服务器。上面Caddyfile中的reverse_proxy是设置反向代理设置的。用命令行实现更容易理解反向代理的原理：
 
 ~~~
 caddy  revese-proxy --from   www.examabc.com   --to 127.0.0.1:8080
@@ -87,5 +85,10 @@ caddy  revese-proxy --from   www.examabc.com   --to 127.0.0.1:8080
 
 意思是浏览器中www.examabc.com的访问，转发给本机的127.0.0.1:8080端口进程，这样就把外部的访问变成公司内部服务器之家的调度。
 
-> 引用文章：[代理与内网穿透简介](https://mbd.baidu.com/ug_share/mbox/4a83aa9e65/share?product=smartapp&tk=5d8b258c213680770d7d9dafcbdf0044&share_url=https%3A%2F%2Fwjrsbu.smartapps.cn%2Fzhihu%2Farticle%3Fid%3D410763468%26isShared%3D1%26uid_f%3D1033650497227616256%26_swebfr%3D1%26_swebFromHost%3Dbaiduboxapp&domain=mbd.baidu.com)
+##### 总结
 
+* 正向代理：在内部局域网的客户端中派个代理让大家获取互联网资源。为客户端代理的叫正向代理。
+
+* 反向代理：在公司内部服务器中派个代理把服务开放给互联网。为服务器代理的叫反向代理
+
+  
