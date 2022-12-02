@@ -41,11 +41,11 @@ cover:
 
 #####  caddy start 
 
-`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行的caddy,它不会阻塞终端的使用，甚至可以退出当前终端，但是一个caddy进程已经被启动了，在Windows下的任务管理器下可以看到caddy进场。你可以正常访问托管的网络服务，比如打开网页或者浏览静态目录和文件。如果想临时测试caddy的服务，可以使用`caddy run`,如果想长时间使用caddy的服务，推荐使用`caddy start`。
+`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行的caddy,它不会阻塞当前终端的使用，甚至可以退出当前终端，但是一个caddy进程已经启动，在Windows下任务管理器下可以看到caddy进程。即使退成启动caddy的cmd终端窗口，也可以正常访问caddy提供的网络服务，比如打开网页或者浏览静态目录和文件。如果想临时测试caddy服务，可以使用`caddy run`,如果想长时间使用caddy服务，推荐使用`caddy start`。
 
 ##### caddy stop
 
-如果 `caddy start` 是使用默认的 `localhost:2019` 管理地址启动的，直接使用 `caddy stop` 命令就可以优雅的停止caddy，如果不是默认的，那么需要使用 `-address` 来指定管理地址。
+如果 `caddy start` 是使用默认 `localhost:2019` 启动的，直接使用 `caddy stop` 命令就可以优雅的停止caddy，如果不是默认的，那么需要使用 `-address` 来指定管理地址。
 
 ```text
 caddy stop -address localhost:2080
@@ -67,7 +67,7 @@ file_server  browse
 
 ~~~
 
-上面这三行文本是Caddyfile的所有内容，直接在caddy所在的目录下运行caddy start，在浏览器输入：`https://localhost:2015`就会在浏览器显示磁盘上c:\tools目录下所有内容。
+上面这三行文本是Caddyfile的所有内容，直接在caddy所在的目录下运行caddy start，在浏览器输入：`https://localhost:2080`就会在浏览器显示磁盘上c:\tools目录下所有内容。
 
 ##### caddy reverse-proxy
 
@@ -93,11 +93,11 @@ localhost:2080 {
 
 ##### caddy fmt
 
-caddy提供的一个辅助工具，可以帮你格式化你的Caddyfile配置文件， 让它更美观。
+caddy提供的一个辅助工具，可以格式Caddyfile配置文件。
 
 ~~~
 caddy fmt --overwrite c:\myrepos\caddy\Caddyfile
-  --这里的overwrites参数是用格式化的文件直接覆盖原文件
+  --这里的overwrites参数是指用格式化的文件直接覆盖原文件
 ~~~
 
 ##### caddy adapt 
