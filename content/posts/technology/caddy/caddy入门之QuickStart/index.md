@@ -145,9 +145,9 @@ localhost:2080  {
 
 * 无论是命令行方式运行caddy ，还是以`caddy run ` 或者`caddy start`使用配置文件运行caddy,一个容易忽略的要点是工作目录，最好切换到站点根目录。
 
-~~~nginx
-  Client sent an HTTP request to an HTTPS server.
-~~~
+*  ~~~nginx
+     Client sent an HTTP request to an HTTPS server.
+   ~~~
 
   意思是caddy托管的是HTTPS web  server,可是客户端发出的是http请求，把协议更换为     HTTPS就可以了。有时浏览器会提示风险，继续信任即可打开托管的服务。
 
