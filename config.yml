@@ -68,7 +68,7 @@ params:
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
-    title: I'm here
+    title: Nothing
     subtitle: "superman"
     imageUrl: "/images/likesun.png"
     imageWidth: 120
