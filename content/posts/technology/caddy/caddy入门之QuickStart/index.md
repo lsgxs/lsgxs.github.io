@@ -48,8 +48,6 @@ cover:
 #####  命令行运行caddy
 
 首先把目录切换到站点目录下。这里所谓的站点，是至少包含有index.html文件的目录，用来测试caddy的静态文件服务。
-
-
      caddy file-server 
      # 把当前目录做为要托管的站点，启用caddy的静态文件支持服务，可以显示站点目录下的index.html文件
      # 如果站点目录下没有index.html文件，打开浏览器什么也不显示，误以为是哪里出错了。
@@ -57,7 +55,7 @@ cover:
 
 在浏览器地址栏输入`http://localhost`或者`localhost`
 
-~~~
+~~~html
 caddy file-server --listen  :2015
 # 用--listen指定端口
 ~~~
@@ -86,7 +84,7 @@ caddy file-server --browse --root  c:\tools
 
 在站点根目录建立名称为Caddyfile的文本文件，不带扩展名(也可以在编辑好内容之后把扩展名删除）。
 
-~~~
+~~~html
 localhost
 
 file_server
@@ -98,12 +96,12 @@ file_server
 
 如果站点根目录下没有index.html文件，但是想显示文件列表的话，就在file_server后添加browse参数。关于file_server的详细用法，看最后的官方文档链接。
 
-~~~
+~~~js
 localhost
 file_server browse
 ~~~
 
-~~~
+<div>
 # https请求地址为localhost时开启c:\tools的目录列表服务
 # https请求地址为localhost:2080时，启用反向代理功能，调用filebrowser服务。
 #不同的两个服务分成两个语句块，用{}分开，互相独立
@@ -122,7 +120,7 @@ localhost:2080  {
     # 如果有不同的服务在公司内部其他主机上，指定具体域名：比如：reverse_prox:  exam.com
     reverse_proxy    127.0.0.1:8080
 }
-~~~
+</div>
 
 [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)参数详细用法
 
@@ -136,21 +134,22 @@ localhost:2080  {
   
   * 使用caddy start启动caddy时，如果不指定配置文件路径，会默认为当前目录，所以最好切换到站点根目录。
   
-    ~~~
+~~~
     caddy start  --config   c:\myrepos\caddy\Caddyfile
-    ~~~
-  
-    
-  
+~~~
+
+
+​    
+
   * 一次设置长期运行，不用每次都去设置caddy运行环境的各种参数。
   * 自动实现https协议
 
 #### 初学caddy需要注意的四个要点
 
 * 无论是命令行方式运行caddy ，还是以`caddy run ` 或者`caddy start`使用配置文件运行caddy,一个容易忽略的要点是工作目录，最好切换到站点根目录。
-* ~~~
+* ```py
   Client sent an HTTP request to an HTTPS server.
-  ~~~
+  ```
 
   意思是caddy托管的是HTTPS web  server,可是客户端发出的是http请求，把协议更换为     HTTPS就可以了。有时浏览器会提示风险，继续信任即可打开托管的服务。
 
