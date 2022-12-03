@@ -133,11 +133,11 @@ localhost:2080  {
 
 ##### 两种运行caddy托管web站点方式的特点
 
-* 命令行方式运行caddy适合初学caddy各种参数用法，熟悉caddy提供的API。
+* 命令行方式运行caddy适合初学caddy各种参数用法。
   
 * Caddyfile配置文件方式启动caddy
   
-  * 使用caddy start启动caddy时，如果不指定配置文件路径，会默认为当前目录，所以最好切换到站点根目录。
+  * 使用caddy start启动caddy时，如果不指定配置文件路径，默认为当前目录，所以最好切换到站点根目录。
   
     ~~~nginx
         caddy start  --config   c:\myrepos\caddy\Caddyfile
@@ -145,7 +145,7 @@ localhost:2080  {
     
   * 一次设置长期运行，不用每次都去设置caddy运行环境的各种参数。
   
-  * 自动HTTPS。在Caddyfile的首行设置里包含域名时，caddy就会提供TLS certificate，为托管的网站启用HTTPS服务。下面是caddy关于[HTTPS](https://caddyserver.com/docs/quick-starts/https#caddyfile)的有关介绍
+  * 自动启用HTTPS。在Caddyfile的首行设置里包含域名时，caddy就会提供TLS certificate，为托管的网站启用HTTPS服务。下面是caddy关于[HTTPS](https://caddyserver.com/docs/quick-starts/https#caddyfile)的有关介绍
   
     ~~~
     You will see Caddy provision a TLS certificate and serve your site over HTTPS. This was possible because your site's address in the Caddyfile contained a domain name.
