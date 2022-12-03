@@ -80,11 +80,8 @@ caddy file-server --browse --root  c:\tools
 
 第四个命令指定了`--root`参数，指定站点根目录为c:\tools
 
-> 注意：
+> 注意：在命令行下带参数运行caddy，根据cmd信息提示，并不会自动添加https协议，在浏览器地址栏输入时为：`http:localhsot`,或则直接输入localhost。如下图：
 >
-> 1、要在站点根目录下编辑一个内容简单的index.html文件，只是输出`hello caddy`也可以。如果没有index.html的话，前两个命令行（没有`--browse`参数）运行后，在浏览器输入`localhost`后什么也没有，不知道是哪里出问题。caddy是一个web服务器，默认你是来托管web站点的，index.html是标配。
->
-> 2、在命令行下运行caddy，根据cmd信息提示，并不会自动添加https协议，在浏览器地址栏输入时为：`http:localhsot`,或则直接输入localhost。如下图：
 
 ![](caddy-cmd-http.png)
 
