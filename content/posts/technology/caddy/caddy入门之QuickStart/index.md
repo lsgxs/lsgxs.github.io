@@ -103,8 +103,8 @@ file_server browse
 ~~~ nginx
 # https请求地址为localhost时开启c:\tools的目录列表服务
 # https请求地址为localhost:2080时，启用反向代理功能，调用filebrowser服务。
-#不同的两个服务分成两个语句块，用{}分开，互相独立
-#站点的https请求地址，自己调试期间可以是ip地址加端口号，实际应用一般为域名。根据实际应用环境修改，这里只是单机测试。
+# 不同的两个服务分成两个语句块，用{}分开，互相独立
+# 站点的https请求地址，自己调试期间可以是ip地址加端口号，实际应用一般为域名
 
 localhost {
     # 开启站点的静态文件服务和显示文件列表服务
@@ -112,13 +112,21 @@ localhost {
     # 指定站点根目录
     root   c:\tools
 }
-
+# 域名
 localhost:2080  {
     #服务器反向代理设置，把127.0.0.1:8080的filebrowser服务托管在该代理服务器
     #有localhost:2080端口的https请求时，转发给本机的127.0.0.1:8080服务
     # 如果有不同的服务在公司内部其他主机上，指定具体域名：比如：reverse_prox:  exam.com
+    # 127.0.0.1为backend address,这个词语是复制acddy网站的，见后面的注释。
     reverse_proxy    127.0.0.1:8080
 }
+# 关于reverse_prox,从caddy网站上看到的这句话:
+# If all you need is a simple reverse proxy over HTTPS (as a TLS terminator), 
+# run this command (replacing your domain name and  #actual backend address):
+# "caddy reverse-proxy --from example.com --to localhost:9000"
+# --from 后面的example.com  代理服务器中维护的域名
+# --to  后面的localhost:9000 为backend address，也就是后端的服务
+# 
 ~~~
 
 [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)参数详细用法
