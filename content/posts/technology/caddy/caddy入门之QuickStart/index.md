@@ -44,7 +44,8 @@ cover:
 *  安装
    * [把 Caddy作为系统服务安装.](https://caddyserver.com/docs/running#manual-installation) 推荐这种安装方式。
    * caddy是一个独立的可执行文件，不需要再安装，把下载到的caddy.exe放在工作目录下，然后把caddy.exe所在的目录加入系统环境变量。如果需要升级caddy,直接用新的caddy.exe覆盖。
-####  命令行运行caddy
+#### 运行caddy的两种方式
+#####  命令行运行caddy
 
 首先把目录切换到站点目录下。这里所谓的站点，是至少包含有index.html文件的目录，用来测试caddy的静态文件服务。
 
@@ -87,9 +88,9 @@ caddy file-server --browse --root  c:\tools
 
 ![](caddy-cmd-http.png)
 
-#### 使用Caddyfile运行caddy
+##### 使用Caddyfile运行caddy
 
-* 在站点根目录建立名称为Caddyfile的文本文件，不带扩展名(也可以在编辑好内容之后把扩展名删除）。
+在站点根目录建立名称为Caddyfile的文本文件，不带扩展名(也可以在编辑好内容之后把扩展名删除）。
 
 ~~~
 localhost
@@ -153,12 +154,13 @@ localhost:2080  {
   * 自动实现https协议
 
 这些只是自己最近初学caddy的体会，记录下来备忘，可能会有理解不全的地方，有空或有应用需求的话继续深入学习。
-##### 测试中遇到的两个问题
+#### 初学caddy需要注意的三个要点
 
-~~~
-Client sent an HTTP request to an HTTPS server.
-~~~
+* 无论是命令行方式运行caddy ，还是以`caddy run ` 或者`caddy start`使用配置文件运行caddy,一个容易忽略的要点是工作目录，最好切换到站点根目录。
+* ~~~
+  Client sent an HTTP request to an HTTPS server.
+  ~~~
 
-意思是caddy托管的是HTTPS web  server,可是客户端发出的是http请求，把协议更换为HTTPS就可以了。有时浏览器会提示风险，继续信任即可打开托管的服务。
+  意思是caddy托管的是HTTPS web  server,可是客户端发出的是http请求，把协议更换为     HTTPS就可以了。有时浏览器会提示风险，继续信任即可打开托管的服务。
 
-由于不断的变更启动caddy的参数，如果测试新的参数时没有出现预期效果，除了命令行、参数、配置文件错误外，多数情况是由于浏览器缓存的原因，清理缓存就好。
+* 由于不断变更启动caddy的参数，如果测试新的参数时没有出现预期效果，除了命令行、参数、配置文件错误外，多数情况是由于浏览器缓存的原因，清理缓存就好。
