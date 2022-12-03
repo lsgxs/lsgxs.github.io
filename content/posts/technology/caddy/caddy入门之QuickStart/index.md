@@ -48,14 +48,13 @@ cover:
 #####  命令行运行caddy
 
 首先把目录切换到站点目录下。这里所谓的站点，是至少包含有index.html文件的目录，用来测试caddy的静态文件服务。
-     caddy file-server 
+~~~
+caddy file-server 
      # 把当前目录做为要托管的站点，启用caddy的静态文件支持服务，可以显示站点目录下的index.html文件
      # 如果站点目录下没有index.html文件，打开浏览器什么也不显示，误以为是哪里出错了。
-
-
 在浏览器地址栏输入`http://localhost`或者`localhost`
-
-~~~html
+~~~
+~~~
 caddy file-server --listen  :2015
 # 用--listen指定端口
 ~~~
@@ -101,7 +100,7 @@ localhost
 file_server browse
 ~~~
 
-<div>
+~~~ 
 # https请求地址为localhost时开启c:\tools的目录列表服务
 # https请求地址为localhost:2080时，启用反向代理功能，调用filebrowser服务。
 #不同的两个服务分成两个语句块，用{}分开，互相独立
@@ -120,7 +119,7 @@ localhost:2080  {
     # 如果有不同的服务在公司内部其他主机上，指定具体域名：比如：reverse_prox:  exam.com
     reverse_proxy    127.0.0.1:8080
 }
-</div>
+~~~
 
 [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)参数详细用法
 
