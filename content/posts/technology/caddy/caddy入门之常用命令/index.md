@@ -1,5 +1,5 @@
 ---
-title: "Caddy入门之常用命令"
+title: "Caddy Command Line"
 date: 2022-12-02T19:43:35+08:00
 draft: false
 # weight: 2
