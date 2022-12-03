@@ -6,7 +6,7 @@ draft: false
 tags: ["NetWork","网络"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: false
@@ -50,8 +50,12 @@ cover:
 ##### 应用实践
 
 以caddy的反向代理设置为例，在实践中理解。
-
-> 反向代理实践
+  ~~~
+  File server and proxy
+   Caddy is both a flexible, efficient static file server and a powerful, scalable reverse proxy.Use it to serve your static site with compression. Or use it as a dynamic reverse proxy to any number of backends。
+    这段文字来自caddy主页介绍，作为反向代理的解释，最后一句话总结了reverse proxy的基本概念。
+  ~~~
+> 反向代理实践。
 
 在虚拟机上安装了caddy，使用下面的命令把caddy安装为Windows系统服务。这里假设代理服务器上安装的是caddy。
 
