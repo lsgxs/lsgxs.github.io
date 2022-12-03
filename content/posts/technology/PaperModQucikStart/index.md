@@ -1,5 +1,5 @@
 ---
-title: "MyPaperModQucikStart"
+title: "PaperMod QucikStart"
 date: 2022-11-24T17:42:04+08:00
 draft: false
 tags: ["first"]
