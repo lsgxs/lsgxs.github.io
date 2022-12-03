@@ -80,10 +80,7 @@ caddy file-server --browse --root  c:\tools
 
 第四个命令指定了`--root`参数，指定站点根目录为c:\tools
 
-> 注意：在命令行下带参数运行caddy，根据cmd信息提示，并不会自动添加https协议，在浏览器地址栏输入时为：`http:localhsot`,或则直接输入localhost。如下图：
->
-
-![](caddy-cmd-http.png)
+> 注意：在命令行下带参数运行caddy，根据cmd信息提示，并不会自动添加https协议，在浏览器地址栏输入：`http:localhsot`,或者直接输入localhost。可以查看cmd终端窗口的提示信息
 
 ##### 使用Caddyfile运行caddy
 
@@ -105,8 +102,6 @@ file_server
 localhost
 file_server browse
 ~~~
-
-![](caddy-cmd-https.png)
 
 ~~~
 # https请求地址为localhost时开启c:\tools的目录列表服务
@@ -150,8 +145,7 @@ localhost:2080  {
   * 一次设置长期运行，不用每次都去设置caddy运行环境的各种参数。
   * 自动实现https协议
 
-这些只是自己最近初学caddy的体会，记录下来备忘，可能会有理解不全的地方，有空或有应用需求的话继续深入学习。
-#### 初学caddy需要注意的三个要点
+#### 初学caddy需要注意的四个要点
 
 * 无论是命令行方式运行caddy ，还是以`caddy run ` 或者`caddy start`使用配置文件运行caddy,一个容易忽略的要点是工作目录，最好切换到站点根目录。
 * ~~~
@@ -161,3 +155,7 @@ localhost:2080  {
   意思是caddy托管的是HTTPS web  server,可是客户端发出的是http请求，把协议更换为     HTTPS就可以了。有时浏览器会提示风险，继续信任即可打开托管的服务。
 
 * 由于不断变更启动caddy的参数，如果测试新的参数时没有出现预期效果，除了命令行、参数、配置文件错误外，多数情况是由于浏览器缓存的原因，清理缓存就好。
+
+* 启动caddy时，在CMD终端窗口显示的提示信息也很有价值，了解这些信息会明白caddy的工作方式。
+
+这些只是自己最近初学caddy的体会，记录下来备忘，可能会有理解不全的地方，有空或有应用需求的话继续深入学习。

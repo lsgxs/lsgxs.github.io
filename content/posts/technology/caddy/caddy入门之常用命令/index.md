@@ -41,7 +41,7 @@ cover:
 
 #####  caddy start 
 
-`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行的caddy,它不会阻塞当前终端的使用，甚至可以退出当前终端，但是一个caddy进程已经启动，在Windows下任务管理器下可以看到caddy进程。即使退成启动caddy的cmd终端窗口，也可以正常访问caddy提供的网络服务，比如打开网页或者浏览静态目录和文件。如果想临时测试caddy服务，可以使用`caddy run`,如果想长时间使用caddy服务，推荐使用`caddy start`。
+`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行的caddy,它不会阻塞当前终端的使用，甚至可以退出当前终端，但是一个caddy进程已经启动，在Windows下任务管理器下可以看到caddy进程。即使退出启动caddy的cmd终端窗口，也可以正常访问caddy提供的网络服务，比如打开网页或者浏览静态目录和文件。如果想临时测试caddy服务，可以使用`caddy run`,如果想长时间使用caddy服务，推荐使用`caddy start`。
 
 ##### caddy stop
 
