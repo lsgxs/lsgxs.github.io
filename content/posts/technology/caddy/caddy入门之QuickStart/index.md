@@ -48,13 +48,13 @@ cover:
 #####  命令行运行caddy
 
 首先把目录切换到站点目录下。这里所谓的站点，是至少包含有index.html文件的目录，用来测试caddy的静态文件服务。
-~~~
+~~~nginx
 caddy file-server 
      # 把当前目录做为要托管的站点，启用caddy的静态文件支持服务，可以显示站点目录下的index.html文件
      # 如果站点目录下没有index.html文件，打开浏览器什么也不显示，误以为是哪里出错了。
 在浏览器地址栏输入`http://localhost`或者`localhost`
 ~~~
-~~~
+~~~ini
 caddy file-server --listen  :2015
 # 用--listen指定端口
 ~~~
@@ -63,14 +63,14 @@ caddy file-server --listen  :2015
 
 > 这前边两个命令行显示index.html的内容，如果没有index.html文件，浏览器自然什么也没有，我以为是哪里出错了。
 
-~~~
+~~~ini
 caddy file-server --browse
 # 把当前目录做为要托管的站点 开启caddy的静态文件支持服务，并用--browse参数开启文件列表显示功能
 ~~~
 
 第三个命令行多了一个`--browse`参数，可以在浏览器显示站点目录列表。如果有index.html则显示index.html的内容，如果没有index.html文件，就会显示当前站点的所有目录及文件。也就是说file-server会优先显示站点目录的主页，如果没有主页则会显示站点目录列表，列表中的文本文件可以直接打开，其他文件可通过浏览器下载。在根目录下有index.html的情况下想用`--browse`开启文件列表显示服务，需要把index.html修改为别的文件名，比如a_index.html,或者把index.html删除，在浏览器就可以显示站点目录列表。
 
-~~~
+~~~ini
 caddy file-server --browse --root  c:\tools  
 # --root参数指定c:\tools作为托管站点根目录；file-server开启静态文件支持，--browse开启显示文件列表
 ~~~
@@ -83,7 +83,7 @@ caddy file-server --browse --root  c:\tools
 
 在站点根目录建立名称为Caddyfile的文本文件，不带扩展名(也可以在编辑好内容之后把扩展名删除）。
 
-~~~html
+~~~ini
 localhost
 
 file_server
@@ -100,7 +100,7 @@ localhost
 file_server browse
 ~~~
 
-~~~ 
+~~~ nginx
 # https请求地址为localhost时开启c:\tools的目录列表服务
 # https请求地址为localhost:2080时，启用反向代理功能，调用filebrowser服务。
 #不同的两个服务分成两个语句块，用{}分开，互相独立
@@ -133,12 +133,10 @@ localhost:2080  {
   
   * 使用caddy start启动caddy时，如果不指定配置文件路径，会默认为当前目录，所以最好切换到站点根目录。
   
-~~~
+~~~nginx
     caddy start  --config   c:\myrepos\caddy\Caddyfile
 ~~~
 
-
-​    
 
   * 一次设置长期运行，不用每次都去设置caddy运行环境的各种参数。
   * 自动实现https协议
@@ -146,9 +144,10 @@ localhost:2080  {
 #### 初学caddy需要注意的四个要点
 
 * 无论是命令行方式运行caddy ，还是以`caddy run ` 或者`caddy start`使用配置文件运行caddy,一个容易忽略的要点是工作目录，最好切换到站点根目录。
-* ```py
+
+~~~nginx
   Client sent an HTTP request to an HTTPS server.
-  ```
+~~~
 
   意思是caddy托管的是HTTPS web  server,可是客户端发出的是http请求，把协议更换为     HTTPS就可以了。有时浏览器会提示风险，继续信任即可打开托管的服务。
 
