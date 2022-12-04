@@ -1,0 +1,19 @@
+sc.exe create filebrowser start= auto binPath= "C:\myrepos\caddy\filebrowser.exe run"
+
+
+==================
+To create the service, run:
+
+sc.exe create caddy start= auto binPath= "YOURPATH\caddy.exe run"
+
+(replace YOURPATH with the actual path to your caddy.exe)
+
+================
+To start:
+
+sc.exe start caddy
+
+================
+To stop:
+
+sc.exe stop caddy
