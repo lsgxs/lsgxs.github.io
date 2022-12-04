@@ -56,7 +56,7 @@ caddy stop -address localhost:2080
 
 ##### caddy  reload
 
-通过 `caddy satrt` 启动的caddy一般是长期运行，不能轻易停止，否则会导致网络服务不可用。如果想使用修改后的配置文件而又不用终止正在运行的caddy，可以使用 `reload` 命令。在修改了正在使用的Caddyfile文件内容后，可以关闭`caddy start`时的终端窗口，打开新的终端窗口，运行`caddy relod`,终端窗口会显示`admin   stopped previous server {"address": "localhost:2019"}`的信息，代表caddy服务成功应用了新的配置文件，可以测试一下修改后的Caddyfile文件。
+通过 `caddy satrt` 启动的caddy一般是长期运行，不能轻易停止，否则会导致网络服务不可用。如果想使用修改后的配置文件而又不用终止正在运行的caddy，可以使用 `reload` 命令。在修改了正在使用的Caddyfile文件内容后，打开新的终端窗口，运行`caddy relod`,终端窗口会显示`admin   stopped previous server {"address": "localhost:2019"}`的信息，代表caddy服务成功应用了新的配置文件，可以测试一下修改后的Caddyfile文件。
 
 ##### caddy  file-server
 
