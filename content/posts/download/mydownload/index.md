@@ -45,4 +45,4 @@ cover:
  this is larger than GitHub's recommended maximum file size of 50.00 MB
 ~~~
 
-在试着保存几个常用工具到githbu仓库，git push 是提示上面的信息，单个文件不能超过50M，并推荐了[Git Large File Storage](https://git-lfs.github.com./)
+在试着保存几个常用工具到githbu仓库，git push 时提示上面的信息，单个文件不能超过50M，并推荐了[Git Large File Storage](https://git-lfs.github.com./)
