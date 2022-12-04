@@ -31,7 +31,10 @@ cover:
 常用软件：
 
 * `<a href="files/caddy.exe" target="_blank"> caddy </a> `-网友介绍的这个方法，但是自己实践后不能下载文件。
+
 * `[caddy](files/caddy.exe)`  --可以下载
+
 * 第三种方法（同第二种方法一样，不用自己写路径），直接把本地要下载的文件拖动在当前正在编辑的markdows文档中，记着把路径中的斜杠修改为顶部向右的斜杠即可。--可以下载
   [caddy.exe](files/caddy.exe) 
-
+  
+  [windows-amd64-filebrowser.zip](files/windows-amd64-filebrowser.zip) 
