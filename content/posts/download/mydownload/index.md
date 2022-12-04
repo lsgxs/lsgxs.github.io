@@ -28,7 +28,7 @@ cover:
 
 ---
 
-常用软件：
+#### 常用软件：
 
 * `<a href="files/caddy.exe" target="_blank"> caddy </a> `-网友介绍的这个方法，但是自己实践后不能下载文件。
 
@@ -38,3 +38,11 @@ cover:
   [caddy.exe](files/caddy.exe) 
   
   [windows-amd64-filebrowser.zip](files/windows-amd64-filebrowser.zip) 
+
+#### 关于git的大文件存储
+
+~~~
+ this is larger than GitHub's recommended maximum file size of 50.00 MB
+~~~
+
+在试着保存几个常用工具到githbu仓库，git push 是提示上面的信息，单个文件不能超过50M，并推荐了[Git Large File Storage](https://git-lfs.github.com./)
