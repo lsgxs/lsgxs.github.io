@@ -41,7 +41,7 @@ cover:
 
 #####  caddy start 
 
-`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行进程,启动成功后返回，不会阻塞当前终端窗口使用。在Windows下任务管理器下可以看到caddy进程。但是关闭启动时的终端窗口后，caddy进程结束，在Windows测试如此，不知道在Linux下如何。如果想临时测试caddy服务，可以使用`caddy run`,如果想长时间使用caddy服务，推荐使用`caddy start`。在正式使用caddy时，推荐把caddy安装为Windows的系统服务。
+`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行进程,启动成功后返回，不会阻塞当前终端窗口使用。在Windows下任务管理器下可以看到caddy进程。但是关闭启动时的终端窗口后，caddy进程结束，在Windows测试如此，不知道在Linux下如何。如果想临时测试caddy服务，可以使用`caddy run`,如果想长时间使用caddy服务，建议使用`caddy start`。在正式使用caddy时，推荐把caddy安装为Windows的系统服务。
 
 ![](caddy-start-success.png)
 
@@ -71,7 +71,7 @@ file_server  browse
 
 ~~~
 
-上面这三行文本是Caddyfile的所有内容，直接在caddy所在的目录下运行caddy start，在浏览器输入：`https://localhost:2080`就会在浏览器显示磁盘上c:\tools目录下所有内容。
+上面这三行文本是Caddyfile的所有内容，直接在caddy所在的目录下运行caddy start，在浏览器输入：`https://localhost:2080`就会在浏览器显示磁盘上c:\tools目录下文件列表。
 
 ##### caddy reverse-proxy
 
@@ -92,7 +92,8 @@ localhost:2080 {
 	#file_server browse
 	reverse_proxy    :8080
 }
---不知道为何静态文件浏览服务和反向代理服务不能同时写在一起，这里注释掉静态文件浏览功能。
+--静态文件浏览服务和反向代理服务同时写在一起并不能达成你的预期，这里注释掉静态文件浏览功能，具体细节需要
+--查阅caddy官方文档
 ~~~
 
 ##### caddy fmt
