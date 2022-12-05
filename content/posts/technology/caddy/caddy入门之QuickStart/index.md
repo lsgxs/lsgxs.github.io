@@ -164,8 +164,10 @@ localhost:2070 {
     # open  reverse proxy to multi backend server
     reverse_proxy    127.0.0.1:8080
     #  reverse_proxy  /filebrowser/*   127.0.0.1:8080 
-    # 使用/filebrowser/*可以通过反向代理打开127.0.0.1:8080的filebrowser服务，但是登录时提示用户名或者密码错误。
-    # 但是reverse_proxy  127.0.0.1:8080却可以顺利登录,不知道什么原因，应该是回话数据的问题，暂时不会，先放在这里。
+    # 使用/filebrowser/*可以通过反向代理打开127.0.0.1:8080的filebrowser服务，
+    # 但是登录时提示用户名或者密码错误。 但是reverse_proxy  127.0.0.1:8080却可以顺利登录
+    #不知道什么原因，应该是会话数据的问题，暂时不会，先放在这里。
+    # 或者有空看看handle_path    
 	
 }
 ~~~~
