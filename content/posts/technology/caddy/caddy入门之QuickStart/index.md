@@ -137,11 +137,11 @@ localhost:2080  {
 
 --上面三个block分别实现主页展示、显示指定目录文件列表和反向代理启动filebrowser功能。
 --我想学习在一个block里使用caddy所谓的matcher token实现这个三个功能，也就是在root、reverse_proxy等directive后
---面设定请求匹配通配符，实现path matcher,不知道是哪里不对，实现不了。
+--面设定请求匹配通配符，用path matcher实现,但是不知道哪里不对，暂时实现不了。
 ~~~
 ##### 使用caddy的route directive
 
-~~~~
+~~~~nginx
 localhost:2070 {
 
     # only show index.html in the root of site
@@ -164,14 +164,13 @@ localhost:2070 {
     # open  reverse proxy to multi backend server
     reverse_proxy    127.0.0.1:8080
     #  reverse_proxy  /filebrowser/*   127.0.0.1:8080 
-    # 使用/filebrowser/*可以顺利反向代理打开127.0.0.1:8080的filebrowser服务，但是登录时提示用户名或者密码错误。
-    # 但是reverse_proxy  127.0.0.1:8080却可以顺利登录,不知道什么原因，应该如何再改进。
+    # 使用/filebrowser/*可以通过反向代理打开127.0.0.1:8080的filebrowser服务，但是登录时提示用户名或者密码错误。
+    # 但是reverse_proxy  127.0.0.1:8080却可以顺利登录,不知道什么原因，应该是回话数据的问题，暂时不会，先放在这里。
 	
 }
 ~~~~
 
-在一个block内实现同样启用主页展示、文件列表显示、反向代理启动FileBrowser三个服务。
-
+在一个block内实现同样启用主页展示、文件列表显示、反向代理启动FileBrowser三个服务，解决了前边的疑惑。
 
 [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)参数详细用法
 
