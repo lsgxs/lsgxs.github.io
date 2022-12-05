@@ -174,6 +174,8 @@ localhost:2070 {
 
 在一个block内实现同样启用主页展示、文件列表显示、反向代理启动FileBrowser三个服务，解决了前边的疑惑。
 
+有空看看[handle](https://caddyserver.com/docs/caddyfile/directives/handle#examples)和[handle_path](https://caddyserver.com/docs/caddyfile/directives/handle_path)
+
 [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)参数详细用法
 
 ##### 两种运行caddy托管web站点方式的特点
