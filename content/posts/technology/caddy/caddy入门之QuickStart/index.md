@@ -107,6 +107,13 @@ file_server browse
 # 站点的https请求地址，自己调试期间可以是ip地址加端口号，实际应用一般为域名
 
 localhost {
+    # 开启站点的静态文件服务,显示站点目录的主页
+    file_server 
+    # 指定站点根目录
+    root   c:\myrepos\caddy
+}
+
+localhost:2070 {
     # 开启站点的静态文件服务和显示文件列表服务
     file_server browse
     # 指定站点根目录
@@ -127,6 +134,10 @@ localhost:2080  {
 # --from 后面的example.com  代理服务器中维护的域名
 # --to  后面的localhost:9000 为backend address，也就是后端的服务
 # 
+
+--上面三个block分别实现主页展示、显示指定目录文件列表和反向代理启动filebrowser功能。
+--我想学习在一个block里使用caddy所谓的matcher token实现这个三个功能，也就是在root、reverse_proxy等directive后
+--面设定请求匹配通配符，实现path matcher,不知道是哪里不对，实现不了。
 ~~~
 
 [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)参数详细用法
@@ -155,7 +166,11 @@ localhost:2080  {
 
 #### 初学caddy需要注意的五个要点
 
-* 无论是命令行方式运行caddy ，还是以`caddy run ` 或者`caddy start`使用配置文件运行caddy,一个容易忽略的要点是工作目录，最好切换到站点根目录。
+* 无论是命令行方式运行caddy ，还是以`caddy run ` 或者`caddy start`使用配置文件运行caddy,一个容易忽略的要点是工作目录，最好切换到站点根目录。如果不在当前的工作目录，需要用`--config`参数指定Caddyfile路径。
+
+     ~~~
+     caddy  start --config   c:\myrepos\caddy\Caddyfile
+     ~~~
 
 *  ~~~nginx
      Client sent an HTTP request to an HTTPS server.
