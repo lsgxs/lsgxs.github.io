@@ -37,11 +37,11 @@ cover:
 
 ##### caddy run 
 
-会运行一个前台caddy进程，直到你使用 `ctrl+c` 或者退出命令窗口
+会运行一个前台caddy进程，会阻塞终端窗口，无法继续运行其他命令，直到你使用 `ctrl+c` 或者退出命令窗口
 
 #####  caddy start 
 
-`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行进程,启动成功后返回，不会阻塞当前终端窗口使用。在Windows下任务管理器下可以看到caddy进程。但是关闭启动时的终端窗口后，caddy进程结束，在Windows测试如此，不知道在Linux下如何。如果想临时测试caddy服务，可以使用`caddy run`,如果想长时间使用caddy服务，建议使用`caddy start`。在正式使用caddy时，推荐把caddy安装为Windows的系统服务。
+`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行进程,启动成功后返回，不会阻塞当前终端窗口使用。在Windows下任务管理器下可以看到caddy进程。但是关闭启动时的终端窗口后，caddy进程结束，在Windows测试如此，不知道在Linux下如何。如果想临时测试caddy服务，可以使用`caddy run`,如果想长时间使用caddy服务，建议使用`caddy start`。在正式使用caddy时，推荐把caddy安装为Windows系统服务。
 
 ![](caddy-start-success.png)
 
@@ -116,7 +116,7 @@ caddy fmt --overwrite c:\myrepos\caddy\Caddyfile
 
   ~~~
   sc.exe create caddy start= auto binPath= "YOURPATH\caddy.exe run"
-  --把双引号中的YOURPATH替换caddy.exe的真实路径
+  --把双引号中的YOURPATH替换为caddy.exe真实路径
   ~~~
   
 * 启动caddy服务
