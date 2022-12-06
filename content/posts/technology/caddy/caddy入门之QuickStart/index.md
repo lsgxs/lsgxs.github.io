@@ -61,7 +61,7 @@ caddy file-server --listen  :2015
 
 第二个命令行加了`--listen`参数和端口号。此时在浏览器地址栏输入：`http://localhost:2015`或者`localhost:2015`。
 
-> 这前边两个命令行显示index.html的内容，如果没有index.html文件，浏览器自然什么也没有，我以为是哪里出错了。
+> 这前边两个命令行显示index.html的内容，如果没有index.html文件，浏览器自然什么也没有，以为是哪里出错了。
 
 ~~~ini
 caddy file-server --browse
@@ -172,7 +172,7 @@ localhost:2070 {
 }
 ~~~~
 
-在一个block内实现同样启用主页展示、文件列表显示、反向代理启动FileBrowser三个服务，解决了前边的疑惑。
+在一个block内启用主页展示、文件列表显示、反向代理启动FileBrowser三个服务，解决了前边的疑惑。
 
 有空看看[handle](https://caddyserver.com/docs/caddyfile/directives/handle#examples)和[handle_path](https://caddyserver.com/docs/caddyfile/directives/handle_path)
 
