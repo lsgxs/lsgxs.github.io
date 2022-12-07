@@ -43,7 +43,7 @@ cover:
 
 *  安装
    * [把 Caddy作为系统服务安装.](https://caddyserver.com/docs/running#manual-installation) 推荐这种安装方式。
-   * caddy是一个独立的可执行文件，不需要再安装，把下载到的caddy.exe放在工作目录下，然后把caddy.exe所在的目录加入系统环境变量。如果需要升级caddy,直接用新的caddy.exe覆盖。
+   * caddy是一个独立的可执行文件，不需要再安装，把下载到的caddy.exe放在工作目录下，然后把caddy.exe所在的目录加入系统环境变量path中。如果需要升级caddy,直接用新的caddy.exe覆盖。
 #### 运行caddy的两种方式
 #####  命令行运行caddy
 
@@ -59,15 +59,12 @@ caddy file-server --listen  :2015
 # 用--listen指定端口
 ~~~
 
-第二个命令行加了`--listen`参数和端口号。此时在浏览器地址栏输入：`http://localhost:2015`或者`localhost:2015`。
+第二个命令行加了`--listen`参数指定端口号。此时在浏览器地址栏输入：`http://localhost:2015`或者`localhost:2015`。
 
-> 这前边两个命令行显示index.html的内容，如果没有index.html文件，浏览器自然什么也没有，以为是哪里出错了。
-
-~~~ini
-caddy file-server --browse
-# 把当前目录做为要托管的站点 开启caddy的静态文件支持服务，并用--browse参数开启文件列表显示功能
 ~~~
-
+ caddy file-server --browse
+ -- 把当前目录做为要托管的站点 开启caddy的静态文件支持服务，并用--browse参数开启文件列表显示功能
+~~~
 第三个命令行多了一个`--browse`参数，可以在浏览器显示站点目录列表。如果有index.html则显示index.html的内容，如果没有index.html文件，就会显示当前站点的所有目录及文件。也就是说file-server会优先显示站点目录的主页，如果没有主页则会显示站点目录列表，列表中的文本文件可以直接打开，其他文件可通过浏览器下载。在根目录下有index.html的情况下想用`--browse`开启文件列表显示服务，需要把index.html修改为别的文件名，比如a_index.html,或者把index.html删除，在浏览器就可以显示站点目录列表。
 
 ~~~ini
@@ -88,10 +85,10 @@ localhost
 
 file_server
 
-#这两行命令是显示站点根目录下的index.html，如果没有自然是空白，以为是哪里出错了。
-#以Caddyfile配置文件的方式使用caddy run 启动，会自动转换为https协议
+#这两参数显示站点根目录下的index.html，如果没有自然是空白，以为是哪里出错了。
+#以Caddyfile配置文件的方式会默认会自动转换为https协议，除非域名或者主机地址使用http协议。
 ~~~
-`caddy  run `
+`caddy  run `  或者 `caddy  start`
 
 如果站点根目录下没有index.html文件，但是想显示文件列表的话，就在file_server后添加browse参数。关于file_server的详细用法，看最后的官方文档链接。
 
@@ -200,7 +197,7 @@ localhost:2070 {
   
     
 
-#### 初学caddy需要注意的五个要点
+#### 初学caddy需要注意的几个要点
 
 * 无论是命令行方式运行caddy ，还是以`caddy run ` 或者`caddy start`使用配置文件运行caddy,一个容易忽略的要点是工作目录，最好切换到站点根目录。如果不在当前的工作目录，需要用`--config`参数指定Caddyfile路径。
 
@@ -212,7 +209,7 @@ localhost:2070 {
      Client sent an HTTP request to an HTTPS server.
    ~~~
 
-  意思是caddy托管的是HTTPS web  server,可是客户端发出的是http请求，把协议更换为     HTTPS就可以了。有时浏览器会提示风险，继续信任即可打开托管的服务。
+  意思是caddy托管的是HTTPS web  server,可是客户端发出的是http请求，把协议更换为 HTTPS就可以了。有时浏览器会提示风险，继续信任即可打开托管的服务。
 
 * 由于不断变更启动caddy的参数，如果测试新的参数时没有出现预期效果，除了命令行、参数、配置文件错误外，多数情况是由于浏览器缓存的原因，清理缓存就好。
 
