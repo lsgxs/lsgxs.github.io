@@ -1,5 +1,5 @@
 ---
-title: "Nginx"
+title: "Nginx QuickStart"
 date: 2022-12-07T17:08:24+08:00
 draft: false
 # weight: 2
