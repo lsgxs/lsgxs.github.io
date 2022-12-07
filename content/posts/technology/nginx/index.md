@@ -87,7 +87,7 @@ server {
 
 ![](images/nginx-welcome.png)
 
-这里显示的内容是nginx自带的html/目录下的index.html。是通过server block下的location block解释的。
+这里显示的内容是nginx自带的html/目录下的index.html，是通过location block中的root   html 参数指定http请求资源的路径映射。
 
 ~~~nginx
 location /  {
