@@ -29,14 +29,14 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-**初识Nginx**
+#### **Nginx QuickStart**
 
 
 
-* 安装Windows版本的Nginx
+#####  安装Windows版本的Nginx
 
   从官网文档看，[Nginx](https://nginx.org/en/download.html)对Linux的支持更全面和广泛，毕竟后端的服务器阵营以Linux为主。这里仅仅是对Nginx入门级学习，没时间去折腾linux，就以Windows10虚拟机做为工作环境。这里下载[Nginx Stable version](https://nginx.org/en/download.html)。解压后的目录为`c:\myrepos\nginx`，目录结构如下图：
-  
+
   ~~~markdown
   nginx+
        |---conf
@@ -53,8 +53,8 @@ cover:
        -nginx.exe    
   
   ~~~
-  
-* 运行Nginx启用静态文件服务
+
+#####   运行Nginx启用静态文件服务
 
   切换到nginx所在的目录c:\myrepos\nginx,在Windows的CMD窗口下运行nginx.exe。此时系统提示一个错误信息
 
@@ -113,7 +113,7 @@ location /  {
 >
 >   This `location` block specifies the “`/`” prefix compared with the URI from the request. For matching requests, the URI will be added to the path specified in the [root](https://nginx.org/en/docs/http/ngx_http_core_module.html#root) directive, that is, to `/data/www`, to form the path to the requested file on the local file system.
 
-* 启用反向代理服务
+##### 启用反向代理服务
 
   ~~~nginx
   
@@ -159,12 +159,10 @@ location /  {
   }
   
   ~~~
-  
-  
 
-* nginx几个常用命令
+  ##### nginx几个常用命令
 
-  ~~~
+ ~~~
   # 在工作目录下启动nginx
   nginx 
   
@@ -181,38 +179,38 @@ location /  {
   # 重新打开日志文件
   nginx  -s  reopen
   
-  ~~~
-  
-* 在Windows下使用tasklist 查看进程信息
-  
-  如果不识别tasklist命令，切换到windows\system32目录，或者修改系统path变量。
-  
-  ~~~
-  tasklist  /if  "imagename eq  nginx.exe"
-  ~~~
-  
-  > 引用：[Beginner 's Guide](https://nginx.org/en/docs/beginners_guide.html)
+ ~~~
 
-  
+##### 在Windows下使用tasklist 查看进程信息
 
-* Map requests to the directory  in local file system by  root  directives in location block
+如果不识别tasklist命令，切换到windows\system32目录，或者修改系统path变量。
 
-  For matching requests, the URI will be added to the path specified in the [root](https://nginx.org/en/docs/http/ngx_http_core_module.html#root) directive，to form the path to the requested file on the local file system.
+~~~
+tasklist  /if  "imagename eq  nginx.exe"
+~~~
 
-  > ```nginx
-  > server {
-  >     location / {
-  >         root /data/www;
-  >     }
-  > 
-  >     location /images/ {
-  >         root /data;
-  >     }
-  > }
-  > ```
+> 引用：[Beginner 's Guide](https://nginx.org/en/docs/beginners_guide.html)
+
+
+
+##### Map requests to the directory  in local file system by  root  directives in location block
+
+For matching requests, the URI will be added to the path specified in the [root](https://nginx.org/en/docs/http/ngx_http_core_module.html#root) directive，to form the path to the requested file on the local file system.
+
+> ```nginx
+> server {
+>     location / {
+>         root /data/www;
+>     }
+> 
+>     location /images/ {
+>         root /data;
+>     }
+> }
+> ```
 
 In response to requests with URIs starting with `/images/`, the server will send files from the `/data/images` directory.(add /images/xxx after to the root , /data  )
 
  For example, in response to the `http://localhost/images/example.png` request nginx will send the `/data/images/example.png` file.
 
-* Next ......
+##### Next ......
