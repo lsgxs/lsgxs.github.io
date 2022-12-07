@@ -2,8 +2,8 @@
 title: "PaperMod QucikStart"
 date: 2022-11-24T17:42:04+08:00
 draft: false
-tags: ["first"]
-weight: 4
+tags: ["PaperMod]
+weight: 1
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
