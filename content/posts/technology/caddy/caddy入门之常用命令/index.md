@@ -41,7 +41,7 @@ cover:
 
 #####  caddy start 
 
-`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行进程,启动成功后返回，不会阻塞当前终端窗口使用。在Windows下任务管理器下可以看到caddy进程。但是关闭启动时的终端窗口后，caddy进程结束，在Windows测试如此，不知道在Linux下如何。如果想临时测试caddy服务，可以使用`caddy run`,如果想长时间使用caddy服务，建议使用`caddy start`。在正式使用caddy时，推荐把caddy安装为Windows系统服务。
+`start` 命令的使用 `run` 一样启动caddy，但是 `start` 启动一个后台运行进程,启动成功后返回，不会阻塞当前终端窗口使用。在Windows下任务管理器下可以看到caddy进程。但是关闭启动时的终端窗口后，caddy进程结束，在Windows测试如此，不知道在Linux下如何。如果想临时测试caddy服务，可以使用`caddy run`,也可以使用`caddy start`，两个命令的区别是`caddy run`会阻塞当前终端窗口，需要运行别的命令的话要再开新终端窗口，而`caddy start`不会阻塞终端窗口，运行成功后启动caddy进程，并返回到终端命令提示符。在正式使用caddy时，推荐把caddy安装为Windows系统服务。
 
 ![](caddy-start-success.png)
 
@@ -103,12 +103,12 @@ caddy提供的一个辅助工具，可以格式Caddyfile配置文件。
 ~~~
 caddy fmt --overwrite c:\myrepos\caddy\Caddyfile
   --这里的overwrites参数是指用格式化的文件直接覆盖原文件
-  --如果注释里有中文，在使用本命令之前备份一份，我发现fmt之后全部乱码，还不知道如何支持中午注释的Caddyfile。
+  --如果注释里有中文，在使用本命令之前备份一份，我发现fmt之后全部乱码。
 ~~~
 
 ##### caddy adapt 
 
-可以把Caddyfile文件的内容转换成caddy 默认的json格式。
+可以把Caddyfile文件内容转换成caddy 默认的json格式。
 
 ##### 把caddy安装为Windows系统服务
 
