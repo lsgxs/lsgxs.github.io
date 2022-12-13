@@ -9,7 +9,7 @@
       <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 28 Nov 2022 22:04:58 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/tags/first/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2022 21:51:27 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/tags/first/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Todolist</title>
       <link>https://lsgxs.github.io/posts/read/todolist/</link>
@@ -20,11 +20,56 @@
     </item>
     
     <item>
-      <title>MyPaperModQucikStart</title>
-      <link>https://lsgxs.github.io/posts/technology/mypapermodqucikstart/</link>
-      <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
+      <title>posts</title>
+      <link>https://lsgxs.github.io/posts/</link>
+      <pubDate>Wed, 07 Dec 2022 17:08:24 +0800</pubDate>
       
-      <guid>https://lsgxs.github.io/posts/technology/mypapermodqucikstart/</guid>
+      <guid>https://lsgxs.github.io/posts/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://lsgxs.github.io/posts/technology/</link>
+      <pubDate>Wed, 07 Dec 2022 17:08:24 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>CollectionForTechnolgoyWeekly</title>
+      <link>https://lsgxs.github.io/posts/technology/tech-weekly/</link>
+      <pubDate>Sat, 03 Dec 2022 21:51:27 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/tech-weekly/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Caddy QuickStart</title>
+      <link>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/</link>
+      <pubDate>Fri, 02 Dec 2022 21:31:59 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Caddy Command Line</title>
+      <link>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Fri, 02 Dec 2022 19:43:35 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>FileBrowser</title>
+      <link>https://lsgxs.github.io/posts/technology/filebrowser/</link>
+      <pubDate>Wed, 30 Nov 2022 21:03:15 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/filebrowser/</guid>
       <description>Desc Text.</description>
     </item>
     
@@ -34,24 +79,6 @@
       <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
       
       <guid>https://lsgxs.github.io/posts/technology/html/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>posts</title>
-      <link>https://lsgxs.github.io/posts/</link>
-      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://lsgxs.github.io/posts/technology/</link>
-      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/technology/</guid>
       <description>Desc Text.</description>
     </item>
     
@@ -70,15 +97,6 @@
       <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
       
       <guid>https://lsgxs.github.io/posts/download/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>文件下载</title>
-      <link>https://lsgxs.github.io/posts/download/mydownload/</link>
-      <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/download/mydownload/</guid>
       <description>Desc Text.</description>
     </item>
     

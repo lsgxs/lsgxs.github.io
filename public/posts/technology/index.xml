@@ -9,49 +9,67 @@
       <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 28 Nov 2022 22:04:58 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/posts/technology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Dec 2022 17:08:24 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/posts/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Papermod参数设置</title>
-      <link>https://lsgxs.github.io/posts/technology/hugo/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</link>
-      <pubDate>Tue, 22 Nov 2022 17:20:56 +0800</pubDate>
+      <title>PaperMod QucikStart</title>
+      <link>https://lsgxs.github.io/posts/technology/papermodqucikstart/</link>
+      <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
       
-      <guid>https://lsgxs.github.io/posts/technology/hugo/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</guid>
-      <description>PaperMod主题config.yml文件的常用参数及设置 paginate : 8 一页显示8个文档
-theme: PaperMod 主题名称
-ShowCodeCopyButtons: 显示代码复制按钮
-UseHogoToc: false 设置为false，可以使用下面两项使用PaperMod自带的toc设置
-showtoc: true
-tocopen: true
-weight： 决定这篇文章的优先级，可以把经常需要看的置顶，设置为1、2、3等顺序。
-ProfileMode:
-enabled : true 设置为true的话，主题显示为profile mode 风格，设置为false为regular常规模式 menu下的main :
-identifier: archives
-name: archives
-url: /archives/
-weight: 10
-- identifier: posts
-name: posts
-url: /posts/
-weight: 10
-- identifier: tags
-name: tags
-url: /tags/
-weight: 20
-- identifier: search
-name: search
-url: /search/
-weight: 10
-​ 这里对应的是模板文件：archives、posts、search
-先记录这些，基本可以让博客运行起来，其他的可以再测试。
-Front Matter区域的参数设置 itle: &amp;#34;{{ replace .</description>
+      <guid>https://lsgxs.github.io/posts/technology/papermodqucikstart/</guid>
+      <description>Desc Text.</description>
     </item>
     
     <item>
-      <title>MyPaperModQucikStart</title>
-      <link>https://lsgxs.github.io/posts/technology/mypapermodqucikstart/</link>
-      <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
+      <title>Nginx QuickStart</title>
+      <link>https://lsgxs.github.io/posts/technology/nginx/</link>
+      <pubDate>Wed, 07 Dec 2022 17:08:24 +0800</pubDate>
       
-      <guid>https://lsgxs.github.io/posts/technology/mypapermodqucikstart/</guid>
+      <guid>https://lsgxs.github.io/posts/technology/nginx/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>CollectionForTechnolgoyWeekly</title>
+      <link>https://lsgxs.github.io/posts/technology/tech-weekly/</link>
+      <pubDate>Sat, 03 Dec 2022 21:51:27 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/tech-weekly/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Caddy QuickStart</title>
+      <link>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/</link>
+      <pubDate>Fri, 02 Dec 2022 21:31:59 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Caddy Command Line</title>
+      <link>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Fri, 02 Dec 2022 19:43:35 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>正向代理和反向代理</title>
+      <link>https://lsgxs.github.io/posts/technology/network/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Thu, 01 Dec 2022 13:01:08 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/network/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
+      <description>forward and reverse proxy</description>
+    </item>
+    
+    <item>
+      <title>FileBrowser</title>
+      <link>https://lsgxs.github.io/posts/technology/filebrowser/</link>
+      <pubDate>Wed, 30 Nov 2022 21:03:15 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/filebrowser/</guid>
       <description>Desc Text.</description>
     </item>
     
@@ -89,6 +107,42 @@ Front Matter区域的参数设置 itle: &amp;#34;{{ replace .</description>
       
       <guid>https://lsgxs.github.io/posts/technology/hugo/pagebundle/</guid>
       <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Papermod参数设置</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Tue, 22 Nov 2022 17:20:56 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/hugo/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</guid>
+      <description>PaperMod主题config.yml文件的常用参数及设置 paginate : 8 一页显示8个文档
+theme: PaperMod 主题名称
+ShowCodeCopyButtons: 显示代码复制按钮
+UseHogoToc: false 设置为false，可以使用下面两项使用PaperMod自带的toc设置
+showtoc: true
+tocopen: true
+weight： 决定这篇文章的优先级，可以把经常需要看的置顶，设置为1、2、3等顺序。
+ProfileMode:
+enabled : true 设置为true的话，主题显示为profile mode 风格，设置为false为regular常规模式 menu下的main :
+identifier: archives
+name: archives
+url: /archives/
+weight: 10
+- identifier: posts
+name: posts
+url: /posts/
+weight: 10
+- identifier: tags
+name: tags
+url: /tags/
+weight: 20
+- identifier: search
+name: search
+url: /search/
+weight: 10
+​ 这里对应的是模板文件：archives、posts、search
+先记录这些，基本可以让博客运行起来，其他的可以再测试。
+Front Matter区域的参数设置 itle: &amp;#34;{{ replace .</description>
     </item>
     
     <item>

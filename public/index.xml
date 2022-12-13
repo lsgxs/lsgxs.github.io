@@ -9,13 +9,130 @@
       <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 28 Nov 2022 22:04:58 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Dec 2022 17:08:24 +0800</lastBuildDate><atom:link href="https://lsgxs.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Todolist</title>
       <link>https://lsgxs.github.io/posts/read/todolist/</link>
       <pubDate>Mon, 28 Nov 2022 10:11:27 +0800</pubDate>
       
       <guid>https://lsgxs.github.io/posts/read/todolist/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>PaperMod QucikStart</title>
+      <link>https://lsgxs.github.io/posts/technology/papermodqucikstart/</link>
+      <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/papermodqucikstart/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Nginx QuickStart</title>
+      <link>https://lsgxs.github.io/posts/technology/nginx/</link>
+      <pubDate>Wed, 07 Dec 2022 17:08:24 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/nginx/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>CollectionForTechnolgoyWeekly</title>
+      <link>https://lsgxs.github.io/posts/technology/tech-weekly/</link>
+      <pubDate>Sat, 03 Dec 2022 21:51:27 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/tech-weekly/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Caddy QuickStart</title>
+      <link>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/</link>
+      <pubDate>Fri, 02 Dec 2022 21:31:59 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Caddy Command Line</title>
+      <link>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Fri, 02 Dec 2022 19:43:35 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>正向代理和反向代理</title>
+      <link>https://lsgxs.github.io/posts/technology/network/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Thu, 01 Dec 2022 13:01:08 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/network/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
+      <description>forward and reverse proxy</description>
+    </item>
+    
+    <item>
+      <title>FileBrowser</title>
+      <link>https://lsgxs.github.io/posts/technology/filebrowser/</link>
+      <pubDate>Wed, 30 Nov 2022 21:03:15 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/filebrowser/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Html简要学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/html/</link>
+      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/html/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>善用github之Pull Request</title>
+      <link>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>常用软件</title>
+      <link>https://lsgxs.github.io/posts/download/mydownload/</link>
+      <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/download/mydownload/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>阅读计划</title>
+      <link>https://lsgxs.github.io/posts/read/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/</link>
+      <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/read/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Difference Between Git Clone Submoudule Downlaod</title>
+      <link>https://lsgxs.github.io/posts/technology/difference-between-git-clone-submoudule-downlaod/</link>
+      <pubDate>Wed, 23 Nov 2022 22:48:02 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/difference-between-git-clone-submoudule-downlaod/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>page bundle</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo/pagebundle/</link>
+      <pubDate>Tue, 22 Nov 2022 22:12:51 +0800</pubDate>
+      
+      <guid>https://lsgxs.github.io/posts/technology/hugo/pagebundle/</guid>
       <description>Desc Text.</description>
     </item>
     
@@ -53,69 +170,6 @@ weight: 10
 ​ 这里对应的是模板文件：archives、posts、search
 先记录这些，基本可以让博客运行起来，其他的可以再测试。
 Front Matter区域的参数设置 itle: &amp;#34;{{ replace .</description>
-    </item>
-    
-    <item>
-      <title>MyPaperModQucikStart</title>
-      <link>https://lsgxs.github.io/posts/technology/mypapermodqucikstart/</link>
-      <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/technology/mypapermodqucikstart/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>Html简要学习笔记</title>
-      <link>https://lsgxs.github.io/posts/technology/html/</link>
-      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/technology/html/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>善用github之Pull Request</title>
-      <link>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</link>
-      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>文件下载</title>
-      <link>https://lsgxs.github.io/posts/download/mydownload/</link>
-      <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/download/mydownload/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>阅读计划</title>
-      <link>https://lsgxs.github.io/posts/read/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/</link>
-      <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/read/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>Difference Between Git Clone Submoudule Downlaod</title>
-      <link>https://lsgxs.github.io/posts/technology/difference-between-git-clone-submoudule-downlaod/</link>
-      <pubDate>Wed, 23 Nov 2022 22:48:02 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/technology/difference-between-git-clone-submoudule-downlaod/</guid>
-      <description>Desc Text.</description>
-    </item>
-    
-    <item>
-      <title>page bundle</title>
-      <link>https://lsgxs.github.io/posts/technology/hugo/pagebundle/</link>
-      <pubDate>Tue, 22 Nov 2022 22:12:51 +0800</pubDate>
-      
-      <guid>https://lsgxs.github.io/posts/technology/hugo/pagebundle/</guid>
-      <description>Desc Text.</description>
     </item>
     
     <item>
