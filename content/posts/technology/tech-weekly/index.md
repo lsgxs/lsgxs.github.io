@@ -2,7 +2,7 @@
 title: "CollectionForTechnolgoyWeekly"
 date: 2022-12-03T21:51:27+08:00
 draft: false
-# weight: 2
+weight: 18
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
