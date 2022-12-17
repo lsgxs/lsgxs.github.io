@@ -1,5 +1,5 @@
 ---
-title: "在本地计算机安装Wordpress"
+title: "在本地计算机安装WordPress"
 date: 2022-12-16T22:23:57+08:00
 draft: false
 # weight: 2
@@ -31,7 +31,7 @@ cover:
 
 ####   安装  xampp、下载 wordpress
 
-* 把解压后的wordperss目录复制在xampp的htdocs目录下，这里为c:\xampp\htdocs\wordpress
+* 下载安装[xampp](https://www.apachefriends.org/index.html)，下载[wordpress](https://wordpress.org/)。把解压后的wordperss目录复制在xampp的htdocs目录下，这里为c:\xampp\htdocs\wordpress
 
 * 启动xampp面板，选择 start  Apache、start mysql。如果有别的web服务器启动，需要先停止服务。比如本机自动启动caddy的话，终止caddy服务，解决端口冲突，因为这里有Apache启动。
 
@@ -71,12 +71,12 @@ cover:
 
 
 
-下面就可以在dashborad里熟悉各种功能，比如下载和应用themes,让你自己的网站符合自己的审美需求。
+下面就可以在dashborad里熟悉各种功能，比如下载和应用themes。
 
 #### 总结
 
 * wordpress是用php开发的基于Web(Apache)和数据库(mysql等)的内容管理系统(CMS)。而xampp是方便用户使用wordpress的本地集成环境。
-* 利用xampp再本地安装wordpress总共有四步
+* 利用xampp在本地安装wordpress总共有四步
   * 安装xampp、解压wordpress到htdocs
   * 利用phpMyAdmin创建数据库
   * 连接数据库，把所有连接参数保存在新建的wp-config.php文件里
@@ -88,9 +88,11 @@ cover:
 
 * 首先安装设置Apache
 
-  为什么要先安装Apache呢，因为wordpress是由php开发的基于浏览器的web应用，所有的功能都通过http请求完成，所有必须有web服务器。配置Apache的配置文件，设置站点目录等。web服务器设置后之后，就可以运行php程序，让流程走起来。
+  为什么要先安装Apache呢，因为wordpress是由php开发的基于浏览器的web应用，所有的功能都通过http请求完成，通过web服务器响应http请求。配置Apache的配置文件，设置站点目录等。web服务器设置后之后，就可以运行php程序，让流程走起来。
 
 * 安装mysql、创建数据库、连接数据库
+
+* 手动安装php？以后再来实践，现在不清楚。
 
 * 安装wordress
 
