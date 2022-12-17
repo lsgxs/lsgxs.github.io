@@ -65,7 +65,9 @@ cover:
 
 #### wordpress管理界面
 
-登录wordpress的管理界面dashboard（在没有学会重置密码前，最好记录好数据库用户名、密码和站点登录的用户名和密码，时间长了可能会忘记）
+登录wordpress的管理界面dashboard：https://localhost/wordpress/wp-admin
+
+（在没有学会重置密码前，最好记录好数据库用户名、密码和站点登录的用户名和密码，时间长了可能会忘记）
 
 ![](images/dashboard.png)
 
