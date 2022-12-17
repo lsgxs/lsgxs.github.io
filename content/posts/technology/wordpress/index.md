@@ -6,7 +6,7 @@ draft: false
 tags: ["wordpress"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: false
@@ -35,7 +35,7 @@ cover:
 
 * 启动xampp面板，选择 start  Apache、start mysql。如果有别的web服务器启动，需要先停止服务。比如本机自动启动caddy的话，终止caddy服务，解决端口冲突，因为这里有Apache启动。
 
-#### 使用phpMyAdmin创建mysql数据库。
+#### 使用phpMyAdmin创建mysql数据库
 
 * 打开浏览器，在地址栏输入localhost，此时会显示`Welcome to XAMPP for Windows `，点击屏幕顶部的`phpMyAdmin`，进入数据库设置面板。或者直接在地址栏输入`localhost/wordperss/phpMyAdmin`
 
@@ -43,13 +43,10 @@ cover:
 
   ![](images/wordpress-setup.png)
   ![](images/wordpress-setup-create-database.png)
-  ![](images/wordpress-setup-create-database-2.png)
-  这里设置root用户的密码暂时为空密码
-  
  #### 连接数据库
 
    在浏览器地址栏输入`localhost/wordpress` ，配置连接数据库的参数。需要输入前边创建的数据库名称和用户名(root)
-
+ ![](images/wordpress-setup-create-database-2.png)
  ![](images/wordpress-setup-create-database-3.png)
   提示信息显示wordpress已经可以和新建的数据库通讯了，开始安装wordpress.
 
@@ -70,5 +67,19 @@ cover:
 #### 总结
 
 wordpress是用php开发的基于Web(Apache)和数据库(mysql等)的内容管理系统(CMS)。而xampp是方便用户使用wordpress的本地集成环境。
+
+#### 手动安装Apach、php、mysql、wordpress  
+
+通过Xampp安装wordpress及其所需要的各种软件非常方便，帮助你快速上手wordpress，构建出自己喜欢的个人站点。如果想知道背后的细节，有有必要自己手动安装所有的组件，实现同样的功能。从xampp提供的环境及整个安装流程，大概知道首先要配置Apache的相关配置文件，让Apache可以支持wordpress,或者说支持php，毕竟wordpress是由php制作的软件，然后由wordress去完成数据库的创建和连接，所有这些基础设施准备好之后，主角登场，开始安装wordpress。
+
+* 首先安装设置Apache
+
+  为什么要先安装Apache呢，因为wordpress是由php开发的基于浏览器的web应用，所有的功能都通过http请求完成，所有必须有web服务器。配置Apache的配置文件，设置站点目录等。web服务器设置后之后，就可以运行php程序，让流程走起来。
+
+* 安装mysql、创建数据库、连接数据库
+
+* 安装wordress
+
+  这些步骤是基于xampp的配置环境判断，自己还没有手动安装，这里大概写记录一下自己的猜测，等真正完成后再来重新做笔记。
 
   
