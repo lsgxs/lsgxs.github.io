@@ -53,7 +53,7 @@ cover:
  ![](images/wordpress-setup-connect-database.png)  
  ![](images/wordpress-setup-create-database-2.png)
  ![](images/wordpress-setup-create-database-3.png)
-  成功连接创建的数据库db_wordpress_1后，wordpress已经可以和新建的数据库通讯了，点击左下角的[run the install]开始安装wordpress.
+  成功连接创建的数据库wordpress_db1后，wordpress已经可以和新建的数据库通讯了，点击左下角的[run the install]开始安装wordpress.
 
  #### 安装wordpress
   ![](images/wordpress-installation.png)
@@ -82,7 +82,7 @@ cover:
   * 连接数据库，把所有连接参数保存在新建的wp-config.php文件里
   * 安装wordpress并登录管理面板，开始使用wordpress建立自己的站点
 
-#### 手动安装Apach、php、mysql、wordpress  
+#### 手动安装Apache、php、mysql、wordpress  
 
 通过Xampp安装wordpress及其所需要的各种软件非常方便，帮助你快速上手wordpress，构建出自己喜欢的个人站点。如果想知道背后的细节，有有必要自己手动安装所有的组件，实现同样的功能。从xampp提供的环境及整个安装流程，大概知道首先要配置Apache的相关配置文件，让Apache可以支持wordpress,或者说支持php，毕竟wordpress是由php制作的软件，然后由wordress去完成数据库的创建和连接，所有这些基础设施准备好之后，主角登场，开始安装wordpress。
 
