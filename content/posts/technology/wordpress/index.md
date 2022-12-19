@@ -116,31 +116,26 @@ Installation: Famous 5-minute install
 
 #####  如何手动安装WordPress
 
+###### 1.  手动安装WordPress之前的准备工作(系统环境)
 
-
-###### 1.  手动安装WordPress之前的准备工作
-
-1. 系统环境
-   - PHP version 7.4+
-   - MySQL version 5.7+ or MariaDB 10.2+
-   - HTTPS support
-
-2. 从官网下载 [WordPress](https://WordPress.org/download/) 
-
-3. 把解压的WordPress目录使用FTP Client上传到站点服务器的Apache的htdocs目录下
+- PHP version 7.4+
+- MySQL version 5.7+ or MariaDB 10.2+
+- HTTPS support
+- 从官网下载 [WordPress](https://WordPress.org/download/) （Recommend PHP 7.4 or greater and MySQL 5.7 or MariaDB version 10.3 or greate）
+- 把解压的WordPress目录使用FTP Client上传到站点服务器的Apache的htdocs目录下
 
 ###### 2. 创建MySQL数据库和数据库用户
 
-1. Create a new **MySQL database name**, **username**, and **password**.
+   设置 MySQL 数据库名称,数据库用户名称, 密码
 
 ###### 3. 配置wp-config.php
 
  wp-config.php是让WordPerss连接数据库服务器的配置文件。首先把WordPress目录下的wp-config-sample.php重命名为wp-config.php。
 
-1. 使用编辑器打开wp-config.php文件。（这里编辑器使用vscode）
-1. 在文件中查找下面的内容，把文件中的 **database_name_here**, **username_here**, and **password_here**替换为新建立的MySql数据库对应的参数 。
+* 使用编辑器打开wp-config.php文件。（这里编辑器使用vscode）
+* 在文件中查找下面的内容，把文件中的 **database_name_here**, **username_here**, and **password_here**替换为新建立的MySql数据库对应的参数 。
 
-  ~~~
+  ~~~nginx
 // ** MySQL settings - You can get this info from your web host ** // 
 
 /** The name of the database for WordPress */
@@ -165,15 +160,15 @@ define( 'DB_HOST', 'localhost' );
 
 ##### 4. 运行安装WordPress的php脚本
 
- 在浏览器输入yourdoman.tld/wp-admin/install.php,打开WordPress设置页面
+ 在浏览器输入yourdoman/wp-admin/install.php,打开WordPress安装页面
 
-1. 选择站点使用的语言后继续
+* 选择站点使用的语言后继续
 
-   ![](images/WordPress-setup.png)
+![](images/WordPress-setup.png)
 
-2. 在下图所示的表单中填写站点基本信息
+* 在下图所示的表单中填写站点基本信息
 
-   ![](images/WordPress-installation.png))
+![](images/WordPress-installation.png))
 
 - **Site Title**：  为WordPress 站点指定标题
 
@@ -183,5 +178,5 @@ define( 'DB_HOST', 'localhost' );
 
   设置完毕后点击左下角的`**Install WordPress**`按钮完成安装。
 
-3. 填写用户名和密码登录WordPress站点
+* 填写用户名和密码登录WordPress站点
 
