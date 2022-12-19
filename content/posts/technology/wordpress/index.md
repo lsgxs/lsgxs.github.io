@@ -3,7 +3,7 @@ title: "在本地计算机安装WordPress"
 date: 2022-12-16T22:23:57+08:00
 draft: false
 # weight: 2
-tags: ["wordpress"]
+tags: ["WordPress"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true
@@ -29,9 +29,9 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-####   安装  xampp、下载 wordpress
+####   安装  xampp、下载 WordPress
 
-* 下载安装[xampp](https://www.apachefriends.org/index.html)，下载[wordpress](https://wordpress.org/)。把解压后的wordperss目录复制在xampp的htdocs目录下，这里为c:\xampp\htdocs\wordpress
+* 下载安装[xampp](https://www.apachefriends.org/index.html)，下载[WordPress](https://WordPress.org/)。把解压后的wordperss目录复制在xampp的htdocs目录下，这里为c:\xampp\htdocs\WordPress
 
 * 启动xampp面板，选择 start  Apache、start mysql。如果有别的web服务器启动，需要先停止服务。比如本机自动启动caddy的话，终止caddy服务，解决端口冲突，因为这里有Apache启动。
 
@@ -48,24 +48,24 @@ cover:
 
  #### 连接数据库
 
-   在浏览器地址栏输入`localhost/wordpress` ，配置连接数据库的参数。需要输入前边创建的数据库名称、用户名(root)、密码。输入`localhost/wordperss`之后，地址栏地址变化为`localhost/wordperss/wp-admin/setup-config.php`,进入数据库参数设置页面。自己估计应该是在Apache的代理设置里做了路由匹配，把`/wordpress`直接映射为/wordpress/wp-admin/setup-config.php。
- ![](images/wordpress-setup.png)
- ![](images/wordpress-setup-connect-database.png)  
- ![](images/wordpress-setup-create-database-2.png)
- ![](images/wordpress-setup-create-database-3.png)
-  成功连接创建的数据库wordpress_db1后，wordpress已经可以和新建的数据库通讯了，点击左下角的[run the install]开始安装wordpress.
+   在浏览器地址栏输入`localhost/WordPress` ，配置连接数据库的参数。需要输入前边创建的数据库名称、用户名(root)、密码。输入`localhost/wordperss`之后，地址栏地址变化为`localhost/wordperss/wp-admin/setup-config.php`,进入数据库参数设置页面。自己估计应该是在Apache的代理设置里做了路由匹配，把`/WordPress`直接映射为/WordPress/wp-admin/setup-config.php。
+ ![](images/WordPress-setup-connect-database.png)  
+ ![](images/WordPress-setup-create-database-2.png)
+ ![](images/WordPress-setup-create-database-3.png)
+  成功连接创建的数据库WordPress_db1后，WordPress已经可以和新建的数据库通讯了，点击左下角的[run the install]开始安装WordPress.
 
- #### 安装wordpress
-  ![](images/wordpress-installation.png)
-  ![](images/wordpress-setup-create-database-4.png)
+ #### 安装WordPress
+  ![](images/WordPress-setup.png)
+  ![](images/WordPress-installation.png)
+  ![](images/WordPress-setup-create-database-4.png)
 
 经过这一系列列的操作，最终把各项参数保存在新建的wp-config.php文件中。如果想重新学习安装流程，可以把wp-config.php删除，再把旧的数据库表删除，如下图提示：
 
-![](images/wordpress-reinstall.png)
+![](images/WordPress-reinstall.png)
 
-#### wordpress管理界面
+#### WordPress管理界面
 
-登录wordpress的管理界面dashboard：https://localhost/wordpress/wp-admin
+登录WordPress的管理界面dashboard：https://localhost/WordPress/wp-admin
 
 （在没有学会重置密码前，最好记录好数据库用户名、密码和站点登录的用户名和密码，时间长了可能会忘记）
 
@@ -75,32 +75,28 @@ cover:
 
 下面就可以在dashborad里熟悉各种功能，比如下载和应用themes。
 
-#### 总结
+#### 使用xampp在本地安装WordPress总结
 
-* wordpress是用php开发的基于Web(Apache)和数据库(mysql等)的内容管理系统(CMS)。而xampp是方便用户使用wordpress的本地集成环境。
-* 利用xampp在本地安装wordpress总共有四步
-  * 安装xampp、解压wordpress到htdocs
+* WordPress是用php开发的基于Web(Apache)和数据库(mysql等)的内容管理系统(CMS)。而xampp是方便用户使用WordPress的本地集成环境。
+* 利用xampp在本地安装WordPress总共有四步
+  * 安装xampp、解压WordPress到htdocs
   * 利用phpMyAdmin创建数据库
   * 连接数据库，把所有连接参数保存在新建的wp-config.php文件里
-  * 安装wordpress并登录管理面板，开始使用wordpress建立自己的站点
+  * 安装WordPress并登录管理面板，开始使用WordPress建立自己的站点
 
-#### 手动安装Apache、php、mysql、wordpress  
+#### 手动安装Apache、php、mysql、WordPress  
 
-通过Xampp安装wordpress及其所需要的各种软件非常方便，帮助你快速上手wordpress，构建出自己喜欢的个人站点。如果想知道背后的细节，有有必要自己手动安装所有的组件，实现同样的功能。从xampp提供的环境及整个安装流程，大概知道首先要配置Apache的相关配置文件，让Apache可以支持wordpress,或者说支持php，毕竟wordpress是由php制作的软件，然后由wordress去完成数据库的创建和连接，所有这些基础设施准备好之后，主角登场，开始安装wordpress。
+通过Xampp安装WordPress及其所需要的各种软件非常方便，帮助你快速上手WordPress，构建出自己喜欢的个人站点。如果想知道背后的细节，有有必要自己手动安装所有的组件，实现同样的功能。从xampp提供的环境及整个安装流程，大概知道首先要配置Apache的相关配置文件，让Apache可以支持WordPress,或者说支持php，毕竟WordPress是由php制作的软件，然后由wordress去完成数据库的创建和连接，所有这些基础设施准备好之后，主角登场，开始安装WordPress。
 
-* 首先安装设置Apache
+* 安装设置Apache
 
-  为什么要先安装Apache呢，因为wordpress是由php开发的基于浏览器的web应用，所有的功能都通过http请求完成，通过web服务器响应http请求。配置Apache的配置文件，设置站点目录等。web服务器设置后之后，就可以运行php程序，让流程走起来。
+  * 为什么要先安装Apache呢，因为WordPress是由php开发的基于浏览器的web应用，所有的功能都通过http请求完成。web服务器收到http请求后,对静态的资源直接回传给浏览器，动态资源由web服务器调用php引擎（比如php.exe），由php引擎执行完毕后把结果返回给web服务器，再由web服务器把网页传送给客户端的浏览器。
+  * 配置Apache的配置文件，设置站点目录等。web服务器设置后之后，就可以运行php程序，让流程走起来。
+  * 如果是在真实的云服务器设置自己的站点，一般会有相应的web服务器,也许就不需要自己安装，设置就好（有点懒，等购买了真实的域名和服务器部署完成后再来改写这篇文章）
 
-* 安装mysql、创建数据库、连接数据库
-
-* 手动安装php？以后再来实践，现在不清楚。
-
-* 安装wordress
-
-  这些步骤是基于xampp的配置环境判断，自己还没有手动安装，这里大概写记录一下自己的猜测，等真正完成后再来重新做笔记。
-
-  wordpress自带的readme.html文件其中一部分，看了这个就知道如何完成wordpress安装
+  
+  
+  WordPress自带的readme.html文件其中一部分，看了这个就知道如何完成WordPress安装
 
 ~~~
 Installation: Famous 5-minute install
@@ -115,4 +111,77 @@ Installation: Famous 5-minute install
     The installer should then send you to the login page. Sign in with the username and password you chose during the installation. If a password was generated for you, you can then click on “Profile” to change the password.
 
 ~~~
+
+---
+
+#####  如何手动安装WordPress
+
+
+
+###### 1.  手动安装WordPress之前的准备工作
+
+1. 系统环境
+   - PHP version 7.4+
+   - MySQL version 5.7+ or MariaDB 10.2+
+   - HTTPS support
+
+2. 从官网下载 [WordPress](https://WordPress.org/download/) 
+
+3. 把解压的WordPress目录使用FTP Client上传到站点服务器的Apache的htdocs目录下
+
+###### 2. 创建MySQL数据库和数据库用户
+
+1. Create a new **MySQL database name**, **username**, and **password**.
+
+###### 3. 配置wp-config.php
+
+ wp-config.php是让WordPerss连接数据库服务器的配置文件。首先把WordPress目录下的wp-config-sample.php重命名为wp-config.php。
+
+1. 使用编辑器打开wp-config.php文件。（这里编辑器使用vscode）
+1. 在文件中查找下面的内容，把文件中的 **database_name_here**, **username_here**, and **password_here**替换为新建立的MySql数据库对应的参数 。
+
+  ~~~
+// ** MySQL settings - You can get this info from your web host ** // 
+
+/** The name of the database for WordPress */
+
+define( 'DB_NAME', 'database_name_here' );
+
+/** MySQL database username */
+
+define( 'DB_USER', 'username_here' );
+
+/** MySQL database password */
+
+define( 'DB_PASSWORD', 'password_here' );
+
+/** MySQL hostname */
+
+define( 'DB_HOST', 'localhost' );
+  ~~~
+
+
+
+
+##### 4. 运行安装WordPress的php脚本
+
+ 在浏览器输入yourdoman.tld/wp-admin/install.php,打开WordPress设置页面
+
+1. 选择站点使用的语言后继续
+
+   ![](images/WordPress-setup.png)
+
+2. 在下图所示的表单中填写站点基本信息
+
+   ![](images/WordPress-installation.png))
+
+- **Site Title**：  为WordPress 站点指定标题
+
+- 设置 WordPress站点的用户名、密码、 邮箱 ，用来登录到WordPress Dashboard进行站点后台管理。
+
+- 如果不想让搜索引擎索引搜索你的站点，选中`Discourage search engines from indexing this site`选项。
+
+  设置完毕后点击左下角的`**Install WordPress**`按钮完成安装。
+
+3. 填写用户名和密码登录WordPress站点
 
