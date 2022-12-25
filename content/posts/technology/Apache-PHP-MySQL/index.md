@@ -1,5 +1,5 @@
 ---
-title: "InstallApache PHP MySQL Manually"
+title: "Install Apache PHP MySQL Manually"
 date: 2022-12-21T17:09:58+08:00
 draft: false
 # weight: 2
@@ -22,11 +22,7 @@ ShowPostNavLinks: true
 UseHugoToc: false
 ShowCodeCopyButtons: true
 cover:
-    image: "images/mountain-1.jpg>" 
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    image: "images/mountain-1.jpg"     
 ---
 
 ####  Install Apache、PHP、MySQL、phpMyAdmin、WordPress manually
