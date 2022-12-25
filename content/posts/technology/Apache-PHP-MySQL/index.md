@@ -1,12 +1,12 @@
 ---
-title: "Apache PHP MySQL"
+title: "InstallApache PHP MySQL Manually"
 date: 2022-12-21T17:09:58+08:00
 draft: false
 # weight: 2
 tags: ["WordPress"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: false
@@ -22,7 +22,7 @@ ShowPostNavLinks: true
 UseHugoToc: false
 ShowCodeCopyButtons: true
 cover:
-    image: "<image path/url>" # image path/url
+    image: "images/mountain-1.jpg>" 
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -49,44 +49,46 @@ cover:
    ![](images/httpd-win64-vc14.png)
     3、安装配置Apache
 
-      一、配置Apache的静态服务功能
-      1.把下载的Apache压缩包解压到磁盘分区的根目录。这里是虚拟机，就解压在C盘根目录：c:\mysite\apache24
-      2.把c:\mysite\apache24\bin添加在Windows的系统环境变量
-      3.修改apache24\conf\httpd.conf.文本编辑器打开Apache配置文件httpd.conf
-        a.找到Define SRVROOT部分，把其后面的"c:/Apache24"修改为"c:/mysite/Apache24"，注意这里`/`和Windows目录反斜杠`\`不同,最终修改为：`Define SRVROOT "c:/mysite/Apache24"`
-        b.如果80端口被某个服务占用，就找到Listen部分，这里把80端口修改为8081：`Listen 8081`
-      4. httpd.exe      Windows CMD终端运行Apache服务，可以和使用Ctrl+C 终止
-         httpd.exe -k intall  以管理员权限运行CMD,把apache 安装为Windows服务，
-         httpd.exe -k start   启动服务
-         httpd.exe -k stop    停止服务
-         httpd.exe -k unintall 卸载服务
-         httpd.exe -h   查看各种命令行参数
-      5.在浏览器使用http://localhost:8081,会显示Apache24\htdocs\index.html 文件的内容，如下图所示：    
-      6.可以参考Apach的redme文件和intall.txt；另外上面下载的httpd-2.4.41-win64-vc14.zip压缩包自带的readme文件，对初学者也很有帮助
-      7.启动Apache的两种方法
-        a. 在Windows CMD 窗口下运行httpd.exe (记得把apache24\bin加入Windows系统环境变量，加入后环境变量后如果不起作用，重启CMD终端或者Windows)，使
-        b. 作为Windows系统服务运行（httpd.exe -k intall）
-      二、配置Apache支持PHP  
-         打开httpd.conf文件，在LoadMoudle部分的最后添加php模块支持
-         #增加php7模块调用
-         LoadModule php7_module "C:/mysite/php7/php7apache2_4.dll"
-         #设置php.ini文件的的搜索路径
-         PHPIniDir c:/mysite/php7
-         #添加对php文件类型的支持
-         <IfModule mod_mime.c>
-         AddType application/x-httpd-php .php
-         </IfModule>
-         
-         ...
-         
-         #
-         # DirectoryIndex: sets the file that Apache will serve if a directory
-         # is requested.
-         # 设置当Apache服务得到一个目录请求的时候访问的文件[即默认首页]
-           <IfModule dir_module>
-               DirectoryIndex index.php index.html
-           </IfModule>  
-      三、使用httpd.exe -t  检测配置文件httpd.conf中的语法是否正确     
+```nginx
+  一、配置Apache的静态服务功能
+  1.把下载的Apache压缩包解压到磁盘分区的根目录。这里是虚拟机，就解压在C盘根目录：c:\mysite\apache24
+  2.把c:\mysite\apache24\bin添加在Windows的系统环境变量
+  3.修改apache24\conf\httpd.conf.文本编辑器打开Apache配置文件httpd.conf
+    a.找到Define SRVROOT部分，把其后面的"c:/Apache24"修改为"c:/mysite/Apache24"，注意这里`/`和Windows目录反斜杠`\`不同,最终修改为：`Define SRVROOT "c:/mysite/Apache24"`
+    b.如果80端口被某个服务占用，就找到Listen部分，这里把80端口修改为8081：`Listen 8081`
+  4. httpd.exe      Windows CMD终端运行Apache服务，可以和使用Ctrl+C 终止
+     httpd.exe -k intall  以管理员权限运行CMD,把apache 安装为Windows服务，
+     httpd.exe -k start   启动服务
+     httpd.exe -k stop    停止服务
+     httpd.exe -k unintall 卸载服务
+     httpd.exe -h   查看各种命令行参数
+  5.在浏览器使用http://localhost:8081,会显示Apache24\htdocs\index.html 文件的内容，如下图所示：    
+  6.可以参考Apach的redme文件和intall.txt；另外上面下载的httpd-2.4.41-win64-vc14.zip压缩包自带的readme文件，对初学者也很有帮助
+  7.启动Apache的两种方法
+    a. 在Windows CMD 窗口下运行httpd.exe (记得把apache24\bin加入Windows系统环境变量，加入后环境变量后如果不起作用，重启CMD终端或者Windows)，使
+    b. 作为Windows系统服务运行（httpd.exe -k intall）
+  二、配置Apache支持PHP  
+     打开httpd.conf文件，在LoadMoudle部分的最后添加php模块支持
+     #增加php7模块调用
+     LoadModule php7_module "C:/mysite/php7/php7apache2_4.dll"
+     #设置php.ini文件的的搜索路径
+     PHPIniDir c:/mysite/php7
+     #添加对php文件类型的支持
+     <IfModule mod_mime.c>
+     AddType application/x-httpd-php .php
+     </IfModule>
+     
+     ...
+     
+     #
+     # DirectoryIndex: sets the file that Apache will serve if a directory
+     # is requested.
+     # 设置当Apache服务得到一个目录请求的时候访问的文件[即默认首页]
+       <IfModule dir_module>
+           DirectoryIndex index.php index.html
+       </IfModule>  
+  三、使用httpd.exe -t  检测配置文件httpd.conf中的语法是否正确     
+```
 
 ![](images/localhost.png)
 更多内容见[Using Apache HTTP Server on Microsoft Windows](https://httpd.apache.org/docs/2.4/platform/windows.html)
@@ -117,7 +119,7 @@ Apache作为web服务器，能直接响应http请求，把静态的资源（html
 
 ###### 设置php.ini
 
-~~~
+~~~nginx
 1、把php所在的目录添加到Windows系统环境变量，让系统可以正常使用php7ts.dll
 2、把php目录下的php.ini-production文件复制一份，把这个复制的文件名修改为php.ini
 3、在php.ini中查找`extension_dir`,修改为`extension_dir c:/mysite/php7/ext`。与apache使用时要用绝对路径，否则不能加载扩展。不过httpd.conf里的路径使用/,php.ini里的路径使用斜杠还是反斜杠呢？实在找不到最终的解释，就试验一下，或者查看xampp下的设置比对一下。
@@ -146,7 +148,7 @@ Apache作为web服务器，能直接响应http请求，把静态的资源（html
 
 **选择合适的Apache、php、MySQL、phpMyAdmin版本很重要**
 
-~~~
+~~~php
 Apache: Apache/2.4.41 (Win64) PHP/7.2.22 
 PHP: 7.2.22   Thread Safety 	enabled   --在phpinfo()显示的参数里显示
 MySQL: 5.1.34-community - MySQL Community Server (GPL)
@@ -161,7 +163,7 @@ phpMyAdmin: 版本信息: 4.0.10.13
 
 [这是来自csdn博主的文章](https://blog.csdn.net/Q1368089323/article/details/116073706)
 
-```
+```nginx
 1、output_buffering = 4096    修改为为  output_buffering = On
 2、session.save_path = "/tmp"   保存sessio数据的保存路径不存在或者为空会导致这个问题，修改为本地磁盘的正确路径即可，这里修改为： session.save_path = "c:/mysite/tmp"
 ```
@@ -172,7 +174,7 @@ phpMyAdmin: 版本信息: 4.0.10.13
 
 [这是来自csdn博主的文章](https://blog.csdn.net/weixin_43182313/article/details/110128879)
 
-```
+```nginx
 For MySQL 5.5,use phpMyAdmin 4.4.x  and  above
 For MySQL 5.1 Use phpMyAdmin 4.0.x
 hope  this helps  someone
@@ -182,7 +184,7 @@ hope  this helps  someone
 
 **[配置文件现在需要一个短语密码]**
 
-```
+```php
 打开目录phpmyadmin/libraries中的config.default.php文件
      查找$cfg['blowfish_secret'] = '';（在引号内随意填写字符作为短语密码），比如:`$cfg['blowfish_secret'] = 'abcd';`
 ]
@@ -192,7 +194,7 @@ hope  this helps  someone
 
 **[登录phpMyAdmin后提示： 缺少 mcrypt 扩展。请检查 PHP 配置]**(https://devel0p.net/php-how-to-install-mcrypt-extension-in-xampp)
 
-```
+```php
 First, you should download the suitable version for your system from here: https://pecl.php.net/package/mcrypt/1.0.3/windows
 
 Then, you should copy php_mcrypt.dll to../xampp/php/ext/ and enable the extension by adding  extension=mcrypt to yourxampp/php/php.ini file.
