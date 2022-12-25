@@ -130,9 +130,11 @@ Apache作为web服务器，能直接响应http请求，把静态的资源（html
 
 ![](images/MySQLCommunity.png)
 
-![](images/MySQLCommunityServer.png)
+![/](images/MySQLCommunityServer.png)
 
+![](images/MySQLCommunityArchives.png)
 ![](images/MySQLCommunityServerZip.png)
+
 
 ​    目前MySQL属于Oracle公司，普通用户可以选择社区版，大型商业应用可以选择商业版。这里选择的是安装版的MySQL5.1.x,在安装过程中设置好参数设置。自己初次入门这几个软件的搭配，遇到的问题真不少，还是选择更稳当的方式，先把系统搭建起来再进一步学习，这样更容易有成就感。
 
