@@ -140,7 +140,9 @@ Apache作为web服务器，能直接响应http请求，把静态的资源（html
 
 ##### phpMyAdmin
 
-这里下载的是phpMyAdmin-4.0.10.13-all-languages.zip，搭配MySQL5.1.x。成功登录phpMyAdmin之后，选择新建名称为wordperss的数据库，排序字符集选择utf8-genearl-ci（为什么选择这个，现在我也不知道，以后用到再学习）。下面是配置中遇到的部分问题，记录下来
+这里下载的是phpMyAdmin-4.0.10.13-all-languages.zip，搭配MySQL5.1.x。成功登录phpMyAdmin之后，选择新建名称为wordperss的数据库，排序字符集选择utf8-genearl-ci（为什么选择这个，现在我也不知道，以后用到再学习）。初次安装phpMyAdmin可以看`phpMyAdmin\doc\html`下的index.html文件，里面是phpMyAdmin的文档资料。也可以选择在浏览器地址栏打开`phpMyAdmin/setup`提供的图形化安装phpMyAdmin界面。
+
+下面是配置中遇到的部分问题，记录下来
 
 
 
@@ -219,9 +221,9 @@ $token_mismatch = false;
 
 在设置好Apache、PHP、MySQL、phpAdmin之后
 
-* 首先登录phpMyAdmin,新建名称为wordpress（数据库名称自己定），设置字符集
+* 首先登录phpMyAdmin,新建名称为wordpress的数据库（数据库名称自己定），设置字符集
 
-* 在phpMyAdmin中选择用户，选择右边的【编辑权限】给用户root设置密码
+* 在phpMyAdmin中选择root用户，选择右边的【编辑权限】给用户root设置密码
 
   ![](images/edit-root-localhost.png)
 
@@ -231,5 +233,5 @@ $token_mismatch = false;
 
 ![](images/WelcomeToWordPress.png)
 
-以后主要通过http://localhost:8081/wordpress/wp-admin/来管理wordpress的内容，也就是所谓的CMS.等有空到真实的云服务机器买个域名和主机空间，体验一下真实的wordpress发布，不过主机提供商应该是把各种软件环境搭建好的，简单设置应该就可以发布WordPress内容了。到时再来补充一篇笔记。
+以后主要通过http://localhost:8081/wordpress/wp-admin/来管理wordpress的内容，也就是所谓的CMS.等有空到真实的云服务服务商买个域名和主机空间，体验一下在云服务器发布wordpress。不过主机提供商应该是把各种软件环境搭建好的，简单设置应该就可以发布WordPress内容了。到时再来补充一篇笔记。
 
