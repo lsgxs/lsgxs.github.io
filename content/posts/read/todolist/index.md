@@ -32,3 +32,4 @@ cover:
 
 - [ ] [html教程](https://wangdoc.com/html/)
 
+- [ ] [PHP The Right Way](https://phptherightway.com/)
