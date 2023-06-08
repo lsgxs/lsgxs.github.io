@@ -51,6 +51,15 @@ cover:
 
   copype   amd64    d:\win10pe   
 
+  如果安装的Windows ADK的版本和所使用的的Windows版本不匹配，使用copype命令时会提示找不到amd64架构处理器，如下图所示：
+
+  ![](images/copype_err.png)
+所以，在下载Windows ADK和Winpe加载项之前，查看当前使用的Windows系统的版本，下载对应的Windows ADK和Winpe加载项。
 * MakeWinpeMedia   /UFD    d:\win10pe   X:
 
   制作可启动的U盘，此时的U盘盘符为X，会删除U盘上所有的数据，注意核对正确 。
+
+* 使用制作好的U盘启动，运行只有CMD窗口的Winpe
+  * 运行notepad
+  * 选择File /open，打开文件系统浏览器，查看下载好的Windows安装盘所在的驱动器和目录（可以提前把下载好的原版Windows安装盘加压到指定的驱动器或者另外一个U盘）
+  * 切换到安装文件所在的目录，运行setup,就可以正常完成Windows安装
