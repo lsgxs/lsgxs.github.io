@@ -57,9 +57,35 @@ cover:
 所以，在下载Windows ADK和Winpe加载项之前，查看当前使用的Windows系统的版本，下载对应的Windows ADK和Winpe加载项。
 * MakeWinpeMedia   /UFD    d:\win10pe   X:
 
-  制作可启动的U盘，此时的U盘盘符为X，会删除U盘上所有的数据，注意核对正确 。
+  制作可启动的U盘，此时的U盘盘符为X，会删除U盘上所有的数据，注意核对正确（ MakeWinPEMedia will format your Windows PE drive as FAT32）
 
 * 使用制作好的U盘启动，运行只有CMD窗口的Winpe
   * 运行notepad
   * 选择File /open，打开文件系统浏览器，查看下载好的Windows安装盘所在的驱动器和目录（可以提前把下载好的原版Windows安装盘加压到指定的驱动器或者另外一个U盘）
   * 切换到安装文件所在的目录，运行setup,就可以正常完成Windows安装
+
++++
+
+下面的内容是微软公司官方文档的部分内容：
+
+### Create a bootable Windows PE USB drive
+
+1. Attach a USB drive to your technician PC.
+
+2. Start the **Deployment and Imaging Tools Environment** as an administrator.
+
+3. **Optional** You can format your USB key prior to running MakeWinPEMedia.  MakeWinPEMedia will format your Windows PE drive as FAT32. If you want  to be able to store files larger than 4GB on your Windows PE USB drive,  you can create a multipartition USB drive that has an additional  partition formatted as NTFS. See [Create a multipartition USB drive](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe--use-a-single-usb-key-for-winpe-and-a-wim-file---wim?view=windows-11#option-1-create-a-multiple-partition-usb-drive) for instructions.
+
+4. Use **MakeWinPEMedia** with the `/UFD` option to format and install Windows PE to the USB flash drive, specifying the USB key's drive letter:
+
+   Windows Command Prompt 	
+
+1. ```cmd
+   MakeWinPEMedia /UFD C:\WinPE_amd64 X:
+   ```
+
+    Warning: This command reformats the partition.
+
+   See [MakeWinPEMedia command line options](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/makewinpemedia-command-line-options?view=windows-11) for all available options.
+
+The bootable Windows PE USB drive is ready. You can use it to [boot a PC into Windows PE](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode?view=windows-11).
