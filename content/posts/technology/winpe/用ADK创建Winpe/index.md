@@ -47,14 +47,42 @@ cover:
 
 ![](images/winpe-load2.png)
 
-* 安装好ADK和WInpe加载项之后，使用copype复制到指定的目录
+* 安装好ADK和WInpe加载项之后，点击Windows桌面左下角的Windows图标，打开程序菜单，选择【部署和映像工具环境】
+
+  
+
+  ![](images/deploy_tools_env.png)
+
+  打开CMD窗口后运行下面的命令：
 
   copype   amd64    d:\win10pe   
 
-  如果安装的Windows ADK的版本和所使用的的Windows版本不匹配，使用copype命令时会提示找不到amd64架构处理器，如下图所示：
+  执行结果如下图：
+
+  ![](images/copype.png)
+
+  
+
+  如果没有选择从【部署和映像工具环境】打开CMD窗口，而是自己随意打开CMD窗口并切换到部署和映像工具所在的目录，使用copype命令时会提示找不到amd64架构处理器，如下图所示：
 
   ![](images/copype_err.png)
-所以，在下载Windows ADK和Winpe加载项之前，查看当前使用的Windows系统的版本，下载对应的Windows ADK和Winpe加载项。
+  出现这个问题的根本原因是设置环境变量的问题，如果要手动执行的话，就需要自己修改copype.cmd里的脚本，如下：
+
+  ```
+  rem
+  rem Set environment variables for use in the script
+  rem
+  set WINPE_ARCH=%1
+  **set WinPERoot=C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment**
+  set SOURCE=%WinPERoot%\%WINPE_ARCH%
+  **set OSCDImgRoot=C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg**
+  set FWFILESROOT=%OSCDImgRoot%\..\..\%WINPE_ARCH%\Oscdimg
+  set DEST=%~2
+  set WIMSOURCEPATH=%SOURCE%\en-us\winpe.wim
+  
+  ```
+
+  这段代码是引用自CSDN上一个博主的文章[win10PE iso镜像制作及问题解决](https://blog.csdn.net/weixin_43863487/article/details/116117714)
 * MakeWinpeMedia   /UFD    d:\win10pe   X:
 
   制作可启动的U盘，此时的U盘盘符为X，会删除U盘上所有的数据，注意核对正确（ MakeWinPEMedia will format your Windows PE drive as FAT32）
