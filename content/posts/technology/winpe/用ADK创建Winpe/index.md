@@ -63,7 +63,7 @@ cover:
 
   
 
-  如果没有选择从【部署和映像工具环境】打开CMD窗口，而是自己随意打开CMD窗口并切换到部署和映像工具所在的目录，使用copype命令时会提示找不到amd64架构处理器，如下图所示：
+  如果没有选择从【部署和映像工具环境】打开CMD窗口，而是在CMD窗口中手动切换目录到部署和映像工具所在的目录，使用copype命令时会提示找不到amd64架构处理器，如下图所示：
 
   ![](images/copype_err.png)
   出现这个问题的根本原因是设置环境变量的问题，如果要手动执行的话，就需要自己修改copype.cmd里的脚本，如下：
@@ -83,9 +83,11 @@ cover:
   ```
 
   这段代码是引用自CSDN上一个博主的文章[win10PE iso镜像制作及问题解决](https://blog.csdn.net/weixin_43863487/article/details/116117714)
+  
+  总结一下：作为新手的我，还是选择从【部署和映像工具环境】菜单项打开CMD，然后执行copye    amd64   d:\win10pe为好。
 * MakeWinpeMedia   /UFD    d:\win10pe   X:
 
-  制作可启动的U盘，此时的U盘盘符为X，会删除U盘上所有的数据，注意核对正确（ MakeWinPEMedia will format your Windows PE drive as FAT32）
+  制作可启动的U盘，此时的U盘盘符为X，会删除U盘上所有的数据，注意核对正确（ MakeWinPEMedia will format your Windows PE drive as FAT32）。这里的d:\win10pe是前边`copype  amd64   d:\win10pe`命令行里指定的目录
 
 * 使用制作好的U盘启动，运行只有CMD窗口的Winpe
   * 运行notepad
@@ -96,24 +98,5 @@ cover:
 
 下面的内容是微软公司官方文档的部分内容：
 
-### Create a bootable Windows PE USB drive
+#### [Create bootable Windows PE media](Create bootable Windows PE media)
 
-1. Attach a USB drive to your technician PC.
-
-2. Start the **Deployment and Imaging Tools Environment** as an administrator.
-
-3. **Optional** You can format your USB key prior to running MakeWinPEMedia.  MakeWinPEMedia will format your Windows PE drive as FAT32. If you want  to be able to store files larger than 4GB on your Windows PE USB drive,  you can create a multipartition USB drive that has an additional  partition formatted as NTFS. See [Create a multipartition USB drive](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe--use-a-single-usb-key-for-winpe-and-a-wim-file---wim?view=windows-11#option-1-create-a-multiple-partition-usb-drive) for instructions.
-
-4. Use **MakeWinPEMedia** with the `/UFD` option to format and install Windows PE to the USB flash drive, specifying the USB key's drive letter:
-
-   Windows Command Prompt 	
-
-1. ```cmd
-   MakeWinPEMedia /UFD C:\WinPE_amd64 X:
-   ```
-
-    Warning: This command reformats the partition.
-
-   See [MakeWinPEMedia command line options](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/makewinpemedia-command-line-options?view=windows-11) for all available options.
-
-The bootable Windows PE USB drive is ready. You can use it to [boot a PC into Windows PE](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode?view=windows-11).
