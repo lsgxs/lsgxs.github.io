@@ -6,7 +6,7 @@ draft: false
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: false
@@ -57,11 +57,9 @@ cover:
 
   ![](images/ipconfig.png)
 
-##### 在宿主机的Windows下使用远程桌面连接登录虚拟机
+    ##### 在宿主机打开远程桌面连接
 
-​    ###### 打开远程桌面连接
-
-首先点击桌面左下角的Windows图标，然后输入远程桌面，就可以自动弹出远程桌面连接的程序，选择打开或者以管理员身份打开，如下图：
+点击桌面左下角的Windows图标，然后输入远程桌面，就可以自动弹出远程桌面连接的程序，选择打开或者以管理员身份打开，如下图：
 
 ![](images/remote_desktop_connection.png)
 
