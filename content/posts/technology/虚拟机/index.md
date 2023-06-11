@@ -69,6 +69,8 @@ cover:
 
 ![](images/connection.png)
 
+![](images/certificate.png)
+
 ##### 在物理机和虚拟机之间复制文件
 
 连接到虚拟机之后，可以使用复制和粘贴的方法实现文件的传送
