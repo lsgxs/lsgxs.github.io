@@ -1,0 +1,87 @@
+---
+title: "使用wimBuilder2制作winpe"
+date: 2023-06-17T17:43:45+08:00
+draft: false
+# weight: 2
+tags: ["first"]
+# author: ["Me", "You"] # multiple authors
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+description: "Desc Text."
+canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: false
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+UseHugoToc: false
+ShowCodeCopyButtons: true
+cover:
+    image: "<image path/url>" # image path/url
+    alt: "<alt text>" # alt text
+    caption: "<text>" # display caption under cover
+    relative: false # when using page bundles set this to true
+    hidden: true # only hide on current single page
+---
+
+#### 使用WINPE的三种方法
+
+##### 网上下载WINPE
+
+​    经常使用的WINPE有IT天空的WINPE、[微PE工具箱](https://www.wepe.com.cn/)
+
+##### 使用工具制作WINPE
+
+  以前使用过winbuilder制作过，经常遇到因为环境不匹配导致的错误，找问题很费时间和精力，就放弃了。后来遇到了wimbuilder2，目前在github上开源。这里就简单记录一下使用wimbuilder2的使用要点：
+
+![img](images/prepare.png)
+
+![img](images/custome.png)
+
+![img](images/build.png)
+
+制作好winpe之后，发现有自己需要而winpe中不包含的软件，如何添加呢
+###### 自定义添加自己需要的软件
+自己对wimbuilder2不熟悉，此项目设计到大量批处理、自定义宏，还有javascript、css、html知识，还有作者自定义的用c语言构造的支持文件，水平有限，暂时没有精力去学习这么多。在做好winpe之后，一个真实的需求就是添加自定义的软件，在桌面显示软件的快捷方式或者添加到开始菜单。可是在wimbuilder里愣是没有找到详细的说明，水平有限吧，还没有通过wimbuilder2自带的范例学明白，无奈，翻阅github上源项目自带的issue,[第79号issue](https://github.com/slorelee/wimbuilder2/issues/79),居然是一个外国人提问的问题，和我的问题一样，逐句看完照着做居然做好了。下面问这个issue的详细内容，记录如下，可以到作者的github项目中翻阅。
+
+```
+For Windows PE, I think a portable version of the application is good, you can run them from your USB disk directly.
+About the shortcuts on Desktop, the PETools loader should read a U:\PETools\PETools.ini, the pecmd.exe's link command
+will create a shortcut for it.
+
+If you want to create a shortcut when building with WimBuilder2.
+You can see the sample in:
+
+E:\WimBuilder2\Projects\WIN10XPE\02-Apps
+- 7-Zip\main.bat
+- Defraggler\main.bat
+- PENetwork\main.bat
+
+call LinkToDesktop "7-Zip.lnk" "#pProgramFiles#p\7-Zip\7zFM.exe"
+call LinkToStartMenu "7-Zip\7-Zip File Manager.lnk" "#pProgramFiles#p\7-Zip\7zFM.exe"
+
+call LinkToStartMenu "Defraggler\%APP_NAME%.lnk" "#pProgramFiles#p\Defraggler\Defraggler.exe"
+
+call LinkToDesktop PENetwork.lnk "#pProgramFiles#p\PENetwork\PENetwork.exe"
+
+#p is instead of the % mark to avoid to use the hostOS's enviroment variables.
+
+You can right click on next item node. and select [open the folder], or [edit the last.bat].
+
+_Personal-Tailor_(Post)
+        MyStartMenu
+
+WimBuilder2\AppData\Projects\WIN10XPE\10-MyCustom\MyStartMenu\last.bat
+
+call LinkToDesktop "7-Zip.lnk" "#pProgramFiles#p\7-Zip\7zFM.exe"
+call PinToTaskbar "#pProgramFiles#p\Everything\Everything.exe"
+call PinToStartmenu "#pProgramFiles#p\WinXShell\WinXShell.exe"
+call PinToStartmenu regedit.exe
+
+```
+
