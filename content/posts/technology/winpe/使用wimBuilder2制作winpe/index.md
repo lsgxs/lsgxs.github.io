@@ -6,7 +6,7 @@ draft: false
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: false
@@ -22,7 +22,7 @@ ShowPostNavLinks: true
 UseHugoToc: false
 ShowCodeCopyButtons: true
 cover:
-    image: "<image path/url>" # image path/url
+    image: "images/冰山.jpg" 
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -85,3 +85,25 @@ call PinToStartmenu regedit.exe
 
 ```
 
+按照上面的问答，在wimbuilder2定制界面，鼠标右击开始菜单，选择编辑last.bat文件，桌面显示geek.exewe年的快捷方式。修改后的last.bat文件内容如下：
+
+```
+rem rd /s /q "%X%\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories"
+
+if exist SIB_RegDefault.reg (
+    reg import SIB_RegDefault.reg
+)
+
+rem   在桌面添加Geek.link这个快捷方式。
+rem   把geek\geek.exe保存在WimBuilder2-Full.v2021-11-11\vendor\_PEMaterial_\Program Files\
+rem   最终的路径为C:\WimBuilder2-Full.v2021-11-11\vendor\_PEMaterial_\Program Files\geek\geek.exe
+rem   可以用同样的方法添加其他自定义软件，如果是单文件可执行文件，可以直接放在 ..\vendor\_PEMaterial_\PortableApps目录下面
+call LinkToDesktop "Geek.lnk" "#pProgramFiles#p\geek\geek.exe"
+```
+
+总结一下添加自定义软件及快捷方式的方法：
+
+* 单文件可执行程序放在项目的..\vendor\_PEMaterial_\PortableApps目录下面
+* 其他程序放在..\vendor\_PEMaterial_\Program Files\目录下
+* 鼠标右击【我的定制(后置)】下面的开始菜单(MyStartMenu),选择编辑last.bat,在文件中添加快捷方式。具体可以参照项目中的关于软件配置的例子写法。
+##### 使用Windows ADK 创建winpe，并手动扩展winpe功能
