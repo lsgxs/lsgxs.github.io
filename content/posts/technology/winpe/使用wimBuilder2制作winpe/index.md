@@ -47,7 +47,7 @@ cover:
 
 制作好winpe之后，发现有自己需要而winpe中不包含的软件，如何添加呢
 ###### 自定义添加自己需要的软件
-自己对wimbuilder2不熟悉，此项目设计到大量批处理、自定义宏，还有javascript、css、html知识，还有作者自定义的用c语言构造的支持文件。在做好winpe之后，一个真实的需求就是添加自定义的软件，在桌面显示软件的快捷方式或者添加到开始菜单。可是在wimbuilder里愣是没有找到详细的说明，自己水平有限吧，还没有通过wimbuilder2自带的范例学明白，无奈，翻阅github上wimbuilder源项目issue,[第79号issue](https://github.com/slorelee/wimbuilder2/issues/79),居然是一个外国人提问的问题，和我的问题一样，逐句看完照着做居然做好了。下面问这个issue的详细内容，记录如下:
+自己对wimbuilder2不熟悉，此项目设计到大量批处理、自定义宏，还有javascript、css、html知识，还有作者自定义的用c语言构造的支持文件。在做好winpe之后，一个真实的需求就是添加自定义的软件，在桌面显示软件的快捷方式或者添加到开始菜单。可是在wimbuilder里愣是没有找到详细的说明，自己水平有限吧，还没有通过wimbuilder2自带的范例学明白，无奈，翻阅github上wimbuilder源项目issue,[第79号issue](https://github.com/slorelee/wimbuilder2/issues/79),居然是一个外国人提问的问题，和我的问题一样，逐句看完照着做居然做好了。下面是这个issue的详细内容:
 
 ```
 For Windows PE, I think a portable version of the application is good, you can run them from your USB disk directly.
@@ -85,7 +85,7 @@ call PinToStartmenu regedit.exe
 
 ```
 
-按照上面的问答，在wimbuilder2定制界面，鼠标右击开始菜单，选择编辑last.bat文件，桌面显示geek.exe快捷方式。修改后的last.bat文件内容如下：
+按照上面的问答，在wimbuilder2定制界面，鼠标右击开始菜单，选择编辑last.bat文件，桌面显示diskgenius.exe快捷方式。修改后的last.bat文件内容如下：
 
 ```
 rem rd /s /q "%X%\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories"
@@ -94,12 +94,17 @@ if exist SIB_RegDefault.reg (
     reg import SIB_RegDefault.reg
 )
 
-rem   在桌面添加Geek.link这个快捷方式。
-rem   把geek\geek.exe保存在WimBuilder2-Full.v2021-11-11\vendor\_PEMaterial_\Program Files\
-rem   最终的路径为C:\WimBuilder2-Full.v2021-11-11\vendor\_PEMaterial_\Program Files\geek\geek.exe
+rem   在桌面添加diskgenius.link这个快捷方式。
+rem   把diskgenius\diskgenius.exe保存在WimBuilder2-Full.v2021-11-11\vendor\_PEMaterial_\Program Files\
+rem   最终的路径为C:\WimBuilder2-Full.v2021-11-11\vendor\_PEMaterial_\Program Files\diskgenius\diskgenius.exe
 rem   可以用同样的方法添加其他自定义软件，如果是单文件可执行文件，可以直接放在 ..\vendor\_PEMaterial_\PortableApps目录下面
 
-call LinkToDesktop "Geek.lnk" "#pProgramFiles#p\geek\geek.exe"
+call LinkToDesktop "DiskGenius.lnk" "#pProgramFiles#p\diskgenius\diskgenius.exe"
+
+call PinToStartmenu "X:\Program Files\diskgenius\diskgenius.exe"
+call PinToStartmenu regedit.exe
+
+
 ```
 
 总结一下添加自定义软件及快捷方式的方法：
