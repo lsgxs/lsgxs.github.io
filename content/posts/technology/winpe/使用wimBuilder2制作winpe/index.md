@@ -121,4 +121,16 @@ call PinToStartmenu regedit.exe
 * 添加快捷方式或者添加到开始菜单
 
   * 鼠标右击【我的定制(后置)】下面的开始菜单(MyStartMenu),选择编辑last.bat,在文件中添加快捷方式。具体可以参照项目中的关于软件配置的例子写法。
+###### 使用UltraISO制作可启动U盘
+
+使用UltraISO把制作好的ISO文件写入到U盘，就可以使用U盘启动进入winpe。写入方法如下：
+
+* 以管理员的方式运行UltraISO
+* 选择File\open菜单打开winpe的ISO文件
+* 选择启动\写入硬盘映像
+* 确认好U盘的盘符，使用HDD++的方式写入U盘（U盘会被格式，制作前要确认U盘上没有重要数据）
+
+![img](images/ultraiso_open.png)
+![img](images/写入硬盘映像.png)
+
 ##### 使用Windows ADK 创建winpe，并手动扩展winpe功能
