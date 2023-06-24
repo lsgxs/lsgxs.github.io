@@ -102,12 +102,12 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
   如果不满足于基础的命令窗口的WinPE，继续往下进行。
 ~~~
 
-### 微软公司官方的关于WinPE的文档
-#### [Download Windows PE (WinPE)](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/download-winpe--windows-pe?view=windows-11)
+#### 微软公司官方的关于WinPE的文档
+##### [Download Windows PE (WinPE)](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/download-winpe--windows-pe?view=windows-11)
 
-#### [Create bootable Windows PE media](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive?view=windows-11)
+##### [Create bootable Windows PE media](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive?view=windows-11)
 
-#### [WinPE: Mount and Customize](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-mount-and-customize?view=windows-11)
+##### [WinPE: Mount and Customize](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-mount-and-customize?view=windows-11)
 ### 扩展基础Winpe功能
 #### Winpe工作目录及注册表权限的设置
 
