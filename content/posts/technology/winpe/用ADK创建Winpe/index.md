@@ -28,7 +28,7 @@ cover:
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
 ---
-
+### 安装Windows ADK 及Winpe加载项
 #### [下载并安装 Windows ADK](https://learn.microsoft.com/zh-cn/windows-hardware/get-started/adk-install#other-adk-downloads)
 
 查看windows系统的版本号，下载对应版本的ADK,运行adksetup。
@@ -46,6 +46,7 @@ cover:
 ![](images/winpe-load.png)
 
 ![](images/winpe-load2.png)
+### 创建基础的Winpe
 
 * 安装好ADK和WInpe加载项之后，点击Windows桌面左下角的Windows图标，打开程序菜单，选择【部署和映像工具环境】
 
@@ -99,4 +100,27 @@ cover:
 下面的内容是微软公司官方文档的部分内容：
 
 #### [Create bootable Windows PE media](Create bootable Windows PE media)
+### 扩展基础Winpe功能之添加Explorer
+#### 工作目录及注册表权限的修改
 
+* 鼠标右击目录winpe-amd64(Winpe所在的工作目录)，选择属性，在弹出的对话框中选择安全标签，点击高级。如下图所示：
+
+  ![img](images/security-1.png)
+  
+* 更改目录的所有者为当前用户(如果不清楚当前用户名，可在cmd命令窗口下用whoami命令显示当前用户名)。
+
+  ![img](images/owner-1.png)
+
+  ​                            ![img](images/search.png)
+  ![img](images/selections.png)
+* 为当前用户添加权限
+  
+  ![img](images/add-1.png)
+  ![img](images/add-2.png)
+  ![img](images/add-3.png)
+  ![img](images/add-4.png)
+  
+  添加权限就两步：第一步是把工作目录的所有者更改为当前用户；第二部是为当前用户添加所有权限；注意继承和替换子容器和对象所有者两个选项都要选，添加权限时选择全部权限。在后边的修改注册表时也用同样的方法设置权限。
+
+#### 搜索并添加Exlorer的支持文件
+#### 修改注册表
