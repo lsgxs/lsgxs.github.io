@@ -69,7 +69,7 @@ cover:
   ![](images/copype_err.png)
   出现这个问题的根本原因是设置环境变量的问题，如果要手动执行的话，就需要自己修改copype.cmd里的脚本，如下：
 
-  ```
+  ```html
   rem
   rem Set environment variables for use in the script
   rem
@@ -88,7 +88,7 @@ cover:
 MakeWinpeMedia   /UFD    d:\win10pe   X:
 总结一下：
 
-~~~
+~~~html
 1、下载并安装Windows ADK及WinPE加载项
 2、以管理员权限运行开始菜单的【部署和映像工具环境】
 3、运行copye    amd64   d:\win10pe
@@ -140,7 +140,7 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
 
 [这里参照csdn网友文章的方法](https://blog.csdn.net/qq_39819990/article/details/128518037)
 
-~~~
+~~~html
 一、使用tasklsit显示Explorer进程依赖的文件
 1、Ctrl+Shift+Esc打开任务管理器，先点击左上角文件-运行新任务，输入cmd，勾选以系统管理权限创建此任务，粘贴但不运行以下命令
   explorer.exe | tasklist /M /FI "ImageName eq explorer.exe" /FO LIST
@@ -176,7 +176,7 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
 
 #### 修改注册表
 
-~~~
+~~~bash
 1、把前边制作好的基础Winpe的boot.wim加载到指定的目录，这里加载位置为hyper-v虚拟机的c盘（c:\winpe-amd64\mount）
    dism /mount-image /imagefile:c:\winpe-amd64\media\sources\boot.wim /index:1 /mounddir:c:\winpe-amd64\mount
 2、把制作Winpe的Windows10安装盘的install.wim也加载到指定的目录，这里加载的位置为c:\winpe-amd64\install
