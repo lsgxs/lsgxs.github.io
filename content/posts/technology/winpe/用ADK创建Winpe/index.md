@@ -6,7 +6,7 @@ draft: false
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: false
@@ -53,7 +53,7 @@ cover:
   
 
   ![](images/deploy_tools_env.png)
-
+#### 一行命令创建基础Winpe
   打开CMD窗口后运行下面的命令：
 
   copype   amd64    d:\win10pe   
@@ -84,18 +84,23 @@ cover:
   ```
 
   这段代码是引用自CSDN上一个博主的文章[win10PE iso镜像制作及问题解决](https://blog.csdn.net/weixin_43863487/article/details/116117714)
-  
-  总结一下：作为新手的我，还是选择从【部署和映像工具环境】菜单项打开CMD，然后执行copye    amd64   d:\win10pe为好。
-* MakeWinpeMedia   /UFD    d:\win10pe   X:
+#### 制作可启动的U盘  
+MakeWinpeMedia   /UFD    d:\win10pe   X:
+总结一下：
 
-  制作可启动的U盘，此时的U盘盘符为X，会删除U盘上所有的数据，注意核对正确（ MakeWinPEMedia will format your Windows PE drive as FAT32）。这里的d:\win10pe是前边`copype  amd64   d:\win10pe`命令行里指定的目录
+~~~
+作为新手的我，还是选择从【部署和映像工具环境】菜单项打开CMD，然后执行
+copye    amd64   d:\win10pe
+MakeWinpeMedia   /UFD    d:\win10pe   X:
 
-* 使用制作好的U盘启动，运行只有CMD窗口的Winpe
+制作可启动的U盘，此时的U盘盘符为X，会删除U盘上所有的数据，注意核对正确（ MakeWinPEMedia will format your Windows PE drive as FAT32）。这里的d:\win10pe是前边`copype  amd64   d:\win10pe`命令行里指定的目录
+
+使用制作好的U盘启动，运行只有CMD窗口的Winpe
   * 运行notepad
   * 选择File /open，打开文件系统浏览器，查看下载好的Windows安装盘所在的驱动器和目录（可以提前把下载好的原版Windows安装盘解压到指定驱动器或者另外一个U盘）
   * 切换到安装文件所在的目录，运行setup,就可以正常完成Windows安装
+~~~
 
-+++
 
 下面的内容是微软公司官方文档的部分内容：
 
@@ -120,7 +125,7 @@ cover:
   ![img](images/add-3.png)
   ![img](images/add-4.png)
   
-  添加权限就两步：第一步是把工作目录的所有者更改为当前用户；第二部是为当前用户添加所有权限；注意继承和替换子容器和对象所有者两个选项都要选，添加权限时选择全部权限。在后边的修改注册表时也用同样的方法设置权限。
+  添加权限就两步：第一步是把工作目录的所有者更改为当前用户；第二部是为当前用户添加权限；注意继承和替换子容器和对象的所有者两个选项都要选，添加权限时选择全部权限。在下一节中修改注册表也用同样方法设置权限。
 
 #### 搜索并添加Exlorer的支持文件
 #### 修改注册表
