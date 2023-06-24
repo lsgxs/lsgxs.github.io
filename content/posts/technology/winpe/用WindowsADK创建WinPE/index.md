@@ -1,5 +1,5 @@
 ---
-title: "用ADK创建Winpe"
+title: "用WindowsADK创建WinPE"
 date: 2023-06-08T07:13:44+08:00
 draft: false
 # weight: 2
