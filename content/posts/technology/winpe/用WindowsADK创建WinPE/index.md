@@ -196,3 +196,20 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
 todolist:有时间可以根据上边的5个步骤，尝试写个批处理脚本，做到逻辑清晰、步骤完整，以提高效率和准确性。  在基础winpe的基础上扩展功能，主要的思路就是添加文件和修改注册表。
 ~~~
 
+#### 手动添加常用软件
+
+##### 以添加oscdimg为例说明向winpe中添加软件的方法
+
+oscdimg是Windows ADK中带的一个工具，但是却并没有集成到winpe中，一般是在`C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\`下的amd64|arm|x86|arm64目录下。添加过程分为两步,添加软件和修改注册表。
+
+* winpe的boot.wim挂载目录下新建一个目录(c:\winpe-amd64\mount\windows)，复制Oscdimg.exe和相关文件
+
+  * md   c:\winpe-amd64\mout\Windows\Oscdimg
+
+  * copy  amd64\oscdimg   c:\winpe-amd64\mout\Windows\Oscdimg
+  
+* 设置注册表项
+  
+  运行regedit ,选择HEKY-LOCAL-MACHE下的【SYSTEM\ControlSet001\Control\Session Manager\Environment】，在右侧的数据项中找到path ,在最后加上%SystemRoot%\Oscdimg ，中间用分号隔开。这里的%SystemRoot%是环境变量的写法，一般指Windows目录。
+
+![img](images/regedit-environment.png)
