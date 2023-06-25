@@ -69,7 +69,7 @@ cover:
   ![](images/copype_err.png)
   出现这个问题的根本原因是设置环境变量的问题，如果要手动执行的话，就需要自己修改copype.cmd里的脚本，如下：
 
-  ```html
+  ```bash
   rem
   rem Set environment variables for use in the script
   rem
@@ -88,7 +88,7 @@ cover:
 MakeWinpeMedia   /UFD    d:\win10pe   X:
 总结一下：
 
-~~~html
+~~~bash
 1、下载并安装Windows ADK及WinPE加载项
 2、以管理员权限运行开始菜单的【部署和映像工具环境】
 3、运行copye    amd64   d:\win10pe
@@ -130,7 +130,7 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
   
   总结一下添加权限的基本步骤
   
-  ~~~
+  ~~~bash
   1、把工作目录的所有者更改为当前用户。如果不知道当前登录Windows的用户名，在CMD窗口下使用whoami命令查询
   2、为当前用户添加权限
   3、注意事项：继承和替换子容器和对象的所有者两个选项都要选，添加权限时选择全部权限。在下一节中修改注册表也用同样方法设置权限。
@@ -140,7 +140,7 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
 
 [这里参照csdn网友文章的方法](https://blog.csdn.net/qq_39819990/article/details/128518037)
 
-~~~html
+~~~bash
 一、使用tasklsit显示Explorer进程依赖的文件
 1、Ctrl+Shift+Esc打开任务管理器，先点击左上角文件-运行新任务，输入cmd，勾选以系统管理权限创建此任务，粘贴但不运行以下命令
   explorer.exe | tasklist /M /FI "ImageName eq explorer.exe" /FO LIST
