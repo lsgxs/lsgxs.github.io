@@ -1,14 +1,13 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "meishi"
 draft: false
-# weight: 2
+# weight:1
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true
 draft: false
-hidemeta: false
+hidemeta: true
 comments: false
 description: "Desc Text."
 canonicalURL: "https://canonical.url/to/page"
@@ -20,7 +19,6 @@ searchHidden: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 UseHugoToc: false
-ShowCodeCopyButtons: true
 cover:
     image: "<image path/url>" # image path/url
     alt: "<alt text>" # alt text
