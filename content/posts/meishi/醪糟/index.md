@@ -6,7 +6,7 @@ draft: false
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: false
@@ -19,14 +19,11 @@ hideSummary: false
 searchHidden: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
-UseHugoToc: false
+UseHugoToc: true
 ShowCodeCopyButtons: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    image: "images/mountain.jpg" 
+   
 ---
 
 #### 自己动手酿制醪糟
@@ -41,3 +38,4 @@ cover:
 
 虽然大米蒸的有点欠火候，但是也不影响整体的味道，个别的米粒没有熟透。下次再改进一下。好玩^-^,先记录这么多，有时间再补充。
 
+![img](images/butterfly.jpg)
