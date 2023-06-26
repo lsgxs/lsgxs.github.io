@@ -87,6 +87,8 @@ params:
         url: posts/think
       - name: download
         url: posts/download
+      - name: 美食
+        url: posts/meishi  
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"

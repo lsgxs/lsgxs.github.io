@@ -5,7 +5,7 @@ draft: false
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: true
 comments: false
