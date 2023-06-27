@@ -137,7 +137,7 @@ call PinToStartmenu regedit.exe
 
 在WimBuilder2的设置界面里设置好winpe桌面背景之后，启动时可以正常显示，启动完毕后，就换成另外一个wimbuilder2自带的一个背景。以换桌面为例，顺带复习一下UltraISO修改启动镜像的简单步骤，好久不用了，差点忘记了，这里记录备忘。
 
-* 使用UltraISO打开WimBuilder2生成的bootpe.iso文件，把sources\boot.wim释放到自定义的目录下，然后使用`dism   /mount-image  /imagefile:dirname/boot.wim   /index:1   /mountdir:c:\mnt  `把boot.wim装载到c:\mnt下。在根目录下有个PEMaterial文件夹，下面保存着wallpaper.jpg，这个图片文件就是wimbuilder2制作的winpe启动后显示的桌面背景，更换成自己喜欢的背景图片，然后再使用`dism  /unmount-image  /mountdir:c:\mnt`打包，更新后的boot.wim直接拖放到UltraISO中原boot.wim所在的路径。
+* 使用UltraISO打开WimBuilder2生成的bootpe.iso文件，把sources\boot.wim释放到自定义的目录下，然后使用`dism   /mount-image  /imagefile:dirname/boot.wim   /index:1   /mountdir:c:\mnt  `把boot.wim装载到c:\mnt下。在根目录下有个PEMaterial文件夹，下面保存着wallpaper.jpg，这个图片文件就是wimbuilder2制作的winpe启动后显示的桌面背景，更换成自己喜欢的背景图片，然后再使用`dism  /unmount-image  /mountdir:c:\mnt   /commit`打包，更新后的boot.wim直接拖放到UltraISO中原boot.wim所在的路径。
 
 * 不要直接解压这个WimBuilder2制作好的BOOTPE.ISO，解压后再修改boot.wim文件，在打包成ISO时发现启动信息错误，又要按照制作启动盘的方法重新导入启动信息再打包，有点麻烦了。所以就是用UltraISO直接打开BOOTPE.ISO，然后把boot.wim释放出来修改，修改后再放回到原来的位置保存即可。一句话，在保持BOOTPE.ISO的启动框架下修改boot.wim会简单点，要不然就需要重新制作启动盘的操作了。
 
