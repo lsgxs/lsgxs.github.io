@@ -189,10 +189,10 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
   （4）再加载前边第四步用win10的software替换的、加载到winpe-amd64\mount的windows\system32\config\softwoare,同样命名为pe-soft,用同样的步骤和方法查询、替换C:\和D:\为X:\，把Interactive User替换为空。修改完成后，直接双击运行pe-modified，把修改后的[原pe]导入到现在的pe，最后卸载pe-soft。
 
 总结一下：
-1、`*修改*Windows安装镜像的software注册表`。使用7-zip打开win10安装镜像中的install.wim文件，提取windows\system32\software注册表文件到software目录(自己新建自定义目录)，然后按照上述方法修改(修改工具为RegistyWorkShop)，完成后卸载（卸载工具为windows自带的regedit）。
-2、`*修改*生成的基础winpe的boot.wim文件包的software注册表，并导出为xxx.reg文件，以备导入`。使用7-zip打开生成的基础winpe下的boot.wim文件，提取windows\system32\software主表表文件到pe-software目录(自己新建自定义目录)，用同样的方法完成修改。
-3、`*合并*两个software注册表单元`把xxx.reg文件合并到修改后的win10安装镜像software注册表单元。
-4、`*替换*software注册表单元文件` 用合并后的software注册表单元文件替换基础wnipe的boot.wim对应文件
+1、`修改Windows安装镜像的software注册表`。使用7-zip打开win10安装镜像中的install.wim文件，提取windows\system32\software注册表文件到software目录(自己新建自定义目录)，然后按照上述方法修改(修改工具为RegistyWorkShop)，完成后卸载（卸载工具为windows自带的regedit）。
+2、`修改生成的基础winpe的boot.wim文件包的software注册表，并导出为xxx.reg文件，以备导入`。使用7-zip打开生成的基础winpe下的boot.wim文件，提取windows\system32\software主表表文件到pe-software目录(自己新建自定义目录)，用同样的方法完成修改。
+3、`合并两个software注册表单元`把xxx.reg文件合并到修改后的win10安装镜像software注册表单元。
+4、`替换software注册表单元文件` 用合并后的software注册表单元文件替换基础wnipe的boot.wim对应文件
 ~~~
 
 #### 手动添加常用软件
