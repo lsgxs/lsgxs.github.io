@@ -22,11 +22,8 @@ ShowPostNavLinks: true
 UseHugoToc: false
 ShowCodeCopyButtons: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    image: "images/云山雾绕.jpg" # image path/url
+
 ---
 ### 安装Windows ADK 及Winpe加载项
 #### [下载并安装 Windows ADK](https://learn.microsoft.com/zh-cn/windows-hardware/get-started/adk-install#other-adk-downloads)

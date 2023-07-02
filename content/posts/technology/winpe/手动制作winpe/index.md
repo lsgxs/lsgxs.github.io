@@ -22,11 +22,7 @@ ShowPostNavLinks: true
 UseHugoToc: false
 ShowCodeCopyButtons: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    image: "images/冰山.jpg" # image path/url
 ---
 
 #### 以win7为例手动创建winpe
@@ -48,5 +44,8 @@ cover:
 * 修改winre\software注册表配置单元，并导出为ToImport.reg（修改winre中的注册表配置单元，并导出以后合并）
 * 挂载修改后的iso_install_windows\software注册表配置单元，双击合并ToImport.reg文件。（合并）
 * 把修改后的iso_install_windows\software注册表配置单元文件替换到winre.wim包文件中（替换）
+* 运行regedit,加载winre.wim的software为pe-soft,找到【HKEY-LOCAL-MACHINE|pe-soft|MicroSoft\Windows NT|CurrentVersion|Winlogon】,修改shell的键值为explorer.exe
 * 从Windows系统目录添加Explorer相关支持文件到winre.wim中（添加Explorer支持文件）
 * 把修改后的winre.wim替换到c:\revovery目录下的winre.wim即可完成手（覆盖c:\recovery目录下的winre.wim）
+* 重启Windows,连续按下F8进入的系统修复模式，选择CMD命令窗口，输入explorer就可以显示基础的Explorer。
+* 如果想要进一步的自定义explorer，就需要学习pecmd或者winxshell(WimBuilder2)。
