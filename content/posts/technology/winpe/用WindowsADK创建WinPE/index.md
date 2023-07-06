@@ -81,8 +81,11 @@ cover:
   ```
 
   这段代码是引用自CSDN上一个博主的文章[win10PE iso镜像制作及问题解决](https://blog.csdn.net/weixin_43863487/article/details/116117714)
-#### 制作可启动的U盘  
-MakeWinpeMedia   /UFD    d:\win10pe   X:
+#### 制作可启动的U盘或者可启动的ISO镜像文件
+`MakeWinpeMedia   /UFD    d:\win10pe   X:`
+
+`MakeWinPEMedia /ISO d:\win10pe d:\win10pe\WinPE_amd64.iso`
+
 总结一下：
 
 ~~~bash
@@ -133,6 +136,28 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
   3、注意事项：继承和替换子容器和对象的所有者两个选项都要选，添加权限时选择全部权限。在下一节中修改注册表也用同样方法设置权限。
   
   ~~~
+  
+  #### 修改注册表
+
+~~~bash
+1、把前边制作好的基础Winpe的boot.wim加载到指定的目录，这里加载位置为hyper-v虚拟机的c盘（c:\winpe-amd64\mount）
+   dism /mount-image /imagefile:c:\winpe-amd64\media\sources\boot.wim /index:1 /mounddir:c:\winpe-amd64\mount
+2、把制作Winpe的Windows10安装盘的install.wim也加载到指定的目录，这里加载的位置为c:\winpe-amd64\install
+3、在winpe-amd64下新建两个目录，目录名称为[原pe]、[原win10]。上边两个wim包加载成功后，分别复制各自的windows\system32\config目录下四个注册表配置单元（SOFTWARE,SYSTEM、DEFAULT,DRIVERS），保存在[原pe]、[原win10]目录下。
+4、备份好原pe和win10的注册表配置单元后，直接把原win10的software配置单元复制到boot.wim加载的对应目录下（也就是直接替换win10的注册表），后边的修改是以win10的注册表为基础，然后导出pe的注册表，确保pe注册表的正常运行，又具有win10的功能。
+5、运行regedit,加载、修改、保存原pe的software配置单元。
+  （1）加载。以管理员权限运行regedit（ctrl+shift+esc打开任务管理器，选择文件\运行新任务，勾选[系统管理原权限创建此任务]，运行regedit）,选择HKEY-LOCAL-MACHINE,选择文件|加载配置单元，选择前边第三步保存的[原pe]software配置单元，[项名称]指定为pe-soft。鼠标右击pe-soft,选择权限，设置方法前边已详细说明，先修改所有者、继承，再添加所有权限。
+  （2）修改。关闭regedit,打开Registry Workshop.(在卸载配置单元的时候不能 regedit和workshop 两个一起打开，不然会提示拒绝访问，只能关掉一个去另一个卸载配置单元。有时workshop操作完之后直接卸载也是拒绝访问，这个是它自身的问题，只能关了重开再去卸载，或者关了打开regedit卸载）),选择pe-soft,ctrl+F查找C:\和D:\,全部替换为X:\（这里是大写的X）。查到后，在Registry Workshop的窗口的下面列出所有的搜索到的结果，ctrl+A全部选择这些搜索的结果，然后鼠标右击并选择替换，把C:\替换为X:\；同样的操作再搜索D:\,也替换为X:\。再搜索Interactive User，全部替换成空（不是删除)
+  (3)保存导出。修改完成后，右击pe-soft,选择导出，保存为pe-modified（名称随意），最后选择文件|卸载配置单元，卸载掉pe-soft。这样就完成了对原pe的software的修改，并另存为pe-modified。
+  （4）再加载前边第四步用win10的software替换的、加载到winpe-amd64\mount的windows\system32\config\softwoare,同样命名为pe-soft,用同样的步骤和方法查询、替换C:\和D:\为X:\，把Interactive User替换为空。修改完成后，直接双击运行pe-modified，把修改后的[原pe]导入到现在的pe，最后卸载pe-soft。
+
+总结一下：
+1、（导出software注册表）修改Windows安装镜像的software注册表。使用7-zip打开win10安装镜像中的install.wim文件，提取windows\system32\software注册表文件到software目录(自己新建自定义目录)，然后按照上述方法修改(修改工具为RegistyWorkShop)，完成后卸载（卸载工具为windows自带的regedit）。
+2、（修改）修改生成的基础winpe的boot.wim文件包的software注册表，并导出为xxx.reg文件，以备导入。使用7-zip打开生成的基础winpe下的boot.wim文件，提取windows\system32\software主表表文件到pe-software目录(自己新建自定义目录)，用同样的方法完成修改。
+3、（合并）合并两个software注册表单元。把xxx.reg文件合并到修改后的win10安装镜像software注册表单元。
+4、（替换）替换software注册表单元文件。 用合并后的software注册表单元文件替换基础wnipe的boot.wim对应文件
+~~~
+
 #### 添加Exlorer支持文件
 
 [这里参照csdn网友文章的方法](https://blog.csdn.net/qq_39819990/article/details/128518037)
@@ -167,29 +192,6 @@ MakeWinpeMedia   /UFD    d:\win10pe   X:
 14.壁纸的设置在下一章，修改pe-def的时候会提到，本文先让窗口版本的explorer启动起来先，要提前设置的可以跑到[HKEY_LOCAL_MACHINE\pe-def\Control Panel\Desktop]设置"Wallpaper"=“X:\Windows\Web\Wallpaper\Windows\img0.jpg”
 ————————————————
 原文链接：https://blog.csdn.net/qq_39819990/article/details/128518037
-~~~
-
-
-
-#### 修改注册表
-
-~~~bash
-1、把前边制作好的基础Winpe的boot.wim加载到指定的目录，这里加载位置为hyper-v虚拟机的c盘（c:\winpe-amd64\mount）
-   dism /mount-image /imagefile:c:\winpe-amd64\media\sources\boot.wim /index:1 /mounddir:c:\winpe-amd64\mount
-2、把制作Winpe的Windows10安装盘的install.wim也加载到指定的目录，这里加载的位置为c:\winpe-amd64\install
-3、在winpe-amd64下新建两个目录，目录名称为[原pe]、[原win10]。上边两个wim包加载成功后，分别复制各自的windows\system32\config目录下四个注册表配置单元（SOFTWARE,SYSTEM、DEFAULT,DRIVERS），保存在[原pe]、[原win10]目录下。
-4、备份好原pe和win10的注册表配置单元后，直接把原win10的software配置单元复制到boot.wim加载的对应目录下（也就是直接替换win10的注册表），后边的修改是以win10的注册表为基础，然后导出pe的注册表，确保pe注册表的正常运行，又具有win10的功能。
-5、运行regedit,加载、修改、保存原pe的software配置单元。
-  （1）加载。以管理员权限运行regedit（ctrl+shift+esc打开任务管理器，选择文件\运行新任务，勾选[系统管理原权限创建此任务]，运行regedit）,选择HKEY-LOCAL-MACHINE,选择文件|加载配置单元，选择前边第三步保存的[原pe]software配置单元，[项名称]指定为pe-soft。鼠标右击pe-soft,选择权限，设置方法前边已详细说明，先修改所有者、继承，再添加所有权限。
-  （2）修改。关闭regedit,打开Registry Workshop.(在卸载配置单元的时候不能 regedit和workshop 两个一起打开，不然会提示拒绝访问，只能关掉一个去另一个卸载配置单元。有时workshop操作完之后直接卸载也是拒绝访问，这个是它自身的问题，只能关了重开再去卸载，或者关了打开regedit卸载）),选择pe-soft,ctrl+F查找C:\和D:\,全部替换为X:\（这里是大写的X）。查到后，在Registry Workshop的窗口的下面列出所有的搜索到的结果，ctrl+A全部选择这些搜索的结果，然后鼠标右击并选择替换，把C:\替换为X:\；同样的操作再搜索D:\,也替换为X:\。再搜索Interactive User，全部替换成空（不是删除)
-  (3)保存导出。修改完成后，右击pe-soft,选择导出，保存为pe-modified（名称随意），最后选择文件|卸载配置单元，卸载掉pe-soft。这样就完成了对原pe的software的修改，并另存为pe-modified。
-  （4）再加载前边第四步用win10的software替换的、加载到winpe-amd64\mount的windows\system32\config\softwoare,同样命名为pe-soft,用同样的步骤和方法查询、替换C:\和D:\为X:\，把Interactive User替换为空。修改完成后，直接双击运行pe-modified，把修改后的[原pe]导入到现在的pe，最后卸载pe-soft。
-
-总结一下：
-1、`修改Windows安装镜像的software注册表`。使用7-zip打开win10安装镜像中的install.wim文件，提取windows\system32\software注册表文件到software目录(自己新建自定义目录)，然后按照上述方法修改(修改工具为RegistyWorkShop)，完成后卸载（卸载工具为windows自带的regedit）。
-2、`修改生成的基础winpe的boot.wim文件包的software注册表，并导出为xxx.reg文件，以备导入`。使用7-zip打开生成的基础winpe下的boot.wim文件，提取windows\system32\software主表表文件到pe-software目录(自己新建自定义目录)，用同样的方法完成修改。
-3、`合并两个software注册表单元`把xxx.reg文件合并到修改后的win10安装镜像software注册表单元。
-4、`替换software注册表单元文件` 用合并后的software注册表单元文件替换基础wnipe的boot.wim对应文件
 ~~~
 
 #### 手动添加常用软件
