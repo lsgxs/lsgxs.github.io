@@ -22,16 +22,16 @@ ShowPostNavLinks: true
 UseHugoToc: false
 ShowCodeCopyButtons: true
 cover:
-    image: "<image path/url>" # image path/url
+    image: "images/冰山.jpg" # image path/url
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+  
 ---
 
+####  快速重建HuGo博客站点
 
-
-####  QuickRebuildHugoSite
+一直用hyper-v的win10虚拟机管理博客站点，没有按照流程关机，第二天启动虚拟机时提示内存不足，用各种办法业务没有修复，只好重装win10虚拟机，里面的git管理github多账号的设置自然没有了，只好重新配置。可是习惯了git add-commit-push这简单的三条语句搞定博客文档上传，现在从头来还真是忘记了当时如何设置的。经过一天的摸索，终于还原了原来的状态，记录如下以备忘。也明白了一句话，简单的背后可能是复杂在支持。
 
 ##### 快速理解hugo 站点的运行模式
 
@@ -86,11 +86,30 @@ cover:
   * hugo  /?     `在git bash终端下使用该命令查询所有详细用法`
   * 接下就可以把生成的html文档自动化发布到github上。
 
-##### 生成并添加密钥对
+##### hugo 静态博客在github上的部署方式
+
+尽管在github上实现自动化部署静态博客有多种方法，我的这个hugo静态博客采用的是github提供的最简单的一种方式，直接使用github的acttions提供的Deploy Hugo site to pages workflow，最终的静态网页是发布在由github的action自动建立的gh-page上，不需要手动建立gh-page分支再部署。具体的设置如下图(github中仓库的Settings，不是github账户本身的Settings)：
+
+![img](images/github-pages-hugo.png)
+
+##### 用Git管理github博客站点
+
+###### 理解与github的通讯方式
+
+在本地直接使git来链接、管理github账号，一般使用ssh协议，具有安全、高效的特点，当然也可以使用https协议，只是经常需要输入账号及密码。而使用ssh-agent可以把私钥缓存在本地，直接撰写文档提交到远程，不必再做ssh相关的设置，非常方便。把公钥添加在github账户Settings的ssh里即可。如果使用第三方应用程序接口访问github，则是设置github账号本身的Settings-Develop Settings下的Personal Access Token(传统的tokens) ；如果是基于仓库基的部署，涉及到Deploy Keys和Secrets and variables，则要设置在仓库的Settings下设置。
+
+* git使用ssh 协议访问github
+* git使用https协议访问github
+* 第三方应用程序API使用token方式访问github账号
+* 基于github具体仓库的Deploy key  or Secretes and variables
+
+###### 生成并添加密钥对
 
 * ssh-keygen  -t rsa  -b 4096  -C  "MyMailbox"
 
-* 在本地添加私钥
+  或者`ssh-keygen -t  ed25519 -f ~/.ssh/id_ed25519_hugo  -C  "lsgxsle12@163.com"`
+
+* 添加私钥到ssh代理（ssh-agent可以缓存ssh，不用每次链接都输入ssh）
 
   * $eval  "$(ssh-agent  -s)"      `启动ssh agent`
   * ssh-add  ~/.ssh/id_rsa_namexxxx    `添加私钥到ssh  agent`
@@ -106,16 +125,14 @@ cover:
   ![img](images/user_ssh_add_2.png)
   
 
-##### 向远程提交文档
+###### 向远程提交文档
 
 ~~~
 git   add .
-
 #这里可能会提示要注册邮件和用户信息 
 #git   config  --global  user.email  "yourmailbox"
 # git  config   --global  user.name  
 git  commit -m   "your  commit "    
-
 git   push origin  main 
 ~~~
 
