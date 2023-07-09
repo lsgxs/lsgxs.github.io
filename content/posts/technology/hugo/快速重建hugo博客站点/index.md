@@ -50,7 +50,7 @@ cover:
 
   * 在系统环境变量path中新增项目，指向e:\hugo\bin
 
-    ![img](images\hugo-path.png)
+    ![img](images/hugo-path.png)
 
   * hugo  version    `正常就会显示hugo的版本信息`
 
@@ -105,3 +105,17 @@ cover:
   
   ![img](images/user_ssh_add_2.png)
   
+
+##### 向远程提交文档
+
+~~~
+git   add .
+
+#这里可能会提示要注册邮件和用户信息 
+#git   config  --global  user.email  "yourmailbox"
+# git  config   --global  user.name  
+git  commit -m   "your  commit "    
+
+git   push origin  main 
+~~~
+
