@@ -149,7 +149,7 @@ git   add .
 git  commit -m   "your  commit "    
 git   push origin  main 
 ~~~
-到目前为止，已顺利恢复hugo博客站点的正常编辑和自动发布了。只是有一点，在`git  push origin main `时提示没有权限。发现再执行一边添加私钥到ssh-agent的两条语句就可以正常推送了。难道是添加私钥一定要使用管理员权限打开git  bash 终端再运行命令吗？
+到目前为止，已顺利恢复hugo博客站点的正常编辑和自动发布了。只是有一点，在`git  push origin main `时提示没有权限。发现再执行一边添加私钥到ssh-agent的两条语句就可以正常推送了。记得以前是配置过git管理多个github账号的config文件，现在有点懒，暂时就只用hugo这一个静态站点，如果以后需要配置，可以看一下自己的另外一篇文档（在一台计算机上用git管理多个github账号）。
 
 ~~~
 eval "$(ssh-agent  -s)"
@@ -158,7 +158,7 @@ ssh-add ~/.ssh/id_rsa_hugo
 
 解决办法：
 
-找到`c:\program files\git\etc\barch.barchrc`,用记事本打开，在文档的末尾添加下面两条命令。如果提示不能保存，就把bash.bashrc文件复制到别处，添加好下面的命令之后再复制覆盖文件。
+找到`program files\git\etc\barch.barchrc`,用记事本打开，在文档的末尾添加下面两条命令。如果提示不能保存，就把bash.bashrc文件复制到别处，添加好下面的命令之后再覆盖git安装路径下的bash.bashrc文件。
 
 ~~~
 #ssh-agent  
@@ -166,10 +166,10 @@ eval  "$(ssh-agent -s )"
 ssh-add ~/.ssh/id_rsa_hugo
 ~~~
 
-这样，以后每次打开git bash 终端窗口是就会自动添加私钥，如下图所示:
+以后每次打开git bash 终端窗口就会自动添加私钥，如下图所示:
 
 ![img](images/ssh-agent.png)
-以后就和往常一样直接git-add-commit-push就可以了。:joy:
+以后就和往常一样直接git-add-commit-push就可以了。
 
 
 
