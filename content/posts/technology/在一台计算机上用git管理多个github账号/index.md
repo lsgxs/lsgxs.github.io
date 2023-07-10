@@ -26,8 +26,9 @@ tags: ["git","github账号","github"]
   ~~~
   1、 把对应账号的公钥添加在github的settings->ssh
   2、启动ssh-agent添加私钥
-     eval $(ssh-agent)
-     ssh-add  id_xxxxxx         --后面的参数是对应的私钥文件名
+     eval "$(ssh-agent -s)"
+     ssh-add  ~/.ssh/id_xxxxxx         --后面的参数是对应的私钥文件名
+     参照：https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
   ~~~
 
 * 在`~/.ssh`目录下新建config文件（没有扩展名的文本文件），内容如下：

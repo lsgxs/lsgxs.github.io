@@ -31,7 +31,20 @@ cover:
 
 ####  快速重建HuGo博客站点
 
-一直用hyper-v的win10虚拟机管理博客站点，没有按照流程关机，第二天启动虚拟机时提示内存不足，用各种办法业务没有修复，只好重装win10虚拟机，里面的git管理github多账号的设置自然没有了，只好重新配置。可是习惯了git add-commit-push这简单的三条语句搞定博客文档上传，现在从头来还真是忘记了当时如何设置的。经过一天的摸索，终于还原了原来的状态，记录如下以备忘。也明白了一句话，简单的背后可能是复杂在支持。
+一直用hyper-v的win10虚拟机管理博客站点，没有按照流程关机，第二天启动虚拟机时提示内存不足，用各种办法业务没有修复，只好重装win10虚拟机，里面的git管理github多账号的设置自然没有了，只好重新配置。可是习惯了git add-commit-push这简单的三条语句搞定博客文档上传，现在从头来还真是忘记了当时如何设置的。经过一天的摸索，终于还原了原来的状态，记录如下以备忘。也明白了一句话，简单的背后可能是复杂在支持。在具体重建之前，先复习一下下面几个概念，理解了原理，实现起来就很容易。
+
+* hugo静态博客的创建、编译和发布
+  * 在本地按照Hugo提供的[QuickStart](https://gohugo.io/getting-started/quick-start/)示例做一遍就理解了。
+* 自己的hugo 静态博客在github上实现自动发布和部署的方式
+  * 使用git-add-commit-push组合推送到github后，采用github本身提供的Deploy Hugo site to pages workflow,它会自己创建gh-pages对象，并把静态的网站文件发布者gh-pages上。
+* 与github的通讯方式 
+  * app与github一般采用 token（访问令牌）方式通讯，设置好访问的权限。
+  * git 与github通讯，经常使用https或者ssh协议等。以ssh协议为例，需要使用ssh-keygen生成一对密钥，公钥放在github的账户ssh设置参数里，私钥在本地通过ssh-agent添加。而git+https协议访问github则每次要输入账号和密码。
+
+
+* github上的几个重要的基本概念
+  * 账户级别的权限，如token 和ssh
+  * 仓库级别的权限   deploy keys   和Secretes and variables
 
 ##### 快速理解hugo 站点的运行模式
 
@@ -52,7 +65,7 @@ cover:
 
     ![img](images/hugo-path.png)
 
-  * hugo  version    `正常就会显示hugo的版本信息`
+  * hugo  version    `正常就会显示hugo的版本信息`(如果提示不识别hugo命令，就重启Windows让系统环境变量生效)
 
 * 建立一个简单的hugo 站点QuickStart(下面的过程是在git  bash终端下输入命令)
 
@@ -88,7 +101,7 @@ cover:
 
 ##### hugo 静态博客在github上的部署方式
 
-尽管在github上实现自动化部署静态博客有多种方法，我的这个hugo静态博客采用的是github提供的最简单的一种方式，直接使用github的acttions提供的Deploy Hugo site to pages workflow，最终的静态网页是发布在由github的action自动建立的gh-page上，不需要手动建立gh-page分支再部署。具体的设置如下图(github中仓库的Settings，不是github账户本身的Settings)：
+在github上实现自动化部署静态博客有多种方法，我这个hugo静态博客采用的是github提供的最简单的一种方式，直接使用github的acttions提供的Deploy Hugo site to pages workflow，最终的静态网页是发布在由github的action自动建立的gh-page上，不需要手动建立gh-page分支再部署。具体的设置如下图(github中仓库的Settings，不是github账户本身的Settings)：
 
 ![img](images/github-pages-hugo.png)
 
