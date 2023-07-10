@@ -141,7 +141,7 @@ cover:
 设置好git和github账号通讯的各种参数之后，使用`git clone git@github.com:yourusername/yourusername.github.io.git`把保存在github的整个站点获取到本地，然后就可以正常的编辑和提交了。把文档笔记部署到github上有个好处，我这本地系统数据丢失了，重做系统再取回就好了。
 ###### 向远程提交文档
 
-~~~
+~~~nginx
 git   add .
 #这里可能会提示要注册邮件和用户信息 
 #git   config  --global  user.email  "yourmailbox"
@@ -151,7 +151,7 @@ git   push origin  main
 ~~~
 到目前为止，已顺利恢复hugo博客站点的正常编辑和自动发布了。只是有一点，在`git  push origin main `时提示没有权限。发现再执行一边添加私钥到ssh-agent的两条语句就可以正常推送了。记得以前是配置过git管理多个github账号的config文件，现在有点懒，暂时就只用hugo这一个静态站点，如果以后需要配置，可以看一下自己的另外一篇文档（在一台计算机上用git管理多个github账号）。
 
-~~~
+~~~nginx
 eval "$(ssh-agent  -s)"
 ssh-add ~/.ssh/id_rsa_hugo
 ~~~
@@ -160,7 +160,7 @@ ssh-add ~/.ssh/id_rsa_hugo
 
 找到`program files\git\etc\barch.barchrc`,用记事本打开，在文档的末尾添加下面两条命令。如果提示不能保存，就把bash.bashrc文件复制到别处，添加好下面的命令之后再覆盖git安装路径下的bash.bashrc文件。
 
-~~~
+~~~nginx
 #ssh-agent  
 eval  "$(ssh-agent -s )"
 ssh-add ~/.ssh/id_rsa_hugo
@@ -179,7 +179,7 @@ ssh-add ~/.ssh/id_rsa_hugo
 
 上面写了这么多，其实是备忘用的，时间久了还真是无法很快重建，几乎涉及到每个步骤的细节。总结一下大致就下面五个步骤：
 
-~~~
+~~~nginx
 #1.生成密钥对，可以切换到~/.ssh目录再生成密钥
 ssh-keygen -t rsa -b 4096 -C “mailbox”
 #ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_hugo -C "mailbox"
