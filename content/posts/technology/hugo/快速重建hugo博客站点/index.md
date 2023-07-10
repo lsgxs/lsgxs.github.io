@@ -38,8 +38,8 @@ cover:
 * 自己的hugo 静态博客在github上实现自动发布和部署的方式
   * 使用git-add-commit-push组合推送到github后，采用github本身提供的Deploy Hugo site to pages workflow,它会自己创建gh-pages对象，并把静态的网站文件发布者gh-pages上。
 * 与github的通讯方式 
-  * app与github一般采用 token（访问令牌）方式通讯，设置好访问的权限。
-  * git 与github通讯，经常使用https或者ssh协议等。以ssh协议为例，需要使用ssh-keygen生成一对密钥，公钥放在github的账户ssh设置参数里，私钥在本地通过ssh-agent添加。而git+https协议访问github则每次要输入账号和密码。
+  * app与github一般采用 token（访问令牌）方式通讯，设置好访问权限。
+  * git 与github通讯，使用https或者ssh协议等。以ssh协议为例，需要使用ssh-keygen生成一对密钥，公钥放在github的账户ssh设置参数里，私钥在本地通过ssh-agent添加。而git+https协议访问github则每次要输入账号和密码。
 
 
 * github上的几个重要的基本概念
@@ -150,3 +150,9 @@ git  commit -m   "your  commit "
 git   push origin  main 
 ~~~
 到目前为止，已顺利恢复hugo博客站点的正常编辑和自动发布了。只是有一点，在`git  push origin main `时提示没有权限。发现再执行一边添加私钥到ssh-agent的两条语句就可以正常推送了。难道是添加私钥一定要使用管理员权限打开git  bash 终端再运行命令吗？
+
+~~~
+eval "$(ssh-agent  -s)"
+ssh-add ~/.ssh/id_rsa_hugo
+~~~
+
