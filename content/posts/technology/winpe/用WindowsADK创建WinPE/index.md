@@ -211,3 +211,13 @@ oscdimg是Windows ADK中带的一个工具，但是却并没有集成到winpe中
   运行regedit ,选择HEKY-LOCAL-MACHE下的【SYSTEM\ControlSet001\Control\Session Manager\Environment】，在右侧的数据项中找到path ,在最后加上%SystemRoot%\Oscdimg ，中间用分号隔开。这里的%SystemRoot%是环境变量的写法，一般指Windows目录。
 
 ![img](images/regedit-environment.png)
+
+#### 简单总结
+
+* 使用Windows ADK制作基础的winpe
+* 再结合手动制作Winpe那篇文档，对Windows  ADK制作好的基础winpe进行扩展
+  * 导出 install.wim中的software注册表配置单元
+  * 导出基础winpe的software注册表配置单元
+  * 修改注册表（参照修改的细节）
+
+* 添加Explorer支持文件
