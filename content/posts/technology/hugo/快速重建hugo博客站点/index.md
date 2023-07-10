@@ -138,7 +138,7 @@ cover:
   ![img](images/user_ssh_add_2.png)
   
 
-设置好git和github账号通讯的各种参数之后，就可以使用`git  clone git@github.com:yourusername/yourusername.github.io.git`把保存在github的文档获取到本地，然后就可以正常的的编辑和提交了。
+设置好git和github账号通讯的各种参数之后，使用`git clone git@github.com:yourusername/yourusername.github.io.git`把保存在github的整个站点获取到本地，然后就可以正常的编辑和提交了。把文档笔记部署到github上有个好处，我这本地系统数据丢失了，重做系统再取回就好了。
 ###### 向远程提交文档
 
 ~~~
