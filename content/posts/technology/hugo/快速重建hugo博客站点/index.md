@@ -156,3 +156,20 @@ eval "$(ssh-agent  -s)"
 ssh-add ~/.ssh/id_rsa_hugo
 ~~~
 
+解决办法：
+
+找到`c:\program files\git\etc\barch.barchrc`,用记事本打开，在文档的末尾添加下面两条命令。如果提示不能保存，就把bash.bashrc文件复制到别处，添加好下面的命令之后再复制覆盖文件。
+
+~~~
+#ssh-agent  
+eval  "$(ssh-agent -s )"
+ssh-add ~/.ssh/id_rsa_hugo
+~~~
+
+这样，以后每次打开git bash 终端窗口是就会自动添加私钥，如下图所示:
+
+![img](images/ssh-agent.png)
+以后就和往常一样直接git-add-commit-push就可以了。:joy:
+
+
+
