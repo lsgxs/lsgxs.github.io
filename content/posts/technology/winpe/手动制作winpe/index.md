@@ -61,7 +61,7 @@ cover:
 
   总结一下：
 
-  ~~~jsx
+  ~~~pascal
   1.导出并修改注册表
     （1）以winre.wim(或者boot.wim)为基础，借用install.wim的注册表，把两个包文件中的software注册表单元导出
     （2）修改winre.wim(或者boot.wim)的注册表，然后导出为some_name.reg文件。同样修改install.wim中导出的注册表单元，再把some_name.reg导入到该注册表单元。
@@ -75,7 +75,7 @@ cover:
 
 ##### 基础Explorer文件列表
 
-```jsx
+```nginx
 Windows\explorer.exe
 Windows\zh-CN\explorer.exe.mui
 Windows\System32\ExplorerFrame.dll
