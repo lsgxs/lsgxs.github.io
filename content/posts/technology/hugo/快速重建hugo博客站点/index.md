@@ -34,7 +34,7 @@ cover:
 一直用hyper-v的win10虚拟机管理博客站点，没有按照流程关机，第二天启动虚拟机时提示内存不足，用各种办法业务没有修复，只好重装win10虚拟机，里面的git管理github多账号的设置自然没有了，只好重新配置。可是习惯了git add-commit-push这简单的三条语句搞定博客文档上传，现在从头来还真是忘记了当时如何设置的。经过一天的摸索，终于还原了原来的状态，记录如下以备忘。也明白了一句话，简单的背后可能是复杂在支持。在具体重建之前，先复习一下下面几个概念，理解了原理，实现起来就很容易。
 
 * hugo静态博客的创建、编译和发布
-  * 在本地按照Hugo提供的[QuickStart](https://gohugo.io/getting-started/quick-start/)示例做一遍就理解了。
+  * 在本地按照Hugo提供的[QuickStart](https://gohugo.io/getting-started/quick-start/)示例做一遍就理解了。我的这个hugo博客使用的是PaperMod主题。
 * 自己的hugo 静态博客在github上实现自动发布和部署的方式
   * 使用git-add-commit-push组合推送到github后，采用github本身提供的Deploy Hugo site to pages workflow,它会自己创建gh-pages对象，并把静态的网站文件发布者gh-pages上。
 * 与github的通讯方式 
@@ -120,7 +120,7 @@ cover:
 
 * ssh-keygen  -t rsa  -b 4096  -C  "MyMailbox"
 
-  或者`ssh-keygen -t  ed25519 -f ~/.ssh/id_ed25519_hugo  -C  "lsgxsle12@163.com"`
+  或者`ssh-keygen -t  ed25519 -f ~/.ssh/id_ed25519_hugo  -C  "MyMailBox"`
 
 * 添加私钥到ssh代理（ssh-agent可以缓存ssh，不用每次链接都输入ssh）
 
@@ -170,6 +170,36 @@ ssh-add ~/.ssh/id_rsa_hugo
 
 ![img](images/ssh-agent.png)
 以后就和往常一样直接git-add-commit-push就可以了。
+
+
+
+***
+
+上面写了这么多，其实是备忘用的，时间久了还真是无法很快重建，几乎涉及到每个步骤的细节。总结一下大致就下面五个步骤：
+
+~~~
+#1.生成密钥对，可以切换到~/.ssh目录再生成密钥
+ssh-keygen -t rsa -b 4096 -C “mailbox”
+#ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_hugo -C "mailbox"
+#或者可以试试后面的ed25519类型创建密钥
+
+#2.复制公钥到hugo的github账户
+clip  <  ~/.ssh/id_rsa_hugo.pub
+#paste  to  ssh of   my hugo  github  account
+
+#3.在本地通过ssh代理添加私钥
+#把下面这两句话添加到bash.bashrc文件的末尾
+eval "$(ssh-agent  -s)"
+ssh-add ~/.ssh/id_rsa_hugo
+
+#4.下载保存在github的完整站点仓库
+git clone  git@github.com:username/username.github.io.git 
+
+#5 正常的编辑和推送到远程
+git  add .
+git  commit  -m "rebuilding "
+git push origin  main
+~~~
 
 
 
