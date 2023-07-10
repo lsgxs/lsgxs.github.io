@@ -138,6 +138,7 @@ cover:
   ![img](images/user_ssh_add_2.png)
   
 
+设置好git和github账号通讯的各种参数之后，就可以使用`git  clone git@github.com:yourusername/yourusername.github.io.git`把保存在github的文档获取到本地，然后就可以正常的的编辑和提交了。
 ###### 向远程提交文档
 
 ~~~
@@ -148,4 +149,4 @@ git   add .
 git  commit -m   "your  commit "    
 git   push origin  main 
 ~~~
-
+到目前为止，已顺利恢复hugo博客站点的正常编辑和自动发布了。只是有一点，在`git  push origin main `时提示没有权限。发现再执行一边添加私钥到ssh-agent的两条语句就可以正常推送了。难道是添加私钥一定要使用管理员权限打开git  bash 终端再运行命令吗？
