@@ -75,7 +75,7 @@ cover:
 
 ##### 基础Explorer文件列表
 
-```nginx
+```bash
 Windows\explorer.exe
 Windows\zh-CN\explorer.exe.mui
 Windows\System32\ExplorerFrame.dll

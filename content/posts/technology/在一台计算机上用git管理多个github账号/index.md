@@ -23,7 +23,7 @@ tags: ["git","github账号","github"]
 
   `ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C "mailbox-for-github"`
 
-  ~~~
+  ~~~bash
   1、 把对应账号的公钥添加在github的settings->ssh
   2、启动ssh-agent添加私钥
      eval "$(ssh-agent -s)"
@@ -32,7 +32,7 @@ tags: ["git","github账号","github"]
   ~~~
 
 * 在`~/.ssh`目录下新建config文件（没有扩展名的文本文件），内容如下：
-  ~~~
+  ~~~nginx
   #first
   Host hexo
   HostName github.com
@@ -57,7 +57,7 @@ tags: ["git","github账号","github"]
 
 * 配置好密钥对文件和config文件之后，测试ssh通过git协议能否联通github
 
-  ~~~
+  ~~~bash
     ssh -T git@hexo
     ssh -T git@hugo
     ssh -T git@tiddlywiki  
