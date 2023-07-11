@@ -31,7 +31,7 @@ cover:
 
 ####  快速重建HuGo博客站点
 
-一直用hyper-v的win10虚拟机管理博客站点，没有按照流程关机，第二天启动虚拟机时提示内存不足，用各种办法业务没有修复，只好重装win10虚拟机，里面的git管理github多账号的设置自然没有了，只好重新配置。可是习惯了git add-commit-push这简单的三条语句搞定博客文档上传，现在从头来还真是忘记了当时如何设置的。经过一天的摸索，终于还原了原来的状态，记录如下以备忘。也明白了一句话，简单的背后可能是复杂在支持。在具体重建之前，先复习一下下面几个概念，理解了原理，实现起来就很容易。
+一直用hyper-v的win10虚拟机管理博客站点，没有按照流程关机，第二天启动虚拟机时提示内存不足，用各种办法业务没有修复，只好重装win10虚拟机，里面的git管理github多账号的设置自然没有了，只好重新配置。可是习惯了git add-commit-push这简单的三条语句搞定博客文档上传，现在从头来还真是忘记了当时如何设置的。经过一天的摸索，终于还原了原来的状态，记录如下以备忘。在重建之前，先复习一下下面几个概念，理解了原理，实现起来就很容易。
 
 * hugo静态博客的创建、编译和发布
   * 在本地按照Hugo提供的[QuickStart](https://gohugo.io/getting-started/quick-start/)示例做一遍就理解了。我的这个hugo博客使用的是PaperMod主题。
@@ -200,6 +200,8 @@ git clone  git@github.com:username/username.github.io.git
 #5 正常的编辑和推送到远程
 git  add .
 git  commit  -m "rebuilding "
+# git config  --global user.email "yourmailbox"
+# git config  --global user.name "your_github_username"
 git push origin  main
 ~~~
 
