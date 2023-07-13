@@ -29,13 +29,11 @@ cover:
 
 #### win7英文版
 
-发布于2009年的windows7，在2015年微软公司就终止了对主流版本的技术支持，windows10、windows11相继登场。但是现实是有大量成熟的业务系统基于Windows7开发的，对于windows10、windows11的支持并不到位。新电脑的硬件配置甚至无法安装Windows7 sp1了，此时可以试试发布于2019年2月的windows7英文版。下载地址：[windows7_EN](ed2k://|file|7601.24214.180801-1700.win7sp1_ldr_escrow_CLIENT_ULTIMATE_x64FRE_en-us.iso|5876357120|9C55A020B327AD60CB8A37D0317743F2|/)
-
-![img](images/win7_download.png)
+发布于2009年的windows7，在2015年微软公司就终止了对主流版本的技术支持，windows10、windows11相继登场。但是现实是有大量成熟的业务系统基于Windows7开发的，对于windows10、windows11的支持并不到位。新电脑的硬件配置甚至无法安装Windows7 sp1了，此时可以试试发布于2019年2月的windows7英文版。
 
 #### 安装语言包
 
-安装了Windows7的英文版之后，把中文语言包安装好，就相当于一个升级版的中文版Windows7。英文版的安装和中文版没什么区别。这里就说一下如何添加中文包。
+安装了Windows7的英文版之后，把中文语言包安装好，就相当于一个升级版的中文版Windows7。英文版的安装和中文版没什么区别。这里就说一下如何添加中文语言包。
 
 ##### 以更新的形式安装中文语言包
 
@@ -62,3 +60,6 @@ cover:
 
 ![img](images/logoff.png)
 
+##### 在Windows ADK生成PE工作目录了寻找语言包
+
+可以尝试在Windows ADK生成的工作目录下寻找中文语言包，一般格式为lp.cab，在安装语言包时选择从本地安装，有空试试。
