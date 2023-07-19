@@ -60,6 +60,3 @@ cover:
 
 ![img](images/logoff.png)
 
-##### 在Windows ADK生成PE工作目录了寻找语言包
-
-可以尝试在Windows ADK生成的工作目录下寻找中文语言包，一般格式为lp.cab，在安装语言包时选择从本地安装，有空试试。
