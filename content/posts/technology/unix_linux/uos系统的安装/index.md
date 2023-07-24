@@ -78,7 +78,9 @@ cover:
 
 ##### Unix&Linux的发展历史
 
-懒的不想再码字，不想去翻翻书本的描述，这里有网上的链接:[Unix&Linux发展史](https://blog.csdn.net/Tach1banA/article/details/118395964),可以快速学习一下，如果想深入了解，还是翻翻还没有阅读大部头Linux书本，记得要做好笔记。这里想认识一下一下Debian、Ubuntu、Redhat、CentOS这几个Linux发行版。作为新手就先从Ubuntu入手吧。Unix作为一个成熟的商业操作系统，经过多年发展，发展出BSD、Minix（操作系统的教学工具）,而Linux是得益于Minix的启发而诞生的，自从Linux加盟了GPL阵营后，迅速发展壮大，诞生了RedHat、CentOS、Debian、Ubuntu等发行版Linux。
+懒的不想再码字，不想去翻翻书本的描述，这里有网上的链接:[Unix&Linux发展史](https://blog.csdn.net/Tach1banA/article/details/118395964),可以快速学习一下，如果想深入了解，还是翻翻还没有阅读大部头Linux书本，记得要做好笔记。这里想认识一下一下Debian、Ubuntu、Redhat、CentOS这几个Linux发行版。作为新手就先从Ubuntu入手吧。
+
+UNIX操作系统是一个强大的多用户，多任务操作系统，支持多种处理器架构，起源于贝尔实验室、通用电气和麻省理工学院合作的计划MULTICS操作系统计划。Unix作为一个成熟的商业操作系统，经过多年发展，Berkeley的BSD UNIX和AT&T(America Telephone & Telegraph,美国电话电报公司)的Unix作为主要的两个发展主线，发展出BSD、System V、 Minix（操作系统的教学工具）、Sun、IBM等公司的Unix,而Linux是得益于Minix的启发而诞生的，自从Linux加盟了GNU(GNU Linux)阵营后，迅速发展壮大，诞生了RedHat、CentOS、Debian、Ubuntu等发行版Linux。
 
 ##### Linux的常见命令
 
