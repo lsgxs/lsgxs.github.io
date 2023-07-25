@@ -102,13 +102,11 @@ UNIX System V Release  4发布后不久，AT&T就将其所有UNIX权利出售给
 
 至此，Unix发展主线就是System V基础版、BSD。而 Minix（Unix操作系统的教学工具）启发了Linux的诞生，自从Linux加盟了GNU(GNU Linux)阵营后，迅速发展壮大，诞生了RedHat、CentOS、Debian、Ubuntu等发行版Linux。
 
-有空看看《UNIX传奇》、Unix高级编程这两本书，会对UNIX的发展会有更详细的认识。
+有空看看《UNIX传奇》、《Unix编程艺术》这两本书，对UNIX发展会有更详细的认识。
 
 关于UNIX发展史的链接文档：
 
 [UNIX操作系统发展史简介](https://mp.weixin.qq.com/s/GgXAGj0Kbo1gKPT4D4WYSA)
-
-[Unix&Linux发展史](https://blog.csdn.net/Tach1banA/article/details/118395964)
 
 [UNIX发展史](https://www.cnblogs.com/Dodge/articles/4264833.html)
 
