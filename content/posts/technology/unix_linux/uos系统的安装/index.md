@@ -76,11 +76,45 @@ cover:
 
 #### Unix&Linux的基础知识学习
 
-##### Unix&Linux的发展历史
+##### UNIX发展史
 
-懒的不想再码字，不想去翻翻书本的描述，这里有网上的链接:[Unix&Linux发展史](https://blog.csdn.net/Tach1banA/article/details/118395964),可以快速学习一下，如果想深入了解，还是翻翻还没有阅读大部头Linux书本，记得要做好笔记。这里想认识一下一下Debian、Ubuntu、Redhat、CentOS这几个Linux发行版。作为新手就先从Ubuntu入手吧。
+1964年贝尔实验室（Bell Labs）、通用电气（General Electric）和麻省理工学院（MIT）联合启动研发第二代分时操作系统**MULTICS**（Multiplexed Information and Computing Service）(注：MULTICS正式研制始于1965年)
 
-UNIX操作系统是一个强大的多用户，多任务操作系统，支持多种处理器架构，起源于贝尔实验室、通用电气和麻省理工学院合作的计划MULTICS操作系统计划。Unix作为一个成熟的商业操作系统，经过多年发展，Berkeley的BSD UNIX和AT&T(America Telephone & Telegraph,美国电话电报公司)的Unix作为主要的两个发展主线，发展出BSD、System V、 Minix（操作系统的教学工具）、Sun、IBM等公司的Unix,而Linux是得益于Minix的启发而诞生的，自从Linux加盟了GNU(GNU Linux)阵营后，迅速发展壮大，诞生了RedHat、CentOS、Debian、Ubuntu等发行版Linux。
+省理工学院合作的MULTICS计划，该计划的目的是让大型机支持300个以上的终端连线使用。因进度不理想、资金不到位，贝尔实验室退出该计划。1969年，贝尔实验室研究人员Ken Thompson在退出MULTICS项目时，准备将原本在MULTICS系统上开发的“star travel”游戏转移到DEC PDP-7上运行。在转移游戏程序运行环境的过程中，Thompson和Dennis M.　Ritchie共同动手设计了一套包含文件系统、命令解释器以及一些实用程序的支持多任务的操作系统。与Multics相对应，这个新操作系统被同事Brian Kernighan戏称为UNICS（UNiplexed　Information and Computing System，非复用信息和计算机服务），之后大家取谐音便叫成了UNIX。
+
+1970年Thompson尝试用Fortran重写UNIX失败后整合BCPL成B语言，1971年他用B语言在PDP-11/24上重写UNIX，当年的11月3日，UNIX第1版（UNIX V1）正式诞生。
+
+1972年，UNIX发布了第2版，最大的改进是添加了后来成为UNIX标志特征之一的管道功能。在开发UNIX V2的时候，Ritchie给B语言加上了数据类型和结构的支持，推出了C语言。
+
+1973年，Thompson和Ritchie使用C语言重写了UNIX，形成第3版UNIX。在当时，为了实现最高效率，系统程序都是由汇编语言编写，所以Thompson和Ritchie此举是极具大胆创新和革命意义的。用C语言编写的Unix代码简洁紧凑、易移植、易读、易修改，为此后UNIX的发展奠定了坚实基础。
+
+1974 年 Thompson 与 Ritchie 共同在 Communications of the ACM 发表 了一篇 UNIX 论文  "UNIX Time-Sharing System" 得到相当大的回响。 1975 年 UNIX  发表第六版（V6）﹐其提供的强大功能更胜过当时昂贵的大型计算机操作系统，其最大特点是以高级语言写成(C语言)，仅需要做少部份程序的修改便可移植到不  同的计算机平台上。 UNIX V6 版本并附有完整的程序原始码在 1976 年正式从 贝尔实验室内部传播到各大学及研究机构，UC  Berkeley 依据这个版本开 始研究并加以发展，并在 1977 年发表 1 BSD（1st Berkeley Software  Distribution）版本的 UNIX OS，其后续的发展更为 UNIX OS 贡献良多且影响深远。
+
+1980年，美国电话电报公司发布了UNIX的可分发二进制版（Distribution Binary）许可证，启动了将UNIX商业化的计划。
+
+1981年，美国电话电报公司基于UNIX V7开发了UNIX System III 的第一个版本（1982年发布）。这是一个商业版本，仅供出售。
+
+1983年，美国电话电报公司成立了UNIX系统实验室（UNIX System Laboratories，USL），并综合其他大学和公司开发的各种UNIX，开发出UNIX System V Release  1（简称SVR1）。这个新的UNIX商业发布版本不再包含源代码。美国电话电报公司开始积极地保护UNIX的源代码。从发布System  III开始，该公司的所有UNIX版本转由一个强调稳定的商业发行版本小组进行维护。
+
+此后，其他一些公司也开始为其自己的小型机或工作站提供商业版本的UNIX系统，有些选择System V作为基础版本，有些则选择了BSD。BSD的一名主要开发者，Bill Joy，在BSD基础上开发了SunOS，并最终创办了SUN公司。
+
+UNIX System V Release  4发布后不久，AT&T就将其所有UNIX权利出售给了Novell。Novell期望以此来对抗微软的Windows  NT，1993年Novell将SVR4的商标权利出售给了X/OPEN公司，后者成为定义UNIX标准的机构。1996年，X/OPEN和OSF/1合并，创建了国际开放标准组织，由它公布的“单一UNIX规范”定义着具有什么特征的操作系统可以冠上UNIX之名，相对地，不符合这些标准但与Unix有类似性的操作系统只能称为“类Unix”(unix-like)。
+
+至此，Unix发展主线就是System V基础版、BSD。而 Minix（Unix操作系统的教学工具）启发了Linux的诞生，自从Linux加盟了GNU(GNU Linux)阵营后，迅速发展壮大，诞生了RedHat、CentOS、Debian、Ubuntu等发行版Linux。
+
+有空看看《UNIX传奇》、Unix高级编程这两本书，会对UNIX的发展会有更详细的认识。
+
+关于UNIX发展史的链接文档：
+
+[UNIX操作系统发展史简介](https://mp.weixin.qq.com/s/GgXAGj0Kbo1gKPT4D4WYSA)
+
+[Unix&Linux发展史](https://blog.csdn.net/Tach1banA/article/details/118395964)
+
+[UNIX发展史](https://www.cnblogs.com/Dodge/articles/4264833.html)
+
+#####  Linux发展史
 
 ##### Linux的常见命令
+
+了解一下Debian、Ubuntu、Redhat、CentOS这几个Linux发行版，我作为新手就先从Ubuntu入手。
 
