@@ -88,7 +88,7 @@ cover:
 
 1973年，Thompson和Ritchie使用C语言重写了UNIX，形成第3版UNIX。在当时，为了实现最高效率，系统程序都是由汇编语言编写，所以Thompson和Ritchie此举是极具大胆创新和革命意义的。用C语言编写的Unix代码简洁紧凑、易移植、易读、易修改，为此后UNIX的发展奠定了坚实基础。
 
-1974 年 Thompson 与 Ritchie 共同在 Communications of the ACM 发表 了一篇 UNIX 论文  "UNIX Time-Sharing System" 得到相当大的回响。 1975 年 UNIX  发表第六版（V6）﹐其提供的强大功能更胜过当时昂贵的大型计算机操作系统，其最大特点是以高级语言写成(C语言)，仅需要做少部份程序的修改便可移植到不  同的计算机平台上。 UNIX V6 版本并附有完整的程序原始码在 1976 年正式从 贝尔实验室内部传播到各大学及研究机构，UC  Berkeley 依据这个版本开 始研究并加以发展，并在 1977 年发表 1 BSD（1st Berkeley Software  Distribution）版本的 UNIX OS，其后续的发展更为 UNIX OS 贡献良多且影响深远。
+1974 年 Thompson 与 Ritchie 共同在 Communications of the ACM 发表 了一篇 UNIX 论文  "UNIX Time-Sharing System" 得到相当大的回响。 1975 年 UNIX  发表第六版（V6）﹐其提供的强大功能更胜过当时昂贵的大型计算机操作系统，其最大特点是以高级语言写成(C语言)，仅需要做少部份程序的修改便可移植到不同的计算机平台上。 UNIX V6 版本并附有完整的程序原始码，在1976年正式从贝尔实验室内部传播到各大学及研究机构，UC  Berkeley 依据这个版本开 始研究并加以发展，并在 1977 年发表 1 BSD（1st Berkeley Software  Distribution）版本的 UNIX OS，其后续的发展更为 UNIX OS 贡献良多且影响深远。
 
 1980年，美国电话电报公司发布了UNIX的可分发二进制版（Distribution Binary）许可证，启动了将UNIX商业化的计划。
 
@@ -103,6 +103,15 @@ UNIX System V Release  4发布后不久，AT&T就将其所有UNIX权利出售给
 至此，Unix发展主线就是System V基础版、BSD。而 Minix（Unix操作系统的教学工具）启发了Linux的诞生，自从Linux加盟了GNU(GNU Linux)阵营后，迅速发展壮大，诞生了RedHat、CentOS、Debian、Ubuntu等发行版Linux。
 
 有空看看《UNIX传奇》、《Unix编程艺术》这两本书，对UNIX发展会有更详细的认识。
+
+自己总结一下：
+
+* 贝尔实验室、通用电气、麻省理工共同开发MULTICS计划
+* 贝尔实验室退出该计划，K&R两人组为了在PDP-7机器上实现原MULTICS计划中的star travel,实现了UNIX。
+* K&R实现了C语言，用C语言重写了UNIX,此时的Unix为V3版。有了C语言的加持，Unix具有更好的流动性，促进UNIX走出贝尔实验室。
+*  UNIX的重要分支BSD产生。UNIX V6 版本并附有完整的程序原始码，在1976年正式从贝尔实验室内部传播到各大学及研究机构。UC  Berkeley 的Bill Joy对这个项目很感兴趣，得到UNIX核心的源码后，依据这个版本研究并加以发展，在1977年发表1BSD（1st Berkeley Software  Distribution）版本的 UNIX OS。Bill Joy也是SUN公司的创办者。Unix V6是贝尔实验室发布的最后一个免费Unix，由于UNIX的高度可移植性，加上当时并没有版权纠纷，很多商业公司基于v6开始发展UNIX，比如IBM的AIX、HP的DEC等。到了BSD4.3,与AT&T的UNIX已经有很大不同了，来自AT&T的UNIX的代码已经不足10%，并且领先了AT&T的UNIX（最早实现tcip/ip协议的就是BSD）
+* 1980年后，AT&T开始考虑商业版权，启动了UNIX的商业计划，根据Unix V7开发了UNIX System Release 1,这个商业版本不再提供源代码。UNIX实际上形成了两大派系：AT&T的UNIX  System V系列和UC  Berkeley 的BSD。此时AT&T开始认识到UNIX的商业价值，起诉了包括伯克利在内的很多厂商，伯克利不得已推出不包含任何AT&T源代码的BSD4.4，同时很多厂商因为版权问题，转向了AT&T的System  v系列，这也导致FreeBSD的发展缓慢，有了后来的Linux。
+* 1984年，Minix
 
 关于UNIX发展史的链接文档：
 
