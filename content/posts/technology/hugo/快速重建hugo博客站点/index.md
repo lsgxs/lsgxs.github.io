@@ -177,7 +177,7 @@ ssh-add ~/.ssh/id_rsa_hugo
 
 ##### 简单总结
 
-上面写了这么多，其实是备忘用的，时间久了还真是无法很快重建，几乎涉及到每个步骤的细节。总结一下大致就下面五个步骤：
+上面写了这么多，其实是备忘用的，时间久了还真是无法很快重建，几乎涉及到每个步骤的细节。总结一下大致就下面几个步骤：
 
 ~~~nginx
 #1.下载并安装git
@@ -185,14 +185,14 @@ ssh-add ~/.ssh/id_rsa_hugo
 ssh-keygen -t rsa -b 4096 -C “mailbox”
 #ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_hugo -C "mailbox"
 #或者可以试试后面的ed25519类型创建密钥
-#~表示当前目录，如果当前目录下没有.ssh目录，试着用mkdir创建
+#~表示当前目录，如果当前目录下没有.ssh目录就创建该目录。
 
 #3.复制公钥到hugo的github账户
 clip  <  ~/.ssh/id_rsa_hugo.pub
 #paste  to  ssh of   my hugo  github  account
 
 #4.在本地通过ssh代理添加私钥
-#把下面这两句话添加到bash.bashrc文件的末尾
+#把下面这两句话添加到bash.bashrc文件的末尾。该文件保存在"x:\Program Files\Git\etc"目录下。
 eval "$(ssh-agent  -s)"
 ssh-add ~/.ssh/id_rsa_hugo
 
@@ -205,6 +205,8 @@ git  commit  -m "rebuilding "
 # git config  --global user.email "yourmailbox"
 # git config  --global user.name "your_github_username"
 git push origin  main
+#如果在另外一台电脑对远程的仓库做了更新，到当前这台电脑下载远程仓库的更新时，使用下面的语句：
+# git  pull origin 
 ~~~
 
 
