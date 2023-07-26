@@ -1,5 +1,5 @@
 ---
-title: "UOS系统的安装"
+title: "统信UOS系统的安装"
 date: 2023-07-24T19:56:18+08:00
 draft: false
 # weight: 2
@@ -28,7 +28,7 @@ cover:
    
 ---
 
-十年前玩过linux,感觉熟悉了基本的玩法，但是并没有做笔记的习惯，发现好多以前了解比较深入和细致的知识点，现在好多都忘记了，甚至要从新再拾起来。工作中也许有机会更换到linux平台。先记录个最基本的入门知识，安装linux的发行版通信UOS，一个国产Linux发行版，是收购了Deepin Linux之后的发行版。毕竟是国产的发行版，使用起来顺手很多。在熟悉unix&linux基本知识之前，最基础的应该是对分区的认识。下面是几种常见的分区方案：
+十年前玩过linux,感觉熟悉了基本的玩法，但是并没有做笔记的习惯，发现好多以前了解比较深入和细致的知识点，现在好多都忘记了，甚至要从新再拾起来。工作中也许有机会更换到linux平台。先记录个最基本的入门知识，安装linux的发行版统信UOS，一个国产Linux发行版，是收购了Deepin Linux之后的发行版。毕竟是国产的发行版，使用起来顺手很多。在熟悉unix&linux基本知识之前，最基础的应该是对分区的认识。下面是几种常见的分区方案：
 
 #### 三种分区方案
 
@@ -80,15 +80,15 @@ cover:
 
 1964年贝尔实验室（Bell Labs）、通用电气（General Electric）和麻省理工学院（MIT）联合启动研发第二代分时操作系统**MULTICS**（Multiplexed Information and Computing Service）(注：MULTICS正式研制始于1965年)
 
-计划，该计划的目的是让大型机支持300位使用者同时连线使用。因进度不理想、资金不到位，贝尔实验室退出该计划。1969年，贝尔实验室研究人员Ken Thompson在退出MULTICS项目时，准备将原本在MULTICS系统上开发的“star travel”游戏转移到DEC PDP-7上运行。在转移游戏程序运行环境的过程中，Thompson和Dennis M.　Ritchie共同动手设计了一套包含文件系统、命令解释器以及一些实用程序的支持多任务的操作系统。与Multics相对应，这个新操作系统被同事Brian Kernighan戏称为UNICS（UNiplexed　Information and Computing System，非复用信息和计算机服务），之后大家取谐音便叫成了UNIX。
+计划，该计划的目的是让大型机支持300位使用者同时连线使用。因进度不理想、资金不到位，贝尔实验室退出该计划。1969年，贝尔实验室研究人员Ken Thompson在退出MULTICS项目时，准备将原本在MULTICS系统上开发的“star travel”游戏转移到DEC PDP-7上运行。在转移游戏程序运行环境的过程中， Ken Thompson和Dennis Ritchie共同动手设计了一套包含文件系统、命令解释器以及一些实用程序的支持多任务的操作系统。与Multics相对应，这个新操作系统被同事Brian Kernighan戏称为UNICS（UNiplexed　Information and Computing System，非复用信息和计算机服务），之后大家取谐音便叫成了UNIX。
 
 1970年Thompson尝试用Fortran重写UNIX失败后整合BCPL成B语言，1971年他用B语言在PDP-11/24上重写UNIX，当年的11月3日，UNIX第1版（UNIX V1）正式诞生。
 
 1972年，UNIX发布了第2版，最大的改进是添加了后来成为UNIX标志特征之一的管道功能。在开发UNIX V2的时候，Ritchie给B语言加上了数据类型和结构的支持，推出了C语言。
 
-1973年，Thompson和Ritchie使用C语言重写了UNIX，形成第3版UNIX。在当时，为了实现最高效率，系统程序都是由汇编语言编写，所以Thompson和Ritchie此举是极具大胆创新和革命意义的。用C语言编写的Unix代码简洁紧凑、易移植、易读、易修改，为此后UNIX的发展奠定了坚实基础。
+1973年，Ken Thompson和Dennis Ritchie使用C语言重写了UNIX，形成第3版UNIX。在当时，为了实现最高效率，系统程序都是由汇编语言编写，所以Ken Thompson和Dennis Ritchie此举是极具大胆创新和革命意义的。用C语言编写的Unix代码简洁紧凑、易移植、易读、易修改，为此后UNIX的发展奠定了坚实基础。
 
-1974 年 Thompson 与 Ritchie 共同在 Communications of the ACM 发表 了一篇 UNIX 论文  "UNIX Time-Sharing System" 得到相当大的回响。 1975 年 UNIX  发表第六版（V6）﹐其提供的强大功能更胜过当时昂贵的大型计算机操作系统，其最大特点是以高级语言写成(C语言)，仅需要做少部份程序的修改便可移植到不同的计算机平台上。 UNIX V6 版本并附有完整的程序原始码，在1976年正式从贝尔实验室内部传播到各大学及研究机构，UC  Berkeley 依据这个版本开 始研究并加以发展，并在 1977 年发表 1 BSD（1st Berkeley Software  Distribution）版本的 UNIX OS，其后续的发展更为 UNIX OS 贡献良多且影响深远。
+1974 年 Ken Thompson和Dennis Ritchie 共同在 Communications of the ACM 发表 了一篇 UNIX 论文  "UNIX Time-Sharing System" 得到相当大的回响。 1975 年 UNIX  发表第六版（V6）﹐其提供的强大功能更胜过当时昂贵的大型计算机操作系统，其最大特点是以高级语言写成(C语言)，仅需要做少部份程序的修改便可移植到不同的计算机平台上。 UNIX V6 版本并附有完整的程序原始码，在1976年正式从贝尔实验室内部传播到各大学及研究机构，UC  Berkeley 依据这个版本开 始研究并加以发展，并在 1977 年发表 1 BSD（1st Berkeley Software  Distribution）版本的 UNIX OS，其后续的发展更为 UNIX OS 贡献良多且影响深远。
 
 1980年，美国电话电报公司发布了UNIX的可分发二进制版（Distribution Binary）许可证，启动了将UNIX商业化的计划。
 
