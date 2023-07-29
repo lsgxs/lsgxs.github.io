@@ -5,8 +5,8 @@ draft: false
 # weight: 2
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
-showToc: true
-TocOpen: true
+showToc: false
+TocOpen: false
 draft: false
 hidemeta: false
 comments: false
