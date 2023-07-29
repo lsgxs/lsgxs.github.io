@@ -90,9 +90,9 @@ cover:
 
 [Zones-微软公司网站关于可信站点自定义项目的说明文档](https://learn.microsoft.com/en-us/troubleshoot/developer/browsers/security-privacy/ie-security-zones-registry-entries#zones)
 
-这些基本都可以找到对应的项目，只是`120A`、和`120B`的英文文档不知道该如何翻译，直译的话似乎找不到对应的项目，而看编码的话`120B`应该对应的上面表中的第11项：仅允许经过批准的域在未经提示的情况下使用ActiveX|Only allow approved domain to use ActiveX without prompt。至于准确的编码数值，可以使用beyond  compare这个比对工具软件，里面有专门的注册表比对功能，先在左侧面板打开HKEY_CURRENT_USER，然后修改可信站点中的`仅允许经过批准的域在未经提示的情况下使用ActiveX`选项并确定，然后在beyond compare面板的右侧打开HKEY_CURRENT_USER,会自动以粉色表示前后修改过的注册表项机数值。
+这些基本都可以找到对应的项目，只是`120A`、和`120B`的英文文档不知道该如何翻译，直译的话似乎找不到对应的项目，而看编码的话`120B`应该对应的上面表中的第11项：仅允许经过批准的域在未经提示的情况下使用ActiveX|Only allow approved domain to use ActiveX without prompt。至于准确的编码数值，可以使用beyond  compare这个比对工具软件，里面有专门的注册表比对功能，先在左侧面板打开HKEY_CURRENT_USER，然后修改可信站点中的`仅允许经过批准的域在未经提示的情况下使用ActiveX`选项并确定，然后在beyond compare面板的右侧打开HKEY_CURRENT_USER,会自动以粉色表示前后修改过的注册表项机数值。也许是不同的浏览器版本中项目名称不同吧，知道`仅允许经过批准的域在未经提示的情况下使用ActiveX`对应的数值就好，先放下这个问题。
 
-~~~
+~~~bash
 Value  Setting
 ----------------------------------------------------------------------------------
 1001   ActiveX controls and plug-ins: Download signed ActiveX controls
