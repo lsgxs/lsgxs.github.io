@@ -88,5 +88,94 @@ cover:
 |                      50-下载：字体下载                       |                        Font download                         |                           1604                            |                                                           |
 |                    51-用户身份验证：登录                     |                            Logon                             |                           1A00                            |                                                           |
 
+[Zones-微软公司网站关于可信站点自定义项目的说明文档](https://learn.microsoft.com/en-us/troubleshoot/developer/browsers/security-privacy/ie-security-zones-registry-entries#zones)
 
+这些基本都可以找到对应的项目，只是`120A`、和`120B`的英文文档不知道该如何翻译，直译的话似乎找不到对应的项目，而看编码的话`120B`应该对应的上面表中的第11项：仅允许经过批准的域在未经提示的情况下使用ActiveX|Only allow approved domain to use ActiveX without prompt。至于准确的编码数值，可以使用beyond  compare这个比对工具软件，里面有专门的注册表比对功能，先在左侧面板打开HKEY_CURRENT_USER，然后修改可信站点中的`仅允许经过批准的域在未经提示的情况下使用ActiveX`选项并确定，然后在beyond compare面板的右侧打开HKEY_CURRENT_USER,会自动以粉色表示前后修改过的注册表项机数值。
+
+~~~
+Value  Setting
+----------------------------------------------------------------------------------
+1001   ActiveX controls and plug-ins: Download signed ActiveX controls
+1004   ActiveX controls and plug-ins: Download unsigned ActiveX controls
+1200   ActiveX controls and plug-ins: Run ActiveX controls and plug-ins
+1201   ActiveX controls and plug-ins: Initialize and script ActiveX controls not marked as safe for scripting
+1206   Miscellaneous: Allow scripting of Internet Explorer Web browser control ^
+1207   Reserved #
+1208   ActiveX controls and plug-ins: Allow previously unused ActiveX controls to run without prompt ^
+1209   ActiveX controls and plug-ins: Allow Scriptlets
+120A   ActiveX controls and plug-ins: ActiveX controls and plug-ins: Override Per-Site (domain-based) ActiveX restrictions
+120B   ActiveX controls and plug-ins: Override Per-Site (domain-based) ActiveX restrict ions
+1400   Scripting: Active scripting
+1402   Scripting: Scripting of Java applets
+1405   ActiveX controls and plug-ins: Script ActiveX controls marked as safe for scripting
+1406   Miscellaneous: Access data sources across domains
+1407   Scripting: Allow Programmatic clipboard access
+1408   Reserved #
+1409   Scripting: Enable XSS Filter
+1601   Miscellaneous: Submit non-encrypted form data
+1604   Downloads: Font download
+1605   Run Java #
+1606   Miscellaneous: Userdata persistence ^
+1607   Miscellaneous: Navigate sub-frames across different domains
+1608   Miscellaneous: Allow META REFRESH * ^
+1609   Miscellaneous: Display mixed content *
+160A   Miscellaneous: Include local directory path when uploading files to a server ^
+1800   Miscellaneous: Installation of desktop items
+1802   Miscellaneous: Drag and drop or copy and paste files
+1803   Downloads: File Download ^
+1804   Miscellaneous: Launching programs and files in an IFRAME
+1805   Launching programs and files in webview #
+1806   Miscellaneous: Launching applications and unsafe files
+1807   Reserved ** #
+1808   Reserved ** #
+1809   Miscellaneous: Use Pop-up Blocker ** ^
+180A   Reserved #
+180B   Reserved #
+180C   Reserved #
+180D   Reserved #
+180E   Allow OpenSearch queries in Windows Explorer #
+180F   Allow previewing and custom thumbnails of OpenSearch query results in Windows Explorer #
+1A00   User Authentication: Logon
+1A02   Allow persistent cookies that are stored on your computer #
+1A03   Allow per-session cookies (not stored) #
+1A04   Miscellaneous: Don't prompt for client certificate selection when no certificates or only one certificate exists * ^
+1A05   Allow 3rd party persistent cookies *
+1A06   Allow 3rd party session cookies *
+1A10   Privacy Settings *
+1C00   Java permissions #
+1E05   Miscellaneous: Software channel permissions
+1F00   Reserved ** #
+2000   ActiveX controls and plug-ins: Binary and script behaviors
+2001   .NET Framework-reliant components: Run components signed with Authenticode
+2004   .NET Framework-reliant components: Run components not signed with Authenticode
+2007   .NET Framework-Reliant Components: Permissions for Components with Manifests
+2100   Miscellaneous: Open files based on content, not file extension ** ^
+2101   Miscellaneous: Web sites in less privileged web content zone can navigate into this zone **
+2102   Miscellaneous: Allow script initiated windows without size or position constraints ** ^
+2103   Scripting: Allow status bar updates via script ^
+2104   Miscellaneous: Allow websites to open windows without address or status bars ^
+2105   Scripting: Allow websites to prompt for information using scripted windows ^
+2200   Downloads: Automatic prompting for file downloads ** ^
+2201   ActiveX controls and plug-ins: Automatic prompting for ActiveX controls ** ^
+2300   Miscellaneous: Allow web pages to use restricted protocols for active content **
+2301   Miscellaneous: Use Phishing Filter ^
+2400   .NET Framework: XAML browser applications
+2401   .NET Framework: XPS documents
+2402   .NET Framework: Loose XAML
+2500   Turn on Protected Mode [Vista only setting] #
+2600   Enable .NET Framework setup ^
+2702   ActiveX controls and plug-ins: Allow ActiveX Filtering
+2708   Miscellaneous: Allow dragging of content between domains into the same window
+2709   Miscellaneous: Allow dragging of content between domains into separate windows
+270B   Miscellaneous: Render legacy filters
+270C   ActiveX Controls and plug-ins: Run Antimalware software on ActiveX controls
+
+       {AEBA21FA-782A-4A90-978D-B72164C80120} First Party Cookie *
+       {A8A88C49-5EB2-4990-A1A2-0876022C854F} Third Party Cookie *
+
+* indicates an Internet Explorer 6 or later setting
+** indicates a Windows XP Service Pack 2 or later setting
+# indicates a setting that is not displayed in the user interface in Internet Explorer
+^ indicates a setting that only has two options, enabled or disabled
+~~~
 
