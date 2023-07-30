@@ -34,59 +34,121 @@ cover:
 
 现在的业务系统大部分时基于Windows IE浏览器的应用，设置好IE浏览器的各项参数，客户端通过浏览器链接到服务端打开应用。但是浏览器经常出现各种小问题，需要重新配置。由于IE的安全标签的可信站点自定义选项很多，手动设置有时候会出错，而且效率低，因此就考虑用批处理自动化设置。在设置之前，了解一下这些参数的保存位置，一般是保存在注册表的HKCU主键下：`HKEY_CURRENT_USER\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONES\2`。用了一下午时间，把这些项目整理在一个表格中，中英文对照更容易理解。
 
-| <span style="display:inline-block;width:34px">自定义项目(中文)</span> | <span style="display:inline-block;width:34px">自定义项目(英文)</span> | <span style="display:inline-block;width:28px">编码</span> | <span style="display:inline-block;width:290px">取值</span> |
-| :----------------------------------------------------------: | :----------------------------------------------------------: | :-------------------------------------------------------: | ---------------------------------------------------------- |
-|            1-.NET Framework：XAML 浏览器应用程序             |                  XAML browser applications                   |                           2400                            | 0-启用；1-提示；3-禁用                                     |
-|                  2-.NET Framework：XPS文档                   |                        XPS documents                         |                           2401                            | 0-启用；1-提示；3-禁用                                     |
-|                  3-.NET Framework：松散XAML                  |                          Loose XAML                          |                           2402                            | 0-启用；1-提示；3-禁用                                     |
-|        4-.NET Framework相关组件：带有清单的权限的组件        |          Permissions for components with manifests           |                           2007                            | 0-启用；1-提示；3-禁用                                     |
-|   5-.NET Framework相关组件：运行未用Authenticode签名的组件   |         Run components not signed with Authenticode          |                           2004                            | 0-启用；1-提示；3-禁用                                     |
-|   6-.NET Framework相关组件：运行已用Authenticode签名的组件   |           Run components signed with Authenticode            |                           2001                            | 0-启用；1-提示；3-禁用                                     |
-|           7-ActiveX控件和插件：ActiveX控件自动提示           |           Automatic prompting for ActiveX controls           |                           2201                            | 0-启用；1-提示；3-禁用                                     |
-| 8-ActiveX控件和插件：:对标记为可安全执行脚本的ActiveX控件执行脚本 |      Script ActiveX controls marked safe for scripting       |                           1405                            | 0-启用；1-提示；3-禁用                                     |
-| 9-ActiveX控件和插件：对未标记为可安全执行脚本的ActiveX控件初始化并执行脚本 | Initialize and script ActiveX controls not marked as safe for scripting |                           1201                            | 0-启用；1-提示；3-禁用                                     |
-|          10-ActiveX控件和插件：二进制文件和脚本行为          |                 Binary and script behaviors                  |                           2000                            | 0-启用；1-提示；3-禁用                                     |
-| 11-ActiveX控件和插件：仅允许经过批准的域在未经提示的情况下使用ActiveX | **Only allow approved domain to use ActiveX without prompt** |                           120B                            | **0-禁用；1-提示；3-启用**                                 |
-|        12-ActiveX控件和插件：下载未签名的ActiveX控件         |              Download unsigned ActiveX controls              |                           1004                            | 0-启用；1-提示；3-禁用                                     |
-|        13-ActiveX控件和插件：下载已签名的ActiveX控件         |               Download signed ActiveX controls               |                           1001                            | 0-启用；1-提示；3-禁用                                     |
-|            14-ActiveX控件和插件：允许ActiveX筛选             |                   Allow ActiveX Filtering                    |                           2702                            | 0-启用；1-提示；3-禁用                                     |
-|             15-ActiveX控件和插件：允许Scriptlet              |                       Allow Scriptlets                       |                           1209                            | 0-启用；1-提示；3-禁用                                     |
-| 16-ActiveX控件和插件：允许运行以前未使用的ActiveX控件而不提示 | Allow previously unused ActiveX controls to run without prompt |                           1208                            | 0-启用；1-提示；3-禁用                                     |
-|         17-ActiveX控件和插件：运行ActiveX控件和插件          |              Run ActiveX controls and plug-ins               |                           1200                            | 0-启用；1-提示；3-禁用                                     |
-|     18-ActiveX控件和插件：在ActiveX空间上运行反恶意软件      |         Run antimalware software on ActiveX controls         |                           270C                            | 0-启用；1-提示；3-禁用                                     |
-| 19-ActiveX控件和插件：在没有使用外部媒体播放机的网页上显示视频和动画 | **Display video and animation on a webpage that does not use external media player** |                           120A                            | 0-启用；1-提示；3-禁用                                     |
-|                   20-脚本：java小程序脚本                    |                  Scripting of java applets                   |                           1402                            | 0-启用；1-提示；3-禁用                                     |
-|                      21-脚本：活动脚本                       |                       Active scripting                       |                           1400                            | 0-启用；1-提示；3-禁用                                     |
-|                    22-脚本：启用XSS筛选器                    |                      Enable XSS filter                       |                           1409                            | 0-启用；1-提示；3-禁用                                     |
-|              23-脚本：允许对剪贴板进行编程访问               |             Allow Programmatic clipboard access              |                           1407                            | 0-启用；1-提示；3-禁用                                     |
-|               24-脚本：允许通过脚本更新状态栏                |             Allow status bar updates via script              |                           2103                            | 0-启用；1-提示；3-禁用                                     |
-|          25-脚本：允许网站使用脚本窗口提示获取信息           | Allow websites to prompt for information using scripted windows |                           2105                            | 0-启用；1-提示；3-禁用                                     |
-|                   26-其他：呈现旧版筛选器                    |                    Render legacy filters                     |                           270B                            | 0-启用；1-提示；3-禁用                                     |
-|                  27-其他：持续使用用户数据                   |                     Userdata persistence                     |                           1606                            | 0-启用；1-提示；3-禁用                                     |
-|      28-其他：低权限Web内容区域中的网站可以导航到此区域      | Websites in less privileged with content zone can navigate into this zone |                           2101                            | 0-启用；1-提示；3-禁用                                     |
-|              29-其他：加载应用程序和不安全文件               |           Launching applications and unsafe files            |                           1806                            | 0-启用；1-提示；3-禁用                                     |
-|          30-其他：将文件上载到服务器时包含本地目录           | Inclue local directory path when uploading files to a server |                           160A                            | 0-启用；1-提示；3-禁用                                     |
-|                 31-其他：跨域浏览窗口和框架                  |     Navigate windows and frames across different domains     |                           1607                            | 0-启用；1-提示；3-禁用                                     |
-|                    32-其他：启用MIME探查                     |                   **Enable MIME Sniffing**                   |                           2100                            | 0-启用；1-提示；3-禁用                                     |
-|                33-其他：使用SmartScreen筛选器                |                    Use SmartScreen Filter                    |                           2301                            | 0-启用；1-提示；3-禁用                                     |
-|                34-其他：使用弹出窗口阻止程序                 |                      Use Pop-up Blocker                      |                           1809                            | **0-禁用；1-提示；3-启用**                                 |
-|                 35-其他：提交非加密表单数据                  |                Submit non-encrypted form data                |                           1601                            | 0-启用；1-提示；3-禁用                                     |
-|                  36-其他：通过域访问数据源                   |              Access data sources across domains              |                           1406                            | 0-启用；1-提示；3-禁用                                     |
-|               37-其他：拖放或者复制和粘贴文件                |            Drag and drop or copy and paste files             |                           1802                            | 0-启用；1-提示；3-禁用                                     |
-|                    38-其他：显示混合内容                     |                    Display mixed content                     |                           1609                            | 0-启用；1-提示；3-禁用                                     |
-|                  39-其他：允许META REFRESH                   |                      Allow META REFRESH                      |                           1608                            | 0-启用；1-提示；3-禁用                                     |
-|          40-其他：允许Microsoft Web浏览器控件的脚本          |       Allow scripting of Microsoft web bowser control        |                           1206                            | 0-启用；1-提示；3-禁用                                     |
-|       41-其他：允许脚本启动的窗口不受大小或者位置限制        | Allow script-initiated windows without size or position constraints |                           2102                            | 0-启用；1-提示；3-禁用                                     |
-|         42-其他：允许网页上的活动内容使用限制的协议          | Allow webpages to use restricted protocols for active content |                           2300                            | 0-启用；1-提示；3-禁用                                     |
-|        43-其他：允许网站打开没有地址或者状态栏的窗口         | Allow websites to open windows without address or status bars |                           2104                            | 0-启用；1-提示；3-禁用                                     |
-|          44-其他：允许在不同窗口中的域之间拖动内容           | Allow dragging of content between domains into separate windows |                           2709                            | 0-启用；1-提示；3-禁用                                     |
-|           45-其他：允许在同一窗口的域之间拖动内容            | Allow dragging of content between domains into the same window |                           2708                            | 0-启用；1-提示；3-禁用                                     |
-|              46-其他：在IFRAME中加载程序和文件               |          Launching programs and files in an IFRAME           |                           1804                            | 0-启用；1-提示；3-禁用                                     |
-|      47-其他：只存在一个证书时不提示进行客户端证书选择       | Don't prompt for client certificate selection when only one certificate exists |                           1A04                            | 0-启用；1-提示；3-禁用                                     |
-|                48-启用.NET Framework安装程序                 |                 Enable .NET Framework setup                  |                           2600                            | 0-启用；1-提示；3-禁用                                     |
-|                      49-下载：文件下载                       |                        File download                         |                           1803                            | 0-启用；1-提示；3-禁用                                     |
-|                      50-下载：字体下载                       |                        Font download                         |                           1604                            | 0-启用；1-提示；3-禁用                                     |
-|                    51-用户身份验证：登录                     |                            Logon                             |                           1A00                            | 0-启用；1-提示；3-禁用                                     |
+| 自定义项目(中文) | 编码 | 取值 |
+| :----------------------------------------------------------: | :-------------------------------------------------------: | ---------------------------------------------------------- |
+|            1-.NET Framework：XAML 浏览器应用程序             |                           2400                            | 0-启用；1-提示；3-禁用                                     |
+|                  2-.NET Framework：XPS文档                   |                           2401                            | 0-启用；1-提示；3-禁用                                     |
+|                  3-.NET Framework：松散XAML                  |                           2402                            | 0-启用；1-提示；3-禁用                                     |
+|        4-.NET Framework相关组件：带有清单的权限的组件        |                           2007                            | 0-启用；1-提示；3-禁用                                     |
+|   5-.NET Framework相关组件：运行未用Authenticode签名的组件   |                           2004                            | 0-启用；1-提示；3-禁用                                     |
+|   6-.NET Framework相关组件：运行已用Authenticode签名的组件   |                           2001                            | 0-启用；1-提示；3-禁用                                     |
+|           7-ActiveX控件和插件：ActiveX控件自动提示           |                           2201                            | 0-启用；1-提示；3-禁用                                     |
+| 8-ActiveX控件和插件：:对标记为可安全执行脚本的ActiveX控件执行脚本 |                           1405                            | 0-启用；1-提示；3-禁用                                     |
+| 9-ActiveX控件和插件：对未标记为可安全执行脚本的ActiveX控件初始化并执行脚本 |                           1201                            | 0-启用；1-提示；3-禁用                                     |
+|          10-ActiveX控件和插件：二进制文件和脚本行为          |                           2000                            | 0-启用；1-提示；3-禁用                                     |
+| 11-ActiveX控件和插件：仅允许经过批准的域在未经提示的情况下使用ActiveX |                           120B                            | **0-禁用；1-提示；3-启用**                                 |
+|        12-ActiveX控件和插件：下载未签名的ActiveX控件         |                           1004                            | 0-启用；1-提示；3-禁用                                     |
+|        13-ActiveX控件和插件：下载已签名的ActiveX控件         |                           1001                            | 0-启用；1-提示；3-禁用                                     |
+|            14-ActiveX控件和插件：允许ActiveX筛选             |                           2702                            | 0-启用；1-提示；3-禁用                                     |
+|             15-ActiveX控件和插件：允许Scriptlet              |                           1209                            | 0-启用；1-提示；3-禁用                                     |
+| 16-ActiveX控件和插件：允许运行以前未使用的ActiveX控件而不提示 |                           1208                            | 0-启用；1-提示；3-禁用                                     |
+|         17-ActiveX控件和插件：运行ActiveX控件和插件          |                           1200                            | 0-启用；1-提示；3-禁用                                     |
+|     18-ActiveX控件和插件：在ActiveX空间上运行反恶意软件      |                           270C                            | 0-启用；1-提示；3-禁用                                     |
+| 19-ActiveX控件和插件：在没有使用外部媒体播放机的网页上显示视频和动画 |                           120A                            | 0-启用；1-提示；3-禁用                                     |
+|                   20-脚本：java小程序脚本                    |                           1402                            | 0-启用；1-提示；3-禁用                                     |
+|                      21-脚本：活动脚本                       |                           1400                            | 0-启用；1-提示；3-禁用                                     |
+|                    22-脚本：启用XSS筛选器                    |                           1409                            | 0-启用；1-提示；3-禁用                                     |
+|              23-脚本：允许对剪贴板进行编程访问               |                           1407                            | 0-启用；1-提示；3-禁用                                     |
+|               24-脚本：允许通过脚本更新状态栏                |                           2103                            | 0-启用；1-提示；3-禁用                                     |
+|          25-脚本：允许网站使用脚本窗口提示获取信息           |                           2105                            | 0-启用；1-提示；3-禁用                                     |
+|                   26-其他：呈现旧版筛选器                    |                           270B                            | 0-启用；1-提示；3-禁用                                     |
+|                  27-其他：持续使用用户数据                   |                           1606                            | 0-启用；1-提示；3-禁用                                     |
+|      28-其他：低权限Web内容区域中的网站可以导航到此区域      |                           2101                            | 0-启用；1-提示；3-禁用                                     |
+|              29-其他：加载应用程序和不安全文件               |                           1806                            | 0-启用；1-提示；3-禁用                                     |
+|          30-其他：将文件上载到服务器时包含本地目录           |                           160A                            | 0-启用；1-提示；3-禁用                                     |
+|                 31-其他：跨域浏览窗口和框架                  |                           1607                            | 0-启用；1-提示；3-禁用                                     |
+|                    32-其他：启用MIME探查                     |                           2100                            | 0-启用；1-提示；3-禁用                                     |
+|                33-其他：使用SmartScreen筛选器                |                           2301                            | 0-启用；1-提示；3-禁用                                     |
+|                34-其他：使用弹出窗口阻止程序                 |                           1809                            | **0-禁用；1-提示；3-启用**                                 |
+|                 35-其他：提交非加密表单数据                  |                           1601                            | 0-启用；1-提示；3-禁用                                     |
+|                  36-其他：通过域访问数据源                   |                           1406                            | 0-启用；1-提示；3-禁用                                     |
+|               37-其他：拖放或者复制和粘贴文件                |                           1802                            | 0-启用；1-提示；3-禁用                                     |
+|                    38-其他：显示混合内容                     |                           1609                            | 0-启用；1-提示；3-禁用                                     |
+|                  39-其他：允许META REFRESH                   |                           1608                            | 0-启用；1-提示；3-禁用                                     |
+|          40-其他：允许Microsoft Web浏览器控件的脚本          |                           1206                            | 0-启用；1-提示；3-禁用                                     |
+|       41-其他：允许脚本启动的窗口不受大小或者位置限制        |                           2102                            | 0-启用；1-提示；3-禁用                                     |
+|         42-其他：允许网页上的活动内容使用限制的协议          |                           2300                            | 0-启用；1-提示；3-禁用                                     |
+|        43-其他：允许网站打开没有地址或者状态栏的窗口         |                           2104                            | 0-启用；1-提示；3-禁用                                     |
+|          44-其他：允许在不同窗口中的域之间拖动内容           |                           2709                            | 0-启用；1-提示；3-禁用                                     |
+|           45-其他：允许在同一窗口的域之间拖动内容            |                           2708                            | 0-启用；1-提示；3-禁用                                     |
+|              46-其他：在IFRAME中加载程序和文件               |                           1804                            | 0-启用；1-提示；3-禁用                                     |
+|      47-其他：只存在一个证书时不提示进行客户端证书选择       |                           1A04                            | 0-启用；1-提示；3-禁用                                     |
+|                48-启用.NET Framework安装程序                 |                           2600                            | 0-启用；1-提示；3-禁用                                     |
+|                      49-下载：文件下载                       |                           1803                            | 0-启用；1-提示；3-禁用                                     |
+|                      50-下载：字体下载                       |                           1604                            | 0-启用；1-提示；3-禁用                                     |
+|                    51-用户身份验证：登录                     |                           1A00                            | 0-启用；1-提示；3-禁用                                     |
+
+
+
+* 本来是在一张表格里显示`自定义项目(中文)`、`自定义项目(英文)`、`编码`、`取值`这四列数据，可是typora的markdown表格里无法全部显示，最后一列的取值不能全部显示。列标题加上了`<span>style="display:inline-block;width:70px"</span>`指定列宽也无法全部显示四列数据，只好分成两个表试试。
+
+|自定义项目(中文) | 自定义项目(英文) |  编码 |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :-------------------------------------------------------: |
+|            1-.NET Framework：XAML 浏览器应用程序             |                  XAML browser applications                   |                           2400                            |
+|                  2-.NET Framework：XPS文档                   |                        XPS documents                         |                           2401                            |
+|                  3-.NET Framework：松散XAML                  |                          Loose XAML                          |                           2402                            |
+|        4-.NET Framework相关组件：带有清单的权限的组件        |          Permissions for components with manifests           |                           2007                            |
+|   5-.NET Framework相关组件：运行未用Authenticode签名的组件   |         Run components not signed with Authenticode          |                           2004                            |
+|   6-.NET Framework相关组件：运行已用Authenticode签名的组件   |           Run components signed with Authenticode            |                           2001                            |
+|           7-ActiveX控件和插件：ActiveX控件自动提示           |           Automatic prompting for ActiveX controls           |                           2201                            |
+| 8-ActiveX控件和插件：:对标记为可安全执行脚本的ActiveX控件执行脚本 |      Script ActiveX controls marked safe for scripting       |                           1405                            |
+| 9-ActiveX控件和插件：对未标记为可安全执行脚本的ActiveX控件初始化并执行脚本 | Initialize and script ActiveX controls not marked as safe for scripting |                           1201                            |
+|          10-ActiveX控件和插件：二进制文件和脚本行为          |                 Binary and script behaviors                  |                           2000                            |
+| 11-ActiveX控件和插件：仅允许经过批准的域在未经提示的情况下使用ActiveX | **Only allow approved domain to use ActiveX without prompt** |                           120B                            |
+|        12-ActiveX控件和插件：下载未签名的ActiveX控件         |              Download unsigned ActiveX controls              |                           1004                            |
+|        13-ActiveX控件和插件：下载已签名的ActiveX控件         |               Download signed ActiveX controls               |                           1001                            |
+|            14-ActiveX控件和插件：允许ActiveX筛选             |                   Allow ActiveX Filtering                    |                           2702                            |
+|             15-ActiveX控件和插件：允许Scriptlet              |                       Allow Scriptlets                       |                           1209                            |
+| 16-ActiveX控件和插件：允许运行以前未使用的ActiveX控件而不提示 | Allow previously unused ActiveX controls to run without prompt |                           1208                            |
+|         17-ActiveX控件和插件：运行ActiveX控件和插件          |              Run ActiveX controls and plug-ins               |                           1200                            |
+|     18-ActiveX控件和插件：在ActiveX空间上运行反恶意软件      |         Run antimalware software on ActiveX controls         |                           270C                            |
+| 19-ActiveX控件和插件：在没有使用外部媒体播放机的网页上显示视频和动画 | **Display video and animation on a webpage that does not use external media player** |                           120A                            |
+|                   20-脚本：java小程序脚本                    |                  Scripting of java applets                   |                           1402                            |
+|                      21-脚本：活动脚本                       |                       Active scripting                       |                           1400                            |
+|                    22-脚本：启用XSS筛选器                    |                      Enable XSS filter                       |                           1409                            |
+|              23-脚本：允许对剪贴板进行编程访问               |             Allow Programmatic clipboard access              |                           1407                            |
+|               24-脚本：允许通过脚本更新状态栏                |             Allow status bar updates via script              |                           2103                            |
+|          25-脚本：允许网站使用脚本窗口提示获取信息           | Allow websites to prompt for information using scripted windows |                           2105                            |
+|                   26-其他：呈现旧版筛选器                    |                    Render legacy filters                     |                           270B                            |
+|                  27-其他：持续使用用户数据                   |                     Userdata persistence                     |                           1606                            |
+|      28-其他：低权限Web内容区域中的网站可以导航到此区域      | Websites in less privileged with content zone can navigate into this zone |                           2101                            |
+|              29-其他：加载应用程序和不安全文件               |           Launching applications and unsafe files            |                           1806                            |
+|          30-其他：将文件上载到服务器时包含本地目录           | Inclue local directory path when uploading files to a server |                           160A                            |
+|                 31-其他：跨域浏览窗口和框架                  |     Navigate windows and frames across different domains     |                           1607                            |
+|                    32-其他：启用MIME探查                     |                   **Enable MIME Sniffing**                   |                           2100                            |
+|                33-其他：使用SmartScreen筛选器                |                    Use SmartScreen Filter                    |                           2301                            |
+|                34-其他：使用弹出窗口阻止程序                 |                      Use Pop-up Blocker                      |                           1809                            |
+|                 35-其他：提交非加密表单数据                  |                Submit non-encrypted form data                |                           1601                            |
+|                  36-其他：通过域访问数据源                   |              Access data sources across domains              |                           1406                            |
+|               37-其他：拖放或者复制和粘贴文件                |            Drag and drop or copy and paste files             |                           1802                            |
+|                    38-其他：显示混合内容                     |                    Display mixed content                     |                           1609                            |
+|                  39-其他：允许META REFRESH                   |                      Allow META REFRESH                      |                           1608                            |
+|          40-其他：允许Microsoft Web浏览器控件的脚本          |       Allow scripting of Microsoft web bowser control        |                           1206                            |
+|       41-其他：允许脚本启动的窗口不受大小或者位置限制        | Allow script-initiated windows without size or position constraints |                           2102                            |
+|         42-其他：允许网页上的活动内容使用限制的协议          | Allow webpages to use restricted protocols for active content |                           2300                            |
+|        43-其他：允许网站打开没有地址或者状态栏的窗口         | Allow websites to open windows without address or status bars |                           2104                            |
+|          44-其他：允许在不同窗口中的域之间拖动内容           | Allow dragging of content between domains into separate windows |                           2709                            |
+|           45-其他：允许在同一窗口的域之间拖动内容            | Allow dragging of content between domains into the same window |                           2708                            |
+|              46-其他：在IFRAME中加载程序和文件               |          Launching programs and files in an IFRAME           |                           1804                            |
+|      47-其他：只存在一个证书时不提示进行客户端证书选择       | Don't prompt for client certificate selection when only one certificate exists |                           1A04                            |
+|                48-启用.NET Framework安装程序                 |                 Enable .NET Framework setup                  |                           2600                            |
+|                      49-下载：文件下载                       |                        File download                         |                           1803                            |
+|                      50-下载：字体下载                       |                        Font download                         |                           1604                            |
+|                    51-用户身份验证：登录                     |                            Logon                             |                           1A00                            |
+
+
+
+
 
 [Zones-微软公司网站关于可信站点自定义项目的说明文档](https://learn.microsoft.com/en-us/troubleshoot/developer/browsers/security-privacy/ie-security-zones-registry-entries#zones)
 
