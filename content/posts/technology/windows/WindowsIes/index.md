@@ -1,14 +1,38 @@
+---
+title: "WindowsIEs"
+date: 2023-07-29T21:55:53+08:00
+draft: false
+# weight: 2
+tags: ["first"]
+# author: ["Me", "You"] # multiple authors
+showToc: false
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+description: "Desc Text."
+canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: false
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+UseHugoToc: false
+ShowCodeCopyButtons: true
+cover:
+    image: "images/农田.jpg" 
+    alt: "<alt text>" # alt text
+    caption: "<text>" # display caption under cover
+    relative: false # when using page bundles set this to true  
+---
+
 ### Unix  & Windows & Linux
-
-
 
 ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的
 
 ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的ABC的
-
-
-
-
 
 * one 
 
