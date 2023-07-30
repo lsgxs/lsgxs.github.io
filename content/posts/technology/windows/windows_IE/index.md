@@ -90,7 +90,7 @@ cover:
 
 
 
-* 本来是在一张表格里显示`自定义项目(中文)`、`自定义项目(英文)`、`编码`、`取值`这四列数据，可是typora的markdown表格里无法全部显示，最后一列的取值不能全部显示。列标题加上了`<span>style="display:inline-block;width:70px"</span>`指定列宽也无法全部显示四列数据，只好分成两个表试试。
+本来是在一张表格里显示`自定义项目(中文)`、`自定义项目(英文)`、`编码`、`取值`这四列数据，可是typora的markdown表格里无法全部显示，最后一列的取值不能全部显示。列标题加上了`<span>style="display:inline-block;width:70px"</span>`指定列宽也无法全部显示四列数据，只好分成两个表试试。
 
 |自定义项目(中文) | 自定义项目(英文) |  编码 |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :-------------------------------------------------------: |
@@ -320,13 +320,14 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 
 
 ***
-自定义项目(中文)       自定义项目(英文)	                 编码                       取值
-1-.NET Framework：XAML 浏览器应用程序         XAML browser applications	                                   2400	0-启用；1-提示；3-禁用
-2-.NET Framework：XPS文档	                           XPS documents	                                                    2401	0-启用；1-提示；3-禁用
-3-.NET Framework：松散XAML                  	      Loose XAML	                                                    2402	0-启用；1-提示；3-禁用
-4-.NET Framework相关组件：带有清单的权限的组件	Permissions for components with manifests	2007	0-启用；1-提示；3-禁用
+~~~
+         自定义项目(中文)                          自定义项目(英文)	           编码        取值
+1-.NET Framework：XAML 浏览器应用程序         XAML browser applications	      2400	 0-启用；1-提示；3-禁用
+2-.NET Framework：XPS文档	                         XPS documents	         2401	0-启用；1-提示；3-禁用
+3-.NET Framework：松散XAML                  	      Loose XAML	         2402	0-启用；1-提示；3-禁用
+4-.NET Framework相关组件：带有清单的权限的组件	Permissions for components with manifests 2007	0-启用；1-提示；3-禁用
 5-.NET Framework相关组件：运行未用Authenticode签名的组件    Run components not signed with Authenticode	2004	0-启用；1-提示；3-禁用
-6-.NET Framework相关组件：运行已用Authenticode签名的组件                                  Run components signed with Authenticode	2001	0-启用；1-提示；3-禁用
+6-.NET Framework相关组件：运行已用Authenticode签名的组件 Run components signed with Authenticode	2001	0-启用；1-提示；3-禁用
 7-ActiveX控件和插件：ActiveX控件自动提示	        Automatic prompting for ActiveX controls	2201	0-启用；1-提示；3-禁用
 8-ActiveX控件和插件：:对标记为可安全执行脚本的ActiveX控件执行脚本	                Script ActiveX controls marked safe for scripting	1405	0-启用；1-提示；3-禁用
 9-ActiveX控件和插件：对未标记为可安全执行脚本的ActiveX控件初始化并执行脚本   Initialize and script ActiveX controls not marked as safe for scripting  1201	0-启用；1-提示；3-禁用
@@ -376,3 +377,7 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 ***
 
 ***把每个项目的取值再核对确认一下***
+~~~
+
+
+
