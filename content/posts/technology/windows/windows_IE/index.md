@@ -34,7 +34,7 @@ cover:
 
 现在的业务系统大部分时基于Windows IE浏览器的应用，设置好IE浏览器的各项参数，客户端通过浏览器链接到服务端打开应用。但是浏览器经常出现各种小问题，需要重新配置。由于IE的安全标签的可信站点自定义选项很多，手动设置有时候会出错，而且效率低，因此就考虑用批处理自动化设置。在设置之前，了解一下这些参数的保存位置，一般是保存在注册表的HKCU主键下：`HKEY_CURRENT_USER\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONES\2`。用了一下午时间，把这些项目整理在一个表格中，中英文对照更容易理解。
 
-| 自定义项目(中文) | 编码 | 取值 |
+| <span style="display:inline-block;width=60px">自定义项目(中文)</span> | <span style="display:inline-block;width=40px">编码</span> | <span style="display:inline-block;width=30px">取值</span> |
 | :----------------------------------------------------------: | :-------------------------------------------------------: | ---------------------------------------------------------- |
 |            1-.NET Framework：XAML 浏览器应用程序             |                           2400                            | 0-启用；1-提示；3-禁用                                     |
 |                  2-.NET Framework：XPS文档                   |                           2401                            | 0-启用；1-提示；3-禁用                                     |
