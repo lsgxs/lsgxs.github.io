@@ -152,15 +152,16 @@ cover:
 
 这些基本都可以找到对应的项目，只是`120A`、和`120B`的英文文档不知道该如何翻译，直译的话似乎找不到对应的项目，而看编码的话`120B`应该对应的上面表中的第11项：仅允许经过批准的域在未经提示的情况下使用ActiveX|Only allow approved domain to use ActiveX without prompt。至于准确的编码数值，可以使用beyond  compare这个比对工具软件，里面有专门的注册表比对功能，先在左侧面板打开HKEY_CURRENT_USER，然后修改可信站点中的`仅允许经过批准的域在未经提示的情况下使用ActiveX`选项并确定，然后在beyond compare面板的右侧打开HKEY_CURRENT_USER,会自动以粉色表示前后修改过的注册表项机数值。也许是不同的浏览器版本中项目名称不同吧，知道`仅允许经过批准的域在未经提示的情况下使用ActiveX`对应的数值就好，先放下这个问题。通常，设置为 0 将设置允许的特定操作，设置为 1 会导致出现提示，设置为 3 将禁止特定操作。只有个别项目是反过来的。微软公司提供的这个表格是按照Zones\2下的值排序，而IE11界面里可信站点自定义项目并不是同步的顺序。上面自己整理的表格中第11、19、32、33项的英文项目名称并没有在下面的列表中对应，但是可以通过编号对应起来。
 
-​                                      Windows中文版IE安全选项可信站点自定义项目不一致版本对照表
+​                               Windows中文版IE11安全选项可信站点自定义项目描述与微软公司文档不一致的对照表（编号一致）
 
-| 11-仅允许经过批准的域未经提示使用ActiveX   Override Per-Site (domain-based) ActiveX restrictions          120B |                      |      |
-| ------------------------------------------------------------ | -------------------- | ---- |
-| 19-在没有使用外部媒体播放机的网页上显示视频和动画 Override Per-Site (domain-based) ActiveX restrictions   120A |                      |      |
-| 32-其他：启用MIME探查                                        | Enable MIME Sniffing |      |
-|                                                              |                      |      |
+| 11-仅允许经过批准的域未经提示使用ActiveX   Override Per-Site (domain-based) ActiveX restrictions          120B |      |      |
+| ------------------------------------------------------------ | ---- | ---- |
+| 19-在没有使用外部媒体播放机的网页上显示视频和动画 Override Per-Site (domain-based) ActiveX restrictions   120A |      |      |
+| 32-其他：启用MIME探查                     Miscellaneous: Open files based on content, not file extension        2100 |      |      |
+| 33-其他：使用SmartScreen筛选器   Miscellaneous: Use Phishing Filter                                                               2301 |      |      |
+|                                                              |      |      |
 
-
+参照[高级用户的internet  explorer安全区域注册表项](https://learn.microsoft.com/zh-cn/troubleshoot/developer/browsers/security-privacy/ie-security-zones-registry-entries#zones)
 
 
 
