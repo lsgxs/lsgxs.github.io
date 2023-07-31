@@ -1,5 +1,5 @@
 ---
-title: "Windows_IE"
+title: "批处理设置IE安全区域注册表项"
 date: 2023-07-28T21:55:53+08:00
 draft: false
 # weight: 2
@@ -25,12 +25,12 @@ cover:
     image: "images/农田.jpg" 
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true  
+    relative: false # when using page bundles set this to true 
 ---
 
 #### 批处理设置IE安全区域注册表项
 
-
+#### Windows IE安全区域注册表项及取值
 
 现在的业务系统大部分时基于Windows IE浏览器的应用，设置好IE浏览器的各项参数，客户端通过浏览器链接到服务端打开应用。但是浏览器经常出现各种小问题，需要重新配置。由于IE的安全标签的可信站点自定义选项很多，手动设置有时候会出错，而且效率低，因此就考虑用批处理自动化设置。在设置之前，了解一下这些参数的保存位置，一般是保存在注册表的HKCU主键下：`HKEY_CURRENT_USER\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONES\2`。用了一下午时间，把这些项目整理在一个表格中，中英文对照更容易理解。
 
@@ -69,7 +69,7 @@ cover:
 |                 31-其他：跨域浏览窗口和框架                  |                           1607                            | 0-启用；1-提示；3-禁用                                    |
 |                    32-其他：启用MIME探查                     |                           2100                            | 0-启用；1-提示；3-禁用                                    |
 |                33-其他：使用SmartScreen筛选器                |                           2301                            | 0-启用；1-提示；3-禁用                                    |
-|           34-其他：使用弹出窗口阻止程序 ？确认取值           |                           1809                            | **0-禁用；1-提示；3-启用**                                |
+|           34-其他：使用弹出窗口阻止程序 ？确认取值           |                           1809                            | **0-启用；1-提示；3-金融**                                |
 |                 35-其他：提交非加密表单数据                  |                           1601                            | 0-启用；1-提示；3-禁用                                    |
 |                  36-其他：通过域访问数据源                   |                           1406                            | 0-启用；1-提示；3-禁用                                    |
 |               37-其他：拖放或者复制和粘贴文件                |                           1802                            | 0-启用；1-提示；3-禁用                                    |
@@ -328,11 +328,10 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 
 
 
+把上面的表格整理成文本文件复制在这里（0-启用0x00000000;1-提示0x00000001;3-禁用0x00000003）
 
-
-***
 ~~~
-         自定义项目(中文)                          自定义项目(英文)	           编码        取值
+         自定义项目(中文)                          自定义项目(英文)	          编码        取值
 1-.NET Framework：XAML 浏览器应用程序         XAML browser applications	      2400	 0-启用；1-提示；3-禁用
 2-.NET Framework：XPS文档	                         XPS documents	         2401	0-启用；1-提示；3-禁用
 3-.NET Framework：松散XAML                  	      Loose XAML	         2402	0-启用；1-提示；3-禁用
@@ -345,9 +344,9 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 10-ActiveX控件和插件：二进制文件和脚本行为	                  Binary and script behaviors	2000	0-启用；1-提示；3-禁用
 11-ActiveX控件和插件：仅允许经过批准的域在未经提示的情况下使用ActiveX                Only allow approved domain to use ActiveX without prompt	120B	0-禁用；1-提示；3-启用
 12-ActiveX控件和插件：下载未签名的ActiveX控件                  Download unsigned ActiveX controls	1004	0-启用；1-提示；3-禁用
-13-ActiveX控件和插件：下载已签名的ActiveX控件	          Download signed ActiveX controls	1001	0-启用；1-提示；3-禁用
-14-ActiveX控件和插件：允许ActiveX筛选	                          Allow ActiveX Filtering	2702	0-启用；1-提示；3-禁用
-15-ActiveX控件和插件：允许Scriptlet	                                                           Allow Scriptlets	1209	0-启用；1-提示；3-禁用
+13-ActiveX控件和插件：下载已签名的ActiveX控件	Download signed ActiveX controls	1001 0-启用；1-提示；3-禁用
+14-ActiveX控件和插件：允许ActiveX筛选	        Allow ActiveX Filtering	2702	0-启用；1-提示；3-禁用
+15-ActiveX控件和插件：允许Scriptlet            Allow Scriptlets	1209	    0-启用；1-提示；3-禁用
 16-ActiveX控件和插件：允许运行以前未使用的ActiveX控件而不提示                  Allow previously unused ActiveX controls to run without prompt   1208	0-启用；1-提示；3-禁用
 17-ActiveX控件和插件：运行ActiveX控件和插件	                Run ActiveX controls and plug-ins	1200	0-启用；1-提示；3-禁用
 18-ActiveX控件和插件：在ActiveX空间上运行反恶意软件                    Run antimalware software on ActiveX controls	270C	0-启用；1-提示；3-禁用
@@ -366,29 +365,26 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 31-其他：跨域浏览窗口和框架	          Navigate windows and frames across different domains	1607	0-启用；1-提示；3-禁用
 32-其他：启用MIME探查	                                                             Enable MIME Sniffing	2100	0-启用；1-提示；3-禁用
 33-其他：使用SmartScreen筛选器                                                    	Use SmartScreen Filter	2301	0-启用；1-提示；3-禁用
-34-其他：使用弹出窗口阻止程序	                                                                     Use Pop-up Blocker	1809	0-禁用；1-提示；3-启用
-35-其他：提交非加密表单数据                                                         	Submit non-encrypted form data	1601	0-启用；1-提示；3-禁用
-36-其他：通过域访问数据源	                                               Access data sources across domains	1406	0-启用；1-提示；3-禁用
-37-其他：拖放或者复制和粘贴文件	                                Drag and drop or copy and paste files	1802	0-启用；1-提示；3-禁用
-38-其他：显示混合内容	                                                                    Display mixed content	1609	0-启用；1-提示；3-禁用
-39-其他：允许META REFRESH	                                                                    Allow META REFRESH	1608	0-启用；1-提示；3-禁用
+34-其他：使用弹出窗口阻止程序                    Use Pop-up Blocker	1809	0-启用；1-提示；3-禁用
+35-其他：提交非加密表单数据              	Submit non-encrypted form data	1601	0-启用；1-提示；3-禁用
+36-其他：通过域访问数据源	             Access data sources across domains	1406	0-启用；1-提示；3-禁用
+37-其他：拖放或者复制和粘贴文件	     Drag and drop or copy and paste files	1802	0-启用；1-提示；3-禁用
+38-其他：显示混合内容	              Display mixed content	1609	0-启用；1-提示；3-禁用
+39-其他：允许META REFRESH	        Allow META REFRESH	1608	0-启用；1-提示；3-禁用
 40-其他：允许Microsoft Web浏览器控件的脚本	  Allow scripting of Microsoft web bowser control	1206	0-启用；1-提示；3-禁用
-41-其他：允许脚本启动的窗口不受大小或者位置限制	                                 Allow script-initiated windows without size or position constraints	2102	0-启用；1-提示；3-禁用
-42-其他：允许网页上的活动内容使用限制的协议	                                 Allow webpages to use restricted protocols for active content	2300	0-启用；1-提示；3-禁用
-43-其他：允许网站打开没有地址或者状态栏的窗口                                         Allow websites to open windows without address or status bars	2104	0-启用；1-提示；3-禁用
-44-其他：允许在不同窗口中的域之间拖动内容	                                 Allow dragging of content between domains into separate windows	2709	0-启用；1-提示；3-禁用
-45-其他：允许在同一窗口的域之间拖动内容	                                                  Allow dragging of content between domains into the same window	2708	0-启用；1-提示；3-禁用
-46-其他：在IFRAME中加载程序和文件                   Launching programs and files in an IFRAME	1804	0-启用；1-提示；3-禁用
-47-其他：只存在一个证书时不提示进行客户端证书选择	                                Don't prompt for client certificate selection when only one certificate exists   1A04	0-启用；1-提示；3-禁用
-48-启用.NET Framework安装程序	                                                 Enable .NET Framework setup	2600	0-启用；1-提示；3-禁用
-49-下载：文件下载	                                                                                    File download	1803	0-启用；1-提示；3-禁用
-50-下载：字体下载                                                                                        Font download	1604	0-启用；1-提示；3-禁用
-51-用户身份验证：登录	                                                                  Logon	1A00	0-启用；1-提示；3-禁用
+41-其他：允许脚本启动的窗口不受大小或者位置限制     Allow script-initiated windows without size or position constraints	2102	0-启用；1-提示；3-禁用
+42-其他：允许网页上的活动内容使用限制的协议	      Allow webpages to use restricted protocols for active content	2300	0-启用；1-提示；3-禁用
+43-其他：允许网站打开没有地址或者状态栏的窗口   Allow websites to open windows without address or status bars	2104	0-启用；1-提示；3-禁用
+44-其他：允许在不同窗口中的域之间拖动内容	   Allow dragging of content between domains into separate windows	2709	0-启用；1-提示；3-禁用
+45-其他：允许在同一窗口的域之间拖动内容	 Allow dragging of content between domains into the same window	2708	0-启用；1-提示；3-禁用
+46-其他：在IFRAME中加载程序和文件    Launching programs and files in an IFRAME	1804	0-启用；1-提示；3-禁用
+47-其他：只存在一个证书时不提示进行客户端证书选择	Don't prompt for client certificate selection when only one certificate exists   1A04	0-启用；1-提示；3-禁用
+48-启用.NET Framework安装程序	  Enable .NET Framework setup	2600	0-启用；1-提示；3-禁用
+49-下载：文件下载	                 File download	1803	0-启用；1-提示；3-禁用
+50-下载：字体下载                   Font download	1604	0-启用；1-提示；3-禁用
+51-用户身份验证：登录	           Logon	1A00	0-启用；1-提示；3-禁用
 
-***
-
-***把每个项目的取值再核对确认一下***
 ~~~
 
-
+#### 使用批处理设置IE安全区域注册表项
 
