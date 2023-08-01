@@ -382,13 +382,13 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 48-启用.NET Framework安装程序	  Enable .NET Framework setup	2600	0-启用；1-提示；3-禁用
 49-下载：文件下载	                 File download	1803	0-启用；1-提示；3-禁用
 50-下载：字体下载                   Font download	1604	0-启用；1-提示；3-禁用
-51-用户身份验证：登录	           Logon	1A00	0-启用；1-提示；3-禁用
+51-用户身份验证：登录	           Logon	1A00	（30000＝匿名登录、10000＝用户名和密码提示、20000=只在 Intranet 区域自动登录、0=自动使用当前用户名和密码登录）
 
 ~~~
 
 #### 使用批处理设置IE安全区域注册表项
 
-根据目前基于IE11的业务需求，只有第11、34两项设置为禁用，其他设置为启用，第四项的".NET Framework-reliant  components---Permissions for components with manifests	"只有禁用（3）和高级安全（0x00010000）两个选项，设置为0x00010000（高级安全）。该批处理文件(bat)，以管理员权限执行就可以完成IE安全区域注册表项的设置。
+根据目前基于IE11的业务需求，只有第11、34两项设置为禁用，其他设置为启用，第四项的".NET Framework-reliant  components---Permissions for components with manifests	"只有禁用（3）和高级安全（0x00010000）两个选项，设置为0x00010000（高级安全）。
 
 * 4..NET Framework-reliant  components---Permissions for components with manifests("2007")
 
@@ -412,6 +412,6 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
    pause
    
    rem 仿照上面的语法把需要的项目补全，也可以把全部的51项都写出来，保存为bat文件，以管理员权限运行批处理。
-   ~~~
-   
+  ~~~
+  
    
