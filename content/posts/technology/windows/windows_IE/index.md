@@ -396,7 +396,9 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 
 * 34.Miscellaneous---Use Pop-up Blocker("1809")
 
-   [下载批处理文件：SetIeSecurityOpts202308.bat](files/SetIeSecurityOpts202308.bat) 
+   [下载批处理文件：SetIESecurityOpts202308.bat](files/SetIeSecurityOpts202308.bat) 
+   
+   下载后，用Windows自带的notepad打开，如果没有换行符的话可下载notepad3打开。当然如果不需要修改，直接以管理员权限运行就可以，即使没有换行也无所谓，notepad认得(^_^)。
 
 
 
