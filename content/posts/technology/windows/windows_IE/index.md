@@ -388,7 +388,7 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 
 #### 使用批处理设置IE安全区域注册表项
 
-根据目前基于IE11的业务需求，只有第11、34两项设置为禁用，其他设置为启用，第四项的".NET Framework-reliant  components---Permissions for components with manifests	"只有禁用（3）和高级安全（0x00010000）两个选项，设置为0x00010000（高级安全）。下载该批处理文件(bat)，以管理员权限执行就可以完成IE安全区域注册表项的设置。
+根据目前基于IE11的业务需求，只有第11、34两项设置为禁用，其他设置为启用，第四项的".NET Framework-reliant  components---Permissions for components with manifests	"只有禁用（3）和高级安全（0x00010000）两个选项，设置为0x00010000（高级安全）。该批处理文件(bat)，以管理员权限执行就可以完成IE安全区域注册表项的设置。
 
 * 4..NET Framework-reliant  components---Permissions for components with manifests("2007")
 
@@ -396,10 +396,22 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 
 * 34.Miscellaneous---Use Pop-up Blocker("1809")
 
-   [下载批处理文件：SetIESecurityOpts202308.bat](files/SetIESecurityOpts202308.bat) 
+  ~~~\
+   @echo off
    
-   下载后，用Windows自带的notepad打开，如果文本没有自然换行的话就用[notepad3](https://github.com/rizonesoft/Notepad3)打开。当然如果不需要修改，直接以管理员权限运行就可以，即使没有换行也无所谓，notepad认得(^_^)。
-
-有了这个批处理，业务岗位的机器维护起来方方便一些，先把浏览器重置，然后运行这个批处理，如果批处理不需要修改、更新，可以使用工具转化为Exe文件，下次需要维护时测试一下这个批处理。也可以在这个批处理里添加点系统清理的语句，比如清理缓存、删除临时文件夹%temp%等。
-
-
+   @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\Range1" /v ":Range" /t REG_SZ /d 10.120.*.* /f
+   @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\Range1" /v "http" /t REG_DWORD /d 2 /f
+   
+   @echo  "1..NET Framework---XAML browser applications"
+   @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2" /v "2400" /t REG_DWORD /d 0 /f
+   。。。
+   。。。
+   
+   @echo  "add registry options for security domain of IE  successfully"
+   
+   pause
+   
+   rem 仿照上面的语法把需要的项目补全，也可以把全部的51项都写出来，保存为bat文件，以管理员权限运行批处理。
+   ~~~
+   
+   
