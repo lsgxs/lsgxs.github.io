@@ -32,14 +32,14 @@ cover:
 
 #### Windows IE安全区域注册表项及取值
 
-单位现在的业务系统大部分基于Windows IE浏览器的应用，设置好IE浏览器的各项参数，客户端通过浏览器链接到服务端打开应用。但是浏览器经常出现各种小问题，需要重新配置。由于IE的安全标签可信站点自定义选项很多，手动设置有时候会出错，而且效率低，因此就考虑用批处理自动化设置。在设置之前，了解一下这些参数的保存位置，一般是保存在注册表的HKCU主键下：`HKEY_CURRENT_USER\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONES\2`。用了一下午时间，把这些项目整理在一个表格中。
+单位现在的业务系统大部分基于Windows IE浏览器的应用，设置好IE浏览器的各项参数，客户端通过浏览器链接到服务端打开应用。但是浏览器经常出现各种小问题，需要重新配置。由于IE的安全标签可信站点自定义选项很多，手动设置有时候会出错，而且效率低，因此就考虑用批处理自动化设置。这些参数保存在注册表的HKCU主键下：`HKEY_CURRENT_USER\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONES\2`。用了一下午时间，把这些项目整理在一个表格中。
 
 | <span style="display:inline-block;width=60px">自定义项目(中文)</span> | <span style="display:inline-block;width=30px">编码</span> | <span style="display:inline-block;width=30px">取值</span> |
 | :----------------------------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: |
 |            1-.NET Framework：XAML 浏览器应用程序             |                           2400                            |                  0-启用；1-提示；3-禁用                   |
 |                  2-.NET Framework：XPS文档                   |                           2401                            |                  0-启用；1-提示；3-禁用                   |
 |                  3-.NET Framework：松散XAML                  |                           2402                            |                  0-启用；1-提示；3-禁用                   |
-|        4-.NET Framework相关组件：带有清单的权限的组件        |                           2007                            |                  0-启用；1-提示；3-禁用                   |
+|        4-.NET Framework相关组件：带有清单的权限的组件        |                           2007                            |                  3-禁用；10000-高级安全                   |
 |   5-.NET Framework相关组件：运行未用Authenticode签名的组件   |                           2004                            |                  0-启用；1-提示；3-禁用                   |
 |   6-.NET Framework相关组件：运行已用Authenticode签名的组件   |                           2001                            |                  0-启用；1-提示；3-禁用                   |
 |           7-ActiveX控件和插件：ActiveX控件自动提示           |                           2201                            |                  0-启用；1-提示；3-禁用                   |
@@ -252,7 +252,7 @@ Value  Setting
 ^ indicates a setting that only has two options, enabled or disabled
 ~~~
 
-可以参考网友的一篇文章，[[win10 ie ActiveX 对应注册表编号](https://www.cnblogs.com/josn1984/p/10696061.html)]
+下面这段文本框内容来自网络的一篇文章，[[win10 ie ActiveX 对应注册表编号](https://www.cnblogs.com/josn1984/p/10696061.html)]
 
 ~~~bash
 ActiveX控件自动提示:(3＝禁用、0＝启用)"2201"=dword:00000000 ;
@@ -335,7 +335,7 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 1-.NET Framework：XAML 浏览器应用程序         XAML browser applications	      2400	 0-启用；1-提示；3-禁用
 2-.NET Framework：XPS文档	                         XPS documents	         2401	0-启用；1-提示；3-禁用
 3-.NET Framework：松散XAML                  	      Loose XAML	         2402	0-启用；1-提示；3-禁用
-4-.NET Framework相关组件：带有清单的权限的组件	Permissions for components with manifests 2007	0-启用；1-提示；3-禁用
+4-.NET Framework相关组件：带有清单的权限的组件	Permissions for components with manifests 2007	3-禁用；10000-高级安全
 5-.NET Framework相关组件：运行未用Authenticode签名的组件    Run components not signed with Authenticode	2004	0-启用；1-提示；3-禁用
 6-.NET Framework相关组件：运行已用Authenticode签名的组件 Run components signed with Authenticode	2001	0-启用；1-提示；3-禁用
 7-ActiveX控件和插件：ActiveX控件自动提示	        Automatic prompting for ActiveX controls	2201	0-启用；1-提示；3-禁用
@@ -388,7 +388,7 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
 
 #### 使用批处理设置IE安全区域注册表项
 
-根据目前基于IE11的业务需求，只有第11、34两项设置为禁用，其他设置为启用，第四项的".NET Framework-reliant  components---Permissions for components with manifests	"只有禁用和高级安全两个选项，设置为0x000010000（高级安全）。下载该批处理文件(bat)，以管理员权限执行就可以完成IE安全区域注册表项的设置。
+根据目前基于IE11的业务需求，只有第11、34两项设置为禁用，其他设置为启用，第四项的".NET Framework-reliant  components---Permissions for components with manifests	"只有禁用（3）和高级安全（0x00010000）两个选项，设置为0x00010000（高级安全）。下载该批处理文件(bat)，以管理员权限执行就可以完成IE安全区域注册表项的设置。
 
 * 4..NET Framework-reliant  components---Permissions for components with manifests("2007")
 
@@ -400,6 +400,6 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
    
    下载后，用Windows自带的notepad打开，如果文本没有自然换行的话就用[notepad3](https://github.com/rizonesoft/Notepad3)打开。当然如果不需要修改，直接以管理员权限运行就可以，即使没有换行也无所谓，notepad认得(^_^)。
 
-
+有了这个批处理，业务岗位的机器维护起来方方便一些，先把浏览器重置，然后运行这个批处理，如果批处理不需要修改、更新，可以使用工具转化为Exe文件，下次需要维护时测试一下这个批处理。也可以在这个批处理里添加点系统清理的语句，比如清理缓存、删除临时文件夹%temp%等。
 
 
