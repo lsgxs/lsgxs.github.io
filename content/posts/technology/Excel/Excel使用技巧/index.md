@@ -37,9 +37,9 @@ cover:
   可以通过Windows控制面板提供的日期、时间、区域格式设置功能来指定需要的日期格式。
   
   * windows7
+   ![img](images/win7-区域和语言.png)
   
-    ![img](images/win7-区域和语言.png)
-    ![img](images/win7-区域和语言-2.png)
+   ![img](images/win7_区域和语言_2.png)
   
   * Windows10
   
