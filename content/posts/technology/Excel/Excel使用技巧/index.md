@@ -30,6 +30,21 @@ cover:
 
 #### Excel表格中关于数据选择的快捷键
 
+##### 快速移动
+* ctlr+上、下、左、右箭头
+* ctrl+ home 、end
+
+##### 快速区域选择
+* 快速选择左上角、右下角区域
+      快捷键：ctrl+shift+home
+      快捷键：ctrl+shift+end
+
+* shift +  箭头  或者  pagedown、pageup
+* 区域选择：
+     在区域中输入格式H:H选择，可以直击选择列，或者a3:c4的区域选择
+
+* alt + ; ，   或者筛选后使用ctrl+G打开定位，选择可见单元格即可选中筛选后的大量数据，ctrl+c、ctrl+v就可以完成复制。
+
 #### 关于日期的格式设置和转换
 
 * Windows系统日期格式的设定
