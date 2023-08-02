@@ -39,7 +39,6 @@ cover:
   * windows7
   
     ![img](images/win7-区域和语言.png)
-  
     ![img](images/win7-区域和语言-2.png)
   
   * Windows10
