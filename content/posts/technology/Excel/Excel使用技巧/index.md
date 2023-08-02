@@ -25,8 +25,7 @@ cover:
     image: "<images/grass_sky.jpg>" 
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    relative: false # when using page bundles set this to true 
 ---
 
 #### Excel表格中关于数据选择的快捷键
@@ -36,6 +35,21 @@ cover:
 * Windows系统日期格式的设定
 
   可以通过Windows控制面板提供的日期、时间、区域格式设置功能来指定需要的日期格式。
+  
+  * windows7
+  
+    ![img](images/win7-区域和语言.png)
+  
+    ![img](images/win7-区域和语言-2.png)
+  
+  * Windows10
+  
+    ![img](images/win10_时间语言.png)
+  
+    ![img](images/win10_更改数据格式.png)
+  
+    ![img](images/win10_日期.png)
+  
 * 日期格式的转换
 
   * 使用date（）函数：date(left(a2,4),mid(a2,5,2),right(2))
