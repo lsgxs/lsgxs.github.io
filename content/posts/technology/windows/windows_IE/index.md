@@ -414,4 +414,18 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
    rem 仿照上面的语法把需要的项目补全，也可以把全部的51项都写出来，保存为bat文件，以管理员权限运行批处理。
   ~~~
   
-   
+   > @echo off
+   >
+   >   @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\Range1" /v ":Range" /t REG_SZ /d 10.120.*.* /f
+   >   @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\Range1" /v "http" /t REG_DWORD /d 2 /f
+   >
+   >   @echo  "1..NET Framework---XAML browser applications"
+   >   @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2" /v "2400" /t REG_DWORD /d 0 /f
+   >   。。。
+   >   。。。
+   >
+   >   @echo  "add registry options for security domain of IE  successfully"
+   >
+   >   pause
+   >
+   >   rem 仿照上面的语法把需要的项目补全，也可以把全部的51项都写出来，保存为bat文件，以管理员权限运行批处理。
