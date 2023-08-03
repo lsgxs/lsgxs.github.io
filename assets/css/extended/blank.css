@@ -33,3 +33,13 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .post-content pre code {
     max-height: 40em;
     }
+::-webkit-scrollbar-corner {
+  background-color: var(--hljs-bg);
+  border-radius: 10px;
+}    
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--hljs-bg)
+  background: rgb(113,113,117);
+
+}
