@@ -9,12 +9,12 @@
 
 ::-webkit-scrollbar-thumb {
     background: var(--tertiary);
-    border: 2px solid var(--theme);
+    border: 5px solid var(--theme);
     border-radius: var(--radius);
 }
 
 .list:not(.dark)::-webkit-scrollbar-thumb {
-    border: 2px solid var(--code-bg);
+    border: 5px solid var(--code-bg);
 }
 
 ::-webkit-scrollbar-thumb:hover {
