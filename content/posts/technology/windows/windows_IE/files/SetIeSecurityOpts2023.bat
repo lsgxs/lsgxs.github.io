@@ -1,5 +1,7 @@
 ﻿rem	 此批处理仅限自己的内部业务系统使用
 
+
+
 @echo off
 @echo  "trusted website"
 @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\Range1" /v ":Range" /t REG_SZ /d 10.120.*.* /f
@@ -17,6 +19,7 @@
 @echo=
 @echo=
 
+@echo  "3..NET Framework---Loose XAML"
 @echo  "3..NET Framework---Loose XAML"
 @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2" /v "2402" /t REG_DWORD /d 0 /f
 @echo=
