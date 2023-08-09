@@ -1,4 +1,4 @@
-﻿rem  此批处理仅限自己的内部业务系统使用
+﻿rem	 此批处理仅限自己的内部业务系统使用
 
 @echo off
 @echo  "trusted website"
@@ -22,7 +22,7 @@
 @echo=
 @echo=
 
-@echo "4..NET Framework-reliant  components---Permissions for components with manifests	"
+@echo "4..NET Framework-reliant	 components---Permissions for components with manifests	"
 @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2" /v "2007" /t REG_DWORD /d 0x00010000 /f
 @echo=
 @echo=
@@ -32,7 +32,7 @@
 @echo=
 @echo=
 
-@echo "6..NET Framework-reliant  components---Run components signed with Authenticode"
+@echo "6..NET Framework-reliant	 components---Run components signed with Authenticode"
 @ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2" /v "2001" /t REG_DWORD /d 0 /f
 @echo=
 @echo=
@@ -261,7 +261,7 @@ echo "35.Miscellaneous---Submit non-encrypted form data"
 @echo=
 @echo=
 
-@echo  "add registry options for security domain of IE  successfully"
+@echo  "add registry options for security domain of IE	successfully"
 @echo=
 @echo=
 
