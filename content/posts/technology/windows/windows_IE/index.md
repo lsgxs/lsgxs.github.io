@@ -430,4 +430,4 @@ Java 小程序脚本:(3＝禁用、0＝启用、1＝提示)"1402"=dword:00010000
    >
    > rem 仿照上面的语法把需要的项目补全，也可以把全部的51项都写出来，保存为bat文件，以管理员权限运行批处理。
    >
-   > 文件下载：[本单位IE设置批处理](files/SetIeSecurityOpts2023.bat)
+   > 文件下载：[本单位IE设置批处理](files/SetIeSecurityOpts20232.bat)
