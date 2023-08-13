@@ -29,7 +29,9 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-#### html发展历史
+#### html基本概念
+
+hypertext  markup  language 的缩写，是用一些列标签来结构话web页面。根据自己的需要在html文件中书写标签，就是告诉浏览器如何结构化这个网页。
 
 #### URL
 
@@ -86,6 +88,21 @@ cover:
 
 #### 常用html元素 
 
+这些用html  tag来表示的单元叫做HTMl  Element，由一个开始标签`<tag-name>`跟着一段content，最后是结束标签`</tag-name>`,比如：
+
+~~~
+
+<open-tag-name>content</closing-tag-name>
+  <open-tag-namne>
+  content
+  </closing-tag-name>
+  这三者共同表示一个Html  Element   。
+  没有content和</closing-tag-name>的叫做void  element ,通常用来在html页面中插入链接或嵌入图片
+  ，比如<img  src="path-name/name.png">
+~~~
+
+这些标签名称在html中不区分大小写，通常使用小写。
+
    * 文本类标签     
      * `<div>`  division
      * `<p>`   paragrahp
@@ -117,14 +134,17 @@ cover:
         <a href="bing/mountain-1.jpg" download > DownLoadFile </a>
         文件下载
         代码中出现的引用资源的path，都是对这个html文件在文件系统中的路径的位置书写的。刚开始被网页中域名加路径的写法整蒙圈了，实际做个小博客或者文件下载的练习，慢慢明白了这些路径的写法及含义。域名是对远程主机的引用，相当于站点根目录，后边的路径就是文件系统的路径。
+       ~~~
        
    * 邮件链接标签
      ~~~  html
         <a href="mailto:user-name@qq.com"> contact </a>
+     ~~~
      
    * 电话链接标签
      ~~~html
      <a href="tel:12334567890"> 12334567890 </a>
+     ~~~
      
    * `<link>`标签主要加载网页引用的外部资源，一般在html文件的`<head>`区域，常见的应用是加载当前html页面需要的CSS文件
      
@@ -136,6 +156,7 @@ cover:
      
      ~~~html
           <script src="javascript-filename.js"></script>
+     ~~~
      
   * 图像类标签
 
@@ -166,6 +187,7 @@ cover:
     <input type="text" id="name" name="name" required
             minlength="4" maxlength="8" size="10">
      <input type="image" alt="登陆" src="login-button.png">
+    ~~~
     
   * button
 

@@ -36,7 +36,7 @@ tags: ["git","github账号","github"]
   #first
   Host hexo
   HostName github.com
-  User username_for_githbu
+  User username_for_github
   IdentityFile ~/.ssh/id_xxxxxx
   #second
   Host hugo
