@@ -1,4 +1,4 @@
-#baseURL: http://example.org/
+﻿#baseURL: http://example.org/
 #languageCode: en-us
 #title: My New Hugo Site
 #theme: "PaperMod"
@@ -97,6 +97,8 @@ params:
   socialIcons:
     # 在layouts/partails/svg.html文件中列举了知名的网站，但是没有Neeva，这里暂时借用goodreads使用.可以增加任何你需要的链接，用这个方法指定图标.svg.html通过大量的{{- else if (eq $icon_name "goodreads") -}}语句，意思是这里
     # socailIcons的name为指定的值是，就在http://www.w3.org/2000/svg获取指定图标，通过<svg> </svg>标签绘图。忽然想到了这个方法，起个名字叫借花献佛^-^。
+    - name: MDN
+      url: https://developer.mozilla.org/en-US/
     - name: goodreads  
       url: https://neeva.com/
     - name: bing
