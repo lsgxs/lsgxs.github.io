@@ -127,8 +127,14 @@ cover:
   * $eval  "$(ssh-agent  -s)"      `启动ssh agent`
   * ssh-add  ~/.ssh/id_rsa_namexxxx    `添加私钥到ssh  agent`
 
-* 将公钥添加到github.com的账号ssh,如下图：
+* 将公钥添加到github.com的账号ssh,步骤如下：
 
+  点击github账户右上角的图片，选择弹出的快捷菜单中的Settings选项，如下图
+  
+  ![img](images/settings.jpg)
+  
+  
+  
   ![img](images/user_ssh_add_1.png)
   ***
   
@@ -156,7 +162,7 @@ eval "$(ssh-agent  -s)"
 ssh-add ~/.ssh/id_rsa_hugo
 ~~~
 
-解决办法：
+自动添加私钥解决办法：
 
 找到`program files\git\etc\barch.barchrc`,用记事本打开，在文档的末尾添加下面两条命令。如果提示不能保存，就把bash.bashrc文件复制到别处，添加好下面的命令之后再覆盖git安装路径下的bash.bashrc文件。
 
