@@ -187,6 +187,8 @@ ssh-add ~/.ssh/id_rsa_hugo
 
 
 > **1.[下载git](https://git-scm.com/download/win)并安装**
+>
+> 正常安装好就可以在bash终端窗口和Windows命令窗口运行各种命令，如果不能运行部分命令的话（比如`ls  -al `,如果提示`command not  found`的提示），可以使直接使用git安装路径下各种命令的绝对路径形式。比如：`/bin/ls  -al`，这个`/bin`应该就是git安装目录下的`C:\Program Files\Git\usr\bin`的映射。git安装目录`C:\Program Files\Git`下的子目录结构，看着有点类似unix的目录结构。
 
 > **2.生成秘钥对**（可以在windows的当前登录用户目录下新建`.ssh`目录，比如:`c:\Users\win10`,在bash终端窗口中，可以使用`cd  ~`直接切换到该目录，如果在bash下不显示当前目录路径，使用`cd  ~`，然后`pwd`就可以显示出当前用的路径）
 
