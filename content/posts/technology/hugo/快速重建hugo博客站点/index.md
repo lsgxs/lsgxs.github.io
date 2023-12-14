@@ -228,6 +228,14 @@ git clone  git@github.com:username/username.github.io.git
 ```
 
 > **6.正常编辑博客文档，使用git-add-commit-push命令组合推送到github**
+>
+> * 使用模板新建博客markdown文档。如果不想从头安装配置hugo这个静态站点生成器，可以在下载到本地的博客文档中复制一个作为模板，然后修改`front-matter`的标题等项目，最后把内容替换为新的内容，使用git-add-commit-push即可发布。
+>
+> * hugo新建markdown博客文档。hugo不需要安装，只需从官网下载一个可执行文件，然后配置好目录结构，设置好环境变量就可以了。最后使用hugo加命令行参数就可以生成博客文档(markdown)。
+>   *    [下载hugo-extended_0.121.1_windows-amd64.zip](https://github.com/gohugoio/hugo/releases/tag/v0.121.1)
+>   * 新建hugo博客项目目录
+>   * 设置环境变量
+>   * hugo  命令行生成markdown文档
 
 ```
 git  add .
