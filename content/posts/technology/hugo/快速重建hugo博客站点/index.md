@@ -185,35 +185,56 @@ ssh-add ~/.ssh/id_rsa_hugo
 
 上面写了这么多，其实是备忘用的，时间久了还真是无法很快重建，几乎涉及到每个步骤的细节。总结一下大致就下面几个步骤：
 
-~~~nginx
-#1.下载并安装git
-#2.生成密钥对，可以切换到~/.ssh目录再生成密钥
+
+> **1.[下载git]()并安装**
+
+> **2.生成秘钥对**（可以在windows的当前登录用户目录下新建`.ssh`目录，比如:`c:\Users\win10`,在bash终端窗口中，可以使用`cd  ~`直接切换到该目录，如果在bash下不显示当前目录路径，使用`cd  ~`，然后`pwd`就可以显示出当前用的路径）
+
+```bash
 ssh-keygen -t rsa -b 4096 -C “mailbox”
-#ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_hugo -C "mailbox"
-#或者可以试试后面的ed25519类型创建密钥
-#~表示当前目录，如果当前目录下没有.ssh目录就创建该目录。
+```
 
-#3.复制公钥到hugo的github账户
-clip  <  ~/.ssh/id_rsa_hugo.pub
-#paste  to  ssh of   my hugo  github  account
+```bash
+--或者
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_hugo -C "mailbox"
+```
 
-#4.在本地通过ssh代理添加私钥
-#把下面这两句话添加到bash.bashrc文件的末尾。该文件保存在"x:\Program Files\Git\etc"目录下。
-eval "$(ssh-agent  -s)"
+> **3.复制公钥并添加到hugo的github账户**
+
+*  复制公钥到系统的剪贴板
+
+  ```bash
+  clip  <  ~/.ssh/id_rsa_hugo.pub
+  ```
+* 添加公钥到hugo的github账户。登录hugo博客所在的github账户，点击github账户右上角的图片，选择弹出的快捷菜单中的Settings选项，在窗口左侧选择`SSH and GPG keys`，然后在右侧窗口选择`New SSh key`,把刚才复制的公钥粘贴保存。至于那个公钥的Title名称，带个语义自己明白就可以。
+  
+
+> **4.在本地添加私钥**
+
+```
+找到`program files\git\etc\barch.barchrc`,用记事本打开，在文档的末尾添加下面两条命令。如果提示不能保存，就把bash.bashrc文件复制到别处，添加好下面的命令之后再覆盖git安装路径下的bash.bashrc文件。
+#ssh-agent  
+eval  "$(ssh-agent -s )"
 ssh-add ~/.ssh/id_rsa_hugo
 
-#5.下载保存在github的完整站点仓库
-git clone  git@github.com:username/username.github.io.git 
+# 以后每次打开git bash 终端窗口就会自动添加私钥
+```
+> **5.下载保存在github的完整站点仓库**
 
-#6 正常的编辑和推送到远程
+```
+git clone  git@github.com:username/username.github.io.git 
+```
+
+> **6.正常编辑博客文档，使用git-add-commit-push命令组合推送到github**
+
+```
 git  add .
 git  commit  -m "rebuilding "
+# 如果提示需要添加user.email和user.name，执行下面两条命令
 # git config  --global user.email "yourmailbox"
 # git config  --global user.name "your_github_username"
 git push origin  main
 #如果在另外一台电脑对远程的仓库做了更新，到当前这台电脑下载远程仓库的更新时，使用下面的语句：
 # git  pull origin 
-~~~
-
-
+```
 
