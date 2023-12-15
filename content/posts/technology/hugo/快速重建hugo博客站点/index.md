@@ -247,5 +247,6 @@ git  commit  -m "rebuilding "
 git push origin  main
 #如果在另外一台电脑对远程的仓库做了更新，到当前这台电脑下载远程仓库的更新时，使用下面的语句：
 # git  pull origin 
+# push到github的hugo仓库后，有自动的hugo编译器脚本自动把markdown文档转换为html文件，利用github pages组织成博客站点。
 ```
 
