@@ -196,8 +196,10 @@ ssh-add ~/.ssh/id_rsa_hugo
 ssh-keygen -t rsa -b 4096 -C “mailbox”
 ```
 
+
+
 ```bash
---或者
+--目前推荐使用这种类型
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_hugo -C "mailbox"
 ```
 
@@ -208,7 +210,7 @@ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_hugo -C "mailbox"
   ```bash
   clip  <  ~/.ssh/id_rsa_hugo.pub
   ```
-* 添加公钥到hugo的github账户。登录hugo博客所在的github账户，点击github账户右上角的图片，选择弹出的快捷菜单中的Settings选项，在窗口左侧选择`SSH and GPG keys`，然后在右侧窗口选择`New SSh key`,把刚才复制的公钥粘贴保存。至于那个公钥的Title名称，带个语义自己明白就可以。
+* 添加公钥到hugo的github账户。登录hugo博客所在的github账户，点击github账户右上角的图片，选择弹出的快捷菜单中的Settings选项，在窗口左侧选择`SSH and GPG keys`，然后在右侧窗口选择`New SSh key`,把刚才复制的公钥粘贴保存。至于那个公钥的Title名称，选择一个带个语义的名称自己明白就可以。
   
 
 > **4.在本地添加私钥**
@@ -233,9 +235,8 @@ git clone  git@github.com:username/username.github.io.git
 >
 > * hugo新建markdown博客文档。hugo不需要安装，只需从官网下载一个可执行文件，然后配置好目录结构，设置好环境变量就可以了。最后使用hugo加命令行参数就可以生成博客文档(markdown)。
 >   *    [下载hugo-extended_0.121.1_windows-amd64.zip](https://github.com/gohugoio/hugo/releases/tag/v0.121.1)
->   * 新建hugo博客项目目录
->   * 设置环境变量
->   * hugo  命令行生成markdown文档
+>   * **新建hugo博客项目目录**  比如建立这样的目录结构：`g:\hugo\bin`、`g:\hugo\sites`。把下载的hugo.exe保存在`bin`目录下，设置好环境变量指向`g:\hugo\bin`目录
+>   * hugo  命令行生成markdown文档。鼠标右键当前博客项目根目录，在弹出的快捷菜单中选择`open Git Bash here`打开git bash。`hugo  new posts/technology/css/cssNote/index.md`在指定的目录`posts/technology/css/cssNote`下新建index.md文档。在index.md统计目录下新建`images`目录保存图片文件，可以在index.md中引用图片文件,引用格式为`[img](images/xxxx.png)`。
 
 ```
 git  add .
