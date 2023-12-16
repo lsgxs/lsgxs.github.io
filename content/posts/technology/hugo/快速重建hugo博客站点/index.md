@@ -228,6 +228,8 @@ ssh-add ~/.ssh/id_rsa_hugo
 ```
 git clone  git@github.com:username/username.github.io.git 
 ```
+设置好一对秘钥之后，第一次使用`git  clone`下载github上的hugo博客项目是，会提示如下图所示的提示，直接输入`yes`就好。
+![img](images/git-clone-first-time.png)
 
 > **6.正常编辑博客文档，使用git-add-commit-push命令组合推送到github**
 >
