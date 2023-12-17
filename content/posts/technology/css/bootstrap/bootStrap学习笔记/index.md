@@ -225,7 +225,7 @@ href后面路径中的bootstrap532就是下载的bootstrap，自定义名称为b
 </html>
 ```
 
-```
+```html
 <!-- 第一个显示在index.html右侧iframe区域的子页面 。-->
 <!DOCTYPE html>
 <html>
@@ -303,4 +303,7 @@ href后面路径中的bootstrap532就是下载的bootstrap，自定义名称为b
 </html>
 ```
 
-> 项目中后面的几个子页面代码（page2.html、page3.html、page4.html）就不再下面继续列出了，同样的原理，只不过演示了不同的bootstrap元素。
+> 项目中后面的几个子页面代码（page2.html、page3.html、page4.html）就不再下面继续列出了，同样的原理，只不过演示了不同的bootstrap元素
+>
+> 后端可以使用go语言自带的web服务器，再使用mysql数据库就可以构建一个通用的具有增删查改功能的简单应用。
+
