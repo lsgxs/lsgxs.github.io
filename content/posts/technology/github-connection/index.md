@@ -49,5 +49,9 @@ ping  github.com
 20.205.243.166    github.com
 ```
 
+然后在cmd窗口下运行`ipconfig   /flushdns`
 
+打开浏览器，访问https://username.github.io 或者 https://github.com 。如果还是不显示，那就清理浏览器缓存，如下图所示：
+
+![img](images/firefox-cache.png)
 
