@@ -74,3 +74,45 @@ cover:
 >
 >   
 
+也可以试试批处理的方法实现，下面的代码先保存，有机会试试再修改一下
+
+```bash
+@echo off  
+setlocal  
+
+::高级共享设置  
+:: 启用网络发现  
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Network\LanmanServer" /v "EnableNetBIOS" /t REG_DWORD /d 1 /f  
+  
+:: 启用文件和打印机共享  
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\NetworkProvider" /v "NPAllowUniversalXPNSearch" /t REG_DWORD /d 1 /f  
+  
+:: 关闭密码保护共享  
+net share * /GRANT:Everyone,FULL /REMARK:"Password Protected Shares Disabled"  
+  
+echo 高级共享设置已完成。  
+
+::启用来宾账号guest
+@echo off  
+net user guest /active:yes  
+echo 来宾账号已启用。  
+
+::拒绝从网络访问选项--删除guest
+@echo off  
+set "key=HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0\NamePipe\RefuseList"  
+for /f "tokens=3" %%a in ('reg query %key%') do (  
+    if "%%a"=="guest" (  
+        reg delete "%key%" /v "%%a" /f  
+        echo guest已从“拒绝从网络访问”列表中删除。  
+    )  
+)  
+
+::允许网络用户访问此计算机
+@echo off  
+set "key=HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0\AllowToAuthenticateForProxy"  
+reg add "%key%" /v "guest" /t REG_DWORD /d 1 /f  
+echo guest已添加到“允许网络用户访问此计算机”列表中。  
+
+pause
+```
+
