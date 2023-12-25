@@ -57,3 +57,30 @@ cover:
   ```
 
   
+
+* 在cmd下退出MySQL
+
+  ```
+  quit
+  ```
+
+  
+
+* 在cmd的MySQL提示符下输入SQL query语句
+
+  * 多行自由输入。需要换行时回车，提示符会变更为`->`,直到你输入结束符号`;`
+
+  * 在输入多行语句时，中途想取消语句的输入，输入`\c`就可以退出语句输入，回到提示符下。
+
+  * MySQL的提示符状态
+
+    | Prompt   | Meaning                                                      |
+    | -------- | ------------------------------------------------------------ |
+    | `mysql>` | Ready for new query。可以开始新的查询                        |
+    | `->`     | Waiting for next line of multiple-line query。多行查询语句的下一行 |
+    | `'>`     | Waiting for next line, waiting for completion of a string that began   with a single quote (`'`)。多行语句中，期待右侧的单引号，形成一个完整的字符串。 |
+    | `">`     | Waiting for next line, waiting for completion of a string that began    with a double quote (`"`)。多行语句中，期待右侧的双引号，形成一个完整的字符串。 |
+    | ``>`     | Waiting for next line, waiting for completion of an identifier that            began with a backtick (```) 。多行语句中，期待右侧的反引号。 |
+    | `/*>`    | Waiting for next line, waiting for completion of a comment that began           with `/*` |
+
+    * 多行语句经常出现在忘记在语句末尾输入分号，而直接敲入回车键，以为语句会执行，结果显示的是一个`->`提示符。没关系，在新的一行输入分号，然后回车就可以执行。
