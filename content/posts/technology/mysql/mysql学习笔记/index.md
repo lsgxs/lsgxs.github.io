@@ -1,5 +1,5 @@
 ---
-title: "Mysql学习笔记"
+title: "MySQL学习笔记"
 date: 2023-12-25T20:14:00+08:00
 draft: false
 # weight: 2
@@ -29,12 +29,12 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-#### 获取指定版本的mysql
+#### 获取指定版本的MySQL
 
 * 根据使用的操作系统：unix /linux、windows  、macOS，选择下载对应版本的[MySQL](https://dev.mysql.com/doc/refman/8.0/en/getting-mysql.html)
 * 使用MD5等校验工具，检测下载的MySQL与官网是否一致。
 
-#### 在Windows下安装mysql
+#### 在Windows下安装MySQL
 
 在Windows下安装mysql的最简单的方法是使用[MySQL  installer](https://dev.mysql.com/downloads/installer/),建议在64位的Windows下使用MySQL。使用MySQL installer安装MySQL时，有四个安装类型选择：
 
@@ -43,9 +43,9 @@ cover:
 * **Dedicated**
 * **Manual**
 
-#### 在Windows的cmd下操作mysql
+#### 在Windows的cmd下操作MySQL
 
-* 连接到mysql数据库服务器
+* 连接到MySQL数据库服务器
 
   ```
   mysql  -u  root -p
