@@ -56,6 +56,14 @@ cover:
   mysql  -h  10.190.21.23   -u  root  -p
   ```
 
+  ```
+  /* -h host的默认值是localhost*,/
+  mysql  -h  localhost  -u  root -p
+  
+  /*下面这行命令就是省略了-h  localhost*/
+  mysql  -u  root  -p
+  ```
+
   
 
 * 在cmd下退出MySQL
