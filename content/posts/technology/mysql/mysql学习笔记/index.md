@@ -114,9 +114,21 @@ cover:
     ```
 
   * 可以把一个脚本执行的结果输出在一个文件中，进一步处理。
-  
+
     ```
     mysql  <  batch-file  > mysql.out
     ```
-  
+
+    
+
+#### MySQL的相关程序
+
+  * mysqld是MySQL的后台主程序，只有启动了它，客户端程序才能连接到MySQL数据库服务器。   
+
+    ```
+    -- 可以在Windows的CMD下运行这个命令。
+    -- mysqld拥有众多的参数
+    mysqld  --verbose  --help  
+    ```
+
     
