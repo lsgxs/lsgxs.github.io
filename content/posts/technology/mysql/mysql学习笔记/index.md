@@ -163,3 +163,39 @@ cover:
 
 在Windows中，按照表格中列出的选项文件的先后顺序读取选项文件，后读取的文件优先级高。
 
+#### 连接到MySQL服务器
+
+* 使用mysql和命令行参数。`mysql  -u  root  -p  `
+
+* 在选项文件中保存连接参数。在选项文件的[client]分组中设置连接参数。
+
+  ```
+  [client]
+  host=host_name
+  user=user_name
+  password=password
+  ```
+  
+* 也可以使用环境变量
+  
+* 连接到MySQL服务器的几种写法
+  
+  ```
+  #   command-line options  connect  string 
+  mysql --host=localhost --user=myname --password=password mydb
+  mysql -h localhost -u myname -ppassword mydb
+  ```
+  
+  ```
+  # URI-like  connect  string
+  # MySQL Shell's shell.parseUri() and shell.unparseUri() methods can be used to deconstruct and assemble a URI-like connection # string. 
+  mysql://user_name@localhost:3333
+  ```
+  
+  ```
+  # key-value  pairs  connect  string 
+  {user:'user_name', host:'localhost', port:33065}
+  ```
+  
+  
+
