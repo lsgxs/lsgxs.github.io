@@ -130,5 +130,36 @@ cover:
     -- mysqld拥有众多的参数
     mysqld  --verbose  --help  
     ```
-
     
+  * 连接到MySQL服务器的客户端程序
+    
+    * myslq
+    * mysqladmin
+    * mysqldump
+    * mysqlimport
+
+* 运行MySQL程序时指定的参数或者选项
+  * 指定参数使用单横线`-`或者双横线`--`，后边跟参数。比如:`mysql  -u  root -p`
+  * 指定选项一般有三种方法，优先级从低到高。
+    * 通过环境变量
+    * 通过选项文件（选项文件内容的格式，请查看MySQL官方文档[Using Option Files](https://dev.mysql.com/doc/refman/8.0/en/option-files.html)）
+    * 通过命令行选项
+
+           MySQL programs determine which options are given first by examining environment variables, then by processing option files, and then by checking the command line. Because later options take precedence over earlier ones, the processing order means that environment variables have the lowest precedence and command-line options the highest. 
+
+
+​          On Windows, MySQL programs read startup options from the files   shown in the following table, in the specified order (files     listed first are read first, files read later take   precedence).
+
+**Option Files Read on Windows Systems **
+
+| File Name                                                 | Purpose                                                      |
+| --------------------------------------------------------- | ------------------------------------------------------------ |
+| `%WINDIR%\my.ini`,                `%WINDIR%\my.cnf`       | Global options                                               |
+| `C:\my.ini`, `C:\my.cnf`                                  | Global options                                               |
+| `*`BASEDIR`*\my.ini`,                `*`BASEDIR`*\my.cnf` | Global options                                               |
+| `defaults-extra-file`                                     | The file specified with                [`--defaults-extra-file`](https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html#option_general_defaults-extra-file),                if any |
+| `%APPDATA%\MySQL\.mylogin.cnf`                            | Login path options (clients only)                            |
+| `*`DATADIR`*\mysqld-auto.cnf`                             | System variables persisted with                [`SET                 PERSIST`](https://dev.mysql.com/doc/refman/8.0/en/set-variable.html) or                [`SET                 PERSIST_ONLY`](https://dev.mysql.com/doc/refman/8.0/en/set-variable.html) (server only) |
+
+在Windows中，按照表格中列出的选项文件的先后顺序读取选项文件，后读取的文件优先级高。
+
