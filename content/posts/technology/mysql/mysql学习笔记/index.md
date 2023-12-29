@@ -199,3 +199,47 @@ cover:
   
   
 
+#### MySQL服务端程序
+
+* mysqld   MySQL后端的服务器程序，启动后listen默认的3306端口，响应客户端的连接和数据请求。
+* msyqld_safe  在Unix平台上推荐使用mysqld_safe启动mysqld服务，它添加了一些安全特性。
+
+####  MySQL客户端程序
+
+* mysql   最为常用的和后端服务交互的客户端程序。常见的启动方法（以Windows为例）
+
+  ```
+  mysql -u  username  -p   
+  # 比如：
+  mysql  -u  root  -p
+  ```
+
+  使用`mysql  -u  root -p`连接到MySQL服务器之后，就可以在提示符下输入下面的命令行：
+
+  ```
+  # 在指定的目录下新建create databsase and create  tables语句，保存为myCreate.sql
+  # 运行source  file-name.sql就可以运行保存在文本文件里的SQL语句.
+  # On Windows, specify path name separators as / or \\
+  source   myCreate.sql
+  #或者
+  \.  file_name.sql
+  ```
+
+* exit   or quit     (退出mysql命令行)
+
+* use   db_name       （切换数据库）
+
+#### MySQL  server的管理程序
+
+* mysqladmin     
+
+ mysqladmin是一个独立的管理工具，带有众多的参数。比如常用的create  db_name  、drop  db_name
+
+```
+# 在windows的cmd下直接运行下面的命令，会创建名称为mydatabase的数据库。
+# 但是并不会显示像mysql一样的命令提示符
+mysqladmin  -u  root   -p   create  mydatabase
+# 可以使用show databases的命令来显示刚创建的数据库
+show  databases;
+```
+
