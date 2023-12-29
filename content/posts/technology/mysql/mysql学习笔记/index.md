@@ -206,7 +206,7 @@ cover:
 
 ####  MySQL客户端程序
 
-* mysql   最为常用的和后端服务交互的客户端程序。常见的启动方法（以Windows为例）
+* **mysql**   最为常用的和后端服务交互的客户端程序。常见的启动方法（以Windows为例）
 
   ```
   mysql -u  username  -p   
@@ -225,13 +225,11 @@ cover:
   \.  file_name.sql
   ```
 
-* exit   or quit     (退出mysql命令行)
+* **exit   or quit**     (退出mysql命令行)
 
-* use   db_name       （切换数据库）
+* **use   db_name**       （切换数据库）
 
-#### MySQL  server的管理程序
-
-* mysqladmin     
+* **mysqladmin**     MySQL  server的管理程序
 
  mysqladmin是一个独立的管理工具，带有众多的参数。比如常用的create  db_name  、drop  db_name
 
@@ -241,5 +239,33 @@ cover:
 mysqladmin  -u  root   -p   create  mydatabase
 # 可以使用show databases的命令来显示刚创建的数据库
 show  databases;
+```
+
+* **mysqldump**  客户端的数据库备份程序mysqldump。使用mysqldump可以进行数据库的逻辑备份，不适合特别大数据库备份。备份数据库的方法有三种
+
+  ```
+  # 备份指定数据库的表
+  mysqldump [options] db_name [tbl_name ...]
+  # 备份指定数据库
+  mysqldump [options] --databases db_name ...
+  # 备份所有数据库
+  mysqldump [options] --all-databases
+  ```
+
+  **备份数据库的写法**
+
+```
+mysqldump -u root -p mydatabase > backup.sql
+# 生成的backup.sql可以使用vscode打开浏览其结构和内容
+```
+
+```
+backup.sql文件中通常还会包含一些数据定义语句（DDL）和数据操作语句（DML），用于创建表和插入初始数据。这些语句通常以--或/* */注释标记，以便区分结构定义和数据。在备份文件中，数据通常以INSERT语句的形式呈现，用于将数据插入到表中。这些INSERT语句可以在数据库中执行，以恢复数据到备份时的状态。因此，虽然backup.sql文件主要包含数据库的结构定义，但其中也包含了用于恢复数据的INSERT语句,可以使用这些语句来还原数据。
+```
+
+​    **还原数据库的写法**
+
+```
+mysql -u root -p mydatabase < backup.sql
 ```
 
