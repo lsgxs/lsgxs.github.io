@@ -95,10 +95,14 @@ cover:
 
 * MySQL的批处理模式
 
-  把需要运行的多行语句保存在后缀名为.sql或者.txt的文件里，然后在MySQL提示符下运行下面的命令：
+  把需要运行的多行语句保存在后缀名为.sql或者.txt的文件里，然后在Windows的CMD提示符下运行下面的命令：
 
   ```
   mysql  <  batch-file.sql
+  #  应该是下面这个写法：
+mysql  -u  root -p   < batch-file.sql
+  # 或者
+mysql  -u  root -p   < batch-file.txt
   ```
 
   使用批处理模式在MySQL下运行脚本文件，有几个好处：
@@ -106,19 +110,19 @@ cover:
   * 一次脚本任务编写，多次运行
 
   * 便于保存和修改特定任务的脚本，如果脚本中部分代码出错，修改后保存就可以重新运行，不必像多行输入模式下重新输入。
-
+  
   * 如果一个脚本的输出内容很多，可以使用`|more`来分页浏览
 
     ```
-    mysql   < batch-file  |more
+  mysql   < batch-file  |more
     ```
-
+  
   * 可以把一个脚本执行的结果输出在一个文件中，进一步处理。
 
     ```
     mysql  <  batch-file  > mysql.out
     ```
-
+  
     
 
 #### MySQL的相关程序
