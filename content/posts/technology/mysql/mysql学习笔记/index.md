@@ -307,6 +307,7 @@ mysql -u root -p mydatabase < backup.sql
     
     ```bash
     # 其中的--local是在MySQL服务器所在的host读取文本文件，而不是从远程的client上读取文本文件。
+    # --password后面没有跟随密码，可以在运行时提示输入密码。
     
     mysqlimport --local --user=root --password --database=your_database_name --fields-terminated-by=',' --lines-terminated-by='\n' --verbose --ignore-lines=1 "C:\Users\win10\your_text_file.txt"
     
@@ -321,14 +322,19 @@ mysql -u root -p mydatabase < backup.sql
      
   
 
-总结一下，本人作为普通数据库用户（比如web应用开发者），在localhost上需要熟悉的的两条客户端命令。其他成百上千的命令行选项，需要在具体的项目中不断学习和实践才能熟悉。
+总结一下，本人作为普通数据库用户（比如web应用开发者），在localhost上需要熟悉简单的几个客户端命令。其他成百上千的命令行选项，需要在具体的项目中不断学习和实践才能熟悉。
 
 ```bash
 # 运行myCreate.sql里保存的SQL语句
 mysql -u  root -p   < myCreate.sql
+
 #逻辑备份数据库
 mysqldump  -u  root -p   >  myDump.sql
+
 #如果想成为DBA,那除了日常的应用、管理、安全、优化之外，还要理解数据库本身的架构，源代码研究，进行更深入的研究了。
+#从文本文件向数据库表中导入数据
+mysqlimport --local --user=root --password --database=your_database_name --fields-terminated-by=',' --lines-terminated-by='\n' --verbose --ignore-lines=1 "C:\Users\win10\your_text_file.txt"
+ 
 ```
 
 #### 数据库的备份和恢复
@@ -344,8 +350,6 @@ mysqldump  -u  root -p   >  myDump.sql
 #### MySQL函数和操作符
 
 #### SQL语句
-
-#### Workbench
 
 # MySQL Workbench
 
