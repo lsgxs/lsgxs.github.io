@@ -100,7 +100,7 @@ cover:
   ```
   mysql  <  batch-file.sql
   mysql  -u  root -p   < batch-file.sql
-mysql  -u  root -p   < batch-file.txt
+  mysql  -u  root -p   < batch-file.txt
   ```
 
   使用批处理模式在MySQL下运行脚本文件，有几个好处：
