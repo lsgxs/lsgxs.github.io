@@ -99,9 +99,7 @@ cover:
 
   ```
   mysql  <  batch-file.sql
-  #  应该是下面这个写法：
-mysql  -u  root -p   < batch-file.sql
-  # 或者
+  mysql  -u  root -p   < batch-file.sql
 mysql  -u  root -p   < batch-file.txt
   ```
 
@@ -110,17 +108,17 @@ mysql  -u  root -p   < batch-file.txt
   * 一次脚本任务编写，多次运行
 
   * 便于保存和修改特定任务的脚本，如果脚本中部分代码出错，修改后保存就可以重新运行，不必像多行输入模式下重新输入。
-  
-  * 如果一个脚本的输出内容很多，可以使用`|more`来分页浏览
 
+  * 如果一个脚本的输出内容很多，可以使用`|more`来分页浏览
+  
     ```
-  mysql   < batch-file  |more
+mysql   < batch-file  |more
     ```
   
   * 可以把一个脚本执行的结果输出在一个文件中，进一步处理。
-
+  
     ```
-    mysql  <  batch-file  > mysql.out
+  mysql  <  batch-file  > mysql.out
     ```
   
     
