@@ -210,7 +210,7 @@ mysql   < batch-file  |more
 
 * **mysql**   最为常用的和后端服务交互的客户端程序。常见的启动方法（以Windows为例）
 
-  ```
+  ```bash
   mysql -u  username  -p   
   # 比如：
   mysql  -u  root  -p
@@ -278,7 +278,7 @@ mysql -u root -p mydatabase < backup.sql
 
   * LOAD  DATA  简单的用法示例
 
-    ```
+    ```bash
     #LOAD DATA can be used to read files obtained from external sources. For example, many programs can export data in comma-#separated values (CSV) format, such that lines have fields separated by commas and enclosed within double quotation #marks, with an initial line of column names. If the lines in such a file are terminated by carriage return/newline #pairs, the statement shown here illustrates the field- and line-handling options you would use to load the file: 
     
     LOAD DATA INFILE 'data.txt' INTO TABLE tbl_name
@@ -306,7 +306,7 @@ mysql -u root -p mydatabase < backup.sql
 
 总结一下，本人作为普通数据库用户（比如web应用开发者），在localhost上需要熟悉的的两条客户端命令。其他成百上千的命令行选项，需要在具体的项目中不断学习和实践才能熟悉。
 
-```
+```bash
 # 运行myCreate.sql里保存的SQL语句
 mysql -u  root -p   < myCreate.sql
 #逻辑备份数据库
@@ -332,7 +332,7 @@ mysqldump  -u  root -p   >  myDump.sql
 
 # MySQL Workbench
 
-```
+```bash
 #  from  MySQL Workbench :https://dev.mysql.com/doc/refman/8.0/en/workbench.html
 
 MySQL Workbench provides a graphical tool for working with MySQL servers and databases. MySQL Workbench fully supports MySQL versions 5.5 and higher.
