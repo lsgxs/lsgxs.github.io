@@ -302,6 +302,23 @@ mysql -u root -p mydatabase < backup.sql
     ```
   
     详细的用法参照MySQl官网关于[LOAD  DATA](https://dev.mysql.com/doc/refman/8.0/en/load-data.html)的介绍，并通过亲自实践可以熟练运用。
+    
+  * **mysqlimport**  
+    
+    ```bash
+    # 其中的--local是在MySQL服务器所在的host读取文本文件，而不是从远程的client上读取文本文件。
+    
+    mysqlimport --local --user=root --password --database=your_database_name --fields-terminated-by=',' --lines-terminated-by='\n' --verbose --ignore-lines=1 "C:\Users\win10\your_text_file.txt"
+    
+    #使用mysqlimport命令时加上--verbose选项，它会以详细模式运行并显示操作过程中的信息。具体显示的内容可能包括以下几项：
+    #    导入进度：它会显示正在导入的记录数和总记录数，以便了解数据导入的进度。
+    #    导入记录的状态：对于每条导入的记录，它会显示成功导入或失败导入的信息。
+    #    错误信息：如果在导入过程中遇到任何错误，它会显示错误信息，以便你可以了解问题的所在并进行相应的处理。
+    #    导入速度：它还会显示数据导入的速度，让你了解数据导入的效率。
+    #    总之，使用--verbose选项可以提供更多的反馈信息，帮助你更好地了解数据导入的过程和状态。
+    ```
+    
+     
   
 
 总结一下，本人作为普通数据库用户（比如web应用开发者），在localhost上需要熟悉的的两条客户端命令。其他成百上千的命令行选项，需要在具体的项目中不断学习和实践才能熟悉。
