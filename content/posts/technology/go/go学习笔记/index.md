@@ -53,7 +53,7 @@ cover:
 
   
 
-  ```
+  ```bash
   Microsoft Windows [版本 10.0.19044.3086]
   (c) Microsoft Corporation。保留所有权利。
   
@@ -103,10 +103,6 @@ cover:
   ```
 
   
-
-偷个懒，下面的内容是复制了csdn的   [彻底搞懂golang的GOROOT和GOPATH](https://blog.csdn.net/qq_38151401/article/details/105729884)
-
----
 
 1、GOPATH 和 GOROOT
 
@@ -174,26 +170,28 @@ src：存放项目源文件的目录
 
 （3）测试
 
-    models：Student.go
-    
-    main：hello.go
-    
-    package main
-     
-    import (
-    	//"./models"  //相对路径
-    	"Go-Player/src/ademo/models"  //根据GOPATH找
-        //根据GOPATH：D:\development\jetbrains\goland\workspace，在其src目录下查找
-        //即GOPATH/src/Go-Player/src/ademo/models
-    	"fmt"
-    )
-     
-    func main() {
-    	stu := models.Student{
-    		Name: "张三",
-    	}
-    	fmt.Println(stu)
-    }
+```go
+models：Student.go
+
+main：hello.go
+
+package main
+ 
+import (
+	//"./models"  //相对路径
+	"Go-Player/src/ademo/models"  //根据GOPATH找
+    //根据GOPATH：D:\development\jetbrains\goland\workspace，在其src目录下查找
+    //即GOPATH/src/Go-Player/src/ademo/models
+	"fmt"
+)
+ 
+func main() {
+	stu := models.Student{
+		Name: "张三",
+	}
+	fmt.Println(stu)
+}
+```
 
 此篇文章仅介绍网上大部分GOPATH版本。Go语言Hello World都只简单地介绍了GOPATH版本。但是从Go的1.11版本之后，已不再推荐使用GOPATH来构建应用了。也就是说GOPATH被认为是废弃的，错误的做法。
 4、一些踩坑经验
@@ -202,13 +200,15 @@ src：存放项目源文件的目录
 
 GO111MODULE 有三个值：off, on和auto（默认值）。
 
-    GO111MODULE=off，go命令行将不会支持module功能，寻找依赖包的方式将会沿用旧版本那种通过vendor目录或者GOPATH模式来查找。
-    GO111MODULE=on，go命令行会使用modules，而一点也不会去GOPATH目录下查找。
-    GO111MODULE=auto，默认值，go命令行将会根据当前目录来决定是否启用module功能。这种情况下可以分为两种情形：
-        当前目录在GOPATH/src之外且该目录包含go.mod文件
-        当前文件在包含go.mod文件的目录下面。
-    
-    当modules 功能启用时，依赖包的存放位置变更为$GOPATH/pkg，允许同一个package多个版本并存，且多个项目可以共享缓存的 module。
+```bash
+GO111MODULE=off，go命令行将不会支持module功能，寻找依赖包的方式将会沿用旧版本那种通过vendor目录或者GOPATH模式来查找。
+GO111MODULE=on，go命令行会使用modules，而一点也不会去GOPATH目录下查找。
+GO111MODULE=auto，默认值，go命令行将会根据当前目录来决定是否启用module功能。这种情况下可以分为两种情形：
+    当前目录在GOPATH/src之外且该目录包含go.mod文件
+    当前文件在包含go.mod文件的目录下面。
+
+当modules 功能启用时，依赖包的存放位置变更为$GOPATH/pkg，允许同一个package多个版本并存，且多个项目可以共享缓存的 module。
+```
 
 （1）使用了了相对路径：import "./models" 
 
@@ -226,12 +226,14 @@ GO111MODULE 有三个值：off, on和auto（默认值）。
 
 不再使用go mod：
 
-    go env -w GO111MODULE=off  或者  go env -w GO111MODULE=auto
-    go env -u GO111MODULE
-    
-      区别在于，如果GO111MODULE=on或者auto，在go get下载包时候，会下载到GOPATH/pkg/mod，引入时也是同样的从这个目录开始。如果这行了上述命令，那么在go get下载包时候，会下载到GOPATH/src 目录下
-    
-      本文仅介绍Hello world(GOPATH版），虽然此种方法不推荐使用，但是初学者在使用的时候仍会遇到很多问题。后续将介绍如何使用Go Module版
+```bash
+go env -w GO111MODULE=off  或者  go env -w GO111MODULE=auto
+go env -u GO111MODULE
+
+  区别在于，如果GO111MODULE=on或者auto，在go get下载包时候，会下载到GOPATH/pkg/mod，引入时也是同样的从这个目录开始。如果这行了上述命令，那么在go get下载包时候，会下载到GOPATH/src 目录下
+
+  本文仅介绍Hello world(GOPATH版），虽然此种方法不推荐使用，但是初学者在使用的时候仍会遇到很多问题。后续将介绍如何使用Go Module版
+```
 
  
 
@@ -240,9 +242,12 @@ GO111MODULE 有三个值：off, on和auto（默认值）。
 
 
 
+
 参考博客：
 
-    Go语言Hello world(GOPATH和Go Module版)：https://www.jianshu.com/p/2e19ba8ade18
-    
-    一次报错的 彻底明白 go的GOROOT ,GOPATH 以及go mod：https://blog.csdn.net/sinat_23156865/article/details/100655475
+```bash
+Go语言Hello world(GOPATH和Go Module版)：https://www.jianshu.com/p/2e19ba8ade18
+csdn的   [彻底搞懂golang的GOROOT和GOPATH](https://blog.csdn.net/qq_38151401/article/details/105729884)
+一次报错的 彻底明白 go的GOROOT ,GOPATH 以及go mod：https://blog.csdn.net/sinat_23156865/article/details/100655475
+```
 
