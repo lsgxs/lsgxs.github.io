@@ -106,7 +106,7 @@ cover:
 
 1、GOPATH 和 GOROOT
 
-不同于其他语言，go中没有项目的说法，只有包, 其中有两个重要的路径，GOROOT 和 GOPATH
+go中更多的是关于包的概念。 其中有两个重要的路径，GOROOT 和 GOPATH
 
 Go开发相关的环境变量如下：
 
@@ -251,3 +251,8 @@ csdn的   [彻底搞懂golang的GOROOT和GOPATH](https://blog.csdn.net/qq_381514
 一次报错的 彻底明白 go的GOROOT ,GOPATH 以及go mod：https://blog.csdn.net/sinat_23156865/article/details/100655475
 ```
 
+
+
+
+
+##### 待续...
