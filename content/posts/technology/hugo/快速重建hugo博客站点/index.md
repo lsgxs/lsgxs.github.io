@@ -216,12 +216,14 @@ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_hugo -C "mailbox"
 > **4.在本地添加私钥**
 
 ```
-找到`program files\git\etc\barch.barchrc`,用记事本打开，在文档的末尾添加下面两条命令。如果提示不能保存，就把bash.bashrc文件复制到别处，添加好下面的命令之后再覆盖git安装路径下的bash.bashrc文件。
+# 如果不想设置etc目录的管理员权限，可以直接把barch.barchrc文件复制到Windows桌面上，按照下面的步骤添加内容，最后再把该文件复制到`program #files\git\etc`目录下，以管理员的权限替换原文件。
+#找到`program files\git\etc\barch.barchrc`,用记事本打开，在文档的末尾添加下面两条命令。如果提示不能保存，就把bash.bashrc文件复制到别处，添加好下面的命令之后再覆盖git安装路径下的bash.bashrc文件。
 #ssh-agent  
 eval  "$(ssh-agent -s )"
 ssh-add ~/.ssh/id_rsa_hugo
 
 # 以后每次打开git bash 终端窗口就会自动添加私钥
+
 ```
 > **5.下载保存在github的完整站点仓库**
 
