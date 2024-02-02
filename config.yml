@@ -83,6 +83,8 @@ params:
         url: posts/stock
       - name: 运动
         url: posts/sport  
+      - name: 汽车
+        url: posts/car 
       - name: 感悟
         url: posts/think
       - name: 美食
