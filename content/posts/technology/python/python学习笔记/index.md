@@ -22,7 +22,7 @@ ShowPostNavLinks: true
 UseHugoToc: false
 ShowCodeCopyButtons: true
 cover:
-    image: "<image path/url>" # image path/url
+    image: "images/冰山.jpg" # image path/url
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -89,8 +89,6 @@ cover:
   
   ```
 
-  
-
 * for
 
   ```python
@@ -102,8 +100,6 @@ cover:
       print('The for loop is over')    
   ```
 
-  
-
 * break
 
   在循环语句中遇到break会结束当前的循环语句块。
@@ -114,11 +110,51 @@ cover:
 
 ####  function
 
+* 局部变量
+
+  函数内部定义的变量称为局部变量，和函数之外定义的同名变量没有关系
+
+  ```
+  x = 40
+  
+  def func(x):
+      print('x is', x)
+      x = 3
+      print('Change local x to', x)
+  
+  func(x)
+  print('x is still', x)
+  ```
+
+  output:
+
+  ```
+  x is 40
+  Changed local x to 3
+  x is still 40
+  ```
+
+* 全局变量
+
+  在python代码块中，如果要显式的使用全局变量，则可以使用global来表明：
+
+  ```
+  global   var_name
+  ```
+
+* 参数的类型
+
+  * 默认参数
+  * 位置参数
+  * 关键字参数
+
 ####  module
+
+函数是实现特定功能的代码段，达到重用一段代码的目的，那如果要重用多个函数，如何实现呢？这里就有了module这个概念，实际就是一个后缀名为.py的文件，里边包含各类变量、函数、类等对象。需要这些功能时，直接引用（import）这些module文件就可以了。
 
 #### Package
 
-包就相当于是Windows的目录和子目录，moudel就是一个后缀名为py的python源文件。而module文件里是各种变量、函数和类等所有名称的定义。有了这样的概念，在包和模块之间重用代码的方式有如下几种形式
+有了大量的功能完备的module，如何分类组织组织这些modules呢？这里就有了packages的概念，包就相当于是Windows的目录和子目录，每个包下面都包含一个`__init__.py`文件，用来标识这个目录是一个包，包含若干个modules。而module文件里是各种变量、函数和类等所有名称的定义。有了这样的概念，在包和模块之间重用代码的方式有如下几种形式
 
 * import   module_name
   * module_name.func_name(argn...)
@@ -135,6 +171,8 @@ cover:
 
 总结一下：from 后面可以是package、package_subpackage_module    ，import后面可以是module、variable、function、class。但是能不能在import后直接跟一个package_name?下次确认一下再总结。
 
+为了避免出现自己的module和第三方module的标识符冲突，建议直接使用import的引用形式，使用是使用module_name.object_name。这样就相当于有扩大了名称空间，不会出现变量、函数、对象等标识符重复的现象。就好像给学生的名字加了前缀：某校.某班级.学生姓名，这样就不会重复，如果重复，那就继续扩大引用的名称空间。
+
 ####  数据结构(data  structure)
 
 除了基本的数值类型和字符串类型之外，在python中提供了四种数据复合的数据结构，分别是list、tuple、dictionary、set。其中前边三种数据类型都是有序的(sequence)，可以进行index(下标从0开始)和slice操作，也经常会使用for   x  in   sequences  语句进行遍历实现各种操作。
@@ -146,13 +184,9 @@ cover:
   weblist = ['php', 'asp', 'jsp', 'javascript','java','ruby','python','go']
   ```
 
-  
-
 * tuple
 
   tuple有类似string的特征，就是定义之后不能被修改。
-
-  
 
 * dictionary
 
@@ -193,7 +227,5 @@ cover:
     # Close the file
     f.close()
     ```
-  
-    
   
   * close
