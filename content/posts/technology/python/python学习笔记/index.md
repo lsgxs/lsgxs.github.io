@@ -88,7 +88,7 @@ cover:
 
   ```
   # web  programming language list
-   = ['php', 'asp', 'jsp', 'javascript','java','python','go']
+  weblist = ['php', 'asp', 'jsp', 'javascript','java','ruby','python','go']
   ```
 
   
