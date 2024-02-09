@@ -229,3 +229,24 @@ cover:
     ```
   
   * close
+
+#### 异常的处理
+
+使用try  ..except语句块来实现异常的处理
+
+```
+try:
+    text = input('Enter something ')
+except EOFError:
+    print(' you enter  ctrl+z and  enter')
+except KeyboardInterrupt:
+    print('You cancel the operation.')
+else:
+    #You can also have an `else` clause associated with a `try..except` block. 
+    #The `else` clause is executed if no exception occurs.
+    print('You entered {}'.format(text))
+```
+
+如果一个错误或者异常没有被处理，则系统会调用python默认的处理程序，显示一个错误信息，然后终止程序的运行。
+
+也可以使用try  ..except..finally 语句块,在finally语句块中运行必须做的任务，比如释放打开文件时占用的资源等，也可以使用with语句来实现资源的自动释放。
