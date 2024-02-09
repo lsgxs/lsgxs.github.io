@@ -35,11 +35,9 @@ cover:
 
   * int
   * float 
-
 * string
 
   * python没有单个的字符类型，指定一个字符串的索引位置就获得一个字符。
-
 * list
 
   * 字符串和list的共同的几个特点，它们统称为sequence数据类型，可以indexd和sliced,也可以concatenate。
@@ -47,14 +45,9 @@ cover:
   * 在对字符串进行sliced操作时，使用str[start:end]的书写形式，start是包含在内的，而end是不包含的。
 
   * 常用的方法append
-  
 * tuple
-
 * dictionary
-
 * set
-
-  
 #### operator
 
 ####  流程控制
@@ -73,7 +66,7 @@ cover:
 
 * while
 
-  ```
+  ```python
   # 用户输入一个数字，和9比大小，显示输入的数字比9大、小或者是猜中了。
   number = 9
   guess = input("please input  a number:")
@@ -91,8 +84,8 @@ cover:
           print('No, it is a little lower than that.')
   else:
       print('The while loop is over.')
-      # 在python中，while语句可以带else子语句，但是如果while语句块中遇到break时，else子语句不会被运行
-      # Do anything else you want to do here    
+      # while语句可以带else子语句，但是如果while语句块中遇到break时，else子语句不会被运行
+      # 可以在此运行任何你想运行的任务   
   
   ```
 
@@ -100,7 +93,7 @@ cover:
 
 * for
 
-  ```
+  ```python
   #这里只是用内置函数range()函数生成了一个包含数值的列表，实际上for..in 循环语句可以遍历包换任何对象的序列(sequence)。 
   for i in range(1, 9):
       print(i)
@@ -148,7 +141,7 @@ cover:
 
 * list
 
-  ```
+  ```python
   # web  programming language list
   weblist = ['php', 'asp', 'jsp', 'javascript','java','ruby','python','go']
   ```
