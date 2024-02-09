@@ -47,12 +47,77 @@ cover:
   * 在对字符串进行sliced操作时，使用str[start:end]的书写形式，start是包含在内的，而end是不包含的。
 
   * 常用的方法append
+  
+* tuple
 
+* dictionary
+
+* set
+
+  
 #### operator
 
-#### expression
+####  流程控制
 
-####  variable
+* if
+
+  if   exp1   :
+
+  ​    elif  exp2: 
+
+  ​    elif  expn:
+
+  ​    else:
+
+  
+
+* while
+
+  ```
+  # 用户输入一个数字，和9比大小，显示输入的数字比9大、小或者是猜中了。
+  number = 9
+  guess = input("please input  a number:")
+  
+  
+  while test1:
+  
+      if guess == number:
+          print('Congratulations, you guessed it.')
+          # this causes the while loop to stop
+          running = False
+      elif guess < number:
+          print('No, it is a little higher than that.')
+      else:
+          print('No, it is a little lower than that.')
+  else:
+      print('The while loop is over.')
+      # 在python中，while语句可以带else子语句，但是如果while语句块中遇到break时，else子语句不会被运行
+      # Do anything else you want to do here    
+  
+  ```
+
+  
+
+* for
+
+  ```
+  #这里只是用内置函数range()函数生成了一个包含数值的列表，实际上for..in 循环语句可以遍历包换任何对象的序列(sequence)。 
+  for i in range(1, 9):
+      print(i)
+  else:
+      # 在python中，for语句可以带else子语句，但是如果for语句块中遇到break时，else子语句不会被运行
+      print('The for loop is over')    
+  ```
+
+  
+
+* break
+
+  在循环语句中遇到break会结束当前的循环语句块。
+
+* continue
+
+  在循环语句块中遇到continue会跳过剩下的语句，直接进入一下个循环。
 
 ####  function
 
@@ -63,13 +128,10 @@ cover:
 包就相当于是Windows的目录和子目录，moudel就是一个后缀名为py的python源文件。而module文件里是各种变量、函数和类等所有名称的定义。有了这样的概念，在包和模块之间重用代码的方式有如下几种形式
 
 * import   module_name
-
+  * module_name.func_name(argn...)
 * import   package_name/sub_package_name/module_name
-
 * from   module_name  import     func_var_names
-
 * from   pacakage_name/sub_package_name  import   module_name
-
 * 就像在website里使用相对路径引用html文件方法一样，在python的当前module中引用其他package下的module也同样适用：
 
   * from  .  import  sibling_module_name
@@ -97,11 +159,15 @@ cover:
 
   tuple有类似string的特征，就是定义之后不能被修改。
 
+  
+
 * dictionary
 
 * set
 
 ####  class
+
+在python中包括基本的数值和字符，以及复合的list、tupule、dictionary、set都是对象。
 
 #### 输入和输出（input and output)
 
