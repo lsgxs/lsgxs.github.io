@@ -250,3 +250,19 @@ else:
 如果一个错误或者异常没有被处理，则系统会调用python默认的处理程序，显示一个错误信息，然后终止程序的运行。
 
 也可以使用try  ..except..finally 语句块,在finally语句块中运行必须做的任务，比如释放打开文件时占用的资源等，也可以使用with语句来实现资源的自动释放。
+
+####   Basic  Elements  For Learning  Python(include  other  Languages) 
+
+~~~\
+1、数据类型(number|int-float、string、list、tuple、dictionary、set)
+2、运算符  (+、-、*、/、//、%、**、not、and、or)
+3、表达式  (算数运算及逻辑运算及函数共同组成各类表达式)
+4、语句块
+5、流程控制 （if、for 、while）
+6、函数 （def   function_name(argn...): ）
+7、类及对象
+8、Module及Package
+9、异常处理
+10、Library
+~~~
+
