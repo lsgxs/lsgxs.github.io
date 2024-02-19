@@ -100,7 +100,7 @@ cover:
   for i in range(1, 9):
       print(i)
   else:
-      # 在python中，for语句可以带else子语句，但是如果for语句块中遇到break时，else子语句不会被运行
+      #在python中，for语句可以带else子语句，但是如果for语句块中遇到break，else子语句不会被运行
       print('The for loop is over')    
   ```
 
