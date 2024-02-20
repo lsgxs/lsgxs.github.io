@@ -57,7 +57,7 @@ cover:
   ##### 对于sequence类型的数据来说，包含两个共同的特征，就是包含index属性和slice操作方法
 
   ```python
-  #string、list、tuple、dictionary都属于sequence类型，因此都可以使用index和slice进行操作
+  #string、list、tuple、dictionary都属于sequence类型，因此都可以使用index和slice操作
   
   #以string类型变量为例进行说明
   str1 = 'python'
@@ -252,7 +252,7 @@ cover:
     * w  写模式 （write）
     * a  追加模式 （append）
     * b  以二进制模式打开（binary）
-    * t 已文本模式打开（text）
+    * t 以文本模式打开（text）文本文件实际上用\n分开的行序列（sequence  of  line)
     
   * write 
   
