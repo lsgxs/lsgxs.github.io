@@ -56,15 +56,17 @@ cover:
 
   ##### 对于sequence类型的数据来说，包含两个共同的特征，就是包含index属性和slice操作方法
 
-  ```
+  ```python
   #string、list、tuple、dictionary都属于sequence类型，因此都可以使用index和slice进行操作
   
   #以string类型变量为例进行说明
   str1 = 'python'
   
   #index操作
-  char1 = str1[0]  #str1[0]就是字符串变量的index操作，作在python中，index序号是从0开始的，最后一个index序号为len(str1) - 1
-  print(char1) # 打印出'python'中index为0的字母，也就是第一个字母p
+  #str1[0]就是字符串变量的index操作，作在python中，index序号是从0开始的，最后一个index序号为len(str1) - 1
+  # 打印出'python'中index为0的字母，也就是第一个字母p
+  char1 = str1[0]  
+  print(char1) 
   
   #slice操作：实际上是以index为基础，对原sequence类型的数据取段。
   slc1 = str1[0:3]
@@ -77,7 +79,7 @@ cover:
   slc4 = str1[:]  #  省略了起止索引号，默认是全部元素
   具体更详细的用法可以参照python文档，理解了基本原理就可以。
   ```
-
+  
   
 #### operator
 
