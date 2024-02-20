@@ -35,9 +35,11 @@ cover:
 
   * int
   * float 
+  
 * string
 
   * python没有单个的字符类型，指定一个字符串的索引位置就获得一个字符。
+  
 * list
 
   * 字符串和list的共同的几个特点，它们统称为sequence数据类型，可以indexd和sliced,也可以concatenate。
@@ -45,9 +47,38 @@ cover:
   * 在对字符串进行sliced操作时，使用str[start:end]的书写形式，start是包含在内的，而end是不包含的。
 
   * 常用的方法append
+  
 * tuple
+
 * dictionary
+
 * set
+
+  ##### 对于sequence类型的数据来说，包含两个共同的特征，就是包含index属性和slice操作方法
+
+  ```
+  #string、list、tuple、dictionary都属于sequence类型，因此都可以使用index和slice进行操作
+  
+  #以string类型变量为例进行说明
+  str1 = 'python'
+  
+  #index操作
+  char1 = str1[0]  #str1[0]就是字符串变量的index操作，作在python中，index序号是从0开始的，最后一个index序号为len(str1) - 1
+  print(char1) # 打印出'python'中index为0的字母，也就是第一个字母p
+  
+  #slice操作：实际上是以index为基础，对原sequence类型的数据取段。
+  slc1 = str1[0:3]
+  #显示为pyt。在指定了起止索引号时，起始索引对应的字符是包含在内的，而不包含终止索引号对应的字符。
+  #也就是只取值到在终止索引号前边的一个位置对应的值。在本例中就是str1[0:2]
+  print(slc1)  
+  slc2 = str1[2:6]  #显示为thon
+  slc3 = str1[:3]   # 省略了起始索引号，默认从0开始，这里就显示为pyt,和前边的str1[0:3]的写法效果相同
+  slc4 = str1[0:]   # 省略了终止索引号，默认是到最后一个元素，这里显示为python
+  slc4 = str1[:]  #  省略了起止索引号，默认是全部元素
+  具体更详细的用法可以参照python文档，理解了基本原理就可以。
+  ```
+
+  
 #### operator
 
 ####  流程控制
@@ -255,7 +286,7 @@ else:
 
 也可以使用try  ..except..finally 语句块,在finally语句块中运行必须做的任务，比如释放打开文件时占用的资源等，也可以使用with语句来实现资源的自动释放。
 
-####   Basic  Elements  For Learning  Python(include  other  Languages) 
+####   Basic  Elements  For Learning  Python(include  other   programming Languages) 
 
 ~~~python
 1、数据类型(number|int-float、string、list、tuple、dictionary、set)
