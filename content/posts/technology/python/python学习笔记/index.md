@@ -44,7 +44,7 @@ cover:
 
   * 字符串和list的共同的几个特点，它们统称为sequence数据类型，可以indexd和sliced,也可以concatenate。
 
-  * 在对字符串进行sliced操作时，使用str[start:end]的书写形式，start是包含在内的，而end是不包含的。
+  * 在对字符串进行sliced操作时，使用str[start:end]的书写形式，start是包含在内的，而end是不包含的。start和end就是index区域，默认的起始序号是0
 
   * 常用的方法append
   
