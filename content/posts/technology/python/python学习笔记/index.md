@@ -58,6 +58,7 @@ cover:
 
   ```python
   #string、list、tuple、dictionary都属于sequence类型，因此都可以使用index和slice操作
+  #这个sequence中的值可以叫做element或者item
   
   #以string类型变量为例进行说明
   str1 = 'python'
@@ -126,7 +127,8 @@ cover:
 
   ```python
   #这里只是用内置函数range()函数生成了一个包含数值的列表，
-  #实际上for..in 循环语句可以遍历包换任何对象的序列(sequence)。 
+  #实际上for..in 循环语句可以遍历包换任何元素的序列(sequence)。 
+  #
   
   #对于sequence中的每一个元素都运行一次for循环中的语句
   #这个sequence可以是range(num)、string、list、tuple、dictionary等。
