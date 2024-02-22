@@ -80,7 +80,7 @@ params:
       - name: 技术
         url: posts/technology
       - name: 财经
-        url: posts/stock
+        url: posts/economic
       - name: 运动
         url: posts/sport  
       - name: 汽车

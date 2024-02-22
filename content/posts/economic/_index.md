@@ -1,5 +1,5 @@
 ---
-title: "stock"
+title: "economic"
 draft: false
 # weight:1
 tags: ["first"]
