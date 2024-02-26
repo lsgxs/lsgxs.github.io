@@ -235,7 +235,7 @@ cover:
 
   * 书写格式：
 
-    ```
+    ```json
     { 
        name: some_name,
        address:{
