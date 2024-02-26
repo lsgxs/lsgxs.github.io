@@ -231,6 +231,26 @@ cover:
 
 * set
 
+* json
+
+  * 书写格式：
+
+    ```
+    { 
+       name: some_name,
+       address:{
+           name: address_name,
+           province: of_china   
+       },
+       age: age_number,
+       social_id: si_code
+    }
+    ```
+
+    json和xml一样是数据交换的一种格式，由于json的易用性,在多数应用场景下逐渐取代xml，当然xml还有自己特殊的应用。
+
+    json的书写格式，在python中实际上就是一个原生的字典列表（实际上就是一个键值对列表）
+
 ####  class
 
 在python中包括基本的数值和字符，以及复合的list、tupule、dictionary、set都是对象。
