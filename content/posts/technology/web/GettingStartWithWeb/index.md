@@ -128,3 +128,6 @@ The `<script>` element should also go into the head, and should include a `src` 
 
 
 
+#### 当前Web应用的架构模式
+
+前端的html+css+javascript，后端的WEB服务器（Apache等），还有MySQL等系列的数据库。可以把自己的web项目部署到web服务器的目录下，当用户通过浏览器发送请求时，后端的Web服务器在自己的webapps目录（这里只是距离，可以是其他名称的目录）下加载web应用的网页。
