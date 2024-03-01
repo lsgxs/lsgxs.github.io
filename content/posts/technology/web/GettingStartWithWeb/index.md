@@ -128,4 +128,4 @@ The `<script>` element should also go into the head, and should include a `src` 
 
 前端的html+css+javascript，后端的WEB服务器（Apache等），还有MySQL等系列的数据库。可以把自己的web项目部署到web服务器的目录下，当用户通过浏览器发送请求时，后端的Web服务器在自己的webapps目录（这里只是举例，可以是其他名称的目录）下加载web应用的网页。
 
-在html文件中包含有javascript文件时，后台的web服务器直接回传到前段，浏览器会解释这些javascript文件，不需要后台的web服务器处理，因为javascript是浏览器解释引擎的一部分，浏览器可以直接解释处理。如果html文件中包含有jsp、php等脚本文件时，则需要有后台的web服务器调用相关的脚本文件解释器处理。后端的web应用大多数遵循MVC架构，这些jsp、php脚本经常是需要和后台的数据库打交道，把计算完毕的数据返回到客户端。
+在html文件中包含有javascript文件时，后台的web服务器直接回传到前端，浏览器会解释这些javascript文件，不需要后台web服务器处理，因为大多数浏览器自带javascript解释引擎，浏览器可以直接解释处理javascript脚本。如果html文件中包含有jsp、php等脚本文件时，则需要有后台的web服务器调用相关的脚本文件解释器处理。后端的web应用大多数遵循MVC架构，这些jsp、php脚本经常是需要和后台的数据库打交道，把计算完毕的数据返回到客户端。
