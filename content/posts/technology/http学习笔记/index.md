@@ -22,7 +22,7 @@ ShowPostNavLinks: true
 UseHugoToc: false
 ShowCodeCopyButtons: true
 cover:
-    image: "<image path/url>" # image path/url
+    image: "images/冰山.jpg" # image path/url
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -131,5 +131,26 @@ Content-Type: text/html
 
 #### HTTP各类头部信息数据
 
+```
+--请求端头部字段
+Date
+Connection
+Host
+Transfer-Encoding
+Accept-Charset
+Accept-Encoding
+Accept-Language
+
+--响应头部字段
+...
+具体的字段可以查询文档
+```
+
+
+
 #### HTTPS
+
+​    由于http协议采用明文传输，不适合应用在重要信息的传输场景，因此就产生了在http基础上附加了加密和认证机制，目前多数使用了SSL和TL协议来提高HTTP协议通信的安全性。可以认为HTTPS就是http+加密+认证+数据完整性。
+
+​    在TCP/IP四层模型中，HTTP是直接和TCP进行通信的，而添加了SSL协议之后，就是HTTP先和SSL通信，然后由SSL和TCP通信，然后完成常规的网络通信。具体的步骤和方法相当复杂，在理解层面认识到这些基础概念就可以，如果有需要或者多网络安全感兴趣，需要更深入的学习。
 
