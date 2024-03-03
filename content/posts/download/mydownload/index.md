@@ -50,3 +50,5 @@ cover:
 [FirefoxSetup115.0_ForWin7](files/FirefoxSetup115.0_ForWin7.msi)
 
 [VSCodeUserSetup-x64-1.70.2_ForWin7](filels/VSCodeUserSetup-x64-1.70.2_ForWin7.exe)
+
+[typora-setup-x64-1.5.12_ForWin7](files/typora-setup-x64-1.5.12_ForWin7.exe)
