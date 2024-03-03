@@ -46,3 +46,7 @@ cover:
 ~~~
 
 在试着保存几个常用工具到githbu仓库，git push 时提示上面的信息，单个文件不能超过50M，并推荐了[Git Large File Storage](https://git-lfs.github.com./)
+
+<a href="files/FirefoxSetup115.0_ForWin7.msi" target="_blank">FirefoxSetup115.0_ForWin7.msi</a>
+
+<a href="files/FirefoxSetup115.0_ForWin7.msi" target="_blank">VSCodeUserSetup-x64-1.70.2_ForWin7.exe</a>
