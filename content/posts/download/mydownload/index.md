@@ -28,7 +28,7 @@ cover:
 
 ---
 
-#### 常用软件：
+#### ]常用软件：
 
 * `<a href="files/caddy.exe" target="_blank"> caddy </a> `-网友介绍的这个方法，但是自己实践后不能下载文件。
 
@@ -47,6 +47,6 @@ cover:
 
 在试着保存几个常用工具到githbu仓库，git push 时提示上面的信息，单个文件不能超过50M，并推荐了[Git Large File Storage](https://git-lfs.github.com./)
 
-<a href="files/FirefoxSetup115.0_ForWin7.msi" target="_blank">FirefoxSetup115.0_ForWin7.msi</a>
+[FirefoxSetup115.0_ForWin7](files/FirefoxSetup115.0_ForWin7.msi)
 
-<a href="files/FirefoxSetup115.0_ForWin7.msi" target="_blank">VSCodeUserSetup-x64-1.70.2_ForWin7.exe</a>
+[VSCodeUserSetup-x64-1.70.2_ForWin7](filels/VSCodeUserSetup-x64-1.70.2_ForWin7.exe)
