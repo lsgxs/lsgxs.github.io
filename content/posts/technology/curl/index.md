@@ -33,7 +33,7 @@ cover:
 
 curl是个开源的项目，在官网上找到下载链接[curl](https://curl.se/download.html)。如下图：
 
-![img](images/curl.png
+![img](images/curl.png)
 
 ![img](images/curl2.png)
 
