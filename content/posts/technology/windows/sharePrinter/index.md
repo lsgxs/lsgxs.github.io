@@ -78,47 +78,66 @@ cover:
 >   
 >     
 >
-> 
-
-也可以试试批处理的方法实现，下面的代码先保存，有机会试试再修改一下
+> 也可以试试批处理的方法实现，下面的代码先保存，有机会试试再修改一下
 
 ```bash
 @echo off  
-setlocal  
+setlocal enabledelayedexpansion  
+  
+echo ====1.Enable network discovery and file and printer sharing====
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Network\LanmanServer" /v "EnableNetBIOS" /t 
 
-::高级共享设置  
-:: 启用网络发现  
-reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Network\LanmanServer" /v "EnableNetBIOS" /t REG_DWORD /d 1 /f  
-  
-:: 启用文件和打印机共享  
-reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\NetworkProvider" /v "NPAllowUniversalXPNSearch" /t REG_DWORD /d 1 /f  
-  
-:: 关闭密码保护共享  
+REG_DWORD /d 1 /f  
+reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\NetworkProvider" /v "NPAllowUniversalXPNSearch" /t 
+
+REG_DWORD /d 1 /f  
 net share * /GRANT:Everyone,FULL /REMARK:"Password Protected Shares Disabled"  
   
-echo 高级共享设置已完成。  
-
-::启用来宾账号guest
-@echo off  
-net user guest /active:yes  
-echo 来宾账号已启用。  
-
-::拒绝从网络访问选项--删除guest
-@echo off  
-set "key=HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0\NamePipe\RefuseList"  
-for /f "tokens=3" %%a in ('reg query %key%') do (  
-    if "%%a"=="guest" (  
-        reg delete "%key%" /v "%%a" /f  
-        echo guest已从“拒绝从网络访问”列表中删除。  
+echo 2. 设置本地安全策略...  
+REM 这里需要手动打开本地安全策略管理器并进行设置，无法通过批处理脚本自动完成。  
+  
+echo ====3.Enable the guest account and configure access permissions====  
+net user Guest /active:yes  
+net user Guest /add  
+net localgroup "Guests" Guest /add  
+net localgroup "Deny access to this computer from the network" | findstr /i /c:"Guest" > nul  
+if %errorlevel%==0 (  
+    net localgroup "Deny access to this computer from the network" /delete Guest > nul  
+    if %errorlevel%==0 (  
+        echo Guest user has been removed from the "Deny access to this computer from the network" list.  
+    ) else (  
+        echo Failed to remove Guest user from the list.  
     )  
+) else (  
+    echo Guest user is not in the "Deny access to this computer from the network" list.  
+)  
+  
+echo ====4.Turn off the firewall and prompt the user to restart the computer====
+
+netsh advfirewall set publicprofile state off  
+netsh advfirewall set privateprofile state off  
+set /p answer="Do you want to restart your computer to apply the new settings? (y/n): "  
+if /i "%answer%"=="y" (  
+    echo Restarting the computer...  
+    shutdown /r /t 0  
+) else (  
+    echo No restart requested. Please restart manually to apply the changes.  
+)
+
+echo.  
+echo Operations completed. Do you want to restart the computer? (Y/N):  
+set /p choice="Please enter Y or N: "  
+  
+if /i "!choice!"=="Y" (  
+    echo You have chosen to restart the computer.  
+    shutdown /r /t 0  
+) else if /i "!choice!"=="N" (  
+    echo You have chosen not to restart the computer.  
+) else (  
+    echo Invalid input. Please enter Y or N.  
+    pause  
 )  
 
-::允许网络用户访问此计算机
-@echo off  
-set "key=HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0\AllowToAuthenticateForProxy"  
-reg add "%key%" /v "guest" /t REG_DWORD /d 1 /f  
-echo guest已添加到“允许网络用户访问此计算机”列表中。  
 
-pause
 ```
 
