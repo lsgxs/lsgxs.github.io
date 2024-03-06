@@ -29,6 +29,17 @@ cover:
     hidden: true # only hide on current single page
 ---
 
+#### CURL是什么
+
+```
+Curl is a command line tool for transferring files with URL syntax, supporting
+FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports
+HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload,
+proxies, cookies, user+password authentication ,file transfer resume, proxy tunneling and a busload of otheruseful tricks.
+```
+
+
+
 #### 下载CURL
 
 [CURL](https://curl.se/download.html)（client  URL）是一个开源项目，到主页可以下载到源代码项目或者二进制版本。
