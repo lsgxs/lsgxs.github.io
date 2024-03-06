@@ -53,6 +53,13 @@ file transfer resume, proxy tunneling and a busload of otheruseful tricks.
 
 #### CURL学习
 
-* 可以到官网下载：https://curl.se/docs/
-* 可以看看这个CURL学习指南：https://www.ruanyifeng.com/blog/2019/09/curl-reference.html
+* 可以到官网下载[CURL](https://curl.se/docs/)
+
+* 可以看看这个[CURL学习指南](https://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
+
+* 官网推荐的开源书籍：
+
+  * [The book: Everything curl -html](https://everything.curl.dev/)
+
+  * [The book: Everything curl -PDF](https://daniel.haxx.se/everything-curl/everything-curl.pdf)
 
