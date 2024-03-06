@@ -32,10 +32,11 @@ cover:
 #### CURL是什么
 
 ```
-Curl is a command line tool for transferring files with URL syntax, supporting
-FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports
-HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload,
-proxies, cookies, user+password authentication ,file transfer resume, proxy tunneling and a busload of otheruseful tricks.
+Curl is a command line tool for transferring files with URL syntax, 
+supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP.
+Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, 
+HTTP form based upload,proxies, cookies, user+password authentication ,
+file transfer resume, proxy tunneling and a busload of otheruseful tricks.
 ```
 
 
