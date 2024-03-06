@@ -1,6 +1,6 @@
 ---
-title: "curl入门"
-date: 2024-03-05T19:42:15+08:00
+title: "Curl"
+date: 2024-03-06T10:02:19+08:00
 draft: false
 # weight: 2
 tags: ["first"]
@@ -26,12 +26,12 @@ cover:
     alt: "<alt text>" # alt text
     caption: "<text>" # display caption under cover
     relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single paghhtt
+    hidden: true # only hide on current single page
 ---
 
-#### CURL下载
+#### 下载CURL
 
-curl是个开源的项目，在官网上找到下载链接[curl](https://curl.se/download.html)。如下图：
+[CURL](https://curl.se/download.html)（client  URL）是一个开源项目，到主页可以下载到源代码项目或者二进制版本。
 
 ![img](images/curl.png)
 
@@ -39,6 +39,8 @@ curl是个开源的项目，在官网上找到下载链接[curl](https://curl.se
 
 ![img](images/curl3.png)
 
-#### CURL的初级应用
+#### CURL学习
 
-待续。。。
+* 可以到官网下载：https://curl.se/docs/
+* 可以看看这个CURL学习指南：https://www.ruanyifeng.com/blog/2019/09/curl-reference.html
+
