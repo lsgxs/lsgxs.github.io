@@ -34,7 +34,7 @@ cover:
 ##### 分层类型
 
 ```
-应用层(http、dns、smtp等应用)
+应用层(http、dns、smtp等应用) 
 传输层(tcp)
 网络层(ip)
 链路层（mac)
@@ -43,9 +43,9 @@ cover:
 ##### 每个层次的数据包形式
 
 ```
-应用层: http data
+应用层: http   应用层负责数据的结构化，
 传输层：tcp  packet
-网络层：ip  datagram
+网络层：ip  datagram  IP层负责数据包的路由
 链路层： mac frame 
 ```
 
