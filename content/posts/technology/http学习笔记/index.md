@@ -158,3 +158,41 @@ Accept-Language
 
 一般是在浏览器的核心里实现的，各个浏览器厂商都已自己的实现和优化，想看到源代码，只有去试试Mozilla Firefox的开源项目看看。或者去[CURL](https://curl.se/download.html)的开源项目看看（client url），那里有http相关工具库的开源项目。而到了TCP协议层，就是在Windows系统的网络库里实现了吧（这里以Windows为例，毕竟自己目前没有把Linx用起来的环境）。忽然感觉，想真正学到Why层面的知识，只有去看看源代码，可是那成千上万行的源代码，有耐心和功力看的懂吗。如果有兴趣，可以借助Sourcetrail类的源代码阅读工具，高效阅读。人的精力是有限的，在搭建了整体的学习框架后，需要专注在自己喜欢的领域不断去学习吧，想在各个领域都学的很通透，那是天才做的事情。
 
+#### HTTP请求和响应数据结构的例子
+
+```
+HTTP operates on the concept of requests and responses. The client requests a web page, the server
+responds by sending it back.
+
+A simple HTTP request from a client looks like this:
+GET / HTTP/1.1
+Host: example.com
+Connection: close
+
+That shows the request header which consists of the request method, path, and protocol on the first line,
+followed by any number of header fields. There is a blank line at the end of the header.
+This request is saying “Get the root web page from the server example.com and I’m going to close the
+connection as soon as I get your response.”
+Ends-of-line are delimited by a Carriage Return/Linefeed combination. In Python or C, you write a CRLF
+like this:
+"\r\n"
+
+If you were requesting a specific file, it would be on that first line, for example:
+GET /path/to/file.html HTTP/1.1
+(And if there were a payload to go with this header, it would go just after the blank line. There would also
+be a Content-Length header giving the length of the payload in bytes. We don’t have to worry about
+this for this project.)
+
+A simple HTTP response from a server looks like:
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Content-Length: 6
+Connection: close
+Hello!
+
+This response says, “Your request succeeded and here’s a response that’s 6 bytes of plain text. Also, I’m
+going to close the connection right after I send this to you. And the response payload is ‘Hello!’.”
+Notice that the Content-Length is set to the size of the payload: 6 bytes for Hello!.
+Another common Content-Type is text/html when the payload has HTML data in it.
+```
+
