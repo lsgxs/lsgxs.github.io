@@ -261,3 +261,315 @@ So ends our brief foray into network theory. Oh yes, I forgot to tell you everyt
 routing: nothing! That’s right, I’m not going to talk about it at all. The router strips the packet to the IP
 
 header, consults its routing table.
+
+#### **A TCP/IP Networking Example**
+
+> 以下内容节选自《TCP/IP Tutorial》第29页开始的例子，仅供自己临时学习用，版权归原公司Fujitsu所有
+
+> Before examining the remaining network access layer 
+>
+> technologies, a simple networking example using an application, 
+>
+> TCP, IP, and Ethernet will be presented. This example should 
+>
+> help illustrate how the various layers and modules interact to 
+>
+> provide end-to-end network services. 
+>
+> This example illustrates the process of accessing a Web page on 
+>
+> the Internet. For purposes of the example, a user on the 
+>
+> computer Lab1 on the Fujitsu corporate network is trying to 
+>
+> access the URL http://www.cnn/com/index.htm.
+>
+> The logical connection used in the example is illustrated in Figure 1-12.
+>
+> ![img](images/request-response.png)
+>
+> **At the Application Level**
+>
+> At the application level, Lab1 is running a Web browser, which 
+>
+> contains an HTTP client. A computer on the cnn.com network is 
+>
+> running an HTTP Web server.
+>
+> In order to access a Web page, the HTTP client on Lab1 sends 
+>
+> an HTTP request to the HTTP server at cnn.com. The HTTP 
+>
+> server sends a response that contains the requested Web page. 
+>
+> See Figure 1-13.
+>
+> The response, a Hypertext Markup Language (HTML) page, is 
+>
+> received by the HTTP client embedded in the Web browser, and 
+>
+> displayed on the computer screen of Lab1.
+>
+> ![img](C:\Users\win7\AppData\Roaming\Typora\typora-user-images\image-20240312021928999.png)
+>
+> **Moving the Request Across the Network**
+>
+> To send an HTTP request, the HTTP client program (the Web 
+>
+> browser) must establish a TCP connection to the HTTP server at 
+>
+> cnn.com. To service HTTP requests, the cnn.com computer has 
+>
+> a TCP server running on it. While logically, the HTTP client is 
+>
+> communicating directly with the HTTP server, the underlying 
+>
+> TCP layer is used to exchange their messages, as illustrated in 
+>
+> Figure 1-14.
+>
+> **Figure 1-14: Using TCP to Transport HTTP Messages**
+>
+> ![img](images/using-tcp-to-transport-http-mesage.png)
+>
+> **Resolving Hostnames and Port Numbers**
+>
+> Transmission Control Protocol does not work with hostnames 
+>
+> and does not know how to find the HTTP server program at 
+>
+> www.cnn.com. Two things must first be done:
+>
+> 1. The hostname www.cnn.com must be translated into an IP 
+>
+> address that the TCP module understands.
+>
+> 2. The HTTP server at www.cnn.com must be identified by a 
+>
+> port number.
+>
+> **Translating a Hostname into an IP Address**
+>
+> Translating the hostname www.cnn.com into an IP address is 
+>
+> done by a database lookup. The distributed database is called 
+>
+> the Domain Name System (DNS). The HTTP client makes a DNS 
+>
+> request and receives the IP address of www.cnn.com as the 
+>
+> response, as illustrated in Figure 1-15.
+>
+> **Figure 1-15: Using DNS to Resolve Hostnames**
+>
+> ![img](images/dns.png)
+>
+> **Finding the HTTP Server Port Number**
+>
+> Most services on the Internet are reachable by using established, 
+>
+> well-known port numbers. For example, all public HTTP servers 
+>
+> on the Internet can be reached at port 80.
+>
+> **Requesting a TCP Connection**
+>
+> Once the HTTP client has found the IP address and port number 
+>
+> of the HTTP server on the cnn.com network, it can now request 
+>
+> that the TCP client on Lab1 connect to the server, as shown in 
+>
+> Figure 1-16.
+>
+> **Figure 1-16: Establishing a TCP/IP Connection**
+>
+> ![img](images/establish-tcp-connection.png)
+>
+> **Invoking the IP Protocol**
+>
+> The TCP client on Lab1 sends a request to establish a 
+>
+> connection to port 80 at 64.236.29.120 (cnn.com). The TCP 
+>
+> connection request is performed by asking the IP module to send 
+>
+> an IP datagram to 64.236.29.120. (See Figure 1-17).
+>
+> Lab1 (168.127.167.35) can only directly deliver an IP datagram 
+>
+> to cnn.com (64.236.29.120) if it is on the same network as 
+>
+> cnn.com.
+>
+> Because they are not on the same network, Lab1 must send the 
+>
+> datagram to the router at the edge of the Fujitsu network, called 
+>
+> the default gateway, which has the IP address 168.127.167.254.
+>
+> **Figure 1-17: Invoking the IP Protocol**
+>
+> ![img](images/invoke-ip-protocol.png)
+>
+> **Finding the MAC Address of the Gateway**
+>
+> To send the IP datagram to the default gateway, the IP module 
+>
+> on Lab1 will need to put the IP datagram in an Ethernet frame 
+>
+> and transmit it. However, Ethernet does not understand 
+>
+> hostnames or IP addresses; it only understands MAC addresses. 
+>
+> The IP module must invoke the services of ARP to translate the 
+>
+> IP address of the default gateway into a MAC address.
+>
+> This process is illustrated in Figure 1-18.
+>
+> **Figure 1-18: Using ARP to Determine MAC Addresses**
+>
+> ![img](C:\Users\win7\AppData\Roaming\Typora\typora-user-images\image-20240312024142867.png)
+>
+> **Invoking the Device Driver**
+>
+> Now that the IP module at Lab1 knows the MAC address of the 
+>
+> default gateway, it tells the Ethernet device driver to send an 
+>
+> Ethernet frame to address 00:00:5E:00:01:07, as illustrated in 
+>
+> Figure 1-19.
+>
+> **Figure 1-19: Using Ethernet to Transmit an IP Datagram**
+>
+> ![img](C:\Users\win7\AppData\Roaming\Typora\typora-user-images\image-20240312024440253.png)
+>
+> **Sending an Ethernet Frame**
+>
+> The Ethernet device driver on Lab1 sends the Ethernet frame to 
+>
+> the Ethernet Network Interface Card (NIC). The NIC serializes 
+>
+> the frames as bits, and puts the bits onto the Ethernet cable as a 
+>
+> series of electrical pulses. See Figure 1-20.
+>
+> **Figure 1-20: Sending the Frame to the Default Gateway**
+>
+> ![img](C:\Users\win7\AppData\Roaming\Typora\typora-user-images\image-20240312024657781.png)
+>
+> **Forwarding the IP Datagram**
+>
+> The default gateway IP router:
+>
+> 1. Receives a series of electrical signals 
+> 2. Converts the signals into an Ethernet frame
+> 3. Unpacks the IP datagram from the frame
+> 4. Uses the address information in the IP datagram to 
+>
+> determine that the datagram must be forwarded on 
+>
+> 5. Looks in its routing table to determine the IP of the next 
+>
+> router in the path 
+>
+> 6. Uses ARP to determine the MAC address of the next 
+>
+> router
+>
+> 7. Retransmits the IP datagram by passing it back through 
+>
+> the network access layer.
+>
+> This process is repeated several times by routers on the Internet, 
+>
+> until the local gateway for cnn.com is reached, as show in 
+>
+> Figure 1-21. 
+>
+> **The Ethernet Frame Arrives at www.cnn.com**
+>
+> The Ethernet device of the last router in the path transmits the 
+>
+> frame to the MAC address of the ww.cnn.com server.
+>
+> The server at www.cnn receives the Ethernet frame. The payload 
+>
+> of the Ethernet frame is passed to the IP module. The TCP 
+>
+> payload of the IP datagram is passed to the TCP server. 
+>
+> Because this is the first segment received, it is a TCP connection 
+>
+> request, so TCP does not pass it up to the HTTP server. Instead, 
+>
+> it responds to the TCP connection request with a TCP 
+>
+> connection response message that is transmitted to Lab1 using 
+>
+> the same process used to deliver the request to www.cnn.com.
+>
+> After the TCP connection has completed, the HTTP page request 
+>
+> is delivered to www.cnn.com over the TCP connection. When the 
+>
+> request is received by the TCP server at cnn.com, it uses the 
+>
+> port number of the received TCP segment to deliver the request 
+>
+> to the HTTP server listening at port 80. The HTTP server will 
+>
+> pass the requested Web page HTML file to the TCP module, 
+>
+> which will then send it down the stack to be transmitted back to 
+>
+> the Fujitsu Lab1 computer. When the Ethernet frame containing 
+>
+> the response arrives, it will be passed up the stack to the HTTP 
+>
+> client, where the browser will render the Web page using the 
+>
+> HTML text file.
+>
+> This is a simplified example that assumes:
+>
+> • No transmission errors took place.
+>
+> • The requests and responses did not require segmentation 
+>
+> and reassembly at the TCP or IP level.
+>
+> Despite the simplicity, the example serves well to illustrate:
+>
+> • How data is encapsulated as it moves through the stack 
+>
+> layers.
+>
+> • How the layers interact with each other to provide an end
+>
+> to-end service.
+>
+> • How data is routed through the Internet.
+>
+> ![img](images/routing-frame-to-final-detination.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
