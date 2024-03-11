@@ -34,7 +34,12 @@ cover:
 ##### 分层类型
 
 ```
-应用层(http、dns、smtp等应用) 
+应用层(http、dns、dhcp、smtp等应用) 
+  > The application layer is the topmost level of the TCP/IP protocol 
+  > suite. It receives data from user applications and issues requests 
+  > to the transport layer. The details of moving data between the 
+  > application and other computers is shielded by the underlying 
+layers.
 传输层(tcp)
 网络层(ip)
 链路层（mac)
@@ -44,7 +49,7 @@ cover:
 
 ```
 应用层: http   应用层负责数据的结构化，
-传输层：tcp  packet
+传输层：tcp  segment
 网络层：ip  datagram  IP层负责数据包的路由
 链路层： mac frame 连接层负责把字节流转换为电流信号 
 ```
@@ -80,6 +85,12 @@ cover:
   * 具体的四次挥手过程待学习
 
 这里的笔记时省略了大量的细节,甚至有的地方并不一定准确，对TCP/IP的轮廓初步认识。如果有兴趣需要进一步学习。到最后，真正要理解的话，要在学习的基础上做项目。
+
+
+
+
+
+
 
 
 
