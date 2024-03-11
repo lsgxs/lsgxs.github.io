@@ -114,6 +114,40 @@ layers.
 上图中，使用了PDU和SDU的术语。PDU是指protocol  data unit,是 一层中交付给下一层的数据，个人理解是整个这一层协议的数据。SDU是service  data unit。个人理解是上层中传递来数据，对本层来说就是SDU，本层的PDU就是下一层的SDU，这个概念有点绕，简单理解就是逐层的打包传递，打包就是在上一层数据上加上本层的Header,再传递到下一层。
 ```
 
+####  Address Resolution Protocol
+
+> The Address Resolution Protocol is a method for translating between Internet layer and network layer address. The ARP 
+>
+> module in a computer or router maintains a translation table of logical to physical mappings it is aware of, called the ARP cache. If there is not a translation for the address in the table, it will  make an ARP broadcast.
+>
+> Using the Internet and TCP/IP in an example, the basic steps of  ARP translation are:
+>
+> 1. ARP checks the local cache to see if it knows the mapping between the IP address and a physical address (the 
+>
+> Media Access Control [MAC] address).
+>
+> 2. If there is not a match, ARP broadcasts an ARP request to the local network. The broadcast is received by every 
+>
+> computer and router to which the host is connected.
+>
+> 3. If a computer with a matching IP address exists on the local network, it sends its MAC address back. The ARP 
+>
+> module adds this translation to the ARP cache for future use
+>
+> 4. If a router on the local network realizes the requested IP address is outside the local network, it sends back its 
+>
+> MAC address, in order for the IP datagram to be forwarded to it.
+>
+> 
+>
+> The same process is used to forward IP datagrams between routers as a packet transverses the network. When a router is 
+>
+> designated as the next hop, the MAC address of the router, rather than the receiving computer, is provided as the IP to MAC 
+>
+> translation.
+
+ARP是介于IP层和网络访问层的模块，用表格的形式实现IP地址到MAC的翻译，通过ip地址找到目标mac（IP layer到Mac  Layer）。
+
 
 
 #### TCP连接
