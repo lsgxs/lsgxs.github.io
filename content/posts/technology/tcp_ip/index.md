@@ -42,8 +42,24 @@ cover:
 layers.
 传输层(tcp)
 网络层(ip)
+  > The Internet layer responds to service requests from the 
+  > transport layer (typically TCP or UDP) and issues service 
+  > requests to the network access layer.
+  > The various Internet layer modules provide:
+  > • Translation between logical addresses and physical addresses
+  > • Routing from the source to the destination computer
+  > • Managing traffic problems, such as switching, routing, and 
+  >   controlling the congestion of data packets
+  > • Maintaining the quality of service requested by the transport 
+     layer    
 链路层（mac)
 ```
+
+> The transport layer is responsible for **application-to-application** data delivery. 
+>
+> The Internet layer is responsible for **source host to destination host** packet delivery, 
+>
+> whereas the next layer (network access) is responsible for **node to node** (hop to hop) frame delivery
 
 ##### 每个层次的数据包形式
 
