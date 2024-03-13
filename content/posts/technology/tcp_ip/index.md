@@ -1,5 +1,5 @@
 ---
-title: "Tcp_ip"
+title: "TCP/IP"
 date: 2024-03-07T20:20:04+08:00
 draft: false
 # weight: 2
@@ -284,17 +284,24 @@ network hardware and topology is transparent to the socket programmer.
 
    * 每一层协议模块添加的header的结构和header中每个字段的用途
 
+     * 在传输端组装IP包的时候，经过的每层协议都要添加本层协议头部信息。了解这些头部信息的具体作用，为后期的网络编程提供支持。
+       * 比如：IP层的协议头部包含有源主机IP地址和目标主机IP地址，通过IP地址可以实现主机层面的通讯
+       * 比如：TCP协议层头部包含有源端口和目标端口，通过端口实现了应用程序级别的通讯。也就是说通过IP地址找到了主机，到了主机后，通过TCP头部数据中的端口号就可以找到服务器端的服务进程。也就是是在接收端，实现了从IP到TCP，再到应用协议的传递。
+
    * 路由的算法和路径传递细节
 
      
 
 这里是初学TCP/IP的肤浅认识，以后有兴趣再深入看看。
 
+***
 
+TCP/IP协议及网络知识的几套书：
 
-
-
-
+* TCP/IP Illustrated  volume  1、2、3
+* Internetworking with Tcp/IP  volume  1、2、3
+* UNIX  NETWORK  PROGRAMMING  volume 1、2、3
+* TCP/IP Network Administration 3e                
 
 
 
