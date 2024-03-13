@@ -61,6 +61,22 @@ layers.
 >
 > whereas the next layer (network access) is responsible for **node to node** (hop to hop) frame delivery
 
+#### OSI七层模型
+
+```
+Application: Network applications such as terminal emulation and file transfer
+Presentation: Formatting of data and encryption
+Session: Establishment and maintenance of sessions
+Transport: Provision of reliable and unreliable end-to-end delivery
+Network: Packet delivery, including routing
+Data Link: Framing of units of information and error checking
+Physical: Transmission of bits on the physical hardware
+```
+
+
+
+
+
 #### 路由
 
 > **Routers**
@@ -172,19 +188,13 @@ ARP是介于IP层和网络访问层的模块，用表格的形式实现IP地址�
 
 ***
 
-Since I just mentioned layering of protocols, it’s time to talk about how networks really work, and to show
 
-some examples of how SOCK_DGRAM packets are built. Practically, you can probably skip this section. It’s
-
-good background, however.
 
 ![img](images/dataEncapsulation.png)
 
 ​                                                                                                     --Data Encapsulation--
 
-Hey, kids, it’s time to learn about *Data Encapsulation*! This is very very important. It’s so important that
-
-you might just learn about it if you take the networks course here at Chico State ;-). Basically, it says this:
+ it’s time to learn about *Data Encapsulation*:
 
 a packet is born, the packet is wrapped (“encapsulated”) in a header (and rarely a footer) by the first protocol
 
@@ -208,59 +218,9 @@ can write sockets programs that are exactly the same without caring how the data
 
 network hardware and topology is transparent to the socket programmer.
 
-Without any further ado, I’ll present the layers of the full-blown model. Remember this for network class
 
-exams:
 
-• Application
 
-• Presentation
-
-• Session
-
-• Transport
-
-• Network
-
-• Data Link
-
-• Physical
-
-The Physical Layer is the hardware (serial, Ethernet, etc.). The Application Layer is just about as far from
-
-the physical layer as you can imagine—it’s the place where users interact with the network.
-
-Now, this model is so general you could probably use it as an automobile repair guide if you really wanted
-
-to. A layered model more consistent with Unix might be:
-
-• Application Layer (*telnet, ftp, etc.*)
-
-• Host-to-Host Transport Layer (*TCP, UDP*)
-
-• Internet Layer (*IP and routing*)
-
-• Network Access Layer (*Ethernet, wi-fi, or whatever*)
-
-At this point in time, you can probably see how these layers correspond to the encapsulation of the original
-
-data.
-
-See how much work there is in building a simple packet? Jeez! And you have to type in the packet headers
-
-yourself using “cat”! Just kidding. All you have to do for stream sockets is send() the data out. All you
-
-have to do for datagram sockets is encapsulate the packet in the method of your choosing and sendto() it
-
-out. The kernel builds the Transport Layer and Internet Layer on for you and the hardware does the Network
-
-Access Layer. Ah, modern technology
-
-So ends our brief foray into network theory. Oh yes, I forgot to tell you everything I wanted to say about
-
-routing: nothing! That’s right, I’m not going to talk about it at all. The router strips the packet to the IP
-
-header, consults its routing table.
 
 #### **A TCP/IP Networking Example**
 
