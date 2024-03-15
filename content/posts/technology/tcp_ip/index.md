@@ -86,6 +86,8 @@ Physical: Transmission of bits on the physical hardware
 > Routers are responsible for passing IP packets along from the source to the destination, across the various network interconnection points. Each router that an IP packet passes through is referred to as a hop. In general, as the packet traverses the network, **a router is only responsible for getting a packet to the next hop along its path.** 
 >
 > Routers use the Internet and network layer. Routers need access to the network layer so they can physically receive packets. The network layer then passes the IP datagram up to the router IP layer. The router processes the destination address contained in the IP header and determines which device the send the IP packet on to, typically another router. The transport and user  level data is not needed and is not unpacked from the IP datagram. This allows routers to function very quickly, as they are able to unpack the necessary information from the IP packet using specially designed hardware。
+>
+> **路由器工作在七层模型的网络层、数据链路层、物理层，对应在四层模型，就是网络层（IP）和网络访问层（network  access layer）**
 
 
 
@@ -239,6 +241,8 @@ network hardware and topology is transparent to the socket programmer.
 4、IP Module准备好Ethernet  Frame后，就可以调用Ethernet的设备驱动程序，来把这个Ethernet Frame发送到Network Interface  Card（NIC），The NIC serializesthe frames as bits, and puts the bits onto the Ethernet cable as aseries of electrical sign
 5、在默认的网关的NIC收到这些电讯号之后，转换为Ethernet  Frame。然后从Frame中释放IP datagram,用IP datagram中的地址信息来决定其中的datagram下一站传递到哪里。如果需要继续中转，中间使用的技术就是路由表和ARP,通过电讯号在Ethernet cable的流动，最终由Network  access layer的NIC完成接收。除了四层模型之外，引入了Ethernet NIC的驱动和NIC,还有Ethernet  cable 和Electrnical  ,整体的技术就好理解了。
 6、在服务器端收到Ethernet  Frame之后，从Frame取出Ip datagram传递到IP Module，再取出egment之后传递给TCP server。由于这是一个TCP连接的请求，并不会送到应用层（HTTP Server），而是回传一个TCP连接response。
+
+（数据包传递到了IP这一层时，如果目标计算机不在同一个网段，就需要使用路由表来搜索下一个路由器的IP地址，让后把IP层的协议包Header填上下一个路由器的IP地址。）
 ```
 
 ##### 通过TCP连接传递HTTP请求
@@ -251,6 +255,27 @@ network hardware and topology is transparent to the socket programmer.
 
 
 
+
+```
+---------------------------
+|     http|dns|ftp|...    |   ------(message)
+---------------------------
+|     TCP|UDP             |   -------(segment)
+---------------------------
+|      IP                 |   -------(datagram)
+---------------------------
+         |
+         |
+     ----------
+     [  ARP   ]
+     ----------
+|-------------------------|
+|   ETHERNET              |   -------(Frame)
+---------------------------
+
+
+
+```
 
 
 
