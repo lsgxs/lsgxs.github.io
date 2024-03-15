@@ -130,6 +130,7 @@ Physical: Transmission of bits on the physical hardware
 
 ```
 上图中，使用了PDU和SDU的术语。PDU是指protocol  data unit,是 一层中交付给下一层的数据，个人理解是整个这一层协议的数据。SDU是service  data unit。个人理解是上层中传递来数据，对本层来说就是SDU，本层的PDU就是下一层的SDU，这个概念有点绕，简单理解就是逐层的打包传递，打包就是在上一层数据上加上本层的Header,再传递到下一层。
+**每一层的协议模块都要在上层传来的数据上加上本层的协议头，在这里可以叫做PDU吧，也就是本层的数据包**
 ```
 
 ####  Address Resolution Protocol
@@ -279,9 +280,15 @@ network hardware and topology is transparent to the socket programmer.
 
 
 
+#### 拓展学习内容
 
+   * 每一层协议模块添加的header的结构和header中每个字段的用途
 
+   * 路由的算法和路径传递细节
 
+     
+
+这里是初学TCP/IP的肤浅认识，以后有兴趣再深入看看。
 
 
 
