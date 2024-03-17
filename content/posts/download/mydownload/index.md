@@ -54,3 +54,5 @@ cover:
 [typora-setup-x64-1.5.12_ForWin7](files/typora-setup-x64-1.5.12_ForWin7.exe)
 
 [TCPIPTutorial](files/TCPIPTutorial.pdf)
+
+[TCPIP-Netwok-Administration-Guide](files/TCPIP-Netwok-Administrator-Guide.pdf)

@@ -133,6 +133,8 @@ Physical: Transmission of bits on the physical hardware
 **每一层的协议模块都要在上层传来的数据上加上本层的协议头，在这里可以叫做PDU吧，也就是本层的数据包**
 ```
 
+
+
 ####  Address Resolution Protocol
 
 > The Address Resolution Protocol is a method for translating between Internet layer and network layer address. The ARP 
@@ -277,6 +279,12 @@ network hardware and topology is transparent to the socket programmer.
 
 
 ```
+
+#### 一句话总结数据包的在网络中的传递
+
+~~~
+应用层负责数据的格式化，提交给TCP层，数据的封装是从TCP协议层开始的。在tcp层附加上端口信息等header，再提交给ip层，Ip层附加上ip地址等header信息。ip协议模块调用ARP服务，完成从ip地址到ethernet NIC的mac物理地址的查询，在完成ip的数据包之后，调用设备驱动，把Ip datagrame格式化为Frame提交给Ethernet层，最终由Ethernet接口卡驱动把frame转换为Electrical  signals，通过Eterhnet  Cable传送到下一个目标主机。在接收端依次卸下对应层的Header信息，通过Ethernet 、ip、tcp层，最后通过端口信息找到接收端应用，由服务器端的应用处理并返回响应数据包。
+~~~
 
 
 
