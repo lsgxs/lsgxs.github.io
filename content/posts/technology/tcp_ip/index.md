@@ -300,7 +300,13 @@ network hardware and topology is transparent to the socket programmer.
 
      
 
-这里是初学TCP/IP的肤浅认识，以后有兴趣再深入看看。
+这里是初学TCP/IP的肤浅认识，以后有兴趣再深入看看。这次学习浏览了这三本书，有时间再看看（保存在download目录下）
+
+```
+1.TCP/IPTutorial.pdf
+2.TCP/IP-Netwok-Administrator-Guide.pdf
+3.TCP/IP-Tutorial-and-Technical-Overview.pdf
+```
 
 ***
 
