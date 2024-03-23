@@ -40,6 +40,17 @@ cover:
 
   * python没有单个的字符类型，指定一个字符串的索引位置就获得一个字符。
   
+  * indexing  使用字符串名字后跟[index]来选定某个字符，使用格式为stringname[index]，从左往右是从0开始计数起步，从右往左是-1开始计数起步。
+  
+    ![img](images/index.png)
+  
+  * slicing  如果需要从指定的字符串选取一段字符，使用slice操作。使用格式为stringname[start:stop:step]
+  
+    * 默认省略书写最后一个参数step，步长1。正数的步长是从左向右选取，负数步长是从由向左选取。步长可以大于1。
+    * 和index的基数一样，从左到右是从0开始计数，从右往左是-1开始计数。
+    * [start:stop]的几种写法：[start:stop],[statr: ],[:stop],[ : ]
+    * [statr:stop]的书写形式中，选取元素使只包含起始值，不包含结束值。
+  
 * list
 
   * 字符串和list的共同的几个特点，它们统称为sequence数据类型，可以indexd和sliced,也可以concatenate。
