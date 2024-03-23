@@ -85,6 +85,13 @@ cover:
       Out: 'NOH'
       ```
     
+      当然也可以把slicing和indexing组合在一起使用：
+      
+      ```
+      In : language[-3:][1]
+      Out: 'O'
+      ```
+      
       
   
 * list
