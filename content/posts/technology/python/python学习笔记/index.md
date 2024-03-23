@@ -44,12 +44,48 @@ cover:
   
     ![img](images/index.png)
   
+    ```python
+    In : language = "PYTHON"
+    In : language[0]
+    Out: 'P'
+    In : language[1]
+    Out: 'Y'
+    In : language[-1]
+    Out: 'N'
+    In : language[-2]
+    Out: 'O
+    ```
+  
+    
+  
   * slicing  如果需要从指定的字符串选取一段字符，使用slice操作。使用格式为stringname[start:stop:step]
   
     * 默认省略书写最后一个参数step，步长1。正数的步长是从左向右选取，负数步长是从由向左选取。步长可以大于1。
+    
     * 和index的基数一样，从左到右是从0开始计数，从右往左是-1开始计数。
+    
     * [start:stop]的几种写法：[start:stop],[statr: ],[:stop],[ : ]
+    
     * [statr:stop]的书写形式中，选取元素使只包含起始值，不包含结束值。
+    
+      ```python
+      language = "PYTHON"
+      
+      In : language[:3] # Same as language[0:3]
+      Out: 'PYT'
+      In : language[1:3]
+      Out: 'YT'
+      In : language[-3:] # Same as language[-3:6]
+      Out: 'HON'
+      In : language[-3:-1]
+      Out: 'HO'
+      In : language[::2] # Every second element
+      Out: 'PTO'
+      In : language[-1:-4:-1] # Negative step goes from right to left
+      Out: 'NOH'
+      ```
+    
+      
   
 * list
 
