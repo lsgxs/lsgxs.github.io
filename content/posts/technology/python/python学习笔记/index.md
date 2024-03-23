@@ -66,7 +66,7 @@ cover:
     
     * [start:stop]的几种写法：[start:stop],[statr: ],[:stop],[ : ]
     
-    * [statr:stop]的书写形式中，选取元素使只包含起始值，不包含结束值。
+    * [statr:stop]的书写形式中，选取元素时只包含起始值，不包含结束值。
     
       ```python
       language = "PYTHON"
