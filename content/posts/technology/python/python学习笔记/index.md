@@ -393,7 +393,7 @@ else:
 
 ##### 数据的选择
 
-```
+```python
 #第一种选择方法通过指定行和列的标签进行数据选择
 df.loc[row_selection, column_selection]
 
@@ -404,7 +404,7 @@ df.loc[:, "name":"country"]  Range of columns DataFrame
 
 ```
 
-```
+```python
 #第二种方法通过指定位置来进行数据选择 
 #这里的iloc是integer location
 df.iloc[row_selection, column_selection]
@@ -418,7 +418,7 @@ df.iloc[:3, [0, 2]] # Returns a DataFrame
 
 ##### 数据的操作
 
-```
+```python
 df.loc[[1000, 1001], "score"] = [3, 4]
 #在学会了选择数据集之后，就可以进行各种运算。
 ...
@@ -430,7 +430,7 @@ df.loc[[1000, 1001], "score"] = [3, 4]
 
 ##### **Importing and Exporting DataFrames**
 
-```
+```python
 ---------------------------------------------------------------------------------
 |Data format/system |Import: pandas (pd) function | Export: DataFrame(df) method |
 ----------------------------------------------------------------------------------
