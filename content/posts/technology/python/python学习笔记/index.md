@@ -428,7 +428,18 @@ df.loc[[1000, 1001], "score"] = [3, 4]
 ##### DataFrame的合并（concatenate、join、merge）
 ##### PLOTTING（使用dataframe的数据绘图）
 
-##### 使用pandas包提供的方法从文件中导入数据
+##### **Importing and Exporting DataFrames**
 
-##### 使用pandas包提供的方法把数据集保存到文件
+```
+---------------------------------------------------------------------------------
+|Data format/system |Import: pandas (pd) function | Export: DataFrame(df) method |
+----------------------------------------------------------------------------------
+|    CSV            |    pd.read_csv              |     df.to_csv                |
+|    JSON           |    pd.read_json             |     df.to_json               |
+|    HTML           |    pd.read_html             |     df.to_html               |
+|    Clipboard      |  pd.read_clipboard          |     df.to_clipboard          |
+|    Excel          |    pd.read_excel            |     df.to_excel              |  
+|    SQL Databases  |   pd.read_sql               |     df.to_sql                |
+---------------------------------------------------------------------------------    
+```
 
