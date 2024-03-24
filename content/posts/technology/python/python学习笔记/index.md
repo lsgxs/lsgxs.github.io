@@ -106,7 +106,7 @@ cover:
 
 * dictionary
 
-* set
+* set  是没有重复元素的一个容器，可以使用集合理论的操作来操作（并集、交集等）
 
   ##### 对于sequence类型的数据来说，包含两个共同的特征，就是包含index属性和slice操作方法
 
@@ -384,4 +384,51 @@ else:
 在学习了各种编程语言之后，你会发现，除了这些在多方面类似的语言特征外，
 最核心的还是算法和数据结构，无论学习多少编程语言，最底层的还是算法和数据结构。
 ~~~
+
+#### NumPy
+
+#### Pandas
+
+初步看了一下pandas的应用，核心就是该package提供了一个DataFrame。为了好理解，暂时把它看做是和Excel类似的组件。通过构建了dataframe对象之后，就可以使用其拥有的各种方法操作数据。在操作数据之前，有一个重要的方法要掌握，那就是DataFrame中数据的选择。
+
+##### 数据的选择
+
+```
+#第一种选择方法通过指定行和列的标签进行数据选择
+df.loc[row_selection, column_selection]
+
+#这里假设构建的dataframe的名称为df
+#实际还是利用sequence的slice的四种书写方法，来指定需要选择的行和列进行操作
+df.loc[:, ["country", "age"]]  #Multiple columns DataFrame 
+df.loc[:, "name":"country"]  Range of columns DataFrame 
+
+```
+
+```
+#第二种方法通过指定位置来进行数据选择 
+#这里的iloc是integer location
+df.iloc[row_selection, column_selection]
+
+df.iloc[:3, [0, 2]] # Returns a DataFrame
+```
+
+```
+#也可是用布尔表达式进行数据的选择，这里就不举例子了
+```
+
+##### 数据的操作
+
+```
+df.loc[[1000, 1001], "score"] = [3, 4]
+#在学会了选择数据集之后，就可以进行各种运算。
+...
+
+```
+
+##### DataFrame的合并（concatenate、join、merge）
+##### PLOTTING（使用dataframe的数据绘图）
+
+##### 使用pandas包提供的方法从文件中导入数据
+
+##### 使用pandas包提供的方法把数据集保存到文件
 
