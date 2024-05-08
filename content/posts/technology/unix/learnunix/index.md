@@ -74,12 +74,14 @@ cover:
 
 * 常见的控制符号
   * 中断或者取消命令的执行：**ctrl+c** 或者del键
+  * ctrl+z  可以把当前的shell暂停到后台，弹出一个新的shell  （这个需要后期安装好netbsd之后实践一下）
   * 暂停程序输出在屏幕：ctrl+s
   * 继续显示由ctrl+s暂停的屏幕输出：ctrl+q
   * 从程序出退出：**ctrl+d**
     * 在当前的shell提示符下ctrl+d就退出shell
     * 在cat、mail程序中输入ctrl+d退出这些程序，返回到shell
-
+    * exit
+  
 * logout
 
   在关闭计算机及电源之前，必须要退出登录的终端。根据不同的shell，可以尝试下边三种logout的命令。
