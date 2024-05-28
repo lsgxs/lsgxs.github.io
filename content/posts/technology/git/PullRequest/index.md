@@ -64,24 +64,36 @@ PR为什么不叫push request
 1.fork原仓库A到我的仓库B（B是A的fork版本）
 
 2.将仓库B clone到我本地电脑
+
+```
 git clone XXX
-3.在本地创建一个分支，如bugfix/issue-12，该分支用于存放我的代码修改。同时在我的github上的仓库B也创建一个同名的该分支
+```
+
+3.在本地创建一个分支，如`bugfix/issue-12`，该分支用于存放我的代码修改。同时在我的github上的仓库B也创建一个同名的该分支
 
 4.切换到该分支bugfix/issue-12，修改代码
+
+```
 git checkout -b bugfix/issue-12
+```
+
 5.修改好了，add，commit，然后push到我远程的仓库B的bugfix/issue-12分支
+
+```
 git push -u origin bugfix/issue-12
-6.在我的github的仓库B中创建pull request。选择仓库B的该分支，推送到原仓库A的某一个分支。具体是哪个分支，参考仓库A的contributing说明，一般是dev分支；如果没说，就只能选择master分支咯
+```
+
+6.在我的github的仓库B中创建pull request。选择仓库B的该分支，推送到原仓库A的某一个分支。具体是哪个分支，参考仓库A的contributing说明，一般是dev分支；如果没说，就只能选择master分支
 进阶
 
 如果当你fork了项目A，你还没有修改，原项目A的代码就修改了，就已经不是最新的了，该怎么办？
 
 接下来还需要与上游建立连接，这里上游指的是一开始fork的那个项目源A，
 
-执行git remote add upstream A仓地址
+执行`git remote add upstream A仓地址`
 
 然后合并到本地（upstream的新代码更新到本地）
-git fetch upstream/master
+`git fetch upstream/master`
 
 具体参见：https://blog.csdn.net/feverfew1/article/details/135441302
 这么做的原因是当你在开发时，如果多人协作开发同一个项目，那么可能其他人也在修改代码并提交到仓库中。如果你 fork 了这个项目的代码，那么你 fork 的代码可能已经不是最新的了，因此需要及时更新代码，以保证你的代码与仓库中最新的代码保持同步。
