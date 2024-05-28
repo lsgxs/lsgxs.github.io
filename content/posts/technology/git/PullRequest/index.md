@@ -100,4 +100,4 @@ git push -u origin bugfix/issue-12
 
 此文的原文链接：
 
-[git-PR是啥？一篇文章学会Pull Request到底是干嘛的](Git PR是啥？一篇文章学会Pull Request到底是干嘛的)
+[Pull Request到底是干嘛的](https://blog.csdn.net/Supreme7/article/details/136813376)
