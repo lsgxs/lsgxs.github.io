@@ -28,7 +28,7 @@ cover:
 
 ---
 
-#### ]常用软件：
+#### 常用软件：
 
 * `<a href="files/caddy.exe" target="_blank"> caddy </a> `-网友介绍的这个方法，但是自己实践后不能下载文件。
 
@@ -59,3 +59,6 @@ cover:
 
 [TCPIP-Tutorial-and-Technical-Overview](files/TCPIP-Tutorial-and-Technical-Overview.pdf)
 
+#### Linux
+
+[installing_applications_on_linux](files/linux/installing_applications_on_linux.pdf)
