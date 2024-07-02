@@ -162,7 +162,9 @@ if /i "!choice!"=="Y" (
 >    >、win+r打开运行界面，输入control打开控制面板。选择查看设备和打印机，选择打印服务器属性，选择打印服务器属性中的驱动程序标签，删除对应的打印机驱动
 >    >一句话：停止print spooler服务--删除windows\system32\spool\printer下文件--重启printSpooler服务--打印服务器属性中驱动程序标签删除驱动
 >  ```
-
+>  也可以试试驱动卸载工具：[Seagull Drivers Wizard](files/SeagullDriversWizard.rar)
+>
+>  
 #### 一次局域网共享打印机的实践
 
 * 网络状况

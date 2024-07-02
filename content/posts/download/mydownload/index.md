@@ -59,6 +59,10 @@ cover:
 
 [TCPIP-Tutorial-and-Technical-Overview](files/TCPIP-Tutorial-and-Technical-Overview.pdf)
 
+[ClassicShellSetup](files/ClassicShellSetup_4_3_1-zhCN.exe)
+
+[SeagullDriversWizard](files/SeagullDriversWizard.rar)
+
 #### Linux
 
 [installing_applications_on_linux](files/linux/installing_applications_on_linux.pdf)
