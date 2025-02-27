@@ -1,70 +1,67 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
-
+name: Deploy Hugo site to Pages (Updated 2025)
+ 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+ 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment
+  contents: read 
+  pages: write 
+  id-token: write 
+ 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
-
-# Default to bash
+  cancel-in-progress: true 
+ 
 defaults:
   run:
-    shell: bash
-
+    shell: bash 
+ 
 jobs:
-  # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
     env:
-      HUGO_VERSION: 0.102.3
+      HUGO_VERSION: 0.127.0  # 升级至当前最新稳定版 
     steps:
-      - name: Install Hugo CLI
+      - name: Install Hugo CLI 
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Checkout
-        uses: actions/checkout@v3
+          wget -O ${{ runner.temp  }}/hugo.deb  https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb  
+          sudo dpkg -i ${{ runner.temp  }}/hugo.deb  
+          hugo version  # 添加版本验证 
+          
+      - name: Checkout 
+        uses: actions/checkout@v4  # 升级checkout版本 
         with:
-          submodules: recursive
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v2
-      - name: Build with Hugo
+          submodules: recursive 
+          fetch-depth: 0  # 启用完整提交历史记录 
+ 
+      - name: Setup Pages 
+        uses: actions/configure-pages@v3  # 升级配置模块 
+        
+      - name: Build with Hugo 
         env:
-          # For maximum backward compatibility with Hugo modules
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
+          HUGO_ENV: production 
         run: |
           hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+            --gc \  # 启用垃圾回收 
+            --cleanDestinationDir \  # 清理目标目录 
+            --baseURL "${{ steps.pages.outputs.base_url  }}/"
+            
+      - name: Upload artifact 
+        uses: actions/upload-pages-artifact@v2  # 关键修复点 
         with:
-          path: ./public
-
-  # Deployment job
+          path: ./public 
+          retention-days: 3  # 优化产物保留策略 
+ 
   deploy:
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+      name: github-pages 
+      url: ${{ steps.deployment.outputs.page_url  }}
+    runs-on: ubuntu-latest 
+    needs: build 
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages 
+        id: deployment 
+        uses: actions/deploy-pages@v2  # 升级部署模块 
