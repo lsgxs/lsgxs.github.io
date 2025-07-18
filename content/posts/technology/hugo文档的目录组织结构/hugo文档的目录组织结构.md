@@ -1,41 +1,20 @@
 ---
-title: "My 1st post"
-date: 2020-09-15T11:30:03+00:00
-# weight: 1
-# aliases: ["/first"]
-tags: ["first"]
-author: "Me"
-# author: ["Me", "You"] # multiple authors
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: true
-cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
-editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
----
 title: "Hugo文档的目录组织结构"
 date: 2022-11-02T20:42:17+08:00
 draft: false
 featured_image: "images/冰山.jpg"
+---
+
+#### hugo文档的目录组织结构
+
+* 在posts目录下直接保存markdow文档
+* 在posts目录下以文档名新建目录，在这新建的目录下新家index.md，新建一个image目录来保存文章引用的图片资源。
+  * 因为index.md和image是同一个层级的结构，无论是在front matter区域的featured_image，还是正文区域的图片，都可以直接引用这个同级目录下保存的资源文件。
+
+如下图所示：
+
+![](images/hugo-doc-directory-strcture.png)
+
+
+
+也就是以目录的形式来组织文档，不仅层次分明，而且引用的图片也可以得到正确渲染。
