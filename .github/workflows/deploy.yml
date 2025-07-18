@@ -4,6 +4,11 @@ on:
   push:
     branches: ["main"]  # 仅在 main 分支推送时触发
 
+permissions:
+  contents: write       # 确保 Actions 有写入权限
+  pages: write          # 允许写入 GitHub Pages
+  id-token: write       # 用于身份验证（可选，但推荐）
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
