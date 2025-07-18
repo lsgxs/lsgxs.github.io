@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Actions on ExampleSite</title>
+    <link>https://lsgxs.github.io/tags/actions/</link>
+    <description>Recent content in Actions on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 15 Nov 2022 20:02:48 +0800</lastBuildDate>
+    <atom:link href="https://lsgxs.github.io/tags/actions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在github基于个人或公司GitHub Pages部署hugo博客之二</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</link>
+      <pubDate>Tue, 15 Nov 2022 20:02:48 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</guid>
+      <description>&lt;h4 id=&#34;使用自定义的actons-workflow在仓库的两个分支之间实现hugo博客站点自动化部署&#34;&gt;使用自定义的actons workflow,在仓库的两个分支之间实现hugo博客站点自动化部署&lt;/h4&gt;
+&lt;p&gt;用仓库的main分支保存博客项目源文件，用仓库的另外一个手动建立的独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在github上新建username.github.io形式的空仓&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在本地根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-·&#34; data-lang=&#34;·&#34;&gt;hugo  new   site  hugo
+cd hugo 
+git  init
+git  submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git  themes/ananke
+编辑config.toml文件，在最后新增  theme  =  &amp;#34;ananke&amp;#34;
+修改baseURL = &amp;#34;https://username.github.io&amp;#34;
+hugo  new  posts/文档名称作为目录名/index.md    --编辑自己的文档
+git  add .
+git  commit -m   &amp;#34;新增文档&amp;#34;
+git  push  -u origin  main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在本地新建一个独立分支gh-pages&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git  checkout  --orphan gh-pages
+echo  &amp;#34;hello github gh-pages&amp;#34; &amp;gt; readme.md 
+git  add .
+git commit -m &amp;#34;add gh-pages branch&amp;#34;
+git push origin gh-pages   --在新建分支后推送到远程仓库分支，要指定源分支，系统会自动建立同名分支，并建立关联。以后再推送分支可以不必再指定源分支。
+git  branch -a   --此时就可以看到新建的独立分支gh-pages。如果不在新建的分支下增加变化并git-add-commit-push ，就不会真正建立分支。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;经过上面两个步骤，username.githbu.io仓库有两个分支：main 、gh-pages。建立并切换到gh-pages分支时，会自动复制main分支的目录和文件，除了.git目录之外，把所有其他目录和文件都删除，然后git-add-commit-push，远程仓库的gh-pages没有别的文件，只用来保存静态的博客站点网页文件。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在github基于个人或公司GitHub Pages部署hugo博客之一</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</link>
+      <pubDate>Mon, 14 Nov 2022 22:47:45 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Hugo自动化部署到github</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
+      <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
+      <description>Desc Text.</description>
+    </item>
+  </channel>
+</rss>
