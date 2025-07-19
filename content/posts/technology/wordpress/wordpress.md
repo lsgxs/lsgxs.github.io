@@ -40,28 +40,28 @@ cover:
 * 打开浏览器，在地址栏输入localhost，此时会显示`Welcome to XAMPP for Windows `，点击屏幕顶部的`phpMyAdmin`，进入数据库设置面板。或者直接在地址栏输入`localhost/wordperss/phpMyAdmin`
 * 选择左侧目录树顶部的`新建`，输入数据库名称，序规则选择 utf8mb4_general_ci。之后，点击“创建”按钮就可以完成数据库创建。选择左侧的数据库，再选权限标签，可以根据实际情况修改密码。
 
-  ![](images/phpMyAdmin.png)
-  ![](images/phpMyAdmin-2.png)
-  ![](images/phpMyAdmin-3.png)
+  ![](/images/technology/wordpress/wordpress/phpMyAdmin.png)
+  ![](/images/technology/wordpress/wordpress/phpMyAdmin-2.png)
+  ![](/images/technology/wordpress/wordpress/phpMyAdmin-3.png)
 
 
 
  #### 连接数据库
 
    在浏览器地址栏输入`localhost/WordPress` ，配置连接数据库的参数。需要输入前边创建的数据库名称、用户名(root)、密码。输入`localhost/wordperss`之后，地址栏地址变化为`localhost/wordperss/wp-admin/setup-config.php`,进入数据库参数设置页面。自己估计应该是在Apache的代理设置里做了路由匹配，把`/WordPress`直接映射为/WordPress/wp-admin/setup-config.php。
- ![](images/WordPress-setup-connect-database.png)  
+ ![](/images/technology/wordpress/wordpress/wordpress-setup-connect-database.png)  
  ![](images/WordPress-setup-create-database-2.png)
- ![](images/WordPress-setup-create-database-3.png)
+ ![](/images/technology/wordpress/wordpress/wordpress-setup-create-database-3.png)
   成功连接创建的数据库WordPress_db1后，WordPress已经可以和新建的数据库通讯了，点击左下角的[run the install]开始安装WordPress.
 
  #### 安装WordPress
-  ![](images/WordPress-setup.png)
-  ![](images/WordPress-installation.png)
-  ![](images/WordPress-setup-create-database-4.png)
+  ![](/images/technology/wordpress/wordpress/wordpress-setup.png)
+  ![](/images/technology/wordpress/wordpress/wordpress-installation.png)
+  ![](/images/technology/wordpress/wordpress/wordpress-setup-create-database-4.png)
 
 经过这一系列列的操作，最终把各项参数保存在新建的wp-config.php文件中。如果想重新学习安装流程，可以把wp-config.php删除，再把旧的数据库表删除，如下图提示：
 
-![](images/WordPress-reinstall.png)
+![](/images/technology/wordpress/wordpress/wordpress-reinstall.png)
 
 #### WordPress管理界面
 
@@ -69,7 +69,7 @@ cover:
 
 （在没有学会重置密码前，最好记录好数据库用户名、密码和站点登录的用户名和密码，时间长了可能会忘记）
 
-![](images/dashboard.png)
+![](/images/technology/wordpress/wordpress/dashboard.png)
 
 
 
@@ -164,11 +164,11 @@ define( 'DB_HOST', 'localhost' );
 
 * 选择站点使用的语言后继续
 
-![](images/WordPress-setup.png)
+![](/images/technology/wordpress/wordpress/wordpress-setup.png)
 
 * 在下图所示的表单中填写站点基本信息
 
-![](images/WordPress-installation.png))
+![](/images/technology/wordpress/wordpress/wordpress-installation.png))
 
 - **Site Title**：  为WordPress 站点指定标题
 

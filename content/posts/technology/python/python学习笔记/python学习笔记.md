@@ -42,7 +42,7 @@ cover:
   
   * indexing  使用字符串名字后跟[index]来选定某个字符，使用格式为stringname[index]，从左往右是从0开始计数起步，从右往左是-1开始计数起步。
   
-    ![img](images/index.png)
+    ![img](/images/technology/python/python学习笔记/python学习笔记/index.png)
   
     ```python
     In : language = "PYTHON"

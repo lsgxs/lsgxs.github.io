@@ -63,7 +63,7 @@ cover:
 
   * 在系统环境变量path中新增项目，指向e:\hugo\bin
 
-    ![img](images/hugo-path.png)
+    ![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/hugo-path.png)
 
   * hugo  version    `正常就会显示hugo的版本信息`(如果提示不识别hugo命令，就重启Windows让系统环境变量生效)
 
@@ -103,7 +103,7 @@ cover:
 
 在github上实现自动化部署静态博客有多种方法，我这个hugo静态博客采用的是github提供的最简单的一种方式，直接使用github的acttions提供的Deploy Hugo site to pages workflow，最终的静态网页是发布在由github的action自动建立的gh-pages上，不需要手动建立gh-pages分支再部署。具体的设置如下图(github中仓库的Settings，不是github账户本身的Settings)：
 
-![img](images/github-pages-hugo.png)
+![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/github-pages-hugo.png)
 
 ##### 用Git管理github博客站点
 
@@ -131,17 +131,17 @@ cover:
 
   点击github账户右上角的图片，选择弹出的快捷菜单中的Settings选项，如下图
   
-  ![img](images/settings.jpg)
+  ![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/settings.jpg)
   
+    
   
-  
-  ![img](images/user_ssh_add_1.png)
+  ![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/user_ssh_add_1.png)
   ***
   
-  ![img](images/user_ssh_delete.png)
+  ![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/user_ssh_delete.png)
   ***
   
-  ![img](images/user_ssh_add_2.png)
+  ![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/user_ssh_add_2.png)
   
 
 设置好git和github账号通讯的各种参数之后，使用`git clone git@github.com:yourusername/yourusername.github.io.git`把保存在github的整个站点获取到本地，然后就可以正常的编辑和提交了。把文档笔记部署到github上有个好处，我这本地系统数据丢失了，重做系统再取回就好了。
@@ -174,7 +174,7 @@ ssh-add ~/.ssh/id_rsa_hugo
 
 以后每次打开git bash 终端窗口就会自动添加私钥，如下图所示:
 
-![img](images/ssh-agent.png)
+![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/ssh-agent.png)
 以后就和往常一样直接git-add-commit-push就可以了。
 
 ***
@@ -224,14 +224,14 @@ ssh-add ~/.ssh/id_rsa_hugo
  github中的仓库到本地时，会提示你没有权限。关闭bash终端，再打开就启用了上面的内容。
  以后每次打开git bash 终端窗口就会自动添加私钥.如下图：
 
-![img](images/gitCloneErr.jpg)
+![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/gitCloneErr.jpg)
 >  **5.下载保存在github的完整站点仓库**
 
 ```
 git clone  git@github.com:username/username.github.io.git 
 ```
 设置好一对秘钥之后，第一次使用`git  clone`下载github上的hugo博客项目是，会提示如下图所示的提示，直接输入`yes`就好。
-![img](images/git-clone-first-time.png)
+![img](/images/technology/hugo/快速重建hugo博客站点/快速重建hugo博客站点/git-clone-first-time.png)
 
 > **6.正常编辑博客文档，使用git-add-commit-push命令组合推送到github**
 >

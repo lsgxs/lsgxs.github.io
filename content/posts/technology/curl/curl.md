@@ -45,11 +45,11 @@ file transfer resume, proxy tunneling and a busload of otheruseful tricks.
 
 [CURL](https://curl.se/download.html)（client  URL）是一个开源项目，到主页可以下载到源代码项目或者二进制版本。
 
-![img](images/curl.PNG)
+![img](/images/technology/curl/curl/curl.PNG)
 
-![img](images/curl2.PNG)
+![img](/images/technology/curl/curl/curl2.PNG)
 
-![img](images/curl3.PNG)
+![img](/images/technology/curl/curl/curl3.PNG)
 
 #### CURL学习
 

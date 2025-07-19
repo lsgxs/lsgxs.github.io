@@ -74,7 +74,7 @@ href后面路径中的bootstrap532就是下载的bootstrap，自定义名称为b
 
 #### 使用bootstrap的例子代码
 
-![img](images/projectStructure.png)
+![img](/images/technology/css/bootstrap/bootStrap学习笔记/bootStrap学习笔记/projectStructure.png)
 
 ```html
 <!-- index.html，显示程序的主界面 -->

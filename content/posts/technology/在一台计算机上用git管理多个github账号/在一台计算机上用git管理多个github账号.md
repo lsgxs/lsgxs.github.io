@@ -64,7 +64,7 @@ tags: ["git","github账号","github"]
   ~~~
 
   如果测试成功，就会返回类似的信息：Hi your-user-name! You've successfully authenticated, but GitHub does not provide shell access
- ![](images/ssh-test.png)
+ ![](/images/technology/在一台计算机上用git管理多个github账号/在一台计算机上用git管理多个github账号/ssh-test.png)
 
 * 有了配置文件之后，以后添加远程连接时就要使用主机别名的方法，比如：
 

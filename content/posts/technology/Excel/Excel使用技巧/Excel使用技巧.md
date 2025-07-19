@@ -52,15 +52,15 @@ cover:
   可以通过Windows控制面板提供的日期、时间、区域格式设置功能来指定需要的日期格式。
   
   * windows7
-   ![img](images/win7_区域和语言_2.png)
+   ![img](/images/technology/Excel/Excel使用技巧/Excel使用技巧/win7_区域和语言_2.png)
   
   * Windows10
   
-    ![img](images/win10_时间语言.png)
+    ![img](/images/technology/Excel/Excel使用技巧/Excel使用技巧/win10_时间语言.png)
   
-    ![img](images/win10_更改数据格式.png)
+    ![img](/images/technology/Excel/Excel使用技巧/Excel使用技巧/win10_更改数据格式.png)
   
-    ![img](images/win10_日期.png)
+    ![img](/images/technology/Excel/Excel使用技巧/Excel使用技巧/win10_日期.png)
   
 * 日期格式的转换
 
@@ -102,7 +102,7 @@ cover:
 
 在打印预览视图下，有一个打印缩放选项，可以选择缩放->将所有列打印在一页，显示正确后直接打印。
 
-![img](images/print-all-columns-in-one-page.jpg)
+![img](/images/technology/Excel/Excel使用技巧/Excel使用技巧/print-all-columns-in-one-page.jpg)
 
 #### 根据身份证号自动计算性别和年龄
 

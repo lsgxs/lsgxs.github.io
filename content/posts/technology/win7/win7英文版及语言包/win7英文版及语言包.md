@@ -37,18 +37,18 @@ cover:
 
 ##### 以更新的形式安装中文语言包
 
-![img](images/language-1.png)
-![img](images/change-display-language.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/language-1.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/change-display-language.png)
 
-![img](images/install-language-pack.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/install-language-pack.png)
 
-![img](images/install-language-pack-2.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/install-language-pack-2.png)
 
-![img](images/update-language-pack.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/update-language-pack.png)
 
-![img](images/install-updates.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/install-updates.png)
 
-![img](images/important-optional-updates.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/important-optional-updates.png)
 
 
 
@@ -56,7 +56,7 @@ cover:
 
 * 下载EXE格式的中文语言包，双击运行可以直接安装，安装完毕后，在控制面板的的地区和语言部分，选择键盘和语言标签，如下图所示选择中文简体，弹出注销对话框，确定注销并登录后，就显示中文版的Windows7。
 
-![img](images/choose-language.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/choose-language.png)
 
-![img](images/logoff.png)
+![img](/images/technology/win7/win7英文版及语言包/win7英文版及语言包/logoff.png)
 

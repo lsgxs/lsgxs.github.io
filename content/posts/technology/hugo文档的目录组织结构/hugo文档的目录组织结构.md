@@ -13,7 +13,7 @@ featured_image: "images/冰山.jpg"
 
 如下图所示：
 
-![](images/hugo-doc-directory-strcture.png)
+![](/images/technology/hugo文档的目录组织结构/hugo文档的目录组织结构/hugo-doc-directory-strcture.png)
 
 
 

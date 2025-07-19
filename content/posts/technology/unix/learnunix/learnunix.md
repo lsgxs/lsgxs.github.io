@@ -176,7 +176,7 @@ xset: sets user preferences
 
 * Unix目录组织结构
 
-  ![img](images/Files_in_the_directory_tree.png)
+  ![img](/images/technology/unix/learnunix/learnunix/Files_in_the_directory_tree.png)
 
  *root directory* and is written as a forward slash ( / )，*bin*, *etc*, *users*, *tmp*, and *usr* are some of the *subdirectories*。These are fairly standard directories and usually contain specific kinds of system files. For instance, *bin* contains many UNIX commands. Not all systems have a directory named *users*; it may be called *u*,*home*, and/or be located in some other part of the filesystem。
 
@@ -208,7 +208,7 @@ xset: sets user preferences
 
     > ls  -al
 
-​           ![img](images/ls_al.png)
+​           ![img](/images/technology/unix/learnunix/learnunix/ls_al.png)
 
 > The long format provides the following information about each file:
 >

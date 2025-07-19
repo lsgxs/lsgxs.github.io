@@ -58,7 +58,7 @@ cover:
 
   切换到nginx所在的目录c:\myrepos\nginx,在Windows的CMD窗口下运行nginx.exe。此时系统提示一个错误信息
 
-  ![](images/nginx-80.png)
+  ![](/images/technology/nginx/nginx/nginx-80.png)
 
  提示访问80端口没有权限。要么提升权限，要么使用别的端口，这里使用2090端口。在配置文件的server  block部分`listen: 80`处修改为`listen: 2090`运行nginx，如下图：
 
@@ -85,7 +85,7 @@ server {
         }
 ~~~~
 
-![](images/nginx-welcome.png)
+![](/images/technology/nginx/nginx/nginx-welcome.png)
 
 这里显示的内容是nginx自带的html/目录下的index.html，是通过location block中的root   html 参数指定http请求资源的路径映射。
 

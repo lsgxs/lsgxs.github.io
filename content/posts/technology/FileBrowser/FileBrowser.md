@@ -45,7 +45,7 @@ localhost:2016 {
 --在真实的场景下用主机的ip地址替代localhost,端口根据实际调整。
 ~~~
 
-![](images/caddy-file-browser.png)
+![](/images/technology/FileBrowser/FileBrowser/caddy-file-browser.png)
 
 这是以前的用法，早期的caddy是直接支持filebrower。现在需要使用反向代理的方法使用FileBrowser。在这里看到了[关于canddy和filebrowser](https://caddy.community/t/file-browser-says-goodbye-to-caddy-for-now/5676)的信息，写个链接有空再来看看。又看到了社区里关于[caddy反向代理](https://caddy.community/t/using-caddy-as-a-reverse-proxy-in-a-home-network/9427)的信息，有空看一下。
 
@@ -62,9 +62,9 @@ localhost:2016 {
   * 第一次启动FileBrowser后，会在目录下生成单文件数据库`filebrowser.db`。
   * 根据运行后在CMD窗口显示的ip及端口信息，如127.0.0.1:8080,在浏览器输入地址就可以进入web文件管理界面
 
-​				![](images/filebrowser.png)
+​				![](/images/technology/FileBrowser/FileBrowser/filebrowser.png)
 
 初始账号为admin/admin，登录后可以根据需要修改密码。
 * 自己的应用场景简单，主要是单位内部的局域网，主机IP都是静态的，这里是虚拟机的环境显示为127.0.0.1。
 
-![](images/filebrowser-login.png)
+![](/images/technology/FileBrowser/FileBrowser/filebrowser-login.png)

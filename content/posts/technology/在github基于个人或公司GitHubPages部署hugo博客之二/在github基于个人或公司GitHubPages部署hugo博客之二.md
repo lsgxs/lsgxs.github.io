@@ -47,11 +47,11 @@ cover:
 
   * 选择仓库，选择Settings->Deploy Keys->Add deploy key，贴上 ssh 公钥，勾选 Allow write access 选项。
 
-    ![](images/add-deploy-key.png)
+    ![](/images/technology/在github基于个人或公司GitHubPages部署hugo博客之二/在github基于个人或公司GitHubPages部署hugo博客之二/add-deploy-key.png)
 
   * 选择Settings->Secrets->New repository secret，Name 填 HUGO_DEPLOY_KEY，Value 贴上 ssh 私钥。
 
-    ![](images/New-Repository-Secrets.png)
+    ![](/images/technology/在github基于个人或公司GitHubPages部署hugo博客之二/在github基于个人或公司GitHubPages部署hugo博客之二/New-Repository-Secrets.png)
 
 * 在博客项目根目录下建立一个actions  workflow文件(如果新建.github目录时提示不能建立，就从别处复制一个)，路径为：.github/workflows/hugo.yml  ,文件内容如下：
 

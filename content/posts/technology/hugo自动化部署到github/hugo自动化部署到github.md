@@ -37,10 +37,10 @@ cover:
 
 * 设置仓库的Github Pages 发布源
 
-  ![](images/gihub-pages-deployment-source.png)
+  ![](/images/technology/hugo自动化部署到github/hugo自动化部署到github/gihub-pages-deployment-source.png)
   在新建好空仓之后，设置Github Pages Build and Deployment source为Github Actions。然后再把本地带有\.github\workflow\hugo.yml的仓库git-add-commit-push到空仓，完成自动化部署。如果没有设置好Build and Deployment为Github Actions，然后推送到新建的空仓，在浏览器输入https://username.github.io 时就会出现404页面，因为仓库新建之后默认的Github Pages Build and Deployment是Deploy from Branch 。hugo actions workflow正确执行后就会建立一个github-pages，在后台以压缩包的形式显示（点击仓库的updates记录)，如果没有显示这个文件，多半原因是没有设置Github Pages Build and Deployment为Github Acionts.如下图:
   
-  ![](images/Artifacts-github-pages.png)
+  ![](/images/technology/hugo自动化部署到github/hugo自动化部署到github/Artifacts-github-pages.png)
   一句话总结：首先建里空仓，然后设置github pages发布源为github actions,最后从本地推送项目到github仓库。
 
 ##### 使用github提供的actions  flow实现自动化部署，一般可以通过两个分支来实现。
@@ -102,9 +102,9 @@ cover:
 * personnal access token和secrets
    * 在上面的脚本Deploy部分，HUGODEPLOYBTTWOBRANCHS是在github的账户setting->developer setting 下面新建的personal access token:
 
-  ![](images/github-token.png)
+  ![](/images/technology/hugo自动化部署到github/hugo自动化部署到github/github-token.png)
 
   * 进入到hugo 项目仓库，然后选择secrets，新建仓库的secrets，填写名称，secret的内容是上一步新建的personal access token的内容，粘贴在这里保存即可，在action脚本里引用时，用${{ secrets.HUGODEPLOYBTTWOBRANCHS }}的写法就可以获取token的值。
   
-    ![](images/repository-secret-new.png)
+    ![](/images/technology/hugo自动化部署到github/hugo自动化部署到github/repository-secret-new.png)
    也就是说，仓库的secrets读取的是github账号级别的personal access token。

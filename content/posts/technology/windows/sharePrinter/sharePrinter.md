@@ -35,16 +35,16 @@ cover:
 
 * 在控制面板的管理工具中，打开本地策略，点击【安全选项】，在右侧底部列表中选择开启guest。如下图所示：
 
-  ![img](images/Securities.jpg)
+  ![img](/images/technology/windows/sharePrinter/sharePrinter/Securities.jpg)
 
 * 选择本地策略下的用户权限分配，在右侧列表中找到【拒绝从网络访问这台计算机】，从中删除guest项目，也就是允许guest通过网络访问这台计算机。如下图所示：
 
-  ![img](images/connectByGuest.jpg)
+  ![img](/images/technology/windows/sharePrinter/sharePrinter/connectByGuest.jpg)
 
 * 选择本地策略下的用户权限分配，在右侧列表中找到【从网络访问这台计算机】,根据需要添加用户（比如everyone、guest，具体可以测试一下）。
-  ![img](images/access-from-network.png)
+  ![img](/images/technology/windows/sharePrinter/sharePrinter/access-from-network.png)
 
-  ![img](images/access-from-network-2.png)
+  ![img](/images/technology/windows/sharePrinter/sharePrinter/access-from-network-2.png)
 
 * 在本机Windows左下角打开搜索框，输入如下格式的目标主机IP地址
 
@@ -208,13 +208,13 @@ if /i "!choice!"=="Y" (
 
       * `office2013`激活方法（下载VOL版的`office2013`）
 
-        ![img](images/officeActivator-1.png)
+        ![img](/images/technology/windows/sharePrinter/sharePrinter/officeActivator-1.png)
 
-        ![img](images/officeActivator-2.png)
+        ![img](/images/technology/windows/sharePrinter/sharePrinter/officeActivator-2.png)
 
-        ![img](images/officeActivator-3.png)
+        ![img](/images/technology/windows/sharePrinter/sharePrinter/officeActivator-3.png)
 
-        ![img](images/officeActivator-4.png)
+        ![img](/images/technology/windows/sharePrinter/sharePrinter/officeActivator-4.png)
 
         这里主要说一下第四部，直接点击【`EZ-Activator`】就可以顺利激活。
 
@@ -313,27 +313,27 @@ if /i "!choice!"=="Y" (
 
 ##### 在局域网中的任意一台计算机添加网络打印机
 
-![img](images/NetPrinter/AddPrinter1.PNG)
+![img](/images/technology/windows/sharePrinter/sharePrinter/NetPrinter/AddPrinter1.PNG)
 
 点击【添加网络打印机】
 
-![img](images/NetPrinter/AddPrinterManualy.PNG)
+![img](/images/technology/windows/sharePrinter/sharePrinter/NetPrinter/AddPrinterManualy.PNG)
 
 点击【我需要的打印机不在列表中】
 
-![img](images/NetPrinter/AddPrinterManualy2.PNG)
+![img](/images/technology/windows/sharePrinter/sharePrinter/NetPrinter/AddPrinterManualy2.PNG)
 
-![img](images/NetPrinter/PrinterIP.PNG)
+![img](/images/technology/windows/sharePrinter/sharePrinter/NetPrinter/PrinterIP.PNG)
 
 根据实际情况填写打印机的`IP`地址到主机名称，端口名称一般是根据上面填写的`IP`地址自动生成的，可以不用管。一般的HP打印机端口默认为9001。填写完成后点击下一步。
 
-![img](images/NetPrinter/InstallPrintDriverFromDisk.png)
+![img](/images/technology/windows/sharePrinter/sharePrinter/NetPrinter/InstallPrintDriverFromDisk.png)
 
 找不打印机驱动时，会弹出这个窗口，点击【从磁盘安装】，选择官方打印机驱动解压包所在的目录，确定后完成打印机驱动的安装。
 
-![img](images/NetPrinter/finish.PNG)
+![img](/images/technology/windows/sharePrinter/sharePrinter/NetPrinter/finish.PNG)
 
-![img](images/NetPrinter/ViewPrinterPort.png)
+![img](/images/technology/windows/sharePrinter/sharePrinter/NetPrinter/ViewPrinterPort.png)
 
 打印机安装成功后，鼠标右键弹出快捷菜单，选择打印机属性，在弹出的窗口中选择端口标签页，选中这台打印机列表项，点击右下角的【配置端口】按钮，就可以查看打印机的配置信息，比如打印机`ip`，端口名称，端口号等基本信息，也可以在浏览器地址栏输入打印`IP`地址，打开打印机更详细的基本信息。想要更全面的了解打印机信息，可以在官网下载并查阅打印机的用户指南`PDF`文档。
 

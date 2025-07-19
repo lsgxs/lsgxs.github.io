@@ -30,26 +30,26 @@ cover:
 
 查看windows系统的版本号，下载对应版本的ADK,运行adksetup。
 
-​     ![](images/adk_winpe.png)
+​     ![](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/adk_winpe.png)
 
-![](images/adk-setup.png)
+![](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/adk-setup.png)
 
-![](images/adk-setup2.png)
+![](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/adk-setup2.png)
 
 #### [下载并安装WinPe加载项](https://go.microsoft.com/fwlink/?linkid=2022233)
 
 下载对应版本的WINpe加载项并安装
 
-![](images/winpe-load.png)
+![](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/winpe-load.png)
 
-![](images/winpe-load2.png)
+![](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/winpe-load2.png)
 ### 创建基础的Winpe
 
 * 安装好ADK和WInpe加载项之后，点击Windows桌面左下角的Windows图标，打开程序菜单，选择【部署和映像工具环境】
 
   
 
-  ![](images/deploy_tools_env.png)
+  ![](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/deploy_tools_env.png)
 #### 一行命令创建基础Winpe
   打开CMD窗口后运行下面的命令：
 
@@ -57,13 +57,13 @@ cover:
 
   执行结果如下图：
 
-  ![](images/copype.png)
+  ![](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/copype.png)
 
   
 
   如果没有选择从【部署和映像工具环境】打开CMD窗口，而是在CMD窗口中手动切换目录到部署和映像工具所在的目录，使用copype命令时会提示找不到amd64架构处理器，如下图所示：
 
-  ![](images/copype_err.png)
+  ![](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/copype_err.png)
   出现这个问题的根本原因是设置环境变量的问题，如果要手动执行的话，就需要自己修改copype.cmd里的脚本，如下：
 
   ```bash
@@ -113,20 +113,20 @@ cover:
 
 * 鼠标右击目录winpe-amd64(Winpe所在的工作目录)，选择属性，在弹出的对话框中选择安全标签，点击高级。如下图所示：
 
-  ![img](images/security-1.png)
+  ![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/security-1.png)
   
 * 更改目录的所有者为当前用户(如果不清楚当前用户名，可在cmd命令窗口下用whoami命令显示当前用户名)。
 
-  ![img](images/owner-1.png)
+  ![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/owner-1.png)
 
-  ​                            ![img](images/search.png)
-  ![img](images/selections.png)
+  ​                            ![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/search.png)
+  ![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/selections.png)
 * 为当前用户添加权限
   
-  ![img](images/add-1.png)
-  ![img](images/add-2.png)
-  ![img](images/add-3.png)
-  ![img](images/add-4.png)
+  ![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/add-1.png)
+  ![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/add-2.png)
+  ![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/add-3.png)
+  ![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/add-4.png)
   
   总结一下添加权限的基本步骤
   
@@ -209,7 +209,7 @@ oscdimg是Windows ADK中带的一个工具，但是却并没有集成到winpe中
   
   运行regedit ,选择HEKY-LOCAL-MACHE下的【SYSTEM\ControlSet001\Control\Session Manager\Environment】，在右侧的数据项中找到path ,在最后加上%SystemRoot%\Oscdimg ，中间用分号隔开。这里的%SystemRoot%是环境变量的写法，一般指Windows目录。
 
-![img](images/regedit-environment.png)
+![img](/images/technology/winpe/用WindowsADK创建WinPE/用WindowsADK创建WinPE/regedit-environment.png)
 
 #### 简单总结
 

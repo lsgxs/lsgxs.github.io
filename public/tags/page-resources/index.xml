@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Page Resources on ExampleSite</title>
-    <link>https://lsgxs.github.io/tags/page-resources/</link>
+    <link>http://localhost:5080/tags/page-resources/</link>
     <description>Recent content in Page Resources on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:5080/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:5080/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.148.1</generator>
     <language>en</language>
     <lastBuildDate>Tue, 22 Nov 2022 22:12:51 +0800</lastBuildDate>
-    <atom:link href="https://lsgxs.github.io/tags/page-resources/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:5080/tags/page-resources/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>page bundle</title>
-      <link>https://lsgxs.github.io/posts/technology/hugo/pagebundle/pagebundle/</link>
+      <link>http://localhost:5080/posts/technology/hugo/pagebundle/pagebundle/</link>
       <pubDate>Tue, 22 Nov 2022 22:12:51 +0800</pubDate>
-      <guid>https://lsgxs.github.io/posts/technology/hugo/pagebundle/pagebundle/</guid>
+      <guid>http://localhost:5080/posts/technology/hugo/pagebundle/pagebundle/</guid>
       <description>Desc Text.</description>
     </item>
   </channel>

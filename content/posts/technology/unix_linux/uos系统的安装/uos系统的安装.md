@@ -62,15 +62,15 @@ cover:
 
 * 安装完毕后，系统重启，如果有Windows系统共存，会显示多启动菜单。如下图：
 
-  ![img](images/bootmgr.jpg)
+  ![img](/images/technology/unix_linux/uos系统的安装/uos系统的安装/bootmgr.jpg)
 
 * 登录系统后，显示类似X-windwos的可视化窗口，操作起来和windows很像。如果网络通畅的话，可以在应用商店里安装应用程序
 
-  ![img](images/appstore.png)
+  ![img](/images/technology/unix_linux/uos系统的安装/uos系统的安装/AppStore.png)
 
 * 可以在控制中心找到通用，然后找到启动菜单(设置启动延迟)、开发者模式（开启root用户权限）
 
-![img](images/ControlCenter.png)
+![img](/images/technology/unix_linux/uos系统的安装/uos系统的安装/ControlCenter.png)
 
 到这里就可以使用UOS完成基本办公环境的构建，如果国产替代系统把办公设备硬件适配做的再好点，国产替代是很有市场和希望的，国产加油。
 

@@ -30,13 +30,13 @@ cover:
 
   下载扩展版本的hugo二进制应用，在系统环境变量里设置指向hug.exe的path即可在任意目录下运行hugo。在git-bash  terminal下测试安装是否正确：`hugo  version`
 
-​       ![](images/hugo-setup-version.png)
+​       ![](/images/technology/PaperModQucikStart/PaperModQucikStart/hugo-setup-version.png)
 
 * 建站
 
   保持下图所示的目录结构：
   
-  ![](images/hugo-directoy-structure.png)
+  ![](/images/technology/PaperModQucikStart/PaperModQucikStart/hugo-directoy-structure.png)
   
   `cd  site`
   
@@ -44,7 +44,7 @@ cover:
   
   `cd HugoPaperMod `                        (此时新建的HugoPaperMod项目下有下图所示的目录）：
   
-  ![](images/hugo-directoy-structure-2.png)
+  ![](/images/technology/PaperModQucikStart/PaperModQucikStart/hugo-directoy-structure-2.png)
   
   在这些目录下只有archetypes目录下有default.md一个文件，作为新建markdown文档的模板，内容如下：
   
@@ -64,7 +64,7 @@ cover:
   
   此时进入themes/PaperMode目录，如下图所示：
   
-  ![](images/cloned-PaperMod.png)
+  ![](/images/technology/PaperModQucikStart/PaperModQucikStart/cloned-PaperMod.png)
   
   > 关键的一步：把PaperMod主题文件夹里面的的一些静态文件和配置文件复制到站点目录下，目的是为了可以自定义博客的样式，而不会改动主题文件夹里的样式，当引用的PaperMod主题有更新的时候，直接在主题目录下git pull就可以，站点目录的修改会优先覆盖主题里的配置，可以实现平滑更新。 
   

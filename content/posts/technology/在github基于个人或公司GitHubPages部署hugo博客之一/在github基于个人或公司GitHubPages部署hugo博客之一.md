@@ -130,9 +130,9 @@ jobs:
 ~~~
 
 点击仓库的actions显示All workflows，选择一个workflows,会在窗口的最下面显示一个artifact,终于看到了熟悉的gh-pages:
-![](images/GitHubPagesActions-workflows.png)
+![](/images/technology/在github基于个人或公司GitHubPages部署hugo博客之一/在github基于个人或公司GitHubPages部署hugo博客之一/GitHubPagesActions-workflows.png)
 
-![](images/GitHubPagesActions-gh-pages.png)
+![](/images/technology/在github基于个人或公司GitHubPages部署hugo博客之一/在github基于个人或公司GitHubPages部署hugo博客之一/GitHubPagesActions-gh-pages.png)
 
 也就是说这个gh-pages是由系统自己创建的，在这个模式下不需要自己手动建立gh-pages，如果需要指自定义actions，就需要自己建立gh-pages分支发布静态站点文件。
 

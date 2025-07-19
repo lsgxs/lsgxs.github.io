@@ -37,5 +37,5 @@ $ hugo serve
  http://localhost:1313                 
 ```
 
-![](images/云山雾绕.jpg)
+![](/images/technology/difference-between-git-clone-submoudule-downlaod/difference-between-git-clone-submoudule-downlaod/云山雾绕.jpg)
 

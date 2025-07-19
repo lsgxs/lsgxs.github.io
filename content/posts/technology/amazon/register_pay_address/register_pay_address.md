@@ -33,7 +33,7 @@ cover:
 
 在搜索引擎中搜索`亚马逊`，选择Amazon的全球官方站点，如下图：
 
-![img](images/Amazon.png)
+![img](/images/technology/amazon/register_pay_address/register_pay_address/Amazon.png)
 
 注意上边图片中显示的网址最后边`/-/zh`就是链接到了中国站点（显示可配送到中国国内的产品）。打开网址后会显示亚马逊全球站点，应该会显示中文界面。
 
@@ -47,15 +47,15 @@ cover:
 
 #### 设置收货地址
 
-![img](images/address.png)
+![img](/images/technology/amazon/register_pay_address/register_pay_address/address.png)
 
 在上面的选项中，国家和地区选项需要在列表中选择，收货人、街道地址、城市、省/地区这些项目都要使用汉语拼音输入，在适当的地方使用空格分开。电话和邮编正常输入。填写完毕后点击`添加地址`完成地址设置。
 
 #### 选择支付方式
 
-![img](images/account.png)
+![img](/images/technology/amazon/register_pay_address/register_pay_address/account.png)
 
-![img](images/UnionPay.png)
+![img](/images/technology/amazon/register_pay_address/register_pay_address/UnionPay.png)
 
 现在的支付方式设置简单了，不需要`VISA`等国外的支付方式，只需要选择中国银联的借记卡或者信用卡，输入卡号和持卡人姓名。我的信用卡正面左下角显示大写的姓名拼音，原样输入就可以。如果是借记卡，要核实持卡人的准确姓名，需要的话可以拨打银行客服确认。
 

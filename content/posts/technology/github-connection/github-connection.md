@@ -38,7 +38,7 @@ ping   github.io
 ping  github.com
 ```
 
-![img](images/ping-github.jpg)
+![img](/images/technology/github-connection/github-connection/ping-github.jpg)
 
 
 
@@ -53,5 +53,5 @@ ping  github.com
 
 打开浏览器，访问https://username.github.io 或者 https://github.com 。如果还是不显示，那就清理浏览器缓存，如下图所示：
 
-![img](images/firefox-cache.png)
+![img](/images/technology/github-connection/github-connection/firefox-cache.png)
 

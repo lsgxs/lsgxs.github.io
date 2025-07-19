@@ -39,11 +39,11 @@ cover:
 
   以前使用过winbuilder制作过，经常遇到因为环境不匹配导致的错误，找问题很费时间和精力，就放弃了。后来遇到了wimbuilder2，目前在github上开源。这里就简单记录一下使用wimbuilder2的使用要点：
 
-![img](images/prepare.png)
+![img](/images/technology/winpe/使用wimBuilder2制作winpe/使用wimBuilder2制作winpe/prepare.png)
 
-![img](images/custome.png)
+![img](/images/technology/winpe/使用wimBuilder2制作winpe/使用wimBuilder2制作winpe/custome.png)
 
-![img](images/build.png)
+![img](/images/technology/winpe/使用wimBuilder2制作winpe/使用wimBuilder2制作winpe/build.png)
 
 制作好winpe之后，发现有自己需要而winpe中不包含的软件，如何添加呢
 ###### 自定义添加自己需要的软件
@@ -130,8 +130,8 @@ call PinToStartmenu regedit.exe
 * 选择启动\写入硬盘映像
 * 确认好U盘的盘符，使用HDD++的方式写入U盘（U盘会被格式，制作前要确认U盘上没有重要数据）
 
-![img](images/ultraiso_open.png)
-![img](images/写入硬盘映像.png)
+![img](/images/technology/winpe/使用wimBuilder2制作winpe/使用wimBuilder2制作winpe/ultraiso_open.png)
+![img](/images/technology/winpe/使用wimBuilder2制作winpe/使用wimBuilder2制作winpe/写入硬盘映像.png)
 
 ###### 自定义制作完成的Winpe桌面背景
 
@@ -141,4 +141,4 @@ call PinToStartmenu regedit.exe
 
 * 不要直接解压这个WimBuilder2制作好的BOOTPE.ISO，解压后再修改boot.wim文件，在打包成ISO时发现启动信息错误，又要按照制作启动盘的方法重新导入启动信息再打包，有点麻烦了。所以就是用UltraISO直接打开BOOTPE.ISO，然后把boot.wim释放出来修改，修改后再放回到原来的位置保存即可。一句话，在保持BOOTPE.ISO的启动框架下修改boot.wim会简单点，要不然就需要重新制作启动盘的操作了。
 
-![img](images/ultraiso.png)
+![img](/images/technology/winpe/使用wimBuilder2制作winpe/使用wimBuilder2制作winpe/ultraiso.png)

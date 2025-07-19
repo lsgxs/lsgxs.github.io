@@ -15,7 +15,7 @@ cover:
 
   关于在static目录下存放资源文件的方法，再专门写一篇文章
 
-  ![](images/github-pages-docs.png)
+  ![](/images/technology/在github基于项目GitHubPages部署hugo博客/在github基于项目GitHubPages部署hugo博客/github-pages-docs.png)
 
 * 参照hugo官网的[QuickStart](https://gohugo.io/getting-started/quick-start/)项目步骤，在本地建立hugo博客项目。
 
@@ -66,7 +66,7 @@ cover:
   * https://username.github.io/hugo
 
 下面的步骤介绍如何使用单独的gh-pages分支保存发布的静态网页文件。如果不使用单独的分支来保存静态网页文件，就要设定发布源为Github Actions,如下图所示
-![](images/github-pages-docs.png)
+![](/images/technology/在github基于项目GitHubPages部署hugo博客/在github基于项目GitHubPages部署hugo博客/github-pages-docs.png)
 
 *    建立独立的分支gh-pages,用来保存发布的静态网页文件
 
