@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github on ExampleSite</title>
+    <link>https://lsgxs.github.io/tags/github/</link>
+    <description>Recent content in Github on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Nov 2022 16:36:14 +0800</lastBuildDate>
+    <atom:link href="https://lsgxs.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>善用github之Pull Request</title>
+      <link>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>在一台计算机上用git管理多个github账号</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>
+      <pubDate>Tue, 01 Nov 2022 22:03:27 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先取消用户名和邮箱的全局设置&lt;/p&gt;
+&lt;p&gt;git config &lt;code&gt;--list&lt;/code&gt;查看一下全局配置参数列表，如果列表显示里包含自己设置的github登录用户名和邮箱，就使用下面两条命令取消全局配置参数：&lt;/p&gt;
+&lt;p&gt;git config &lt;code&gt;--global&lt;/code&gt; &lt;code&gt;--unset&lt;/code&gt; user.name “your-name-for-github”&lt;/p&gt;
+&lt;p&gt;git config &lt;code&gt;--global &lt;/code&gt; &lt;code&gt;--unset&lt;/code&gt; user.email  &amp;ldquo;your-mailbox-for-github&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用ssh-keygen分别生成多个github账户对应的密钥对&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t ed25519 -f id_ed25519_hexo -C &amp;quot;mailbox-for-github&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t ed25519 -f id_ed25519_hugo -C &amp;quot;mailbox-for-github&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C &amp;quot;mailbox-for-github&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、 把对应账号的公钥添加在github的settings-&amp;gt;ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、启动ssh-agent添加私钥
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;ssh-agent -s&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ssh-add  ~/.ssh/id_xxxxxx         --后面的参数是对应的私钥文件名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   参照：https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;code&gt;~/.ssh&lt;/code&gt;目录下新建config文件（没有扩展名的文本文件），内容如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#first
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;hexo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;HostName&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;github.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;username_for_github&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;IdentityFile&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/.ssh/id_xxxxxx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#second
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;hugo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;HostName&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;github.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;username_for_github&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;IdentityFile&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/.ssh/id_ed25xxxxxx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Third
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;tiddlywiki&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;HostName&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;github.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;username_for_github&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;IdentityFile&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/.ssh/id_edxxxxx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;--Host是主机的别名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;--HostName都是github.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;--User对应三个github账户的用户名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;--IdentityFile&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;是~/.ssh/目录下对应的私钥文件名称&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置好密钥对文件和config文件之后，测试ssh通过git协议能否联通github&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

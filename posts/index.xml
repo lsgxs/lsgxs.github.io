@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on ExampleSite</title>
+    <link>https://lsgxs.github.io/posts/</link>
+    <description>Recent content in Posts on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://lsgxs.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 12 Jul 2025 17:43:00 +0800</lastBuildDate>
+    <atom:link href="https://lsgxs.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Todolist</title>
+      <link>https://lsgxs.github.io/posts/read/todolist/todolist/</link>
+      <pubDate>Mon, 28 Nov 2022 10:11:27 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/read/todolist/todolist/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>PaperMod QuickStart</title>
+      <link>https://lsgxs.github.io/posts/technology/papermodqucikstart/papermodqucikstart/</link>
+      <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/papermodqucikstart/papermodqucikstart/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>自己动手酿制醪糟</title>
+      <link>https://lsgxs.github.io/posts/meishi/%E9%86%AA%E7%B3%9F/%E9%86%AA%E7%B3%9F/</link>
+      <pubDate>Sat, 12 Jul 2025 17:38:00 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/meishi/%E9%86%AA%E7%B3%9F/%E9%86%AA%E7%B3%9F/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>轮胎</title>
+      <link>https://lsgxs.github.io/posts/car/%E8%BD%AE%E8%83%8E/%E8%BD%AE%E8%83%8E/</link>
+      <pubDate>Wed, 28 May 2025 16:09:41 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/car/%E8%BD%AE%E8%83%8E/%E8%BD%AE%E8%83%8E/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>市盈率的模型</title>
+      <link>https://lsgxs.github.io/posts/economic/stock/%E5%B8%82%E7%9B%88%E7%8E%87/%E5%B8%82%E7%9B%88%E7%8E%87%E7%9A%84%E6%A8%A1%E5%9E%8B/%E5%B8%82%E7%9B%88%E7%8E%87%E7%9A%84%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Wed, 26 Feb 2025 16:50:01 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/economic/stock/%E5%B8%82%E7%9B%88%E7%8E%87/%E5%B8%82%E7%9B%88%E7%8E%87%E7%9A%84%E6%A8%A1%E5%9E%8B/%E5%B8%82%E7%9B%88%E7%8E%87%E7%9A%84%E6%A8%A1%E5%9E%8B/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>投资和分红</title>
+      <link>https://lsgxs.github.io/posts/economic/stock/%E6%8A%95%E8%B5%84%E5%92%8C%E5%88%86%E7%BA%A2/%E6%8A%95%E8%B5%84%E5%92%8C%E5%88%86%E7%BA%A2/</link>
+      <pubDate>Wed, 26 Feb 2025 11:39:41 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/economic/stock/%E6%8A%95%E8%B5%84%E5%92%8C%E5%88%86%E7%BA%A2/%E6%8A%95%E8%B5%84%E5%92%8C%E5%88%86%E7%BA%A2/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>更换防冻冷却液</title>
+      <link>https://lsgxs.github.io/posts/car/vitara%E4%BF%9D%E5%85%BB%E7%BB%B4%E6%8A%A4/%E6%9B%B4%E6%8D%A2%E9%98%B2%E5%86%BB%E5%86%B7%E5%8D%B4%E6%B6%B2/%E6%9B%B4%E6%8D%A2%E9%98%B2%E5%86%BB%E5%86%B7%E5%8D%B4%E6%B6%B2/</link>
+      <pubDate>Sun, 26 Jan 2025 08:29:50 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/car/vitara%E4%BF%9D%E5%85%BB%E7%BB%B4%E6%8A%A4/%E6%9B%B4%E6%8D%A2%E9%98%B2%E5%86%BB%E5%86%B7%E5%8D%B4%E6%B6%B2/%E6%9B%B4%E6%8D%A2%E9%98%B2%E5%86%BB%E5%86%B7%E5%8D%B4%E6%B6%B2/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Pull Request</title>
+      <link>https://lsgxs.github.io/posts/technology/git/pullrequest/pullrequest/</link>
+      <pubDate>Tue, 28 May 2024 11:05:47 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/git/pullrequest/pullrequest/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>LearnNetBsd</title>
+      <link>https://lsgxs.github.io/posts/technology/netbsd/learnnetbsd/learnnetbsd/</link>
+      <pubDate>Wed, 15 May 2024 17:13:30 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/netbsd/learnnetbsd/learnnetbsd/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Amazon海外购注册及设置</title>
+      <link>https://lsgxs.github.io/posts/technology/amazon/register_pay_address/register_pay_address/</link>
+      <pubDate>Thu, 09 May 2024 09:59:12 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/amazon/register_pay_address/register_pay_address/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Learning  The Unix Operating System</title>
+      <link>https://lsgxs.github.io/posts/technology/unix/learnunix/learnunix/</link>
+      <pubDate>Mon, 29 Apr 2024 14:32:47 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/unix/learnunix/learnunix/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Excel计算两个日期之间的月数</title>
+      <link>https://lsgxs.github.io/posts/technology/excel/calcmonthsofdatedif/calcmonthsofdatedif/</link>
+      <pubDate>Thu, 25 Apr 2024 17:35:36 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/excel/calcmonthsofdatedif/calcmonthsofdatedif/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>TCP/IP</title>
+      <link>https://lsgxs.github.io/posts/technology/tcp_ip/tcp_ip/</link>
+      <pubDate>Thu, 07 Mar 2024 20:20:04 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/tcp_ip/tcp_ip/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Curl</title>
+      <link>https://lsgxs.github.io/posts/technology/curl/curl/</link>
+      <pubDate>Wed, 06 Mar 2024 10:02:19 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/curl/curl/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Http学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/http%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/http%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 01 Mar 2024 20:40:15 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/http%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/http%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>股票投资的基本概念</title>
+      <link>https://lsgxs.github.io/posts/economic/stock/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9F%A5%E8%AF%86%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9F%A5%E8%AF%86%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Tue, 27 Feb 2024 09:54:22 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/economic/stock/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9F%A5%E8%AF%86%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9F%A5%E8%AF%86%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Financial</title>
+      <link>https://lsgxs.github.io/posts/economic/financial/financial/</link>
+      <pubDate>Thu, 22 Feb 2024 15:52:04 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/economic/financial/financial/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Vitara四驱系统</title>
+      <link>https://lsgxs.github.io/posts/car/vitara%E5%9B%9B%E9%A9%B1%E7%B3%BB%E7%BB%9F/vitara%E5%9B%9B%E9%A9%B1%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Wed, 21 Feb 2024 17:01:07 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/car/vitara%E5%9B%9B%E9%A9%B1%E7%B3%BB%E7%BB%9F/vitara%E5%9B%9B%E9%A9%B1%E7%B3%BB%E7%BB%9F/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>自定义typora</title>
+      <link>https://lsgxs.github.io/posts/technology/typora/%E8%87%AA%E5%AE%9A%E4%B9%89typora/%E8%87%AA%E5%AE%9A%E4%B9%89typora/</link>
+      <pubDate>Tue, 20 Feb 2024 10:58:20 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/typora/%E8%87%AA%E5%AE%9A%E4%B9%89typora/%E8%87%AA%E5%AE%9A%E4%B9%89typora/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Python学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/python/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 09 Feb 2024 09:49:02 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/python/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Vitara保养维护</title>
+      <link>https://lsgxs.github.io/posts/car/vitara%E4%BF%9D%E5%85%BB%E7%BB%B4%E6%8A%A4/vitara%E4%BF%9D%E5%85%BB%E7%BB%B4%E6%8A%A4/</link>
+      <pubDate>Fri, 02 Feb 2024 09:14:51 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/car/vitara%E4%BF%9D%E5%85%BB%E7%BB%B4%E6%8A%A4/vitara%E4%BF%9D%E5%85%BB%E7%BB%B4%E6%8A%A4/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>2024年关于自己投资方法的调整</title>
+      <link>https://lsgxs.github.io/posts/economic/stock/2024%E5%B9%B4%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E6%8A%95%E8%B5%84%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E6%95%B4/2024%E5%B9%B4%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E6%8A%95%E8%B5%84%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E6%95%B4/</link>
+      <pubDate>Wed, 31 Jan 2024 15:20:15 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/economic/stock/2024%E5%B9%B4%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E6%8A%95%E8%B5%84%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E6%95%B4/2024%E5%B9%B4%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E6%8A%95%E8%B5%84%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E6%95%B4/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Go学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/go/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 31 Dec 2023 22:49:04 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/go/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>MySQL学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/mysql/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 25 Dec 2023 20:14:00 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/mysql/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>bootstrap学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/css/bootstrap/bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 16 Dec 2023 17:33:35 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/css/bootstrap/bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>CSS  学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 16 Dec 2023 17:33:35 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/css/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/css%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Github Connection</title>
+      <link>https://lsgxs.github.io/posts/technology/github-connection/github-connection/</link>
+      <pubDate>Sat, 16 Dec 2023 17:32:35 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/github-connection/github-connection/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Windows局域网共享打印机</title>
+      <link>https://lsgxs.github.io/posts/technology/windows/shareprinter/shareprinter/</link>
+      <pubDate>Wed, 13 Dec 2023 16:02:02 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/windows/shareprinter/shareprinter/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Getting Started With Web</title>
+      <link>https://lsgxs.github.io/posts/technology/web/gettingstartwithweb/gettingstartwithweb/</link>
+      <pubDate>Sun, 13 Aug 2023 12:14:15 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/web/gettingstartwithweb/gettingstartwithweb/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Excel使用技巧</title>
+      <link>https://lsgxs.github.io/posts/technology/excel/excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Wed, 02 Aug 2023 06:06:51 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/excel/excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>批处理设置IE安全区域注册表项</title>
+      <link>https://lsgxs.github.io/posts/technology/windows/windows_ie/windows_ie/</link>
+      <pubDate>Fri, 28 Jul 2023 21:55:53 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/windows/windows_ie/windows_ie/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>统信UOS系统的安装</title>
+      <link>https://lsgxs.github.io/posts/technology/unix_linux/uos%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85/uos%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 24 Jul 2023 19:56:18 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/unix_linux/uos%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85/uos%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>自己动手制作酸豆角</title>
+      <link>https://lsgxs.github.io/posts/meishi/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%88%B6%E4%BD%9C%E9%85%B8%E8%B1%86%E8%A7%92/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%88%B6%E4%BD%9C%E9%85%B8%E8%B1%86%E8%A7%92/</link>
+      <pubDate>Tue, 18 Jul 2023 19:52:59 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/meishi/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%88%B6%E4%BD%9C%E9%85%B8%E8%B1%86%E8%A7%92/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%88%B6%E4%BD%9C%E9%85%B8%E8%B1%86%E8%A7%92/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Win7英文版及语言包</title>
+      <link>https://lsgxs.github.io/posts/technology/win7/win7%E8%8B%B1%E6%96%87%E7%89%88%E5%8F%8A%E8%AF%AD%E8%A8%80%E5%8C%85/win7%E8%8B%B1%E6%96%87%E7%89%88%E5%8F%8A%E8%AF%AD%E8%A8%80%E5%8C%85/</link>
+      <pubDate>Thu, 13 Jul 2023 22:11:04 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/win7/win7%E8%8B%B1%E6%96%87%E7%89%88%E5%8F%8A%E8%AF%AD%E8%A8%80%E5%8C%85/win7%E8%8B%B1%E6%96%87%E7%89%88%E5%8F%8A%E8%AF%AD%E8%A8%80%E5%8C%85/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>快速重建hugo博客站点</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo/%E5%BF%AB%E9%80%9F%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9/%E5%BF%AB%E9%80%9F%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9/</link>
+      <pubDate>Sun, 09 Jul 2023 22:11:22 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/hugo/%E5%BF%AB%E9%80%9F%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9/%E5%BF%AB%E9%80%9F%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>手动制作winpe</title>
+      <link>https://lsgxs.github.io/posts/technology/winpe/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9Cwinpe/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9Cwinpe/</link>
+      <pubDate>Sun, 02 Jul 2023 13:29:48 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/winpe/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9Cwinpe/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9Cwinpe/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>使用wimBuilder2制作winpe</title>
+      <link>https://lsgxs.github.io/posts/technology/winpe/%E4%BD%BF%E7%94%A8wimbuilder2%E5%88%B6%E4%BD%9Cwinpe/%E4%BD%BF%E7%94%A8wimbuilder2%E5%88%B6%E4%BD%9Cwinpe/</link>
+      <pubDate>Sat, 17 Jun 2023 17:43:45 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/winpe/%E4%BD%BF%E7%94%A8wimbuilder2%E5%88%B6%E4%BD%9Cwinpe/%E4%BD%BF%E7%94%A8wimbuilder2%E5%88%B6%E4%BD%9Cwinpe/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>使用远程桌面连接在Window10和Hyper-V虚拟机之间传送文件</title>
+      <link>https://lsgxs.github.io/posts/technology/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+      <pubDate>Sun, 11 Jun 2023 08:00:43 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>用WindowsADK创建WinPE</title>
+      <link>https://lsgxs.github.io/posts/technology/winpe/%E7%94%A8windowsadk%E5%88%9B%E5%BB%BAwinpe/%E7%94%A8windowsadk%E5%88%9B%E5%BB%BAwinpe/</link>
+      <pubDate>Thu, 08 Jun 2023 07:13:44 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/winpe/%E7%94%A8windowsadk%E5%88%9B%E5%BB%BAwinpe/%E7%94%A8windowsadk%E5%88%9B%E5%BB%BAwinpe/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>一本书看懂财务报表</title>
+      <link>https://lsgxs.github.io/posts/economic/stock/%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9C%8B%E6%87%82%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9C%8B%E6%87%82%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/</link>
+      <pubDate>Tue, 30 May 2023 07:16:08 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/economic/stock/%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9C%8B%E6%87%82%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9C%8B%E6%87%82%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>股票投资的几个阶段感悟</title>
+      <link>https://lsgxs.github.io/posts/economic/stock/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%84%9F%E6%82%9F/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Sun, 21 May 2023 22:13:17 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/economic/stock/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%84%9F%E6%82%9F/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%84%9F%E6%82%9F/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>我的感悟</title>
+      <link>https://lsgxs.github.io/posts/think/%E6%88%91%E7%9A%84%E6%84%9F%E6%82%9F/%E6%88%91%E7%9A%84%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Sun, 07 May 2023 09:36:03 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/think/%E6%88%91%E7%9A%84%E6%84%9F%E6%82%9F/%E6%88%91%E7%9A%84%E6%84%9F%E6%82%9F/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Install Apache PHP MySQL Manually</title>
+      <link>https://lsgxs.github.io/posts/technology/apache-php-mysql/apache-php-mysql/</link>
+      <pubDate>Wed, 21 Dec 2022 17:09:58 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/apache-php-mysql/apache-php-mysql/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>在本地计算机安装WordPress</title>
+      <link>https://lsgxs.github.io/posts/technology/wordpress/wordpress/</link>
+      <pubDate>Fri, 16 Dec 2022 22:23:57 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/wordpress/wordpress/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Nginx QuickStart</title>
+      <link>https://lsgxs.github.io/posts/technology/nginx/nginx/</link>
+      <pubDate>Wed, 07 Dec 2022 17:08:24 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/nginx/nginx/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Caddy QuickStart</title>
+      <link>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/</link>
+      <pubDate>Fri, 02 Dec 2022 21:31:59 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/caddy%E5%85%A5%E9%97%A8%E4%B9%8Bquickstart/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Caddy Command Line</title>
+      <link>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Fri, 02 Dec 2022 19:43:35 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/caddy/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/caddy%E5%85%A5%E9%97%A8%E4%B9%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>正向代理和反向代理</title>
+      <link>https://lsgxs.github.io/posts/technology/network/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Thu, 01 Dec 2022 13:01:08 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/network/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
+      <description>forward and reverse proxy</description>
+    </item>
+    <item>
+      <title>FileBrowser</title>
+      <link>https://lsgxs.github.io/posts/technology/filebrowser/filebrowser/</link>
+      <pubDate>Wed, 30 Nov 2022 21:03:15 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/filebrowser/filebrowser/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Html简要学习笔记</title>
+      <link>https://lsgxs.github.io/posts/technology/html/html/</link>
+      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/html/html/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>善用github之Pull Request</title>
+      <link>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/github/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/%E5%96%84%E7%94%A8github%E4%B9%8Bgit-pull-request/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>常用软件</title>
+      <link>https://lsgxs.github.io/posts/download/mydownload/mydownload/</link>
+      <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/download/mydownload/mydownload/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>阅读计划</title>
+      <link>https://lsgxs.github.io/posts/read/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/</link>
+      <pubDate>Thu, 24 Nov 2022 13:19:38 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/read/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Difference Between Git Clone Submoudule Downlaod</title>
+      <link>https://lsgxs.github.io/posts/technology/difference-between-git-clone-submoudule-downlaod/difference-between-git-clone-submoudule-downlaod/</link>
+      <pubDate>Wed, 23 Nov 2022 22:48:02 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/difference-between-git-clone-submoudule-downlaod/difference-between-git-clone-submoudule-downlaod/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>page bundle</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo/pagebundle/pagebundle/</link>
+      <pubDate>Tue, 22 Nov 2022 22:12:51 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/hugo/pagebundle/pagebundle/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>Papermod参数设置</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Tue, 22 Nov 2022 17:20:56 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/hugo/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/papermod%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;h4 id=&#34;papermod主题configyml文件的常用参数及设置&#34;&gt;PaperMod主题config.yml文件的常用参数及设置&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;paginate : 8  一页显示8个文档&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;theme: PaperMod   主题名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ShowCodeCopyButtons: 显示代码复制按钮&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UseHogoToc: false      设置为false，可以使用下面两项使用PaperMod自带的toc设置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;showtoc: true&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tocopen: true&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;weight： 决定这篇文章的优先级，可以把经常需要看的置顶，设置为1、2、3等顺序。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ProfileMode:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;enabled :  true  设置为true的话，主题显示为profile mode 风格，设置为false为regular常规模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;menu下的main :&lt;/p&gt;
+&lt;p&gt;identifier: archives&lt;/p&gt;
+&lt;p&gt;name: archives&lt;/p&gt;
+&lt;p&gt;url: /archives/&lt;/p&gt;
+&lt;p&gt;weight: 10&lt;/p&gt;
+&lt;p&gt;- identifier: posts&lt;/p&gt;
+&lt;p&gt;name: posts&lt;/p&gt;
+&lt;p&gt;url: /posts/&lt;/p&gt;
+&lt;p&gt;weight: 10&lt;/p&gt;
+&lt;p&gt;- identifier: tags&lt;/p&gt;
+&lt;p&gt;name: tags&lt;/p&gt;
+&lt;p&gt;url: /tags/&lt;/p&gt;
+&lt;p&gt;weight: 20&lt;/p&gt;
+&lt;p&gt;- identifier: search&lt;/p&gt;
+&lt;p&gt;name: search&lt;/p&gt;
+&lt;p&gt;url: /search/&lt;/p&gt;
+&lt;p&gt;weight: 10&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​        这里对应的是模板文件：archives、posts、search&lt;/p&gt;
+&lt;p&gt;先记录这些，基本可以让博客运行起来，其他的可以再测试。&lt;/p&gt;
+&lt;h4 id=&#34;front-matter区域的参数设置&#34;&gt;Front Matter区域的参数设置&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;itle: &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34;
+date: {{ .Date }}
+# weight: 1
+# aliases: [&amp;#34;/first&amp;#34;]
+tags: [&amp;#34;first&amp;#34;,&amp;#34;删除github分支&amp;#34;,&amp;#34;github分支&amp;#34;]  
+author: &amp;#34;Me&amp;#34;
+# author: [&amp;#34;Me&amp;#34;, &amp;#34;You&amp;#34;] # multiple authors
+showToc: true
+TocOpen: true
+draft: false
+hidemeta: false
+comments: false
+description: &amp;#34;Desc Text.&amp;#34;
+canonicalURL: &amp;#34;https://canonical.url/to/page&amp;#34;
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: false
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: false
+ShowRssButtonInSectionTermList: true
+UseHugoToc: false
+cover:
+    image: &amp;#34;images/冰山.jpg&amp;#34; # image path/url
+    alt: &amp;#34;&amp;lt;alt text&amp;gt;&amp;#34; # alt text
+    caption: &amp;#34;&amp;lt;text&amp;gt;&amp;#34; # display caption under cover
+    relative: false # when using page bundles set this to true
+    hidden: true # only hide on current single page
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>ExampleSite</title>
+      <link>https://lsgxs.github.io/posts/technology/examplesite/examplesite/</link>
+      <pubDate>Fri, 18 Nov 2022 23:06:19 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/examplesite/examplesite/</guid>
+      <description>&lt;h4 id=&#34;关于themes中自带examplesite的使用方法&#34;&gt;关于Themes中自带ExampleSite的使用方法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;学习一个新的hugo博客站点主题，可以使用主题中自带的ExampleSite站点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ mkdir your-site
+$ cd your-site
+$ mkdir themes
+$ cd themes
+$ git clone https://github.com/repository-url.git
+$ cp -r themes-name/exampleSite/** ../    --把ExampleSite站点目录下的所有内容复制到你的站点根目录
+$ cd ..
+$ hugo serve   
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;如果你的站点已经是一个git 仓库项目了，可以使用git submoudle 的方法添加这个主题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; git submodule add https://github.com/repository-name   themes/theme-name
+ hugo serve -t  hugo-theme-name
+ http://localhost:1313                 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://lsgxs.github.io/images/technology/difference-between-git-clone-submoudule-downlaod/difference-between-git-clone-submoudule-downlaod/%E4%BA%91%E5%B1%B1%E9%9B%BE%E7%BB%95.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在github基于个人或公司GitHub Pages部署hugo博客之二</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</link>
+      <pubDate>Tue, 15 Nov 2022 20:02:48 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</guid>
+      <description>&lt;h4 id=&#34;使用自定义的actons-workflow在仓库的两个分支之间实现hugo博客站点自动化部署&#34;&gt;使用自定义的actons workflow,在仓库的两个分支之间实现hugo博客站点自动化部署&lt;/h4&gt;
+&lt;p&gt;用仓库的main分支保存博客项目源文件，用仓库的另外一个手动建立的独立分支gh-pages保存编译后的静态文件。这里依然以username.github.io形式的仓库为例。自己手动建立独立的gh-pages分支。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在github上新建username.github.io形式的空仓&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在本地根据hugo官网推荐的QuickStart入门教程，建立Hugo博客项目&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-·&#34; data-lang=&#34;·&#34;&gt;hugo  new   site  hugo
+cd hugo 
+git  init
+git  submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git  themes/ananke
+编辑config.toml文件，在最后新增  theme  =  &amp;#34;ananke&amp;#34;
+修改baseURL = &amp;#34;https://username.github.io&amp;#34;
+hugo  new  posts/文档名称作为目录名/index.md    --编辑自己的文档
+git  add .
+git  commit -m   &amp;#34;新增文档&amp;#34;
+git  push  -u origin  main --第一次推送到空仓username.github.io时要带上-u参数，以后不需要带-u参数
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在本地新建一个独立分支gh-pages&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git  checkout  --orphan gh-pages
+echo  &amp;#34;hello github gh-pages&amp;#34; &amp;gt; readme.md 
+git  add .
+git commit -m &amp;#34;add gh-pages branch&amp;#34;
+git push origin gh-pages   --在新建分支后推送到远程仓库分支，要指定源分支，系统会自动建立同名分支，并建立关联。以后再推送分支可以不必再指定源分支。
+git  branch -a   --此时就可以看到新建的独立分支gh-pages。如果不在新建的分支下增加变化并git-add-commit-push ，就不会真正建立分支。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;经过上面两个步骤，username.githbu.io仓库有两个分支：main 、gh-pages。建立并切换到gh-pages分支时，会自动复制main分支的目录和文件，除了.git目录之外，把所有其他目录和文件都删除，然后git-add-commit-push，远程仓库的gh-pages没有别的文件，只用来保存静态的博客站点网页文件。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>设置post模版</title>
+      <link>https://lsgxs.github.io/posts/technology/papermod%E7%9A%84%E6%A8%A1%E7%89%88/papermod%E7%9A%84%E6%A8%A1%E7%89%88/</link>
+      <pubDate>Tue, 15 Nov 2022 11:30:03 +0000</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/papermod%E7%9A%84%E6%A8%A1%E7%89%88/papermod%E7%9A%84%E6%A8%A1%E7%89%88/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>在github基于个人或公司GitHub Pages部署hugo博客之一</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</link>
+      <pubDate>Mon, 14 Nov 2022 22:47:45 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8githubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>在github部署静态博客站点的三种方式</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Mon, 14 Nov 2022 08:49:58 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/%E5%9C%A8github%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <description>&lt;p&gt;最近使用hexo 和hugo两种静态站点框架在github上部署博客，总结一下有三种常用的部署方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在两个不同的仓库之间使用githbu actions flow自动化部署站点
+&lt;ul&gt;
+&lt;li&gt;一个仓库作为博客项目源文件的存储空间&lt;/li&gt;
+&lt;li&gt;另外一个仓库作为博客项目生成的静态文件发布源&lt;/li&gt;
+&lt;li&gt;具体的实现可以参照自己hexo博客的部署项目源文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在一个仓库的两个不同分支之间部署博客站点
+&lt;ul&gt;
+&lt;li&gt;首先要建立一个username.github.io的仓库，在main分支保存博客项目源文件。&lt;/li&gt;
+&lt;li&gt;其次是在本地建立一个独立分支gh-pages，用这个分支来发布生成的静态网页文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;利用github基于项目的github pages服务
+&lt;ul&gt;
+&lt;li&gt;在仓库的main分支保存博客项目源文件&lt;/li&gt;
+&lt;li&gt;在项目的根目录下建立docs目录，并修改config.toml文件，在文件末尾添加publish = &amp;ldquo;docs&amp;quot;的数据项。github项目仓库默认使用docs作为静态站点发布源，替代了public目录的作用，可以删除public目录。&lt;/li&gt;
+&lt;li&gt;也就是说在一个仓库的main分支下保存源文件，同时把项目根目录的docs目录作为静态站点发布源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Hugo自动化部署到github</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
+      <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>测试hugo渲染</title>
+      <link>https://lsgxs.github.io/posts/technology/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 13 Nov 2022 08:31:38 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8githubpages%E4%B8%8A%E5%8F%91%E5%B8%83%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;h4 id=&#34;测试hugo静态文档发布后无法渲染的原因&#34;&gt;测试hugo静态文档发布后无法渲染的原因&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;baseURL的设置&lt;/p&gt;
+&lt;p&gt;在自定义config.toml文件时，一定要设置baseURL值为自己的仓库域名，比如：&lt;code&gt;baseURL = &#39;https://username.github.io/hugo&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hugo   -D&lt;/p&gt;
+&lt;p&gt;刚开始在本地使用hugo server -D ，在浏览器浏览本地静态网页文件时没有问题，但是后来发现这个命令并没有在public目录或者自定义的docs目录下生成静态网页文件。&lt;code&gt;hugo server -D&lt;/code&gt;只是启动自带的这个web服务器，在内存中渲染这些文件，并没有真正生成静态网页文件。在编辑好MarkDown文档之后，要使用hugo  或者hugo  -D在public目录或者自定义的的docs目录生成静态网页文件，然后再执行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git commit -m &amp;quot;updates $(date)&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git   push  origin  &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;也可以把下面这几条命令写在批处理文件中，写完文档后直接运行这个批处理就可以完成发布，稍等使用&lt;code&gt;https://username.github.io/hugo&lt;/code&gt;浏览最新发布的博客文章。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo
+git   add  .
+git  commit -m  &amp;#34;updates $(date)&amp;#34;
+git push origin 
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>在github基于项目GitHub Pages部署hugo博客</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 12 Nov 2022 16:43:00 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithubpages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;前面有两篇笔记专门记录基于个人或者公司GitHub Pages发布hugo博客站点的方法。这篇笔记记录如何在基于项目的GitHub Pages部署博客站点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在github上建立一个项目类型的空白仓库（不要选择readme文件初始化仓库),仓库名称为hugo。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地的仓库时现成的.git仓库时，远程的github仓库最好是空仓，操作起来简单。&lt;/li&gt;
+&lt;li&gt;如果远程是现成的.git仓库，就直接git clone到本地，然后再添加项目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置main分支的docs作为静态网页发布目录&lt;/p&gt;
+&lt;p&gt;关于在static目录下存放资源文件的方法，再专门写一篇文章&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://lsgxs.github.io/images/technology/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEGitHubPages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEGitHubPages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/github-pages-docs.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参照hugo官网的&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;QuickStart&lt;/a&gt;项目步骤，在本地建立hugo博客项目。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Hugo Quickstart</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo-quickstart/hugo-quickstart/</link>
+      <pubDate>Tue, 08 Nov 2022 22:19:18 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/hugo-quickstart/hugo-quickstart/</guid>
+      <description>&lt;h1 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h1&gt;
+&lt;p&gt;Create a Hugo site using the beautiful Ananke theme.&lt;/p&gt;
+&lt;p&gt;This quick start uses &lt;code&gt;macOS&lt;/code&gt; in the examples. For instructions about how to install Hugo on other operating systems, see &lt;a href=&#34;https://gohugo.io/getting-started/installing&#34;&gt;install&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is required to have &lt;a href=&#34;https://git-scm.com/downloads&#34;&gt;Git installed&lt;/a&gt; to run this tutorial.&lt;/p&gt;
+&lt;p&gt;For other approaches to learning Hugo (like books or video tutorials), refer to the &lt;a href=&#34;https://gohugo.io/getting-started/external-learning-resources/&#34;&gt;external learning resources&lt;/a&gt; page.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1: Install Hugo&lt;/h2&gt;
+&lt;p&gt;Install the &lt;strong&gt;extended version of Hugo&lt;/strong&gt; (this is required for the current theme used).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo文档的目录组织结构</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Wed, 02 Nov 2022 20:42:17 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/</guid>
+      <description>&lt;h4 id=&#34;hugo文档的目录组织结构&#34;&gt;hugo文档的目录组织结构&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在posts目录下直接保存markdow文档&lt;/li&gt;
+&lt;li&gt;在posts目录下以文档名新建目录，在这新建的目录下新家index.md，新建一个image目录来保存文章引用的图片资源。
+&lt;ul&gt;
+&lt;li&gt;因为index.md和image是同一个层级的结构，无论是在front matter区域的featured_image，还是正文区域的图片，都可以直接引用这个同级目录下保存的资源文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://lsgxs.github.io/images/technology/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/hugo%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/hugo-doc-directory-strcture.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;也就是以目录的形式来组织文档，不仅层次分明，而且引用的图片也可以得到正确渲染。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>快速安装和使用hugo</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/</link>
+      <pubDate>Tue, 01 Nov 2022 22:32:10 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8hugo/</guid>
+      <description>&lt;h4 id=&#34;安装hugo&#34;&gt;安装hugo&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;hugo一个快速的博客生成器，只需要下载一个二进制的可执行文件即可。下载后可以保持下面的目录结构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;c:/hugo/bin   &amp;ndash;把这个目录的路径添加在Windows的系统path里。&lt;/li&gt;
+&lt;li&gt;c:/hugo/sites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建一个hugo 站点&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd sites
+hugo new site quickstart 
+cd quickstart
+git init 
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+-- 修改config.toml文件，添加theme  = &amp;#34;theme-name&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建一个文档&lt;/p&gt;
+&lt;p&gt;hugo new  posts/your-first-post.md        &amp;ndash;posts是hugo项目保存marddown文档的目录&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; hugo new posts/以文档的名字作为目录名称-不能包含空格/index.md     
+
+ --真正的markdown文档是index.md ，以目录为核心来组织文档，在index.md的同级目录下建立image目录，保存文档引用的图片。
+ --用这种方式来组织hugo文档，在渲染文档引用的图片时不易出错。
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hugo server -D   &amp;ndash;注意这里是大写字母D   &amp;ndash;把生成的静态网页文件保存在public目录，然后&lt;/p&gt;
+&lt;p&gt;​                                                                         &amp;ndash;在浏览器用http://localhost:1313可以浏览文档&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一般可以采用hugo &lt;code&gt;--cleanDestinationDir&lt;/code&gt; 来全新生成博客文档&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Hugo Post中的图像资源引用方法</title>
+      <link>https://lsgxs.github.io/posts/technology/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 01 Nov 2022 22:04:29 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;h4 id=&#34;在hugo的post中如何引用图片&#34;&gt;在hugo的post中如何引用图片&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一个引用图片的位置是在文章的front matter区域，一般使用&lt;code&gt;featured_image: &amp;quot;images/xxx.png&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这个图片默认显示在文章的左边，相当于一个缩略图，装饰作用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在这个位置显示的图片，如果在static目录下建立images目录保存引用的图片的话，发布到github的username.github.io时，却因为无法找到文件而不能渲染。以文章名字新建目录，然后在这个目录下修改markdown文档的名字为index.md，在同级别的目录下新建一个image目录，用来保存在front matte区域显示的缩略图图片。目录结构如下&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;   1+----Hugo-Post中的图像资源引用方法    以文档的名字作为目录名新建目录 
+     2+----image
+       3+----冰山.png
+     2+----index.md                   
+    上面的1、2、3代表3个层级,在index.md内用image/冰山.png的格式引用图片，index.md与image目录同级，直接引用就可以了。 
+ hugo new posts/文档的名字-保持目录名字不能有空格/index.md 
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二个引用图片的位置是在正文区域，一般使用&lt;code&gt;![](/images/xxx.png)&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这个位置引用的图片可以在static目录下新建一个images目录，在images目录下保存要引用的图片。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>在一台计算机上用git管理多个github账号</title>
+      <link>https://lsgxs.github.io/posts/technology/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>
+      <pubDate>Tue, 01 Nov 2022 22:03:27 +0800</pubDate>
+      <guid>https://lsgxs.github.io/posts/technology/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先取消用户名和邮箱的全局设置&lt;/p&gt;
+&lt;p&gt;git config &lt;code&gt;--list&lt;/code&gt;查看一下全局配置参数列表，如果列表显示里包含自己设置的github登录用户名和邮箱，就使用下面两条命令取消全局配置参数：&lt;/p&gt;
+&lt;p&gt;git config &lt;code&gt;--global&lt;/code&gt; &lt;code&gt;--unset&lt;/code&gt; user.name “your-name-for-github”&lt;/p&gt;
+&lt;p&gt;git config &lt;code&gt;--global &lt;/code&gt; &lt;code&gt;--unset&lt;/code&gt; user.email  &amp;ldquo;your-mailbox-for-github&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用ssh-keygen分别生成多个github账户对应的密钥对&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t ed25519 -f id_ed25519_hexo -C &amp;quot;mailbox-for-github&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t ed25519 -f id_ed25519_hugo -C &amp;quot;mailbox-for-github&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t ed25519 -f id_ed25519_tiddlywiki -C &amp;quot;mailbox-for-github&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1、 把对应账号的公钥添加在github的settings-&amp;gt;ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2、启动ssh-agent添加私钥
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;ssh-agent -s&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   ssh-add  ~/.ssh/id_xxxxxx         --后面的参数是对应的私钥文件名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   参照：https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;code&gt;~/.ssh&lt;/code&gt;目录下新建config文件（没有扩展名的文本文件），内容如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#first
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;hexo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;HostName&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;github.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;username_for_github&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;IdentityFile&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/.ssh/id_xxxxxx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#second
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;hugo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;HostName&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;github.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;username_for_github&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;IdentityFile&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/.ssh/id_ed25xxxxxx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Third
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;tiddlywiki&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;HostName&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;github.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;username_for_github&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;IdentityFile&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;sr&#34;&gt;/.ssh/id_edxxxxx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;--Host是主机的别名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;--HostName都是github.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;--User对应三个github账户的用户名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;--IdentityFile&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;是~/.ssh/目录下对应的私钥文件名称&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置好密钥对文件和config文件之后，测试ssh通过git协议能否联通github&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
