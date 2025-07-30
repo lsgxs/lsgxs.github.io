@@ -81,7 +81,7 @@ draft = true
 +++
 ```
 
-这里title是文档的标题，date是建立文档的日期，draft表示文档是否是草稿，在正式发布之前，都要把draft设置为true。
+这里title是文档的标题，date是建立文档的日期，draft表示文档是否是草稿，在正式发布之前，把draft设置为true。
 
 在这新建的Markdown文档的正文区加入一下测试内容并保存，然后运行hugo的服务器
 
@@ -91,7 +91,7 @@ hugo  server -D
 
 ```
 
-此时就可以根据服务器的提示信息，在浏览器使用URL来浏览博客站点的第一个文档，浏览地址因为为默认的1313端口：`http://localhost:1313
+此时就可以根据服务器的提示信息，在浏览器使用URL来浏览博客站点的第一个文档，浏览地址为默认的1313端口：`http://localhost:1313
 
 #### 配置站点
 
@@ -109,6 +109,4 @@ theme： 'ananke'
 
 #### 发布站点
 
-When you *publish* your site, Hugo creates the entire static site in the `public` directory in the root of your project. This includes the HTML files, and assets such as images, CSS files, and JavaScript files
-
-可以在git bash 终端使用`hugo `命令来发布博客站点，没错，就是一个什么都不带的hugo 命令，就也可以发布站点，hugo 会在根目录下创建public目录，然后把生成静态html文件，还有其他的图片、css文件等资源全部复制到public目录下。在浏览器输入`http://localhost:1313/`时，实际上打开的是public目录下的index.html文件。可以观察一下public目录下的所有子目录和文件。当然，这里的发布实际上是在站点根目录下新建一个public目录，在public目录下保存静态站点的所有资源。将来发布到github，原理是一样的，在gitub上的username.github.io仓库的gh-pages分支发布静态站点。
+可以在git bash 终端使用`hugo `命令来发布博客站点，没错，就是一个什么参数都不带的hugo 命令，就也可以发布站点，hugo 会在根目录下创建public目录，然后把生成静态html文件，还有其他的图片、css文件等资源全部复制到public目录下。在浏览器输入`http://localhost:1313/`时，实际上打开的是public目录下的index.html文件。可以观察一下public目录下的所有子目录和文件。当然，这里的发布实际上是在站点根目录下新建一个public目录，在public目录下保存静态站点的所有资源。将来发布到github，原理是一样的，在gitub上的username.github.io仓库的gh-pages分支发布静态站点。
