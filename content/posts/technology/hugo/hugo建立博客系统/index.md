@@ -110,3 +110,108 @@ theme： 'ananke'
 #### 发布站点
 
 可以在git bash 终端使用`hugo `命令来发布博客站点，没错，就是一个什么参数都不带的hugo 命令，就也可以发布站点，hugo 会在根目录下创建public目录，然后把生成静态html文件，还有其他的图片、css文件等资源全部复制到public目录下。在浏览器输入`http://localhost:1313/`时，实际上打开的是public目录下的index.html文件。可以观察一下public目录下的所有子目录和文件。当然，这里的发布实际上是在站点根目录下新建一个public目录，在public目录下保存静态站点的所有资源。将来发布到github，原理是一样的，在gitub上的username.github.io仓库的gh-pages分支发布静态站点。
+
+### 博客站点目录详细介绍
+
+hugotest
+├── ├── .github
+├── │   └── workflows   workflows目录用来保存自动发布的脚本文件，比如：deploy.yaml
+├── ├── archetypes     archetypes目录用来保存新建文档的front  matter的模版，比如default.md 和posts.md，二者的优先级是自定义的posts.md优先，
+├── ├── assets
+├── │   └── css
+├── ├── content
+├── │   └── posts
+├── ├── data
+├── ├── i18n
+├── ├── layouts
+├── │   ├── category
+├── │   ├── section
+├── │   └── _default
+├── ├── public
+├── │   ├── about
+├── │   ├── archives
+├── │   ├── assets
+├── │   ├── categories
+├── │   ├── images
+├── │   ├── links
+├── │   ├── posts
+├── │   ├── search
+├── │   └── tags
+├── ├── static
+├── │   └── images
+├── └── themes
+├──     └── PaperMod
+
+下面这段代码是在windows下输出上边树形目录的代码，需要复制后粘贴在powershell里运行
+```powershell
+function Get-SimpleTree {
+    <#
+    .SYNOPSIS
+        以树状结构显示目录内容（支持自定义深度和文件显示）。
+    .PARAMETER Path
+        要遍历的目录路径。
+    .PARAMETER Depth
+        递归深度（默认：2）。
+    .PARAMETER ShowFiles
+        是否显示文件（默认仅显示目录）。
+    #>
+    param (
+        [string]$Path,          # 路径由外部输入，避免递归时重复弹窗
+        [int]$Depth = 2,        # 默认递归深度
+        [string]$Prefix = "",   # 缩进前缀（递归时使用）
+        [switch]$ShowFiles      # 是否显示文件
+    )
+
+    # 检查路径是否存在
+    if (-not (Test-Path $Path)) {
+        Write-Host "错误：路径 '$Path' 不存在！" -ForegroundColor Red
+        return
+    }
+
+    # 如果是根目录（递归起点），显示目录名并设置初始缩进
+    if ($Prefix -eq "") {
+        $root = Split-Path $Path -Leaf
+        Write-Host $root -ForegroundColor Cyan
+        $Prefix = "├── "  # 初始缩进符号
+    }
+
+    # 获取子项（根据 ShowFiles 参数决定是否包含文件）
+    $items = if ($ShowFiles) { 
+        Get-ChildItem $Path 
+    } else { 
+        Get-ChildItem $Path -Directory 
+    }
+
+    $count = $items.Count
+    $i = 0
+
+    # 遍历当前目录下的每一项
+    $items | ForEach-Object {
+        $i++
+        $isLast = ($i -eq $count)  # 判断是否是最后一项（用于调整符号）
+        $symbol = if ($isLast) { "└── " } else { "├── " }
+        $line = $Prefix + $symbol + $_.Name
+        Write-Host $line -ForegroundColor (Get-ItemColor $_)
+
+        # 递归处理子目录（如果是目录且未达到深度限制）
+        if ($_.PSIsContainer -and $Depth -gt 1) {
+            $nextPrefix = if ($isLast) { "    " } else { "│   " }
+            Get-SimpleTree -Path $_.FullName -Depth ($Depth - 1) -Prefix ($Prefix + $nextPrefix) -ShowFiles:$ShowFiles
+        }
+    }
+}
+
+# 辅助函数：根据文件类型返回颜色
+function Get-ItemColor {
+    param ($item)
+    if ($item -is [System.IO.DirectoryInfo]) { "Green" }        # 目录显示绿色
+    elseif ($item.Extension -match "\.(exe|bat|ps1)$") { "Yellow" } # 可执行文件显示黄色
+    else { "Gray" }                                             # 其他文件显示灰色
+}
+
+# === 调用示例 ===
+Write-Host "`n=== 目录树状图 ===" -ForegroundColor Magenta
+$inputPath = Read-Host "请输入要遍历的目录路径（例如：C:\Windows 或 .\hugotest）"
+Get-SimpleTree -Path $inputPath -Depth 2 -ShowFiles:$false
+```
+
