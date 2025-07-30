@@ -2,7 +2,7 @@
 title: "Learning  The Unix Operating System"
 date: 2024-04-29T14:32:47+08:00
 draft: false
-# weight: 2
+weight: 3
 tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true

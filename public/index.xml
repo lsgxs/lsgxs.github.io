@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.148.1</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Jul 2025 17:43:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jul 2025 14:18:10 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Todolist</title>
@@ -26,6 +26,20 @@
       <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
       <guid>http://localhost:1313/posts/2022/papermod-quickstart/</guid>
       <description>简单的入门Huog&#43;PaperMod主题，构建自己的本地博客</description>
+    </item>
+    <item>
+      <title>Learning  The Unix Operating System</title>
+      <link>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</link>
+      <pubDate>Mon, 29 Apr 2024 14:32:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</guid>
+      <description> Unix的主要两个分支 基于AT&amp;amp;T的System V商用版本Unix和基于BSD的开源版本Unix。商业版本包括SunOS、Solaris、SCO Unix、AIX、HP/UX和 ULTRIX 等，开源版本包括FreeBSD、NetBSD、Linux等。</description>
+    </item>
+    <item>
+      <title>Hugo博客迁移重新部署</title>
+      <link>http://localhost:1313/posts/2025/hugo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 30 Jul 2025 14:18:10 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/hugo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/</guid>
+      <description>简单记录原来的Hugo博客系统迁移后重新部署的过程。如果再有博客迁移，轻车熟路完成内容迁移，简单完成部署</description>
     </item>
     <item>
       <title>自己动手酿制醪糟</title>
@@ -82,13 +96,6 @@
       <pubDate>Thu, 09 May 2024 09:59:12 +0800</pubDate>
       <guid>http://localhost:1313/posts/2024/amazon%E6%B5%B7%E5%A4%96%E8%B4%AD%E6%B3%A8%E5%86%8C%E5%8F%8A%E8%AE%BE%E7%BD%AE/</guid>
       <description>尝试在国外的亚马逊网站购买原版书籍，未知的领域让人好奇，同时又有不确定的困惑，在网上搜了相对简单的方法，这里记录一下</description>
-    </item>
-    <item>
-      <title>Learning  The Unix Operating System</title>
-      <link>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</link>
-      <pubDate>Mon, 29 Apr 2024 14:32:47 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</guid>
-      <description> Unix的主要两个分支 基于AT&amp;amp;T的System V商用版本Unix和基于BSD的开源版本Unix。商业版本包括SunOS、Solaris、SCO Unix、AIX、HP/UX和 ULTRIX 等，开源版本包括FreeBSD、NetBSD、Linux等。</description>
     </item>
     <item>
       <title>Excel计算两个日期之间的月数</title>
