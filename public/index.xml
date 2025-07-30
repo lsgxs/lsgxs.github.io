@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.148.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Jul 2025 14:18:10 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jul 2025 17:50:29 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Todolist</title>
@@ -33,6 +33,13 @@
       <pubDate>Mon, 29 Apr 2024 14:32:47 +0800</pubDate>
       <guid>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</guid>
       <description> Unix的主要两个分支 基于AT&amp;amp;T的System V商用版本Unix和基于BSD的开源版本Unix。商业版本包括SunOS、Solaris、SCO Unix、AIX、HP/UX和 ULTRIX 等，开源版本包括FreeBSD、NetBSD、Linux等。</description>
+    </item>
+    <item>
+      <title>Hugo建立博客系统</title>
+      <link>http://localhost:1313/posts/2025/hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Wed, 30 Jul 2025 17:50:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97/</guid>
+      <description>这篇文档主要记录使用Hugo建立博客系统的详细步骤，主要内容包含下面6个主题。 1、使用Hugo轻松建立个人博客站点 2、博客站点目录详细介绍 3、博客站点的内容组织 4、Hugo博客系统是如何工作的 5、博客系统的部署 6、使用PaperMod主题 </description>
     </item>
     <item>
       <title>Hugo博客迁移重新部署</title>

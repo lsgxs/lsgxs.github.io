@@ -21,6 +21,13 @@
       <description>在接下来的两年内，主要的任务是把时间花在读书和技术实践上，把时间花在哪里，你的收获就会在哪里。</description>
     </item>
     <item>
+      <title>Learning  The Unix Operating System</title>
+      <link>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</link>
+      <pubDate>Mon, 29 Apr 2024 14:32:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</guid>
+      <description> Unix的主要两个分支 基于AT&amp;amp;T的System V商用版本Unix和基于BSD的开源版本Unix。商业版本包括SunOS、Solaris、SCO Unix、AIX、HP/UX和 ULTRIX 等，开源版本包括FreeBSD、NetBSD、Linux等。</description>
+    </item>
+    <item>
       <title>自己动手酿制醪糟</title>
       <link>http://localhost:1313/posts/2025/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E9%85%BF%E5%88%B6%E9%86%AA%E7%B3%9F/</link>
       <pubDate>Sat, 12 Jul 2025 17:38:00 +0800</pubDate>
@@ -75,13 +82,6 @@
       <pubDate>Thu, 09 May 2024 09:59:12 +0800</pubDate>
       <guid>http://localhost:1313/posts/2024/amazon%E6%B5%B7%E5%A4%96%E8%B4%AD%E6%B3%A8%E5%86%8C%E5%8F%8A%E8%AE%BE%E7%BD%AE/</guid>
       <description>尝试在国外的亚马逊网站购买原版书籍，未知的领域让人好奇，同时又有不确定的困惑，在网上搜了相对简单的方法，这里记录一下</description>
-    </item>
-    <item>
-      <title>Learning  The Unix Operating System</title>
-      <link>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</link>
-      <pubDate>Mon, 29 Apr 2024 14:32:47 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2024/learning-the-unix-operating-system/</guid>
-      <description> Unix的主要两个分支 基于AT&amp;amp;T的System V商用版本Unix和基于BSD的开源版本Unix。商业版本包括SunOS、Solaris、SCO Unix、AIX、HP/UX和 ULTRIX 等，开源版本包括FreeBSD、NetBSD、Linux等。</description>
     </item>
     <item>
       <title>Excel计算两个日期之间的月数</title>

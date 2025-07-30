@@ -18,7 +18,7 @@
       <link>http://localhost:1313/posts/2025/hugo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Wed, 30 Jul 2025 14:18:10 +0800</pubDate>
       <guid>http://localhost:1313/posts/2025/hugo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2/</guid>
-      <description>简单记录原来的博客系统迁移后重新部署的过程。如果以后有同样的博客迁移，可以轻车熟路完成内容迁移后简单完成部署</description>
+      <description>简单记录原来的Hugo博客系统迁移后重新部署的过程。如果再有博客迁移，轻车熟路完成内容迁移，简单完成部署</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,4 @@
 ---
-​---
 title: "{{ replace .Name "-" " " | title }}"
 slug: "{{ .Name | urlize }}"
 date: {{ .Date }}
@@ -9,6 +8,5 @@ tags: ["默认标签"]
 toc: true
 description: " "
 thumbnail: "images/"
-​---
 ---
 

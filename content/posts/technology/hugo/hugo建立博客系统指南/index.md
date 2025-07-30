@@ -1,0 +1,114 @@
+---
+title: "Hugo建立博客系统"
+slug: "hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97"
+date: 2025-07-30T17:50:29+08:00
+draft: false
+categories: ["默认分类"]
+tags: ["默认标签"]
+toc: true
+thumbnail: "images/create-site.png"
+description: "这篇文档主要记录使用Hugo建立博客系统的详细步骤，主要内容包含下面6个主题。
+1、使用Hugo轻松建立个人博客站点
+2、博客站点目录详细介绍
+3、博客站点的内容组织
+4、Hugo博客系统是如何工作的
+5、博客系统的部署
+6、使用PaperMod主题 "
+---
+
+这篇文档主要记录使用Hugo建立博客系统的详细步骤，主要内容包含下面6个主题
+```
+1、使用Hugo轻松建立个人博客站点
+2、博客站点目录详细介绍
+3、博客站点的内容组织
+4、Hugo博客系统是如何工作的
+5、博客系统的部署
+6、使用PaperMod主题
+```
+
+### 使用Hugo轻松建立个人博客站点
+
+```
+1、 建立站点
+2、 添加文档 
+3、 配置站点 
+4、 发布站点 
+```
+
+在开始使用Hugo建立站点之前，需要做好两个准备工作：
+
+* 安装Hugo 
+
+  * **下载`hugo`**。在`github.com`上下载[`hugo`](https://github.com/gohugoio/hugo/releases/latest) 的对应操作系统版本，选择the extended  editions 就可以了。至于`extended/deploy`   editions多了发布到知名网站的功能：`Deploy your site directly to a Google Cloud Storage bucket, an AWS S3 bucket, or an Azure Storage container. `我这里最后发布到`github`,所以就不需要下载扩展/发布的版本了。
+  * **安装`hugo`**。我这里使用的Windows平台，下载的`hugo`是一个单独的可执行文件，不需安装，只需把这个文件放置在自己指定的目录，然后把可执行文件所在目录的路径添加在`path`环境变量里，添加在用户环境变量或者系统环境变量都是可以的。
+
+  * **测试`hugo`**。在git 还没有安装时，无法使用`git  bash`命令行终端，可以在`Windwos`自带的`CMD`命令行窗口使用`hugo  version`，能正常显示`hugo`版本号就说明安装好了。  
+
+* 安装Git 
+
+    到[git官网](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)下载对应操作系统版本的git安装就好。
+
+####  建立站点
+
+```bash
+hugo  new  site  site-name  --format   yaml
+cd  site-name   
+git   init
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+#如果没有带--format  yaml参数，默认生成的是hugo.toml参数，变量和数值之间使用等号`=`，而不是冒号`:`
+echo "theme: 'ananke'" >> hugo.yaml
+hugo  server
+```
+
+#### 新建文档
+
+```bash
+hugo  new content  content/posts/learnhugo.md
+
+#等采用了branch  bundle和leaf bundle的方式组织站点目录之后，就可以使用下面的写法新建文档
+hugo  new   posts/technology/learnhugo/index.md
+```
+
+这里使用最简单的默认文档模版。新建文档的模版保存在博看站点更目录下的`archetypes`目录下，新建站点的archetype目录下只有一个default.md文档，这个文档作为新建文档的front matter模版，保持最简单的title、date、draft三个文档元数据，对hugo越来越熟悉之后，就可以在archetypes目录下新建posts.md文件,添加一些类似category、tag、thumbnail、description等更加丰富的front matter元数据。
+
+默认的文档front  matter如下所示：
+
+```
++++
+title = 'My First Post'
+date = 2025-05-23T07:07:07+01:00
+draft = true
++++
+```
+
+这里title是文档的标题，date是建立文档的日期，draft表示文档是否是草稿，在正式发布之前，都要把draft设置为true。
+
+在这新建的Markdown文档的正文区加入一下测试内容并保存，然后运行hugo的服务器
+
+```
+# 这里的-D表示包含草稿，也就是draft=true的文档 
+hugo  server -D 
+
+```
+
+此时就可以根据服务器的提示信息，在浏览器使用URL来浏览博客站点的第一个文档，浏览地址因为为默认的1313端口：`http://localhost:1313
+
+#### 配置站点
+
+博客站点根目录下的hugo.yaml，旧版本一般是config.yaml，不过两者都可以使用，推荐使用新版本的写法：hugo.yaml。配置文件在新建站点时默认为toml后缀，我这里使用`--format  yaml`参数指定新建站点时使用yaml格式的配置文件：hugo.yaml。下面是hugo.yaml文件的内容
+
+```
+baseURL：  'https://example.org/'
+languageCode： 'en-us'
+title： 'My New Hugo Site'
+#新建站点时，只有前边三行数据，下面的主题设置需要手动添加
+theme： 'ananke'
+```
+
+这里主要是最后一行的theme值，要把它设置为需要的主题，这里是参照hugo官方文档的初学教程，使用ananke主题。新建站点时，配置文件里只有前边三行数据，主题设置需要手动添加：`theme: ananke`，注意冒号后边一定要有一个空格，否则hugo编译时会提示错误信息。如果使用默认的toml格式配置文件，要使用`=`号而不是冒号`:`。
+
+#### 发布站点
+
+When you *publish* your site, Hugo creates the entire static site in the `public` directory in the root of your project. This includes the HTML files, and assets such as images, CSS files, and JavaScript files
+
+可以在git bash 终端使用`hugo `命令来发布博客站点，没错，就是一个什么都不带的hugo 命令，就也可以发布站点，hugo 会在根目录下创建public目录，然后把生成静态html文件，还有其他的图片、css文件等资源全部复制到public目录下。在浏览器输入`http://localhost:1313/`时，实际上打开的是public目录下的index.html文件。可以观察一下public目录下的所有子目录和文件。当然，这里的发布实际上是在站点根目录下新建一个public目录，在public目录下保存静态站点的所有资源。将来发布到github，原理是一样的，在gitub上的username.github.io仓库的gh-pages分支发布静态站点。
