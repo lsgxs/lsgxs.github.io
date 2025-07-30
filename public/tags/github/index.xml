@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github on 技术博客</title>
+    <link>http://localhost:1313/tags/github/</link>
+    <description>Recent content in Github on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://localhost:1313/images/site-cover.jpg</url>
+      <link>http://localhost:1313/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Nov 2022 16:36:14 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>善用github之Pull Request</title>
+      <link>http://localhost:1313/posts/2022/%E5%96%84%E7%94%A8github%E4%B9%8Bpull-request/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2022/%E5%96%84%E7%94%A8github%E4%B9%8Bpull-request/</guid>
+      <description>通过pull request在github上查看修改明细，修改了哪几个文件，每个文件修改了什么内容，在编辑框左边显示&#43;或者-号表示增加或者删除（大概是这意思，我猜测，看官方文档再理解</description>
+    </item>
+    <item>
+      <title>在一台计算机上用git管理多个github账号</title>
+      <link>http://localhost:1313/posts/2022/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>
+      <pubDate>Tue, 01 Nov 2022 22:03:27 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2022/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</guid>
+      <description>如果你在本地电脑上有两个不同的博客系统，在github上创建了两个账户，就可以采用这个方法同时管理多个github账号</description>
+    </item>
+  </channel>
+</rss>

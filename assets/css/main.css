@@ -1,0 +1,124 @@
+/* 基础样式 */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 顶部导航 */
+.site-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.site-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.site-nav li {
+    margin-left: 20px;
+}
+
+.site-nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-nav a:hover {
+    color: white;
+}
+
+/* 文章布局 */
+.article-container {
+    padding: 40px 0;
+}
+
+.article-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.article-sidebar {
+    width: 280px;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+}
+
+.article-content {
+    flex: 1;
+    max-width: 800px;
+}
+
+/* 目录样式 */
+#TableOfContents {
+    font-size: 0.95rem;
+}
+
+#TableOfContents ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+#TableOfContents a {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+#TableOfContents a:hover {
+    background: var(--light-gray);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .article-layout {
+        flex-direction: column;
+    }
+    .article-sidebar {
+        width: 100%;
+        position: static;
+    }
+}

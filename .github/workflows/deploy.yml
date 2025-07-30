@@ -1,0 +1,39 @@
+name: Deploy Hugo Site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]  # 仅在 main 分支推送时触发
+
+permissions:
+  contents: write       # 确保 Actions 有写入权限
+  pages: write          # 允许写入 GitHub Pages
+  id-token: write       # 用于身份验证（可选，但推荐）
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 如果使用子模块（如 PaperMod 主题）
+          fetch-depth: 0    # 获取完整历史记录
+
+      - name: 设置 Hugo 环境
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: 构建站点
+        run: hugo --minify  # 生成静态文件到 ./public
+
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public       # Hugo 默认输出目录
+          publish_branch: gh-pages    # 部署到 gh-pages 分支
+          force_orphan: true          # 清空 gh-pages 历史记录
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'

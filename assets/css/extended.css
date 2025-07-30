@@ -1,0 +1,34 @@
+/* 文章布局 */
+.article-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.article-sidebar {
+    width: 300px;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+}
+
+.article-content {
+    flex: 1;
+    max-width: 800px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .article-layout {
+        flex-direction: column;
+    }
+    .article-sidebar {
+        width: 100%;
+        position: static;
+    }
+}

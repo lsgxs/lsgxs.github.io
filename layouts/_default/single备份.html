@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --nav-height: 60px;
+            --toc-width: 280px;
+            --content-padding: 40px;
+            --primary-color: #3498db;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --border-color: #eaeaea;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+            overflow-x: hidden;
+        }
+
+        /* 顶部导航栏 */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 主体布局 */
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 目录样式 - 增强版 */
+        .toc-container {
+            position: sticky;
+            top: calc(var(--nav-height) + 20px);
+            align-self: flex-start;
+            width: var(--toc-width);
+            padding: 20px;
+            margin-right: 30px;
+            max-height: calc(100vh - var(--nav-height) - 40px);
+            overflow-y: auto;
+            background: var(--light-gray);
+            border-radius: 8px;
+            scroll-behavior: auto;
+            overscroll-behavior: contain;
+        }
+
+        .toc-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 15px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .toc a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+            padding: 5px 0 5px 10px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            border-left: 2px solid transparent;
+        }
+
+        .toc a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .toc a.active {
+            color: var(--primary-color);
+            font-weight: bold;
+            border-left: 3px solid var(--primary-color);
+            background: rgba(52, 152, 219, 0.05);
+            transform: translateX(5px);
+        }
+
+        /* 内容区域 */
+        .content-container {
+            flex: 1;
+            background: white;
+            padding: var(--content-padding);
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .article-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .article-content {
+            line-height: 1.8;
+        }
+
+        .article-content h2 {
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            scroll-margin-top: calc(var(--nav-height) + 20px);
+        }
+
+        .article-content h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+            scroll-margin-top: calc(var(--nav-height) + 20px);
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 代码高亮样式 */
+        .article-content pre {
+            position: relative;
+            background: #f7f7f7;
+            /* Mac 窗口灰 (更接近Xcode风格) */
+            color: #242424;
+            /* 深灰文字 (比纯黑柔和) */
+            border-left: 4px solid #8e8e93;
+            /* Mac 系统灰 */
+            border-radius: 8px;
+            padding: 1.5rem 1rem 1rem;
+            margin: 1.5rem 0;
+            overflow: auto;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            max-height: 40vh;
+            white-space: pre-wrap;
+            font-family: 'Fira Code', Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            scrollbar-width: thin;
+            scrollbar-color: #c4c4c4 #f7f7f7;
+        }
+
+
+        /* 调整Copy按钮位置 */
+        .copy-code {
+            position: absolute;
+            top: 5px;
+            /* 更靠近顶部 */
+            right: 15px;
+            /* 避开滚动条 */
+            z-index: 10;
+            /* 确保在最上层 */
+            /* 其他样式保持不变 */
+        }
+
+        /* 滚动条样式 */
+        .article-content pre::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        .article-content pre::-webkit-scrollbar-thumb {
+            background: #c4c4c4;
+            /* Mac风格滚动条 */
+            border-radius: 6px;
+            border: 3px solid #f7f7f7;
+            /* 与背景同色的边框 */
+        }
+
+        .article-content pre::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            .article-content pre {
+                max-height: 50vh;
+                padding-right: 10px;
+            }
+        }
+
+
+
+
+
+        .article-content code {
+            font-family: 'Fira Code', Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9rem;
+            /*color: #abb2bf; */
+            color: #000000;
+            /* 保持纯黑 */
+            font-weight: 500;
+            /* 中等字重 */
+        }
+
+        /* 代码文字样式 (强制覆盖高亮插件) */
+        .article-content pre code {
+            background: transparent !important;
+            color: inherit !important;
+            /* 继承pre的颜色 */
+            padding: 0;
+            font-family: inherit;
+            text-shadow: none !important;
+        }
+
+
+        /* 复制按钮样式 */
+        .copy-code {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #abb2bf;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        pre:hover .copy-code {
+            opacity: 1;
+        }
+
+        .copy-code:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .copy-code.copied {
+            background: #28a745;
+            color: white;
+            border-color: #28a745;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .toc-container {
+                width: 240px;
+                padding: 15px;
+            }
+
+            .content-container {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .toc-container {
+                position: static;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+                max-height: none;
+            }
+
+            .article-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="/" class="site-title">{{ .Site.Title }}</a>
+            <div class="nav-links">
+                <a href="/">首页</a>
+                <a href="/posts/">所有文章</a>
+                <a href="/categories/">分类</a>
+                <a href="/tags/">标签</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="main-container">
+        <!-- 目录 -->
+        <aside class="toc-container">
+            <h3 class="toc-title">目录</h3>
+            <div class="toc">
+                {{ .TableOfContents }}
+            </div>
+        </aside>
+
+        <!-- 文章内容 -->
+        <article class="content-container">
+            <header class="article-header">
+                <h1 class="article-title">{{ .Title }}</h1>
+                <div class="article-meta">
+                    <span>📅 {{ .Date.Format "2006年1月2日" }}</span>
+                    {{ with .Params.categories }}
+                    <span>📁 {{ range . }}<a href="/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}</span>
+                    {{ end }}
+                </div>
+            </header>
+
+            <div class="article-content">
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+
+    <!-- 强力目录联动脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // ======== 代码高亮 + 复制按钮 ========
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+                const copyBtn = document.createElement('button');
+                copyBtn.className = 'copy-code';
+                copyBtn.textContent = 'Copy';
+                copyBtn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(block.textContent)
+                        .then(() => {
+                            copyBtn.textContent = 'Copied!';
+                            copyBtn.classList.add('copied');
+                            setTimeout(() => {
+                                copyBtn.textContent = 'Copy';
+                                copyBtn.classList.remove('copied');
+                            }, 2000);
+                        });
+                });
+                block.parentElement.prepend(copyBtn);
+            });
+
+            // ======== 目录强力联动 ========
+            const headings = document.querySelectorAll('.article-content h2[id], .article-content h3[id]');
+            const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+            const navHeight = document.querySelector('.top-nav').offsetHeight;
+            const tocContainer = document.querySelector('.toc-container');
+
+            // 预计算所有标题位置
+            const headingPositions = [];
+            headings.forEach(heading => {
+                headingPositions.push({
+                    id: heading.id,
+                    top: heading.offsetTop - navHeight - 20
+                });
+            });
+
+            // 同步目录状态
+            function syncToc() {
+                const scrollPos = window.scrollY;
+                let activeId = '';
+
+                // 从下往上查找当前标题
+                for (let i = headingPositions.length - 1; i >= 0; i--) {
+                    if (headingPositions[i].top <= scrollPos + 50) {
+                        activeId = headingPositions[i].id;
+                        break;
+                    }
+                }
+
+                // 更新目录
+                tocLinks.forEach(link => {
+                    const isActive = link.getAttribute('href') === `#${activeId}`;
+                    link.classList.toggle('active', isActive);
+
+                    // 自动滚动目录容器
+                    if (isActive) {
+                        const scrollTo = link.offsetTop - tocContainer.clientHeight / 2;
+                        tocContainer.scrollTop = scrollTo;
+                    }
+                });
+            }
+
+            // 高性能滚动监听
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        syncToc();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // 初始化
+            syncToc();
+        });
+    </script>
+</body>
+
+</html>

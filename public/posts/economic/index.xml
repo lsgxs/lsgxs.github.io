@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>财经知识 on 技术博客</title>
+    <link>http://localhost:1313/posts/economic/</link>
+    <description>Recent content in 财经知识 on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://localhost:1313/images/site-cover.jpg</url>
+      <link>http://localhost:1313/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Feb 2025 16:50:01 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/economic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>市盈率的模型</title>
+      <link>http://localhost:1313/posts/2025/%E5%B8%82%E7%9B%88%E7%8E%87%E7%9A%84%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Wed, 26 Feb 2025 16:50:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/%E5%B8%82%E7%9B%88%E7%8E%87%E7%9A%84%E6%A8%A1%E5%9E%8B/</guid>
+      <description>市盈率（Price Earnings Ratio，简称P/E Ratio）是一种股票市场常用的指标，用于评估股票的价值和投资者的预期回报。市盈率是股票市场价格与其每股收益的比率，计算公式为： 市盈率 = 股票市场价格 / 每股收益 市盈率反映了投资者愿意为每一元的净利润支付多少金额。市盈率的高低反映市场对公司未来成长的预期、公司所在行业的性质、以及整体经济环境等因素。</description>
+    </item>
+    <item>
+      <title>投资和分红</title>
+      <link>http://localhost:1313/posts/2025/%E6%8A%95%E8%B5%84%E5%92%8C%E5%88%86%E7%BA%A2/</link>
+      <pubDate>Wed, 26 Feb 2025 11:39:41 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/%E6%8A%95%E8%B5%84%E5%92%8C%E5%88%86%E7%BA%A2/</guid>
+      <description>大部分投资者对分红的理解有偏差或者误解，要么认为分红没有意义，因为分红到手了，可是市值变小了，总资产价值没有增加；有的以为股价大跌，越跌越买，可是如果10年内的分红收益不及股价大幅度下跌的亏损，这样的分红持股有意义吗，你的投资生涯有多少个十年呢。所以最终还是要寻找稳定增长的股票长期持有，可是这并不是一件唾手可得的事情</description>
+    </item>
+    <item>
+      <title>股票投资的基本概念</title>
+      <link>http://localhost:1313/posts/2024/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Tue, 27 Feb 2024 09:54:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>从经济运行的基本规律、货币发行和运转等宏观经济到具体的股票市场，各种简单到复杂的概念。好多概念一直没有搞清楚，甚至有的概念几十年你都没有搞清楚，慢慢收集信息，最终你会懂的</description>
+    </item>
+    <item>
+      <title>Financial</title>
+      <link>http://localhost:1313/posts/2024/financial/</link>
+      <pubDate>Thu, 22 Feb 2024 15:52:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024/financial/</guid>
+      <description>如果货币发行过多,老百姓手中的钱大大超过社会上可供销售的商品的价值,商品价格就会大幅度上涨，产生通货膨胀。通货膨胀严重的时候，物价会飞涨。如果货币发行过少，老百姓手中的钱大大少于社会上可供销售的商品的价值,有可能带来通货紧缩。当出现通货紧缩的时候,物价下跌,企业亏损裁员，工人失业，消费不足,人们的生活陷入困境。所以，货币发行量必须要遵守货币流通规律。</description>
+    </item>
+    <item>
+      <title>2024年关于自己投资方法的调整</title>
+      <link>http://localhost:1313/posts/2024/2024%E5%B9%B4%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E6%8A%95%E8%B5%84%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E6%95%B4/</link>
+      <pubDate>Wed, 31 Jan 2024 15:20:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024/2024%E5%B9%B4%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1%E6%8A%95%E8%B5%84%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E6%95%B4/</guid>
+      <description>Desc Text.</description>
+    </item>
+    <item>
+      <title>一本书看懂财务报表</title>
+      <link>http://localhost:1313/posts/2023/%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9C%8B%E6%87%82%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/</link>
+      <pubDate>Tue, 30 May 2023 07:16:08 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2023/%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9C%8B%E6%87%82%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/</guid>
+      <description>资产 = 所有者权益  &#43;   负债  </description>
+    </item>
+    <item>
+      <title>股票投资的几个阶段感悟</title>
+      <link>http://localhost:1313/posts/2023/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Sun, 21 May 2023 22:13:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2023/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%98%B6%E6%AE%B5%E6%84%9F%E6%82%9F/</guid>
+      <description>如果把一个完整的交易过程分为选对股票、买对时机、中长线持有这个三个步骤的话，第一步还没有完全独立，还不具有分析宏观的政策和行业分析，再进一步细化到公司基本面的深入研究，包括最基本的财务报表分析。虽然可以根据股票交易软件提供的量化功能完成自动化选股，但是必须要补齐基本面分析这方面知识。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>汽车类技术和维护保养类 on 技术博客</title>
+    <link>http://localhost:1313/posts/car/</link>
+    <description>Recent content in 汽车类技术和维护保养类 on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://localhost:1313/images/site-cover.jpg</url>
+      <link>http://localhost:1313/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 28 May 2025 16:09:41 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/car/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>轮胎</title>
+      <link>http://localhost:1313/posts/2025/%E8%BD%AE%E8%83%8E/</link>
+      <pubDate>Wed, 28 May 2025 16:09:41 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/%E8%BD%AE%E8%83%8E/</guid>
+      <description>追求极致操控：优先选择米其林Pilot Sport 4。 平衡操控与静音：优科豪马E70B是性价比之选。 注重静音舒适性：玛吉斯MS360在同级别中表现优异。 预算有限且需操控升级：可考虑优科豪马E70B或倍耐力新P7。</description>
+    </item>
+    <item>
+      <title>更换防冻冷却液</title>
+      <link>http://localhost:1313/posts/2025/%E6%9B%B4%E6%8D%A2%E9%98%B2%E5%86%BB%E5%86%B7%E5%8D%B4%E6%B6%B2/</link>
+      <pubDate>Sun, 26 Jan 2025 08:29:50 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2025/%E6%9B%B4%E6%8D%A2%E9%98%B2%E5%86%BB%E5%86%B7%E5%8D%B4%E6%B6%B2/</guid>
+      <description>首先要确保操作的安全性，在冷机状态下排出冷却液，然后怠速运行，直到散热器电子风扇转动并自动停止。电子风扇启动到停止的这个过程，就是冷却液进行大循环的过程，随着循环的进行，冷却循环系统中会有空气排出，会导致液面下降，及时补充冷却液。如此多次循环，会把空气排放干净，直到冷机时不再有液面下降就算是排空成功</description>
+    </item>
+    <item>
+      <title>Vitara四驱系统</title>
+      <link>http://localhost:1313/posts/2024/vitara%E5%9B%9B%E9%A9%B1%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Wed, 21 Feb 2024 17:01:07 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024/vitara%E5%9B%9B%E9%A9%B1%E7%B3%BB%E7%BB%9F/</guid>
+      <description>ALLGRIP系统是智能全时四驱系统，任何驾驶模式、任何行驶速度下都是前后轴有驱动力的。不过在auto模式、sport模式以及snow模式前后轴并没有固定的扭矩分配比例，由系统根据路况前轴在约95%-50%后轴在约5%-50%范围内随机动态智能分配。只有在lock锁定后才会是前后轴各50%的固定扭矩分配。正是由于能随路况智能动态分配前后轴动力，才使得装配ALLGRIP系统智能全时四驱系统的车辆有更佳的路况适应性能，达到既节能又安全的目的。</description>
+    </item>
+    <item>
+      <title>Vitara保养维护</title>
+      <link>http://localhost:1313/posts/2024/vitara%E4%BF%9D%E5%85%BB%E7%BB%B4%E6%8A%A4/</link>
+      <pubDate>Fri, 02 Feb 2024 09:14:51 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024/vitara%E4%BF%9D%E5%85%BB%E7%BB%B4%E6%8A%A4/</guid>
+      <description>目前使用中国石化长城SN级别的5w-30的全合成机油，在中国石化加油站内购买，不在网上购买，线上何线下的产品也不会一样。机油的选择，首先要选对型号，然后是一定要正品，买到劣质机油会对发动机造成直接损坏。目前坚持5000-6000公里更换机油，机滤。空气滤和空调滤都是自己购买后更换。</description>
+    </item>
+  </channel>
+</rss>

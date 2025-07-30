@@ -1,0 +1,151 @@
+baseURL: "http://localhost:1313/"
+title: "技术博客"
+pagination:
+  pagerSize: 3
+  paginatePath: "page"
+theme: PaperMod
+uglyURLs: false
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+permalinks:
+  posts: /posts/:year/:slug/
+
+taxonomies:
+  category: categories
+  tag: tags
+
+# 修复：goldmark.extensions 配置格式错误
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      typographer: {}  # 使用对象格式而不是列表
+      cjk: {}          # 使用对象格式而不是列表
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false  # 禁用行号（使用我们自定义的样式）
+    noClasses: false
+    style: ""
+
+params:
+  env: production
+  title: "技术博客"
+  description: "技术分享与个人思考"
+  keywords: [技术博客, 编程, 开发]
+  author: 作者名
+  images: ["/images/site-cover.jpg"]
+  DateFormat: "2006年1月2日"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  showtoc: true
+  tocopen: true
+  summaryFallback: true  # 当无摘要时自动提取开头文字
+  summaryLength: 200     # 摘要长度
+
+  profileMode:
+    enabled: true
+    title: 上善若水
+    subtitle: superman
+    imageUrl: "/images/likesun.png"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: 我的头像
+    buttons:
+      - name: 阅读
+        url: /posts/read/
+      - name: 技术
+        url: /posts/technology/
+      - name: 财经
+        url: /posts/economic/
+      - name: 运动
+        url: /posts/sport/  
+      - name: 汽车
+        url: /posts/car/ 
+      - name: 感悟
+        url: /posts/think/
+      - name: 美食
+        url: /posts/meishi/  
+      - name: 下载
+        url: /posts/download/
+
+  homeInfoParams:
+    Title: "您好！ \U0001F44B"
+    Content: 欢迎访问我的博客
+
+  socialIcons:
+    - name: x
+      url: "https://x.com/"
+    - name: stackoverflow
+      url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/"
+
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: true
+
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+
+menu:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 5
+    - identifier: posts
+      name: 所有文章
+      url: /posts/
+      weight: 10
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 15
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 20
+    - identifier: example
+      name: 示例站点
+      url: https://example.org
+      weight: 25
+
+pygmentsUseClasses: true
+
+caches:
+  assets: 
+    maxAge: -1
+  getjson:
+    maxAge: -1
+  getcsv:
+    maxAge: -1
+  images:
+    maxAge: -1
+  modules:
+    maxAge: -1

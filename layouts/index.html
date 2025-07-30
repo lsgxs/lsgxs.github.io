@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <style>
+        /* 基础样式 - 更高透明度 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            min-height: 100vh;
+            /* 背景设置 - 透明度降低到0.2 */
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+                url('/images/river.png') center/cover no-repeat fixed;
+            padding: 40px 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* 主要内容垂直居中 */
+            min-height: 100vh;
+            padding: 40px 20px;
+            /* 保留安全边距 */
+        }
+
+        /* 内容容器 - 透明度增加到0.5 */
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.0);
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 900px;
+            margin: 40px auto;
+            /* 上下边距40px，水平居中 */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            width: 90%;
+            /* 添加响应式宽度 */
+        }
+
+        /* 顶部导航 */
+        .top-nav {
+            text-align: right;
+            margin-bottom: 40px;
+        }
+
+        .top-nav a {
+            color: #555;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 400;
+            transition: color 0.2s;
+            font-size: 1.1rem;
+        }
+
+        .top-nav a:hover {
+            color: #3498db;
+        }
+
+        /* 个人信息区 */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .profile-subtitle {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* 长条石头状按钮 */
+        .profile-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px auto;
+            max-width: 700px;
+        }
+
+        .profile-button {
+            padding: 12px 25px;
+            border-radius: 50px;
+            /* 长椭圆形 */
+            background: rgba(52, 152, 219, 0.85);
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            box-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -3px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            font-weight: 500;
+            line-height: 1.3;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            min-width: 120px;
+            /* 保证按钮有最小宽度 */
+        }
+
+        .profile-button:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 8px 15px rgba(0, 0, 0, 0.15),
+                inset 0 -3px 5px rgba(0, 0, 0, 0.2);
+            background: rgba(41, 128, 185, 0.95);
+        }
+
+        /* 知识链接区 */
+        .knowledge-section {
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: #555;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .knowledge-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .knowledge-link {
+            color: #3498db;
+            text-decoration: none;
+            padding: 8px 20px;
+            transition: all 0.3s ease;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .knowledge-link:hover {
+            /*border-bottom-color: #3498db; */
+            background-color: #f0f7ff;     /* 浅蓝色背景 */
+            text-decoration: underline;      /* 添加下划线 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+            transform: translateY(-2px);        /* 轻微上浮 */
+        }
+
+        /* 文章列表 */
+        .latest-posts {
+            margin-top: 50px;
+        }
+
+        .post-list {
+            list-style: none;
+        }
+
+        .post-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .post-title {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .post-title a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-title a:hover {
+            color: #e74c3c;
+        }
+
+        .post-date {
+            color: #95a5a6;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .post-date::before {
+            content: "📅";
+            margin-right: 8px;
+        }
+
+        .view-all {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background: #f8f9fa;
+            color: #555;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .view-all:hover {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                margin: 20px auto;
+                /* 移动端减少边距 */
+                padding: 30px 20px;
+            }
+
+            .profile-title {
+                font-size: 2rem;
+            }
+
+            .profile-buttons {
+                gap: 12px;
+            }
+
+            .profile-button {
+                padding: 10px 20px;
+                min-width: 100px;
+                font-size: 0.9rem;
+            }
+
+            .top-nav a {
+                margin-left: 15px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-buttons {
+                gap: 10px;
+            }
+
+            .profile-button {
+                padding: 8px 15px;
+                min-width: 80px;
+                font-size: 0.85rem;
+            }
+
+            .knowledge-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div class="content-wrapper"> 这行代码的注释去掉，就可以显示一个半透明的文本区域，记得同时去掉下面的</div>注释 -->
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <a href="/about/">About</a>
+        <a href="/archives/">Archives</a>
+        <a href="/search/">Search</a>
+    </nav>
+
+    <!-- 个人信息 -->
+    <div class="profile-container">
+        {{ if .Site.Params.profileMode.enabled }}
+        {{ with .Site.Params.profileMode.title }}
+        <h1 class="profile-title">{{ . }}</h1>
+        {{ end }}
+
+        {{ with .Site.Params.profileMode.subtitle }}
+        <p class="profile-subtitle">{{ . }}</p>
+        {{ end }}
+
+        <!-- 长条石头状分类按钮 -->
+        <div class="profile-buttons">
+            {{ range .Site.Params.profileMode.buttons }}
+            <a href="{{ .url }}" class="profile-button">{{ .name }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+
+    <!-- 知识链接 -->
+    <div class="knowledge-section">
+        <h5 class="section-title">知识资源</h5>
+        <div class="knowledge-links">
+            <a href="https://gohugo.io" class="knowledge-link">Hugo</a>
+            <a href="https://github.com/adityatelange/hugo-PaperMod" class="knowledge-link">PaperMod</a>
+            <a href="https://www.python.org/" class="knowledge-link">Python</a>
+            <a href="https://www.ibm.com/think/topics/linux" class="knowledge-link">Linux</a>
+            <a href="https://github.com" class="knowledge-link">GitHub</a>
+            <a href="https://stackoverflow.com" class="knowledge-link">Stack Overflow</a>
+            <a href="https://developer.mozilla.org" class="knowledge-link">MDN Web Docs</a>
+        </div>
+    </div>
+
+
+
+
+    <!--</div> -->
+</body>
+
+</html>

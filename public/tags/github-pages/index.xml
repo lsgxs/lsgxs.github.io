@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github Pages on 技术博客</title>
+    <link>http://localhost:1313/tags/github-pages/</link>
+    <description>Recent content in Github Pages on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://localhost:1313/images/site-cover.jpg</url>
+      <link>http://localhost:1313/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 15 Nov 2022 20:02:48 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在github基于个人或公司GitHub Pages部署hugo博客之二</title>
+      <link>http://localhost:1313/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8github-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</link>
+      <pubDate>Tue, 15 Nov 2022 20:02:48 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8github-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</guid>
+      <description>实现博客项目的自动化部署有多种方法，可以尝试一下有什么不同点。这个是在一个仓库的两个分支之间实现自动化部署，通过自己的实践记录一下</description>
+    </item>
+    <item>
+      <title>在github基于个人或公司GitHub Pages部署hugo博客之一</title>
+      <link>http://localhost:1313/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8github-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</link>
+      <pubDate>Mon, 14 Nov 2022 22:47:45 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8github-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</guid>
+      <description>学习使用github pages自带actions操作方法：进入该仓库，选择settings-pages,在Build and Deployment 的Source部分选择GitHub Actions，直接进入hugo.yml编辑界面，直接点击右侧的commit就可以在仓库新建hugo.yml文件，路径是.github\workflows\hugo.yml&amp;#39;，什么有没有修改，可以实现自动发布。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #3b82f6;
+            --background-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .page-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .post-list {
+            display: grid;
+            gap: 30px;           
+
+        }
+
+        .post-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .post-content {
+            padding: 25px;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .post-title {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .post-title a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .post-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .post-summary {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .read-more {
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .read-more:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .pagination a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: background 0.2s;
+        }
+
+        .pagination a:hover {
+            background: var(--secondary-color);
+        }
+
+        .pagination .disabled {
+            background: var(--border-color);
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .post-content {
+                padding: 20px;
+            }
+
+            .post-title {
+                font-size: 1.4rem;
+            }
+
+            .post-meta {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 强制调试信息 -->
+    <div style="position:fixed; top:0; left:0; z-index:9999; background:white; padding:20px; border:3px solid red;">
+        <h2>调试面板</h2>
+        <p><strong>当前模板：</strong> {{ .Kind | default "未知" }}</p>
+        <p><strong>模板文件：</strong> {{ .File.Path | default "未加载" }}</p>
+        <p><strong>描述字段：</strong> {{ .Description | default "空值" }}</p>
+        <p><strong>Params描述：</strong> {{ .Params.description | default "空值" }}</p>
+    </div>
+    <!--调试信息结束-->
+
+    <div class="container">
+        <header>
+            <h1>{{ .Title }}</h1>
+            {{ if .Description }}
+            <p class="page-description">{{ .Description }}</p>
+            {{ end }}
+        </header>
+
+        <div class="post-list">
+            {{ range .Paginator.Pages }}
+            <article class="post-card">
+                <div class="post-content">
+                    <h2 class="post-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h2>
+
+                    <!-- 高性能摘要代码开始 -->
+
+                    <!-- 摘要提取开始 -->
+                    {{ $summary := "" }}
+
+                    {{/* 1. 强制使用Front Matter描述 */}}
+                    {{ if .Params.description }}
+                    {{ $summary = .Params.description }}
+                    {{ else }}
+                    {{/* 2. 智能提取文本开头 */}}
+                    {{ $plain := .Content | plainify | replaceRE "^\\s+" "" }}
+                    {{ $sentences := findRE `[^.!?\n]+[.!?\n]` $plain 1 }}
+                    {{ if $sentences }}
+                    {{ $summary = index $sentences 0 | truncate 200 }}
+                    {{ else }}
+                    {{ $summary = $plain | truncate 200 }}
+                    {{ end }}
+                    {{ end }}
+
+                    <div class="post-summary">
+                        {{ .Description | default (.Content | plainify | truncate 200) }}
+
+                        <!-- 详细调试 -->
+                        <div style="background:#ffe; padding:10px; margin-top:10px; font-family:monospace;">
+                            <strong>DEBUG:</strong><br>
+                            Content前50字: {{ substr (.Content | plainify) 0 50 }}<br>
+                            Description长度: {{ len .Description }}<br>
+                            Params描述长度: {{ len .Params.description }}
+                        </div>
+                    </div>
+
+
+
+                    <!-- 摘要提取结束 -->
+                    <!-- 高性能摘要代码结束 -->
+
+                    <div class="post-meta">
+                        <span class="post-date">
+                            {{ .Date.Format "2006年1月2日" }}
+                        </span>
+                        <a href="{{ .RelPermalink }}" class="read-more">阅读全文 →</a>
+                    </div>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+
+        <!-- 分页控件 -->
+        <div class="pagination">
+            {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}">上一页</a>
+            {{ else }}
+            <span class="disabled">上一页</span>
+            {{ end }}
+
+            {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}">下一页</a>
+            {{ else }}
+            <span class="disabled">下一页</span>
+            {{ end }}
+        </div>
+    </div>
+</body>
+
+</html>
