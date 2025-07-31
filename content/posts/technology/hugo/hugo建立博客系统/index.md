@@ -69,7 +69,7 @@ hugo  new content  content/posts/learnhugo.md
 hugo  new   posts/technology/learnhugo/index.md
 ```
 
-这里使用最简单的默认文档模版。新建文档的模版保存在博看站点更目录下的`archetypes`目录下，新建站点的archetype目录下只有一个default.md文档，这个文档作为新建文档的front matter模版，保持最简单的title、date、draft三个文档元数据，对hugo越来越熟悉之后，就可以在archetypes目录下新建posts.md文件,添加一些类似category、tag、thumbnail、description等更加丰富的front matter元数据。
+这里使用最简单的默认文档模版。新建文档的模版保存在博客站点根目录下的`archetypes`目录下，新建站点的archetype目录下只有一个default.md文档，这个文档作为新建文档的front matter模版，保持最简单的title、date、draft三个文档元数据，对hugo越来越熟悉之后，就可以在archetypes目录下新建posts.md文件,添加一些类似category、tag、thumbnail、description等更加丰富的front matter元数据。
 
 默认的文档front  matter如下所示：
 
@@ -109,25 +109,27 @@ theme： 'ananke'
 
 #### 发布站点
 
-可以在git bash 终端使用`hugo `命令来发布博客站点，没错，就是一个什么参数都不带的hugo 命令，就也可以发布站点，hugo 会在根目录下创建public目录，然后把生成静态html文件，还有其他的图片、css文件等资源全部复制到public目录下。在浏览器输入`http://localhost:1313/`时，实际上打开的是public目录下的index.html文件。可以观察一下public目录下的所有子目录和文件。当然，这里的发布实际上是在站点根目录下新建一个public目录，在public目录下保存静态站点的所有资源。将来发布到github，原理是一样的，在gitub上的username.github.io仓库的gh-pages分支发布静态站点。
+可以在git bash 终端使用`hugo `命令来发布博客站点，没错，就是一个什么参数都不带的hugo 命令，就也可以发布站点，hugo 会在根目录下创建public目录，然后把生成静态html文件，还有其他的图片、css文件等资源全部复制到public目录下。在浏览器输入`http://localhost:1313/`时，实际上打开的是public目录下的index.html文件。可以观察一下public目录下的所有子目录和文件。当然，这里的发布实际上是在站点根目录下新建一个public目录，在public目录下保存静态站点的所有资源。将来发布到github，原理是一样的，在github上的username.github.io仓库的gh-pages分支发布静态站点。
 
 ### 博客站点目录详细介绍
 
+```
 hugotest
+├── └── .git          显示站点已使用git init初始化 
 ├── ├── .github
 ├── │   └── workflows   workflows目录用来保存自动发布的脚本文件，比如：deploy.yaml
 ├── ├── archetypes     archetypes目录用来保存新建文档的front  matter的模版，比如default.md 和posts.md，二者的优先级是自定义的posts.md优先，
-├── ├── assets
+├── ├── assets        assets目录用来保存css、javascript文件
 ├── │   └── css
-├── ├── content
-├── │   └── posts
-├── ├── data
+├── ├── content       博客系统的内容都在content目录下保存
+├── │   └── posts     markdown类型的文档都可以分类保存在posts目录下
+├── ├── data          content/posts目录保存markdown类型的文档，data目录可以保存toml、yaml、json格式的文件，这些文件都是模板的数据源
 ├── ├── i18n
-├── ├── layouts
+├── ├── layouts       layouts目录保存hugo站点的模板，下面的子目录保存hugo各种类型的模板，比如list.html、single.html等
 ├── │   ├── category
 ├── │   ├── section
 ├── │   └── _default
-├── ├── public
+├── ├── public      public是hugo发布站点的目录，所有生成的图片、静态网页、css、javascript文件都在这里保存。
 ├── │   ├── about
 ├── │   ├── archives
 ├── │   ├── assets
@@ -137,10 +139,12 @@ hugotest
 ├── │   ├── posts
 ├── │   ├── search
 ├── │   └── tags
-├── ├── static
-├── │   └── images
-├── └── themes
+├── ├── static     
+├── │   └── images  static目录下的images用来保存站点共享的图片资源
+├── └── themes  站点使用的主题 根据hugo对模板搜索优先级的规定，优先使用站点根目录下的layouts/下的各类模板，如果没有就使用主题的模板，最后是默认模板
 ├──     └── PaperMod
+    └── hugo.yaml    站点的配置文件
+```
 
 下面这段代码是在windows下输出上边树形目录的代码，需要复制后粘贴在powershell里运行
 ```powershell
@@ -215,3 +219,58 @@ $inputPath = Read-Host "请输入要遍历的目录路径（例如：C:\Windows 
 Get-SimpleTree -Path $inputPath -Depth 2 -ShowFiles:$false
 ```
 
+### hugo博客站点的内容组织
+
+#### Page  Bundle 
+
+A page bundle is a directory that encapsulates both content and associated resources。Page bundles are either *leaf bundles* or *branch bundles*
+
+* **Leaf bundle** 
+
+  A *leaf bundle* is a directory that contains an `index.md` file and zero or more resources. Analogous to a physical leaf, a leaf bundle is at the end of a branch. It has no descendants
+
+* **Branch bundle **
+
+  A *branch bundle* is a directory that contains an `_index.md` file and zero or more resources. Analogous to a physical branch, a branch bundle may have descendants including leaf bundles and other branch bundles. Top-level directories with or without `_index.md` files are also branch bundles. This includes the home page
+
+这是官方文档的一部分，好好体会一下这几句话，就可以理解Hugo博客文档的目录组织结构了。以Posts\目录为例子
+
+```
+posts\
+
+    +-----technology
+
+       |--------+hugo                                      # branch  bundle
+
+       |-------------+ learnhugo                                 #  leaf  bundle 
+
+       |--------------------+images
+
+       |--------------------------img1.jpg
+
+       |--------------------------img2.jpg
+
+       |--------------------index.md                   
+
+       |--------+PaperMod                                 # branch  bundle                       
+
+       | --------_index.md
+
+    +-----------+economic                                 # branch  bundle 
+
+        |------------+stock
+
+        |------------+finace
+
+        |------------_index.md 
+
+    +-----------+read                                     # branch  bundle 
+
+    ------------_index.md 
+
+
+```
+
+上面的目录结构是我的博客站点posts目录的一部分，是按照hugo的page  bundle逻辑结构组织的，posts/目录包含子目录technology、economic、read等，还包含一个`_index.md`文件，这个层级就是`branch  bundle`。`technology`目录下的`hugo`子目录也是一个包含`_index.md`文件和子目录的`branch bundle`。`hugo`目录下的子目录`learnhugo` 是一个包含`inde.md`和其他图片资源文件的`leaf bundle`。其他的economic、read等目录也是如此的组织结构，这样就形成了一个树状的`Page   Bundle`。在content目录下的文档就是hugo  模板系统的数据来源之一。
+
+ 
