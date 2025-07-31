@@ -406,8 +406,6 @@ Hugo 站点工作原理与面向对象特性详解
 
 三、Hugo 与传统 OOP 对比
 
-## **Hugo 与传统 OOP 对比**
-
 
 
 | 特性         | 传统 OOP（如 Java） | Hugo 实现方式           |
