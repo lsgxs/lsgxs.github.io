@@ -1,0 +1,237 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Hugo建立博客系统 | 技术博客</title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel=stylesheet><style>:root{--nav-height:60px;--toc-width:280px;--content-padding:40px;--primary-color:#3498db;--text-color:#333;--light-gray:#f5f5f5;--border-color:#eaeaea}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;color:var(--text-color);line-height:1.6;padding-top:var(--nav-height);overflow-x:hidden}.top-nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height);background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);display:flex;align-items:center;padding:0 30px;z-index:1000}.nav-container{width:100%;max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.site-title{font-size:1.4rem;font-weight:700;color:var(--primary-color);text-decoration:none}.nav-links{display:flex;gap:25px}.nav-links a{color:var(--text-color);text-decoration:none;font-size:1rem;transition:color .3s}.nav-links a:hover{color:var(--primary-color)}.main-container{display:flex;max-width:1400px;margin:0 auto;padding:20px}.toc-container{position:sticky;top:calc(var(--nav-height) + 20px);align-self:flex-start;width:var(--toc-width);padding:20px;margin-right:30px;max-height:calc(100vh - var(--nav-height) - 40px);overflow-y:auto;background:var(--light-gray);border-radius:8px;scroll-behavior:auto;overscroll-behavior:contain}.toc-title{font-size:1.2rem;margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid var(--primary-color)}.toc ul{list-style:none;padding-left:15px}.toc li{margin-bottom:8px;position:relative}.toc a{color:var(--text-color);text-decoration:none;display:block;padding:5px 0 5px 10px;transition:all .2s;font-size:.95rem;border-left:2px solid transparent}.toc a:hover{color:var(--primary-color);transform:translateX(5px)}.toc a.active{color:var(--primary-color);font-weight:700;border-left:3px solid var(--primary-color);background:rgba(52,152,219,5%);transform:translateX(5px)}.content-container{flex:1;background:#fff;padding:var(--content-padding);border-radius:8px;box-shadow:0 2px 15px rgba(0,0,0,5%)}.article-header{margin-bottom:30px;border-bottom:1px solid var(--border-color);padding-bottom:20px}.article-title{font-size:2rem;margin-bottom:10px;color:#2c3e50}.article-meta{display:flex;gap:20px;color:#7f8c8d;font-size:.9rem;margin-bottom:15px}.article-content{line-height:1.8}.article-content h2{font-size:1.6rem;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-color);scroll-margin-top:calc(var(--nav-height) + 20px)}.article-content h3{font-size:1.3rem;margin:1.5rem 0 .8rem;scroll-margin-top:calc(var(--nav-height) + 20px)}.article-content img{max-width:100%;height:auto;border-radius:6px;margin:1.5rem 0;box-shadow:0 3px 10px rgba(0,0,0,.1)}.article-content pre{position:relative;background:#f7f7f7;color:#242424;border-left:4px solid #04b04f;border-radius:8px;padding:1.5rem 1rem 1rem;margin:1.5rem 0;overflow:auto;box-shadow:0 1px 3px rgba(0,0,0,.1);max-height:40vh;white-space:pre-wrap;font-family:fira code,Menlo,Monaco,Consolas,monospace;font-size:.9rem;line-height:1.5;scrollbar-width:thin;scrollbar-color:#c4c4c4 #f7f7f7}.article-content code{font-family:inherit;color:inherit !important;background:0 0 !important;padding:0;text-shadow:none !important;font-size:.9rem}.hljs-meta,.hljs-built_in{color:#04b04f}.hljs-attribute{color:#e91e63}.hljs-string{color:#2e7d32}.hljs-number{color:#2196f3}.article-content pre::-webkit-scrollbar{width:12px;height:12px}.article-content pre::-webkit-scrollbar{width:12px;height:12px}.article-content pre::-webkit-scrollbar-thumb{background:#04b04f;opacity:.6;border:3px solid #f7f7f7}.article-content pre::-webkit-scrollbar-track{background:#f7f7f7;border-radius:6px}.copy-code{position:absolute;top:10px;right:15px;background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.2);color:#242424;border-radius:4px;padding:3px 8px;font-size:.8rem;cursor:pointer;transition:all .3s;opacity:0;z-index:10}pre:hover .copy-code{opacity:1}.copy-code:hover{background:rgba(0,0,0,.2)}.copy-code.copied{background:#28a745;color:#fff;border-color:#28a745}@media(max-width:1024px){.toc-container{width:240px;padding:15px}.content-container{padding:25px}}@media(max-width:768px){.main-container{flex-direction:column}.toc-container{position:static;width:100%;margin-right:0;margin-bottom:30px;max-height:none}.article-title{font-size:1.8rem}.article-content pre{max-height:50vh;padding-right:10px}}</style></head><body><nav class=top-nav><div class=nav-container><a href=/ class=site-title>技术博客</a><div class=nav-links><a href=/>首页</a>
+<a href=/posts/>所有文章</a>
+<a href=/categories/>分类</a>
+<a href=/tags/>标签</a></div></div></nav><div class=main-container><aside class=toc-container><h3 class=toc-title>目录</h3><div class=toc><nav id=TableOfContents><ul><li><ul><li><a href=#使用hugo轻松建立个人博客站点>使用Hugo轻松建立个人博客站点</a><ul><li><a href=#建立站点>建立站点</a></li><li><a href=#新建文档>新建文档</a></li><li><a href=#配置站点>配置站点</a></li><li><a href=#发布站点>发布站点</a></li></ul></li><li><a href=#博客站点目录详细介绍>博客站点目录详细介绍</a></li><li><a href=#hugo博客站点的内容组织>hugo博客站点的内容组织</a><ul><li><a href=#page--bundle>Page Bundle</a></li></ul></li><li><a href=#hugo博客系统是如何工作的>Hugo博客系统是如何工作的</a></li></ul></li></ul></nav></div></aside><article class=content-container><header class=article-header><h1 class=article-title>Hugo建立博客系统</h1><div class=article-meta><span>📅 2025年7月30日</span>
+<span>📁 <a href=/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB>默认分类</a></span></div></header><div class=article-content><p>这篇文档主要记录使用Hugo建立博客系统的详细步骤，主要内容包含下面6个主题</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1、使用Hugo轻松建立个人博客站点
+</span></span><span class=line><span class=cl>2、博客站点目录详细介绍
+</span></span><span class=line><span class=cl>3、博客站点的内容组织
+</span></span><span class=line><span class=cl>4、Hugo博客系统是如何工作的
+</span></span><span class=line><span class=cl>5、博客系统的部署
+</span></span><span class=line><span class=cl>6、使用PaperMod主题
+</span></span></code></pre></div><h3 id=使用hugo轻松建立个人博客站点>使用Hugo轻松建立个人博客站点</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1、 建立站点
+</span></span><span class=line><span class=cl>2、 添加文档 
+</span></span><span class=line><span class=cl>3、 配置站点 
+</span></span><span class=line><span class=cl>4、 发布站点 
+</span></span></code></pre></div><p>在开始使用Hugo建立站点之前，需要做好两个准备工作：</p><ul><li><p>安装Hugo</p><ul><li><p><strong>下载<code>hugo</code></strong>。在<code>github.com</code>上下载<a href=https://github.com/gohugoio/hugo/releases/latest><code>hugo</code></a> 的对应操作系统版本，选择the extended editions 就可以了。至于<code>extended/deploy</code> editions多了发布到知名网站的功能：<code>Deploy your site directly to a Google Cloud Storage bucket, an AWS S3 bucket, or an Azure Storage container. </code>我这里最后发布到<code>github</code>,所以就不需要下载扩展/发布的版本了。</p></li><li><p><strong>安装<code>hugo</code></strong>。我这里使用的Windows平台，下载的<code>hugo</code>是一个单独的可执行文件，不需安装，只需把这个文件放置在自己指定的目录，然后把可执行文件所在目录的路径添加在<code>path</code>环境变量里，添加在用户环境变量或者系统环境变量都是可以的。</p></li><li><p><strong>测试<code>hugo</code></strong>。在git 还没有安装时，无法使用<code>git bash</code>命令行终端，可以在<code>Windwos</code>自带的<code>CMD</code>命令行窗口使用<code>hugo version</code>，能正常显示<code>hugo</code>版本号就说明安装好了。</p></li></ul></li><li><p>安装Git</p><p>到<a href=https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>git官网</a>下载对应操作系统版本的git安装就好。</p></li></ul><h4 id=建立站点>建立站点</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo  new  site  site-name  --format   yaml
+</span></span><span class=line><span class=cl><span class=nb>cd</span>  site-name   
+</span></span><span class=line><span class=cl>git   init
+</span></span><span class=line><span class=cl>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</span></span><span class=line><span class=cl><span class=c1>#如果没有带--format  yaml参数，默认生成的是hugo.toml参数，变量和数值之间使用等号`=`，而不是冒号`:`</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;theme: &#39;ananke&#39;&#34;</span> &gt;&gt; hugo.yaml
+</span></span><span class=line><span class=cl>hugo  server
+</span></span></code></pre></div><h4 id=新建文档>新建文档</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo  new content  content/posts/learnhugo.md
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>#等采用了branch  bundle和leaf bundle的方式组织站点目录之后，就可以使用下面的写法新建文档</span>
+</span></span><span class=line><span class=cl>hugo  new   posts/technology/learnhugo/index.md
+</span></span></code></pre></div><p>这里使用最简单的默认文档模版。新建文档的模版保存在博客站点根目录下的<code>archetypes</code>目录下，新建站点的archetype目录下只有一个default.md文档，这个文档作为新建文档的front matter模版，保持最简单的title、date、draft三个文档元数据，对hugo越来越熟悉之后，就可以在archetypes目录下新建posts.md文件,添加一些类似category、tag、thumbnail、description等更加丰富的front matter元数据。</p><p>默认的文档front matter如下所示：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>+++
+</span></span><span class=line><span class=cl>title = &#39;My First Post&#39;
+</span></span><span class=line><span class=cl>date = 2025-05-23T07:07:07+01:00
+</span></span><span class=line><span class=cl>draft = true
+</span></span><span class=line><span class=cl>+++
+</span></span></code></pre></div><p>这里title是文档的标题，date是建立文档的日期，draft表示文档是否是草稿，在正式发布之前，把draft设置为true。</p><p>在这新建的Markdown文档的正文区加入一下测试内容并保存，然后运行hugo的服务器</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># 这里的-D表示包含草稿，也就是draft=true的文档 
+</span></span><span class=line><span class=cl>hugo  server -D 
+</span></span></code></pre></div><p>此时就可以根据服务器的提示信息，在浏览器使用URL来浏览博客站点的第一个文档，浏览地址为默认的1313端口：`http://localhost:1313</p><h4 id=配置站点>配置站点</h4><p>博客站点根目录下的hugo.yaml，旧版本一般是config.yaml，不过两者都可以使用，推荐使用新版本的写法：hugo.yaml。配置文件在新建站点时默认为toml后缀，我这里使用<code>--format yaml</code>参数指定新建站点时使用yaml格式的配置文件：hugo.yaml。下面是hugo.yaml文件的内容</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>baseURL：  &#39;https://example.org/&#39;
+</span></span><span class=line><span class=cl>languageCode： &#39;en-us&#39;
+</span></span><span class=line><span class=cl>title： &#39;My New Hugo Site&#39;
+</span></span><span class=line><span class=cl>#新建站点时，只有前边三行数据，下面的主题设置需要手动添加
+</span></span><span class=line><span class=cl>theme： &#39;ananke&#39;
+</span></span></code></pre></div><p>这里主要是最后一行的theme值，要把它设置为需要的主题，这里是参照hugo官方文档的初学教程，使用ananke主题。新建站点时，配置文件里只有前边三行数据，主题设置需要手动添加：<code>theme: ananke</code>，注意冒号后边一定要有一个空格，否则hugo编译时会提示错误信息。如果使用默认的toml格式配置文件，要使用<code>=</code>号而不是冒号<code>:</code>。</p><h4 id=发布站点>发布站点</h4><p>可以在git bash 终端使用<code>hugo </code>命令来发布博客站点，没错，就是一个什么参数都不带的hugo 命令，就也可以发布站点，hugo 会在根目录下创建public目录，然后把生成静态html文件，还有其他的图片、css文件等资源全部复制到public目录下。在浏览器输入<code>http://localhost:1313/</code>时，实际上打开的是public目录下的index.html文件。可以观察一下public目录下的所有子目录和文件。当然，这里的发布实际上是在站点根目录下新建一个public目录，在public目录下保存静态站点的所有资源。将来发布到github，原理是一样的，在github上的username.github.io仓库的gh-pages分支发布静态站点。</p><h3 id=博客站点目录详细介绍>博客站点目录详细介绍</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>hugotest
+</span></span><span class=line><span class=cl>├── └── .git          显示站点已使用git init初始化 
+</span></span><span class=line><span class=cl>├── ├── .github
+</span></span><span class=line><span class=cl>├── │   └── workflows   workflows目录用来保存自动发布的脚本文件，比如：deploy.yaml
+</span></span><span class=line><span class=cl>├── ├── archetypes     archetypes目录用来保存新建文档的front  matter的模版，比如default.md 和posts.md，二者的优先级是自定义的posts.md优先，
+</span></span><span class=line><span class=cl>├── ├── assets        assets目录用来保存css、javascript文件
+</span></span><span class=line><span class=cl>├── │   └── css
+</span></span><span class=line><span class=cl>├── ├── content       博客系统的内容都在content目录下保存
+</span></span><span class=line><span class=cl>├── │   └── posts     markdown类型的文档都可以分类保存在posts目录下
+</span></span><span class=line><span class=cl>├── ├── data          content/posts目录保存markdown类型的文档，data目录可以保存toml、yaml、json格式的文件，这些文件都是模板的数据源
+</span></span><span class=line><span class=cl>├── ├── i18n
+</span></span><span class=line><span class=cl>├── ├── layouts       layouts目录保存hugo站点的模板，下面的子目录保存hugo各种类型的模板，比如list.html、single.html等
+</span></span><span class=line><span class=cl>├── │   ├── category
+</span></span><span class=line><span class=cl>├── │   ├── section
+</span></span><span class=line><span class=cl>├── │   └── _default
+</span></span><span class=line><span class=cl>├── ├── public      public是hugo发布站点的目录，所有生成的图片、静态网页、css、javascript文件都在这里保存。
+</span></span><span class=line><span class=cl>├── │   ├── about
+</span></span><span class=line><span class=cl>├── │   ├── archives
+</span></span><span class=line><span class=cl>├── │   ├── assets
+</span></span><span class=line><span class=cl>├── │   ├── categories
+</span></span><span class=line><span class=cl>├── │   ├── images
+</span></span><span class=line><span class=cl>├── │   ├── links
+</span></span><span class=line><span class=cl>├── │   ├── posts
+</span></span><span class=line><span class=cl>├── │   ├── search
+</span></span><span class=line><span class=cl>├── │   └── tags
+</span></span><span class=line><span class=cl>├── ├── static     
+</span></span><span class=line><span class=cl>├── │   └── images  static目录下的images用来保存站点共享的图片资源
+</span></span><span class=line><span class=cl>├── └── themes  站点使用的主题 根据hugo对模板搜索优先级的规定，优先使用站点根目录下的layouts/下的各类模板，如果没有就使用主题的模板，最后是默认模板
+</span></span><span class=line><span class=cl>├──     └── PaperMod
+</span></span><span class=line><span class=cl>    └── hugo.yaml    站点的配置文件
+</span></span></code></pre></div><p>下面这段代码是在windows下输出上边树形目录的代码，需要复制后粘贴在powershell里运行</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=line><span class=cl><span class=kd>function</span><span class=w> </span><span class=nb>Get-SimpleTree</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=cm>&lt;#
+</span></span></span><span class=line><span class=cl><span class=cm>    .</span><span class=sd>SYNOPSIS</span><span class=cm>
+</span></span></span><span class=line><span class=cl><span class=cm>        以树状结构显示目录内容（支持自定义深度和文件显示）。
+</span></span></span><span class=line><span class=cl><span class=cm>    .PARAMETER Path
+</span></span></span><span class=line><span class=cl><span class=cm>        要遍历的目录路径。
+</span></span></span><span class=line><span class=cl><span class=cm>    .PARAMETER Depth
+</span></span></span><span class=line><span class=cl><span class=cm>        递归深度（默认：2）。
+</span></span></span><span class=line><span class=cl><span class=cm>    .PARAMETER ShowFiles
+</span></span></span><span class=line><span class=cl><span class=cm>        是否显示文件（默认仅显示目录）。
+</span></span></span><span class=line><span class=cl><span class=cm>    #&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=k>param</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>        <span class=p>[</span><span class=no>string</span><span class=p>]</span><span class=nv>$Path</span><span class=p>,</span>          <span class=c># 路径由外部输入，避免递归时重复弹窗</span>
+</span></span><span class=line><span class=cl>        <span class=p>[</span><span class=no>int</span><span class=p>]</span><span class=nv>$Depth</span> <span class=p>=</span> <span class=mf>2</span><span class=p>,</span>        <span class=c># 默认递归深度</span>
+</span></span><span class=line><span class=cl>        <span class=p>[</span><span class=no>string</span><span class=p>]</span><span class=nv>$Prefix</span> <span class=p>=</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>   <span class=c># 缩进前缀（递归时使用）</span>
+</span></span><span class=line><span class=cl>        <span class=p>[</span><span class=no>switch</span><span class=p>]</span><span class=nv>$ShowFiles</span>      <span class=c># 是否显示文件</span>
+</span></span><span class=line><span class=cl>    <span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># 检查路径是否存在</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=o>-not</span> <span class=p>(</span><span class=nb>Test-Path</span> <span class=nv>$Path</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nb>Write-Host</span> <span class=s2>&#34;错误：路径 &#39;</span><span class=nv>$Path</span><span class=s2>&#39; 不存在！&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Red</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># 如果是根目录（递归起点），显示目录名并设置初始缩进</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nv>$Prefix</span> <span class=o>-eq</span> <span class=s2>&#34;&#34;</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$root</span> <span class=p>=</span> <span class=nb>Split-Path</span> <span class=nv>$Path</span> <span class=n>-Leaf</span>
+</span></span><span class=line><span class=cl>        <span class=nb>Write-Host</span> <span class=nv>$root</span> <span class=n>-ForegroundColor</span> <span class=n>Cyan</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$Prefix</span> <span class=p>=</span> <span class=s2>&#34;├── &#34;</span>  <span class=c># 初始缩进符号</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># 获取子项（根据 ShowFiles 参数决定是否包含文件）</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$items</span> <span class=p>=</span> <span class=k>if</span> <span class=p>(</span><span class=nv>$ShowFiles</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>        <span class=nb>Get-ChildItem</span> <span class=nv>$Path</span> 
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>        <span class=nb>Get-ChildItem</span> <span class=nv>$Path</span> <span class=n>-Directory</span> 
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>$count</span> <span class=p>=</span> <span class=nv>$items</span><span class=p>.</span><span class=py>Count</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$i</span> <span class=p>=</span> <span class=mf>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c># 遍历当前目录下的每一项</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$items</span> <span class=p>|</span> <span class=nb>ForEach-Object</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$i</span><span class=p>++</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$isLast</span> <span class=p>=</span> <span class=p>(</span><span class=nv>$i</span> <span class=o>-eq</span> <span class=nv>$count</span><span class=p>)</span>  <span class=c># 判断是否是最后一项（用于调整符号）</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$symbol</span> <span class=p>=</span> <span class=k>if</span> <span class=p>(</span><span class=nv>$isLast</span><span class=p>)</span> <span class=p>{</span> <span class=s2>&#34;└── &#34;</span> <span class=p>}</span> <span class=k>else</span> <span class=p>{</span> <span class=s2>&#34;├── &#34;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$line</span> <span class=p>=</span> <span class=nv>$Prefix</span> <span class=p>+</span> <span class=nv>$symbol</span> <span class=p>+</span> <span class=nv>$_</span><span class=p>.</span><span class=py>Name</span>
+</span></span><span class=line><span class=cl>        <span class=nb>Write-Host</span> <span class=nv>$line</span> <span class=n>-ForegroundColor</span> <span class=p>(</span><span class=nb>Get-ItemColor</span> <span class=nv>$_</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c># 递归处理子目录（如果是目录且未达到深度限制）</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nv>$_</span><span class=p>.</span><span class=py>PSIsContainer</span> <span class=o>-and</span> <span class=nv>$Depth</span> <span class=o>-gt</span> <span class=mf>1</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nv>$nextPrefix</span> <span class=p>=</span> <span class=k>if</span> <span class=p>(</span><span class=nv>$isLast</span><span class=p>)</span> <span class=p>{</span> <span class=s2>&#34;    &#34;</span> <span class=p>}</span> <span class=k>else</span> <span class=p>{</span> <span class=s2>&#34;│   &#34;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=nb>Get-SimpleTree</span> <span class=n>-Path</span> <span class=nv>$_</span><span class=p>.</span><span class=py>FullName</span> <span class=n>-Depth</span> <span class=p>(</span><span class=nv>$Depth</span> <span class=p>-</span> <span class=mf>1</span><span class=p>)</span> <span class=n>-Prefix</span> <span class=p>(</span><span class=nv>$Prefix</span> <span class=p>+</span> <span class=nv>$nextPrefix</span><span class=p>)</span> <span class=n>-ShowFiles:</span><span class=nv>$ShowFiles</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># 辅助函数：根据文件类型返回颜色</span>
+</span></span><span class=line><span class=cl><span class=kd>function</span><span class=w> </span><span class=nb>Get-ItemColor</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>param</span> <span class=p>(</span><span class=nv>$item</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nv>$item</span> <span class=o>-is</span> <span class=p>[</span><span class=no>System.IO.DirectoryInfo</span><span class=p>])</span> <span class=p>{</span> <span class=s2>&#34;Green&#34;</span> <span class=p>}</span>        <span class=c># 目录显示绿色</span>
+</span></span><span class=line><span class=cl>    <span class=k>elseif</span> <span class=p>(</span><span class=nv>$item</span><span class=p>.</span><span class=py>Extension</span> <span class=o>-match</span> <span class=s2>&#34;\.(exe|bat|ps1)$&#34;</span><span class=p>)</span> <span class=p>{</span> <span class=s2>&#34;Yellow&#34;</span> <span class=p>}</span> <span class=c># 可执行文件显示黄色</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span> <span class=p>{</span> <span class=s2>&#34;Gray&#34;</span> <span class=p>}</span>                                             <span class=c># 其他文件显示灰色</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># === 调用示例 ===</span>
+</span></span><span class=line><span class=cl><span class=nb>Write-Host</span> <span class=s2>&#34;</span><span class=se>`n</span><span class=s2>=== 目录树状图 ===&#34;</span> <span class=n>-ForegroundColor</span> <span class=n>Magenta</span>
+</span></span><span class=line><span class=cl><span class=nv>$inputPath</span> <span class=p>=</span> <span class=nb>Read-Host</span> <span class=s2>&#34;请输入要遍历的目录路径（例如：C:\Windows 或 .\hugotest）&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>Get-SimpleTree</span> <span class=n>-Path</span> <span class=nv>$inputPath</span> <span class=n>-Depth</span> <span class=mf>2</span> <span class=n>-ShowFiles:</span><span class=vm>$false</span>
+</span></span></code></pre></div><h3 id=hugo博客站点的内容组织>hugo博客站点的内容组织</h3><h4 id=page--bundle>Page Bundle</h4><p>A page bundle is a directory that encapsulates both content and associated resources。Page bundles are either <em>leaf bundles</em> or <em>branch bundles</em></p><ul><li><p><strong>Leaf bundle</strong></p><p>A <em>leaf bundle</em> is a directory that contains an <code>index.md</code> file and zero or more resources. Analogous to a physical leaf, a leaf bundle is at the end of a branch. It has no descendants</p><p>最后一层子目录就叫做leaf bundle;</p></li><li><p>**Branch bundle **</p><p>A <em>branch bundle</em> is a directory that contains an <code>_index.md</code> file and zero or more resources. Analogous to a physical branch, a branch bundle may have descendants including leaf bundles and other branch bundles. Top-level directories with or without <code>_index.md</code> files are also branch bundles. This includes the home page</p><p>顶层目录和中间层的子目录叫作branch bundle。有<code>_index.md</code>文件<code>branch bundle</code>有<code>list page</code>,没有<code>_index.md</code>的<code>branch bundle</code>没有<code>list page</code>,只是在作为<code>url segment</code>出现，也就是路径中的一段显示。</p></li></ul><p>这是官方文档的一部分，好好体会一下这几句话，就可以理解Hugo博客文档的目录组织结构了。以Posts\目录为例子</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>posts\
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    +-----technology
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>       |--------+hugo                                      # branch  bundle
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>       |-------------+ learnhugo                                 #  leaf  bundle 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>       |--------------------+images
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>       |--------------------------img1.jpg
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>       |--------------------------img2.jpg
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>       |--------------------index.md                   
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>       |--------+PaperMod                                 # branch  bundle                       
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>       | --------_index.md
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    +-----------+economic                                 # branch  bundle 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        |------------+stock
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        |------------+finace
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        |------------_index.md 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    +-----------+read                                     # branch  bundle 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    ------------_index.md 
+</span></span></code></pre></div><p>上面的目录结构是我的博客站点posts目录的一部分，是按照hugo的page bundle逻辑结构组织的，posts/目录包含子目录technology、economic、read等，还包含一个<code>_index.md</code>文件，这个层级就是<code>branch bundle</code>。<code>technology</code>目录下的<code>hugo</code>子目录也是一个包含<code>_index.md</code>文件和子目录的<code>branch bundle</code>。<code>hugo</code>目录下的子目录<code>learnhugo</code> 是一个包含<code>inde.md</code>和其他图片资源文件的<code>leaf bundle</code>。其他的economic、read等目录也是如此的组织结构，这样就形成了一个树状的<code>Page Bundle</code>。在content目录下的文档就是hugo 模板系统的数据来源之一。目录结构和最后的站点渲染是对应的。</p><h3 id=hugo博客系统是如何工作的>Hugo博客系统是如何工作的</h3><p>在了解hugo生成的站点的结构和目录之后，来探索一下hugo站点的不同部分是如何互相协作运转起来的。</p><p>作为输入端的content、data，content保存markdown文档，data目录保存toml|yaml|json|csv格式的文件，用来作为数据源，layouts下面的模版文件里的hugo 模版语言从这些数据源中读取数据，还有Assets、static这些保存css、images的静态资源文件，最后由hugo引擎分析编译这些模板文件，生成静态的网页文件保存在public目录下，同时把站点需要的各类资源都复制在public目录下，public目录就成为站点的根目录。最后可以在本地浏览这个public站点，也可以发布到远程的网络服务器，比如发布到github的Pages。这个过程里有两个重要的元素，一个是markdown的元数据，一个是Hugo模版语音的对象化封装，可以使用对象的方法和属性在模版文件里加工，最终输出到拥有界面的HTML文件里，由浏览器渲染后呈现。大致是这个流程，虽然有的地方不严谨，但是感觉理解了hugo的工作原理。</p><p>这是我自己的理解，我又整理一份文心一言给的文档，保存如下：</p><p>Hugo 站点工作原理与面向对象特性详解
+一、Hugo 站点工作原理</p><ol><li><p>构建阶段：数据准备</p><p>分析文件：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl> content/ → Markdown/HTML → Page 对象
+</span></span><span class=line><span class=cl>    config.toml → .Site 配置
+</span></span><span class=line><span class=cl>    static/ → 静态资源（直接复制到 public/）
+</span></span><span class=line><span class=cl>    layouts/ → 模板文件
+</span></span><span class=line><span class=cl>    data/ → JSON/YAML/TOML → 自定义数据对象
+</span></span><span class=line><span class=cl>关键数据结构：
+</span></span><span class=line><span class=cl>    .Site：全局站点（配置、页面列表、菜单等）
+</span></span><span class=line><span class=cl>    .Page：单页面（内容、元数据、资源）
+</span></span><span class=line><span class=cl>    .Resources：静态资源（图片处理、CSS/JS 压缩）
+</span></span></code></pre></div></li><li><p>渲染阶段：模板执行</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1. 模板解析 → 生成 AST（抽象语法树）
+</span></span><span class=line><span class=cl>2. 数据绑定 → 将 .Site、.Page 等对象绑定到模板上下文
+</span></span><span class=line><span class=cl>3. 执行渲染：
+</span></span><span class=line><span class=cl>      变量替换（{{ .Title }}）
+</span></span><span class=line><span class=cl>      方法调用（{{ .Date.Format &#34;2006-01-02&#34; }}）
+</span></span><span class=line><span class=cl>      逻辑控制（{{ if .IsPage }}...{{ end }}）
+</span></span><span class=line><span class=cl>4. 输出静态文件 → 写入 public/ 目录 
+</span></span></code></pre></div><p>3.示例：渲染流程</p><p>访问 /posts/first-post/：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1.解析 content/posts/first-post.md → Page 对象
+</span></span><span class=line><span class=cl>2.选择 layouts/posts/single.html 模板
+</span></span><span class=line><span class=cl>3.渲染 .Title、.Content 等属性
+</span></span><span class=line><span class=cl>4.生成 public/posts/first-post/index.html
+</span></span></code></pre></div></li></ol><p>二、Hugo 的面向对象特性</p><ol><li><p>封装（Encapsulation）</p><pre><code> 实现方式：
+ 对象属性：.Page.Title
+ 对象方法：.Permalink、.Summary
+ 隐藏细节：例如 .Permalink 内部处理 URL 生成逻辑
+</code></pre></li><li><p>组合（Composition）</p><p>实现方式：
+部分模板（Partials）：</p><pre><code> &lt;!-- layouts/partials/header.html --&gt;
+ &lt;header&gt;{{ .Site.Title }}&lt;/header&gt;
+
+ &lt;!-- layouts/_default/baseof.html --&gt;
+ {{ partial &quot;header.html&quot; . }}
+</code></pre><p>​ 模板继承：</p><pre><code> &lt;!-- layouts/_default/baseof.html --&gt;
+ &lt;html&gt;{{ block &quot;main&quot; . }}{{ end }}&lt;/html&gt;
+
+ &lt;!-- layouts/_default/single.html --&gt;
+ {{ define &quot;main&quot; }}
+ &lt;article&gt;{{ .Content }}&lt;/article&gt;
+ {{ end }}
+</code></pre></li><li><p>多态（Polymorphism）</p><p>实现方式：
+管道操作符 |：</p><pre><code> &lt;!-- 字符串处理 --&gt;
+ {{ &quot;hello&quot; | title }}  &lt;!-- 输出 &quot;Hello&quot; --&gt;
+
+ &lt;!-- 日期处理 --&gt;
+ {{ .Date | time.Format &quot;2006-01-02&quot; }}
+
+资源处理：
+
+
+   {{ $css := resources.Get &quot;style.css&quot; | minify }}
+   {{ $img := resources.Get &quot;photo.jpg&quot; | resize &quot;300x&quot; }}
+</code></pre></li><li><p>上下文传递（Context Passing）</p><p>实现方式：
+循环中自动切换上下文：</p><pre><code> {{ range .Pages }}
+   &lt;a href=&quot;{{ .Permalink }}&quot;&gt;{{ .Title }}&lt;/a&gt;  &lt;!-- . 是当前 Page --&gt;
+ {{ end }}
+</code></pre><p>​ with 语句临时修改上下文：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>{{ with .Page.Params.author }}
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> &lt;p&gt;Author: {{ . }}&lt;/p&gt;  &lt;!-- . 是 author 字符串 --&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> {{ end }}
+</span></span></code></pre></div><p>5.类型系统（Type Safety）
+实现方式：
+类型断言：</p><pre><code> {{ if eq (kind .Params) &quot;map&quot; }}
+ &lt;!-- 处理参数为 map 的情况 --&gt;
+
+ {{ end }}
+</code></pre></li></ol><p>方法签名匹配：例如 .Resize 仅适用于 Resource 对象</p><p>三、Hugo 与传统 OOP 对比</p><table><thead><tr><th>特性</th><th>传统 OOP（如 Java）</th><th>Hugo 实现方式</th></tr></thead><tbody><tr><td><strong>封装</strong></td><td>类 + 私有/公共字段</td><td><code>.</code> 访问属性 + 方法调用</td></tr><tr><td><strong>组合</strong></td><td>结构体嵌入</td><td>部分模板 + 模板继承</td></tr><tr><td><strong>多态</strong></td><td>接口 + 实现类</td><td>管道操作符 + 内置函数</td></tr><tr><td><strong>继承</strong></td><td>类继承</td><td><code>baseof.html</code> 模板继承</td></tr><tr><td><strong>类型安全</strong></td><td>编译时检查</td><td>构建时静态类型检查</td></tr></tbody></table><p>四、Hugo 设计哲学</p><p>简洁优先：极简语法（无类、接口声明）
+约定优于配置：固定目录结构隐式定义行为
+性能导向：构建时完成所有计算，生成纯静态文件</p><p>使用建议</p><p>利用 部分模板 减少重复代码
+通过 管道操作符 实现灵活数据处理
+结合 上下文传递 编写动态逻辑</p></div></article></div><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("pre code").forEach(e=>{hljs.highlightElement(e);const t=document.createElement("button");t.className="copy-code",t.textContent="Copy",t.addEventListener("click",()=>{navigator.clipboard.writeText(e.textContent).then(()=>{t.textContent="Copied!",t.classList.add("copied"),setTimeout(()=>{t.textContent="Copy",t.classList.remove("copied")},2e3)})}),e.parentElement.prepend(t)});const o=document.querySelectorAll(".article-content h2[id], .article-content h3[id]"),i=document.querySelectorAll('.toc a[href^="#"]'),a=document.querySelector(".top-nav").offsetHeight,n=document.querySelector(".toc-container"),e=[];o.forEach(t=>{e.push({id:t.id,top:t.offsetTop-a-20})});function s(){const s=window.scrollY;let t="";for(let n=e.length-1;n>=0;n--)if(e[n].top<=s+50){t=e[n].id;break}i.forEach(e=>{const s=e.getAttribute("href")===`#${t}`;if(e.classList.toggle("active",s),s){const t=e.offsetTop-n.clientHeight/2;n.scrollTop=t}})}let t=!1;window.addEventListener("scroll",()=>{t||(window.requestAnimationFrame(()=>{s(),t=!1}),t=!0)}),s()})</script></body></html>
