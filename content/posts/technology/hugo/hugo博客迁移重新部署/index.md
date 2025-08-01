@@ -4,7 +4,7 @@ slug: "hugo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD
 date: 2025-07-30T14:18:10+08:00
 draft: false
 categories: [technology]
-tags: [hugo]
+tags: [hugo,github]
 toc: true
 thumbnail: "images/Build&DeploymentSource.png"
 description: "简单记录原来的Hugo博客系统迁移后重新部署的过程。如果再有博客迁移，轻车熟路完成内容迁移，简单完成部署"

@@ -2,6 +2,7 @@
 title: "Hugo Post中的图像资源引用方法"
 date: 2022-11-01T22:04:29+08:00
 draft: false
+tags: [hugo]
 thumbnail: "冰山.jpg"
 description: "hugo博客系统，使用PaperMod主题，在Markdown中引用图片资源的多种不同方法"
 ---

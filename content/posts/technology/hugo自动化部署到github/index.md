@@ -2,7 +2,7 @@
 title: "Hugo自动化部署到github"
 date: 2022-11-13T21:53:09+08:00
 draft: false
-tags: ["actions","部署","博客"]
+tags: ["hugo",actions","部署","博客"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true

@@ -3,7 +3,7 @@ title: "MySQL学习笔记"
 date: 2023-12-25T20:14:00+08:00
 draft: false
 # weight: 2
-tags: ["first"]
+tags: [mysql]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true

@@ -3,7 +3,7 @@ title: "Html简要学习笔记"
 date: 2022-11-28T22:04:58+08:00
 draft: false
 # weight: 2
-tags: ["first"]
+tags: [web,html]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false

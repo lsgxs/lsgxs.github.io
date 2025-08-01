@@ -3,7 +3,7 @@ title: "快速重建hugo博客站点"
 date: 2023-07-09T22:11:22+08:00
 draft: false
 # weight: 2
-tags: ["first"]
+tags: [hugo]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true

@@ -4,7 +4,7 @@ slug: "hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D
 date: 2025-07-30T17:50:29+08:00
 draft: false
 categories: ["默认分类"]
-tags: ["默认标签"]
+tags: [hugo,github]
 toc: true
 thumbnail: "images/create-site.png"
 description: "这篇文档主要记录使用Hugo建立博客系统的详细步骤，主要内容包含下面6个主题。

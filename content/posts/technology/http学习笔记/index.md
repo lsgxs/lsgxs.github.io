@@ -3,7 +3,7 @@ title: "Http学习笔记"
 date: 2024-03-01T20:40:15+08:00
 draft: false
 # weight: 2
-tags: ["first"]
+tags: [http]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true

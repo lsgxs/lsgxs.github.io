@@ -3,7 +3,7 @@ title: "正向代理和反向代理"
 date: 2022-12-01T13:01:08+08:00
 draft: false
 # weight: 2
-tags: ["NetWork","网络"]
+tags: ["web",NetWork","网络"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true
