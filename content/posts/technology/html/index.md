@@ -82,7 +82,7 @@ hypertext  markup  language 的缩写，是用一些列标签来结构话web页�
     </html>
 ~~~
 
-#### 常用html元素 
+#### 常用html元素
 
 这些用html  tag来表示的单元叫做HTMl  Element，由一个开始标签`<tag-name>`跟着一段content，最后是结束标签`</tag-name>`,比如：
 
@@ -102,7 +102,8 @@ hypertext  markup  language 的缩写，是用一些列标签来结构话web页�
    * 文本类标签     
      * `<div>`  division
      * `<p>`   paragrahp
-     * `<br>`  break 适用在一个段落内换行，段落之间的换行应该使用CSS完成。
+     * `<br/>`  break 适用在一个段落内换行，段落之间的换行应该使用CSS完成。
+     * `<hr/>`画一条水平的横线
      * `<span>`
      * `<pre>`、`<code>`
      
@@ -160,9 +161,42 @@ hypertext  markup  language 的缩写，是用一些列标签来结构话web页�
 
   * 列表类标签  (list)
 
-     * ol    ordered list
-     * ul    unordered list
-     * li     list item
+    * ol    ordered list
+
+    * ul    unordered list
+
+    * li     list item
+
+    * description  list
+
+      ```
+      <!--desctiption  list dl -->
+      <dl>
+      
+      <!--desctiption  term: dt -->
+      <dt>soliloquy</dt>
+      
+      <!--desctiption  definition dd -->
+      <dd>
+      In drama, where a character speaks to themselves, representing their inner
+      thoughts or feelings and in the process relaying them to the audience (but
+      not to other characters.)
+      </dd>
+      <dt>monologue</dt>
+      <dd>
+      In drama, where a character speaks their thoughts out loud to share them
+      with the audience and any other characters present.
+      </dd>
+      <dt>aside</dt>
+      <dd>
+      In drama, where a character shares a comment only with the audience for
+      humorous or dramatic effect. This is usually a feeling, thought, or piece of
+      additional background information.
+      </dd>
+      </dl>
+      ```
+
+      
 
   *  表格类标签 （tabular）
 
@@ -210,6 +244,95 @@ hypertext  markup  language 的缩写，是用一些列标签来结构话web页�
 <a  href="https://username.github.io" title="这是我的博客"> 博客</a>  #<a></a>标签就是把中间的内容部分转换为链接呈现给用户，而具体的动作在属性和值来实现。在后期的javascript编程中，标签的属性值还可以添加事件和方法，用来实现动态的编程。理解了这一点，最起码在书写标签时轻松很多，知道在哪个地方书写哪些内容。
 小小的一个标签，把用户界面和实现逻辑都实现了，真的是天才的设计，这个更加让自己对web知识的学习产生更大的兴趣。
 ```
+#### 网页头部的元数据
+
+```
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <!--设置UTF-8字符集-->
+    <meta charset="utf-8" />
+    
+    <!--添加作者和描述信息可以实现seo（(Search Engine Optimization搜索引擎优化）-->
+    <meta name="author" content="Chris Mills" />
+    <meta
+       name="description"
+       content="The MDN Web Docs Learning Area aims to provide
+       complete beginners to the Web with all they need to know to get
+        started with developing websites and applications." />
+
+    <!--设置主页图标-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    <!--应用样式表到HTML文件-->
+    <link rel="stylesheet" href="my-css-file.css" />
+
+    <!--加载javascript代码。defer实现延期加载，避免HTML元素没有被创建之前的错误访问-->
+    <script src="my-js-file.js" defer></script>
+
+    <title>My test page</title>
+
+
+</head>
+
+<body>
+    <p>This is my page</p>
+  </body>
+</html>
+
+```
+
+#### 语义标签和非语义标签
+
+* 有特定语义的标签
+
+  * `<header>`页面的头部
+
+  * `<nav>`  导航栏
+
+  * `<aside>` 侧边栏
+
+  * `<body>`
+
+  * `<main>`
+
+  * `<article>`  一篇文章
+
+  * `<section>`一章中的一节
+
+  * `<p>  `  一个段落
+
+  * `<footer>`页面的页脚
+
+  * `<cite>`引用出处
+
+      `<cite>` 就像书籍的“参考文献页脚注”，但它是**学术诚信和内容可追溯性的基石**。在网页中，它同样守护着内容的权威性和可访问性
+  
+    
+
+* 非语义标签
+  * `<div>` 一个块状的分区，没有指定的语义
+  
+  * `<span>`
+  
+* blockquote 和cite标签    
+  
+  区分 <cite> 和 <blockquote> 的 cite 属性
+  
+      <cite>：标记来源名称（显示在页面上）。
+      <blockquote> 的 cite 属性：标记来源URL（隐藏在HTML中，供机器读取）
+  
+  ```
+   <blockquote cite="https://example.com/article">  <!-- 机器可读的URL -->
+   <p>This is a quoted text.</p>
+   </blockquote>
+   
+   <p>— <cite>Article Title</cite></p>  <!-- 人类可读的来源名称 -->
+  ```
+  
+  
+  
+    
 
 > 引用链接：[HTML 教程](https://wangdoc.com/html/)
 
