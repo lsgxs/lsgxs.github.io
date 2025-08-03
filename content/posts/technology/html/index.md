@@ -307,15 +307,7 @@ hypertext  markup  language 的缩写，是用一些列标签来结构话web页�
   * `<cite>`引用出处
 
       `<cite>` 就像书籍的“参考文献页脚注”，但它是**学术诚信和内容可追溯性的基石**。在网页中，它同样守护着内容的权威性和可访问性
-  
-    
-
-* 非语义标签
-  * `<div>` 一个块状的分区，没有指定的语义
-  
-  * `<span>`
-  
-* blockquote 和cite标签    
+  * blockquote 和cite标签    
   
   区分` <cite>` 和` <blockquote> `的` cite` 属性
   
@@ -329,10 +321,17 @@ hypertext  markup  language 的缩写，是用一些列标签来结构话web页�
    
    <p>— <cite>Article Title</cite></p>  <!-- 人类可读的来源名称 -->
   ```
+  * `abbr`标签
+  
+  作为abbreviation  或者acronym，是为文档中的缩写提供标识，拥有title属性的`abbr`会以鼠标悬停式解释abbr含义的方式呈现title文本。而没有title的`abbr`标签只是显示缩写，以缩写的形式告诉读者，这是个专有名词的缩写。    这些没有明显视觉效果的语义标签，应该是给机器、搜索引擎或者屏幕阅读器提供帮助。  
+  
+* 非语义标签
+  * `<div>` 一个块状的分区，没有指定的语义
+  
+  * `<span>`
   
   
   
-    
 
 > 引用链接：[HTML 教程](https://wangdoc.com/html/)
 
