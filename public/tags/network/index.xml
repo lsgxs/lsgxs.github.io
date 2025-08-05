@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NetWork on 技术博客</title>
+    <title>NetWork&#34; on 技术博客</title>
     <link>http://localhost:1313/tags/network/</link>
-    <description>Recent content in NetWork on 技术博客</description>
-    <image>
-      <title>技术博客</title>
-      <url>http://localhost:1313/images/site-cover.jpg</url>
-      <link>http://localhost:1313/images/site-cover.jpg</link>
-    </image>
-    <generator>Hugo -- 0.148.1</generator>
+    <description>Recent content in NetWork&#34; on 技术博客</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 01 Dec 2022 13:01:08 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/network/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +13,7 @@
       <link>http://localhost:1313/posts/2022/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
       <pubDate>Thu, 01 Dec 2022 13:01:08 +0800</pubDate>
       <guid>http://localhost:1313/posts/2022/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
-      <description>外部的计算机通过互联网只能访问到公司内部服务器的代理，由这台代理服务调度外部的服务请求，这样的应用模式叫做反向代理。反向代理是公司内部一组服务器的代理，通过这个代理服务器，把内部的服务开放给互联网用户。</description>
+      <description>&lt;h4 id=&#34;正向代理服和反向代理的基本概念&#34;&gt;正向代理服和反向代理的基本概念&lt;/h4&gt;&#xA;&lt;h5 id=&#34;网络模型的发展&#34;&gt;网络模型的发展&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;两层网络模型：网络客户端，服务器。实际是就是最初的client/server模型。随着客户端请求规模的增加，受限于服务器端计算能力和网路带宽，服务器端的响应不再及时，于是就出现了三层模型或者分布式网路模型。&lt;/li&gt;&#xA;&lt;li&gt;简单构建一个三层网络模型：网络客户端、代理服务器、应用服务器（如数据库服务器、邮件服务器等，分布在多台主机或者表现为一台主机的多个不同系统服务）。&lt;/li&gt;&#xA;&lt;li&gt;分布式多层模型。这个比较复杂，暂不深究。这里只是记录自己对反向代理概念的初步认识。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;正向代理&#34;&gt;正向代理&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;应用场景 公司内部局域网的计算机通过代理服务器(与防火墙搭配)访问互联网资源。正向代理服务器和其他客户端同属于内部网络，通过防火墙的设置，只有代理服务器可以访问外部互联网，其他计算机通过代理服务器访问外部互联网。代理服务器是同网段其他客户端的代理，这样的模型应用称作为正向代理。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;反向代理&#34;&gt;反向代理&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;应用场景 外部计算机通过互联网访问公司内部网络服务。公司内部有多个后端服务器，但是不能直接开放给外部通过互联网访问的计算机，而是通过一个代理服务器设置服务转发调度表，把公司内部的服务展示给外部计算机。也就是说，外部的计算机通过互联网只能访问到公司内部服务器的代理，由这台代理服务调度外部的服务请求，这样的应用模式叫做反向代理。反向代理是公司内部一组服务器的代理，通过这个代理服务器，把内部的服务开放给互联网用户。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;应用实践&#34;&gt;应用实践&lt;/h5&gt;&#xA;&lt;p&gt;以caddy的反向代理设置为例，在实践中理解。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;File server and proxy&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; Caddy is both a flexible, efficient static file server and a powerful, scalable reverse proxy.Use it to serve your static site with compression. Or use it as a dynamic reverse proxy to any number of backends。&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  这段文字来自caddy主页介绍，作为反向代理的解释，最后一句话总结了reverse proxy的基本概念。&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;&#xA;&lt;p&gt;反向代理实践。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;在虚拟机上安装了caddy，使用下面的命令把caddy安装为Windows系统服务。这里假设代理服务器上安装的是caddy。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc.exe create caddy start= auto binPath= &amp;#34;C:\myrepos\caddy\caddy.exe run&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sc.exe start caddy&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--sc.exe stop  caddy&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--也可以在Windows的服务界面里设置；或者用Win+R打开运行界面，输入services.ms 打开Windows服务窗口启动或者停止caddy服务&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;caddy的配置文件Caddyfile设置如下：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

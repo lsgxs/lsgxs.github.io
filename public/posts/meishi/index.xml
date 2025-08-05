@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>美食美味 on 技术博客</title>
     <link>http://localhost:1313/posts/meishi/</link>
     <description>Recent content in 美食美味 on 技术博客</description>
-    <image>
-      <title>技术博客</title>
-      <url>http://localhost:1313/images/site-cover.jpg</url>
-      <link>http://localhost:1313/images/site-cover.jpg</link>
-    </image>
-    <generator>Hugo -- 0.148.1</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 12 Jul 2025 17:43:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/meishi/index.xml" rel="self" type="application/rss+xml" />
@@ -18,14 +13,14 @@
       <link>http://localhost:1313/posts/2025/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E9%85%BF%E5%88%B6%E9%86%AA%E7%B3%9F/</link>
       <pubDate>Sat, 12 Jul 2025 17:38:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/2025/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E9%85%BF%E5%88%B6%E9%86%AA%E7%B3%9F/</guid>
-      <description>这次买了带有单向透气阀的罐子，专门用来生发醪糟米酒</description>
+      <description>&lt;h4 id=&#34;自己动手酿制醪糟&#34;&gt;自己动手酿制醪糟&lt;/h4&gt;&#xA;&lt;p&gt;夏天到了，想起了美味的醪糟，决定自己动手试一试。从2022年开始自己在家包槲包（卢氏特产，槲包叶子包裹小米、黍子、大米煮就是美味），今年包好槲包，刚好剩下一小盆糯米，正好做醪糟用。半年前买的安琪甜酒曲放在家里，还没有拆开过，说干就干。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;首先把糯米放在凉水盆里浸泡4个小时左右，然后沥干水分蒸30分钟左右（第一次是直接放在薄一点的搪瓷盆里蒸），不能太过软糯，也不能夹生，蒸熟后且保持一定颗粒状的感觉。&lt;/li&gt;&#xA;&lt;li&gt;找个大一点的装满凉水的盆子，把刚蒸好的糯米带盆坐在凉水盆里，目的是快速自然降温，温度达到30摄氏度左右，主要是保持甜酒曲的良好发酵环境。&lt;/li&gt;&#xA;&lt;li&gt;取安琪甜酒曲一袋的一半儿，用少许凉开水搅拌均匀，倒入放凉的糯米盆中搅拌均匀，让每一粒大米都沾上甜酒曲，把大米压实，中间镂空，用保鲜膜封两层，常温下发酵40个小时左右，也就是两天就可以。如果发现出酒水不多，就加上点凉开水再发酵4个小时左右。发酵成功后，可以分盛到瓶子里放冰箱冷藏即可。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;第一次就成功闻到了醪糟的香甜味&#34;&gt;第一次就成功闻到了醪糟的香甜味&lt;/h4&gt;&#xA;&lt;p&gt;虽然大米蒸的有点欠火候，但是也不影响整体的味道，个别的米粒没有熟透。下次再改进一下。好玩^-^,先记录这么多，有时间再补充。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/butterfly.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;升级装备制作的醪糟&#34;&gt;升级装备制作的醪糟&lt;/h4&gt;&#xA;&lt;p&gt;买了带有单向阀的罐子，可以让糯米发酵产生的气体排出，而外边的空气却无法进入罐子，这样确保发酵的成功率。第一次使用这样的罐子发酵米酒，没有做太多，只用了1.5斤的圆糯米。因为时间的问题，没有泡多久，不到六个小时，下次还是晚上泡好，第二天刚好。把泡好的糯米倒在笼布上，记得把笼布用清水洗一下，湿笼布可以让蒸好的糯米不粘布。大概蒸了不到40分钟，把糯米倒在干净的容器里降温，大概到30多度就可以加入安琪酵母甜酒曲，记得看看糯米和酒曲的配比，这次是根据自己的感觉随便加的，甜酒曲用温开水化开导入糯米中，充分搅拌，把糯米装在罐子里，盖好盖子，记得要把单向阀向上提，要不然就是一个密封的罐子，夏天很容易坏掉。24小时就看到有一半的酒水出来了，夏天应该是发酵3天以内就可以了，只要看出的酒水达到糯米的一半以上就可以了，放到冰箱里停止发酵。&lt;/p&gt;</description>
     </item>
     <item>
       <title>自己动手制作酸豆角</title>
       <link>http://localhost:1313/posts/2023/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%88%B6%E4%BD%9C%E9%85%B8%E8%B1%86%E8%A7%92/</link>
       <pubDate>Tue, 18 Jul 2023 19:52:59 +0800</pubDate>
       <guid>http://localhost:1313/posts/2023/%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%88%B6%E4%BD%9C%E9%85%B8%E8%B1%86%E8%A7%92/</guid>
-      <description>挑选饱满的本地豇豆，用淡盐水清洗，在阴凉处晾干，不要在太阳下晒干，否则豆角会丢失水分，影响口感。清洗时不要把豇豆掐头去尾，否则豇豆内部会存留生水，容易坏，挑选好的、完整的豆角清洗就可以</description>
+      <description>&lt;h4 id=&#34;自己动手做酸豆角&#34;&gt;自己动手做酸豆角&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;挑选饱满的本地豇豆，用淡盐水清洗，在阴凉处晾干，不要在太阳下晒干，否则豆角会丢失水分，影响口感。清洗时不要把豇豆掐头去尾，否则豇豆内部会存留生水，容易坏，挑选好的、完整的豆角清洗就可以。一句话总结：把完整的豆角用淡盐水清洗后在阴凉处晾干。&lt;/li&gt;&#xA;&lt;li&gt;挑选玻璃或者陶瓷罐，用50度左右的高度白酒把容器的每一个地方都消毒，然后把晾干的豇豆盘整放入容器（注意容器不能有生水、油渍），装入容器时每次少量的3到4根豆角盘起来装入，一次装太多容易折断。根据自己的口味，可以在豆角上面放入生蒜、少量新鲜辣椒、生姜以丰富口感。装入的食材八分满即可，不要装满。&lt;/li&gt;&#xA;&lt;li&gt;熬制料水。选取花椒、八角、桂皮、香叶、老冰糖少量（带点黄色的蔗糖）、3两食用盐，这几种调料放入水中烧开，水开后转中小火再熬制5分钟关火，让料水自然冷却，彻底放凉。&lt;/li&gt;&#xA;&lt;li&gt;把放凉的的料水倒入容器（料头不用倒入容器），保持料水没过豆角，最好找个干净的石头压住豆角（可以用几根筷子交叉放在石头下面，或者没有石头就用几根筷子交叉压住，石头也要用高度白酒消毒），不能让豆角露出液面，否则豆角会坏掉。&lt;/li&gt;&#xA;&lt;li&gt;向容器中倒入一两左右的高度白酒，开始封口。用保鲜膜盖住容器口，然后盖好盖子放在阴凉处，不用搅拌，发酵三个星期之后就可以食用。没有发酵好不能放在冰箱里，成功后可以放置到冰箱冷藏。&lt;/li&gt;&#xA;&lt;li&gt;如果发现有少量坏掉（白化）现象，用干净的勺子捞出，然后把高度白酒装在喷壶，喷洒高度白酒即可。如果大面积坏掉就失败了，倒掉重做。&lt;/li&gt;&#xA;&lt;li&gt;要经常吃、经常添加新鲜的菜，这样的菜可以保存多年。经过自然发酵的豆角，包含自然发酵的菌类，口感好，还有益于健康。但是发酵间短的不能食用，至少要3个星期以上，食用时就不会有亚硝酸盐。食用时夹菜的筷子也要干净，保持无油、无生水。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;豆角生花了、长白毛了怎么处理？&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;第一天：先找干净的勺子把花、和白毛瓢出来，再放入一小把白冰糖、在用小喷壶的方式把50度以上的高度白酒喷进去，把瓶口周围也要喷一下，第二天观察一下还有的话，在喷点高度白酒。第三天在观察一下，应该生花、长白毛的就改善了。还有的话，就在放点鲜花椒（一定要洗干净晾干）、在放点无碘盐，在用高度白酒喷一下周围，情况就会改善。切记要在阴凉地方发酵。&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

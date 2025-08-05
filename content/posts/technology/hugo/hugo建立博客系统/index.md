@@ -277,7 +277,7 @@ posts\
 
 上面的目录结构是我的博客站点posts目录的一部分，是按照hugo的page  bundle逻辑结构组织的，posts/目录包含子目录technology、economic、read等，还包含一个`_index.md`文件，这个层级就是`branch  bundle`。`technology`目录下的`hugo`子目录也是一个包含`_index.md`文件和子目录的`branch bundle`。`hugo`目录下的子目录`learnhugo` 是一个包含`inde.md`和其他图片资源文件的`leaf bundle`。其他的economic、read等目录也是如此的组织结构，这样就形成了一个树状的`Page   Bundle`。在content目录下的文档就是hugo  模板系统的数据来源之一。目录结构和最后的站点渲染是对应的。
 
- ### Hugo博客系统是如何工作的
+### Hugo博客系统是如何工作的
 
 在了解hugo生成的站点的结构和目录之后，来探索一下hugo站点的不同部分是如何互相协作运转起来的。
 
@@ -428,4 +428,24 @@ Hugo 站点工作原理与面向对象特性详解
 利用 部分模板 减少重复代码
 通过 管道操作符 实现灵活数据处理
 结合 上下文传递 编写动态逻辑
+
+### 备份博客并快速还原
+
+#### 备份博客内容
+
+安全起见，要定期的备份自己的博客内容，尤其是自己定制了博客的配置或者自定义了博客的布局，在某些修改不能达成目标时，无法正确还原到修改之前的样子，这个时候如果有个近期的备份时最好不过了，定期备份博客，除了能保存自己写的笔记之外，还可以以最低的代价还原到正常运行的状态。这里说的备份就是博客项目的整体备份。
+
+```
+git  clone  https://github.com/username/username.github.io.git  
+#或者使用git协议
+git  clone  git@github.com/username/username.github.io.git 
+```
+
+#### 删除原来的username.github.io仓库
+
+#### 新建一个空的仓库username.github.io
+
+#### 上传备份的博客项目到username.github.io
+
+
 

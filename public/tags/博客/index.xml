@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>博客 on 技术博客</title>
     <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 博客 on 技术博客</description>
-    <image>
-      <title>技术博客</title>
-      <url>http://localhost:1313/images/site-cover.jpg</url>
-      <link>http://localhost:1313/images/site-cover.jpg</link>
-    </image>
-    <generator>Hugo -- 0.148.1</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 13 Nov 2022 21:53:09 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +13,7 @@
       <link>http://localhost:1313/posts/2022/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
       <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
       <guid>http://localhost:1313/posts/2022/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
-      <description>部署静态博客站点到github一般有三种方法，第一种是使用git命令手动部署到github仓库；第二种是使用github自带的actions workflow自动部署到默认的gh-pages分支；第三种是在一个仓库的两个分支之间完成自动化发布，同时是使用actions workflow</description>
+      <description>&lt;h4 id=&#34;使用github的actions-workflow把hugo博客自动化部署到github&#34;&gt;使用github的actions workflow把hugo博客自动化部署到github&lt;/h4&gt;&#xA;&lt;p&gt;部署静态博客站点到github一般有三种方法，第一种是使用git命令手动部署到github仓库；第二种是使用github自带的actions workflow自动部署到默认的gh-pages分支；第三种是在一个仓库的两个分支之间完成自动化发布，同时是使用actions workflow。&lt;/p&gt;&#xA;&lt;h5 id=&#34;使用git命令手动推送到github仓库&#34;&gt;使用git命令手动推送到github仓库&lt;/h5&gt;&#xA;&lt;p&gt;手动建立项目，添加文档，最后使用git命令部署到github仓库。&lt;/p&gt;&#xA;&lt;h5 id=&#34;使用github提供的actions--flow和推荐的hugo-workflow自动化部署&#34;&gt;使用github提供的actions  flow和推荐的hugo workflow自动化部署&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;在gihhub上新建username.github.io的仓库，不选择添加readme.md来初始化仓库，这样就新建了一个空仓，从本地推送到github时很方便，不必运行git pull  origin main 就可以直接推送本地仓库到远程。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;设置仓库的Github Pages 发布源&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/gihub-pages-deployment-source.png&#34; alt=&#34;&#34;&gt;&#xA;在新建好空仓之后，设置Github Pages Build and Deployment source为Github Actions。然后再把本地带有.github\workflow\hugo.yml的仓库git-add-commit-push到空仓，完成自动化部署。如果没有设置好Build and Deployment为Github Actions，然后推送到新建的空仓，在浏览器输入https://username.github.io 时就会出现404页面，因为仓库新建之后默认的Github Pages Build and Deployment是Deploy from Branch 。hugo actions workflow正确执行后就会建立一个github-pages，在后台以压缩包的形式显示（点击仓库的updates记录)，如果没有显示这个文件，多半原因是没有设置Github Pages Build and Deployment为Github Acionts.如下图:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/Artifacts-github-pages.png&#34; alt=&#34;&#34;&gt;&#xA;一句话总结：首先建里空仓，然后设置github pages发布源为github actions,最后从本地推送项目到github仓库。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;使用github提供的actions--flow实现自动化部署一般可以通过两个分支来实现&#34;&gt;使用github提供的actions  flow实现自动化部署，一般可以通过两个分支来实现。&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;一个分支保存项目源文件、&lt;/p&gt;&#xA;&lt;p&gt;一般为main分支，把项目的源文件推送到这个分支，既可以保存源文件，又可以从这里开始执行自动化部署到本仓库的另外一个分支。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;手动建立一个独立的gh-pages分支&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git   checkout --orphan gh-pages&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo  &amp;#34;hello gh-pages&amp;#34; &amp;gt; readme.md&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git  add .&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m  &amp;#34;udpate with orphan branch gh-pages&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin gh-pages&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git  branch -a   查看所有分支 &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--经过上面的创建新的独立分支到最后的提交、推送，到这里才可以看到这个新建的分支&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-- 然后可以把gh-pages分支下除了.git目录之外的所有目录和文件删除，推送到远程，专门来保存自动部署生成的静态站点文件&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-- 当然可以试一下不必手动删除这些目录和文件，看看系统是不是会自动清理删除这些目录和文件。&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;编写actions自动部署脚本&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

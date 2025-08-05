@@ -14,7 +14,7 @@
 </span></span><span class=line><span class=cl>     |----logs    日志目录
 </span></span><span class=line><span class=cl>     |----temp    
 </span></span><span class=line><span class=cl>     -nginx.exe    
-</span></span></code></pre></div><h5 id=运行nginx启用静态文件服务>运行Nginx启用静态文件服务</h5><p>切换到nginx所在的目录c:\myrepos\nginx,在Windows的CMD窗口下运行nginx.exe。此时系统提示一个错误信息</p><p><img loading=lazy src=/posts/2022/nginx-quickstart/images/nginx-80.png></p><p>提示访问80端口没有权限。要么提升权限，要么使用别的端口，这里使用2090端口。在配置文件的server block部分<code>listen: 80</code>处修改为<code>listen: 2090</code>运行nginx，如下图：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-nginx data-lang=nginx><span class=line><span class=cl><span class=k>server</span> <span class=p>{</span>
+</span></span></code></pre></div><h5 id=运行nginx启用静态文件服务>运行Nginx启用静态文件服务</h5><p>切换到nginx所在的目录c:\myrepos\nginx,在Windows的CMD窗口下运行nginx.exe。此时系统提示一个错误信息</p><p><img src=images/nginx-80.png alt></p><p>提示访问80端口没有权限。要么提升权限，要么使用别的端口，这里使用2090端口。在配置文件的server block部分<code>listen: 80</code>处修改为<code>listen: 2090</code>运行nginx，如下图：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-nginx data-lang=nginx><span class=line><span class=cl><span class=k>server</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>        <span class=kn>listen</span>      <span class=mi>2090</span> <span class=p>;</span>
 </span></span><span class=line><span class=cl>        <span class=kn>server_name</span>  <span class=s>localhost</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>       
@@ -34,7 +34,7 @@
 </span></span><span class=line><span class=cl>        <span class=kn>location</span> <span class=p>=</span> <span class=s>/50x.html</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>            <span class=kn>root</span>   <span class=s>html</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span></code></pre></div><p><img loading=lazy src=/posts/2022/nginx-quickstart/images/nginx-welcome.png></p><p>这里显示的内容是nginx自带的html/目录下的index.html，是通过location block中的root html 参数指定http请求资源的路径映射。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-nginx data-lang=nginx><span class=line><span class=cl><span class=k>location</span> <span class=s>/</span>  <span class=p>{</span>
+</span></span></code></pre></div><p><img src=images/nginx-welcome.png alt></p><p>这里显示的内容是nginx自带的html/目录下的index.html，是通过location block中的root html 参数指定http请求资源的路径映射。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-nginx data-lang=nginx><span class=line><span class=cl><span class=k>location</span> <span class=s>/</span>  <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=kn>root</span>  <span class=s>html</span> <span class=p>;</span>
 </span></span><span class=line><span class=cl>    <span class=kn>index</span>  <span class=s>index.html</span>  <span class=s>index.htm</span>
 </span></span><span class=line><span class=cl>

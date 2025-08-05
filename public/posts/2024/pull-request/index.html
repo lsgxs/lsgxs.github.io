@@ -7,7 +7,7 @@
 漏洞修复或代码贡献
 对于开源项目，Pull Request是外部贡献者提交代码更改的主要方式。当发现项目的漏洞或想要添加新功能时，外部开发者可以在自己的分支上进行修改，并通过Pull Request将更改提交给项目维护者。维护者会对更改进行审查，并根据项目的需求和规范决定是否合并这些更改。
 </code></pre><p>其实归根结底就是一个目的：Code Review
-工作流程</p><p><img alt=img loading=lazy src=/posts/2024/pull-request/PullRequest.png></p><p>在这里插入图片描述
+工作流程</p><p><img src=PullRequest.png alt=img></p><p>在这里插入图片描述
 PR为什么不叫push request</p><p>我们重点看一下第 6 步, 写完代码了想合入到原作者的仓库, 新建了一个"pull request", 拉请求? 这推啊,将自己的修改推到原作者的仓, 感觉叫"push request"比较合适吧。</p><p>既然 Github 坚持叫"pull request", 我们试着理解一下它的思路, 写完代码了心里肯定是在想: 原作者大神, 我改了点东西, 你快把我的修改拉回去吧。站在原作者的角度思考, 叫 pull request 好像也说得过去, 每天有大量的人从我这里 fork 代码走, 我只会拉取我感兴趣的代码回来。</p><p>这个解释勉强能够说服我。
 具体步骤</p><p>1.fork原仓库A到我的仓库B（B是A的fork版本）</p><p>2.将仓库B clone到我本地电脑</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>git clone XXX
 </span></span></code></pre></div><p>3.在本地创建一个分支，如<code>bugfix/issue-12</code>，该分支用于存放我的代码修改。同时在我的github上的仓库B也创建一个同名的该分支</p><p>4.切换到该分支bugfix/issue-12，修改代码</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>git checkout -b bugfix/issue-12

@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PaperMod on 技术博客</title>
     <link>http://localhost:1313/tags/papermod/</link>
     <description>Recent content in PaperMod on 技术博客</description>
-    <image>
-      <title>技术博客</title>
-      <url>http://localhost:1313/images/site-cover.jpg</url>
-      <link>http://localhost:1313/images/site-cover.jpg</link>
-    </image>
-    <generator>Hugo -- 0.148.1</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 24 Nov 2022 17:42:04 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/papermod/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +13,7 @@
       <link>http://localhost:1313/posts/2022/papermod-quickstart/</link>
       <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
       <guid>http://localhost:1313/posts/2022/papermod-quickstart/</guid>
-      <description>简单的入门Huog&#43;PaperMod主题，构建自己的本地博客</description>
+      <description>&lt;h4 id=&#34;根据papermod的quickstart记录自己的建站教程&#34;&gt;根据PaperMod的QuickStart记录自己的建站教程&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;安装hugo&lt;/p&gt;&#xA;&lt;p&gt;下载扩展版本的hugo二进制应用，在系统环境变量里设置指向hug.exe的path即可在任意目录下运行hugo。在git-bash  terminal下测试安装是否正确：&lt;code&gt;hugo  version&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;​       &lt;img src=&#34;images/hugo-setup-version.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;建站&lt;/p&gt;&#xA;&lt;p&gt;保持下图所示的目录结构：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/hugo-directoy-structure.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;cd  site&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;hugo  new site HuGoPaperMod -f yml &lt;/code&gt;     (这里用-f yml指定建立yml格式的配置文件)&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;cd HugoPaperMod &lt;/code&gt;                        (此时新建的HugoPaperMod项目下有下图所示的目录）：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/hugo-directoy-structure-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;在这些目录下只有archetypes目录下有default.md一个文件，作为新建markdown文档的模板，内容如下：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: {{ .Date }}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;draft: true&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init    (先初始化当前的站点项目目录，否则下边的git submodule add 不能执行)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod   （--depth=1指定只下载gitchub仓库最近的一次提交，不包括更多的历史提交记录）&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule update --init --recursive   (needed when you reclone your repo,submodules may not get cloned automatically)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;到这里已经把PaperMod主题下载到themes目录下，如果提示`unable to access...`类似的错误信息，就多试几次，可能是因为https协议没有ssh协议稳定。&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在config.yml文件里添加&lt;code&gt;theme : &amp;quot;PaperMod&amp;quot;&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
