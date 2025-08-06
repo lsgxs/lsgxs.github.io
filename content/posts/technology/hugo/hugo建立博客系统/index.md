@@ -429,11 +429,11 @@ Hugo 站点工作原理与面向对象特性详解
 通过 管道操作符 实现灵活数据处理
 结合 上下文传递 编写动态逻辑
 
-### 备份博客并快速还原
+### 备份和还原博客
 
 #### 备份博客内容
 
-安全起见，要定期的备份自己的博客内容，尤其是自己定制了博客的配置或者自定义了博客的布局，在某些修改不能达成目标时，无法正确还原到修改之前的样子，如果有个近期备份是最好不过了。定期备份博客项目源代码，除了能保存自己写的笔记之外，还能以最低的代价还原到博客正常运行的状态。这里说的备份是博客项目源代码的整体备份。
+安全起见，定期备份自己的博客内容，尤其是自己定制了博客配置或者自定义了博客布局，在某些修改不能达成目标时，无法正确还原到修改之前的样子，如果有个近期备份是最好不过了。定期备份博客项目源代码，除了能保存自己写的笔记之外，还能以最低的代价还原到博客正常运行的状态。这里说的备份是博客项目源代码的整体备份。
 
 ```
 git  clone  https://github.com/username/username.github.io.git  
@@ -461,10 +461,10 @@ git  clone  git@github.com/username/username.github.io.git
 
 ![img](images/githubPages.png)
 
-#### 总结一下备份还原步骤
+#### 总结备份还原步骤
 
 ```
-1、git clone  git@github.com:username/username.github.io.git    #推荐使用ssh协议，也就是这行的写法。
+1、下载仓库。git clone  git@github.com:username/username.github.io.git    #推荐使用ssh协议，也就是这行的写法。
    # 或者 git  clone  https://github.com/username/username.github.io.git   
    # 如果在后边使用git push origin main 时很慢，甚至提示无法访问，那就直接把https协议更换为ssh协议,更换方法如下：
    # git  remote  -v    
@@ -472,13 +472,13 @@ git  clone  git@github.com/username/username.github.io.git
    # git  remote  add origin  git@github.com:username/username.github.io.git 
    # 然后再使用git-add-commit-push 就正常推送了。
    # 所以，推荐使用ssh协议下载和上传博客项目   
-2、删除username.github.io仓库     （在仓库的settings最下端选择delete  this  repository）  
-3、新建username.github.io仓库， 保持默认选项，让username.github.io保持空仓状态
+2、删除仓库。删除username.github.io仓库     （在仓库的settings最下端选择delete  this  repository）  
+3、新建空仓。新建username.github.io仓库， 保持默认选项，让username.github.io保持空仓状态
 
-4、切换到本地下载的博客项目根目录，使用git  remote  -v   查看远程连接是否正确，然后使用git  push  -u  origin   main ，(或者试试git push  oirgin  main )完成第一次自动部署
-   自动部署会自动创建gh-pages，因为没有设置正确的Deploy and Build Source,第一次部署会出错。
-5、设置Pages的DeployMent  and  Builder  source  为branch ，Deployment  分支选择为gh-pages，发布目录选择为root，点击保存(save)。
-6、在本地的博客项目文档修改一点内容(随便修改点内容)，git-add-commit-push ,再次推送到username.github.io仓库，进行第二次自动部署，这次就可以正常自动部署了
+4、首次部署。切换到本地下载的博客项目根目录，使用git  remote  -v   查看远程连接是否正确，然后使用git  push  -u  origin   main ，(或者试试git push  oirgin  main )完成第一次自动部署
+   自动部署会自动创建gh-pages分支，因为没有设置正确的Deploy and Build Source,第一次部署会出错。
+5、设置部署源为gh-pages分支。设置Pages的 Builder and DeployMent Source为Branch ，分支选择为gh-pages，发布目录选择为root，点击保存(save)。
+6、二次推送。在本地的博客项目文档修改一点内容(随便修改点内容)，git-add-commit-push ,再次推送到username.github.io仓库，进行第二次自动部署，这次就可以正常自动部署了
 
 ```
 
