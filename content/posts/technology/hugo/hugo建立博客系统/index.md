@@ -464,15 +464,23 @@ git  clone  git@github.com/username/username.github.io.git
 #### 总结一下备份还原步骤
 
 ```
-1、git clone  git@github.com:username/username.github.io.git
-   # 或者 git  clone  https://github.com/username/username.github.io.git 
+1、git clone  git@github.com:username/username.github.io.git    #推荐使用ssh协议，也就是这行的写法。
+   # 或者 git  clone  https://github.com/username/username.github.io.git   
+   # 如果在后边使用git push origin main 时很慢，甚至提示无法访问，那就直接把https协议更换为ssh协议,更换方法如下：
+   # git  remote  -v    
+   # git  remote  remove  origin  
+   # git  remote  add origin  git@github.com:username/username.github.io.git 
+   # 然后再使用git-add-commit-push 就正常推送了。
+   # 所以，推荐使用ssh协议下载和上传博客项目   
 2、删除username.github.io仓库     （在仓库的settings最下端选择delete  this  repository）  
 3、新建username.github.io仓库， 保持默认选项，让username.github.io保持空仓状态
-4、切换到本地备份的博客项目根目录，打开git  bash终端命令窗口
-5、使用git  remote  -v   查看远程连接是否正确，然后使用git  push  -u  origin   main ，(或者试试git push  oirgin  main )完成第一次自动部署
+
+4、切换到本地下载的博客项目根目录，使用git  remote  -v   查看远程连接是否正确，然后使用git  push  -u  origin   main ，(或者试试git push  oirgin  main )完成第一次自动部署
    自动部署会自动创建gh-pages，因为没有设置正确的Deploy and Build Source,第一次部署会出错。
-6、设置Pages的DeployMent  and  Builder  source  为branch ，Deployment  分支选择为gh-pages，发布目录选择为root，点击保存(save)。
-7、在本地的博客项目文档修改一点内容(随便修改点内容)，git-add-commit-push ,再次推送到username.github.io仓库，进行第二次自动部署，这次就可以正常自动部署了
+5、设置Pages的DeployMent  and  Builder  source  为branch ，Deployment  分支选择为gh-pages，发布目录选择为root，点击保存(save)。
+6、在本地的博客项目文档修改一点内容(随便修改点内容)，git-add-commit-push ,再次推送到username.github.io仓库，进行第二次自动部署，这次就可以正常自动部署了
 
 ```
+
+**总结6个步骤：下载项目，删除仓库，新建空仓；首次推送（有错误），修改Pages的Build and Deployment Source为`Deploy From  branch`并选择gh-pages分支，二次推送（成功）**
 
