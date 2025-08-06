@@ -436,12 +436,17 @@ Hugo 站点工作原理与面向对象特性详解
 安全起见，定期备份自己的博客内容，尤其是自己定制了博客配置或者自定义了博客布局，在某些修改不能达成目标时，无法正确还原到修改之前的样子，如果有个近期备份是最好不过了。定期备份博客项目源代码，除了能保存自己写的笔记之外，还能以最低的代价还原到博客正常运行的状态。这里说的备份是博客项目源代码的整体备份。
 
 ```
-git  clone  https://github.com/username/username.github.io.git  
-#或者使用git协议
+#使用ssh协议下载仓库到本地
 git  clone  git@github.com/username/username.github.io.git 
+
+#或者使用https协议
+git  clone  https://github.com/username/username.github.io.git  
+
 ```
 
 #### 删除原来的username.github.io仓库
+
+* **删除后不可恢复，所以要先使用`git clone  git@github.com:username/username.github.io.git` 把仓库下载到本地，做好仓库备份**。选择仓库的settings，在页面的最下端选择`**Delete this repository**`选项，按照提示输入确认信息后删除仓库。
 
 #### 新建一个空的仓库username.github.io
 
@@ -455,11 +460,29 @@ git  clone  git@github.com/username/username.github.io.git
 
   ![newRepository](images/newRepository3.png)
 
-#### 上传备份的博客项目到username.github.io
+#### 首次部署(上传备份的博客项目到username.github.io)
+
+```
+1、git push  -u  origin  main
+2、如果使用git push -u origin main 时很慢，甚至提示无法访问，那可能备份时是使用https协议下载的仓库，现在更换为ssh协议
+   git  remote  -v     # 查看origin 的连接情况
+   git  remote  remove  origin    
+   git  remote  add origin  git@github.com:username/username.github.io.git 
+   然后再使用git-add-commit-push 就正常推送了。
+   推荐使用ssh协议下载和上传博客项目
+```
+
+因为没有设置正确的Build and Deployment Source 为gh-pages分支，所以会导致第一次自动化部署错误。下面修改一下github的Pages的设置。
 
 #### 修改仓库Pages的Build And  Deployment  Source
 
 ![img](images/githubPages.png)
+
+设置Pages的 Builder and DeployMent Source为Branch ，分支选择为gh-pages，发布目录选择为root，点击保存(save)。
+
+#### 二次部署
+
+在修改了仓库Pages下的Build and Deployment Source 为gh-pages分支之后，在本地的博客文档中随便修改点内容，然后再次推送到仓库，这次的自动化部署会成功部署。 
 
 #### 总结备份还原步骤
 
