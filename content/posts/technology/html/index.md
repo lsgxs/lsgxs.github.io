@@ -209,6 +209,20 @@ hypertext  markup  language 的缩写，是用一些列标签来结构话web页�
           <input type="submit" value="commit">
         </form>
      ~~~
+     the `Form` element acts as the outer wrapper for the form, grouping together all the form controls inside it. When the `<button>` is pressed, all the data represented by the form controls will be submitted to the server.The action and method attributes cause the form data to be submitted in a URL along the following lines:
+
+          `/some/url/submit_page?name=Bob&email=bob%40bob.com`
+         
+         点击Form上的提交按钮之后，Form上所有的输入的数据都会以键值对的形式添加在URL后边，每一个键值对之间用`&`分开。
+
+       结构化表单  
+
+     ```
+        You can include any HTML elements you like inside a `<form>` element to structure the form elements themselves and provide containers to target with CSS for styling, etc. 
+         We can  put each input/label pair and the submit button inside a separate <p>, so that each will appear on a separate line. These elements are all inline by default, meaning that if we didn't do this, they would all sit on the same line.
+         我们可以把标签/输入框和提交按钮放在一个单独的<p>元素里，这样每一组元素的就会单独显示一行，否则所有标签/输入框都是显示在一行里，因为这元素默认使用的inline排列。如果加上用<p> 、<div> 、<section>来作为容器，就会按照这些容器的布局来显示元素。   
+     ```
+
 
   * lable
 
