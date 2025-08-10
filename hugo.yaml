@@ -1,4 +1,4 @@
-baseURL: "http://localhost:1313/"
+baseURL: "http://lsgxs.github.io/"
 title: "技术博客"
 pagination:
   pagerSize: 3
