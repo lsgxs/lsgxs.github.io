@@ -418,7 +418,7 @@ selector-name  {
     We  can  use  lengths and percentages  and fr  to creating   grids.(length、percentags、fr)。再使用fr单位来定义一个网格：
     ```
     
-  * 然后使用Line-Based方法在网格中放置元素（这是mdn官网的例子）
+  * 然后使用Line-Based方法在网格中放置Htm文档中的元素（这是mdn官网的例子）
   
     ![img](images/grid.png)
   
@@ -457,7 +457,7 @@ selector-name  {
     aside {
       border-right: 1px solid rebeccapurple;
     }
-    
+    /*放置html中的元素*/
     header {
       grid-column: 1 / 3;  /*  header部分是从第一根线开始到第三根线结束，也就是占满2列*/
       grid-row: 1;         /*这种写法直接指定行号，第一行*/
@@ -755,8 +755,8 @@ A common approach when using Media Queries is to create a simple single-column l
 * Box  Model
   * 盒子的四个要素：content、padding、border、margin 
   * 盒子尺寸的计算方法
-    * 加法： content+ `2*padding` + `2*border`   ,而margin 不属于盒子本身的尺寸，是用来和保持其他元素的间距
-    * 减法：在给定了宽度和高度之后，减去border，减去padding ，最后就是content的尺寸。
+    * 加法： 给定的宽度和高度是content的尺寸。content+ `2*padding` + `2*border`   ,而margin 不属于盒子本身的尺寸，是用来和保持其他元素的间距
+    * 减法：给定的宽度和高度是盒子的整体尺寸，减去border，减去padding ，最后就是content的尺寸。
 * 布局方式
   * flow
   * float
