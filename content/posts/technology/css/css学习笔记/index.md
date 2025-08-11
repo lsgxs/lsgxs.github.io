@@ -405,17 +405,96 @@ selector-name  {
   
 * grid 
 
-  * 定义一个网格
+  * 首先定义一个网格
   
     ```
     .container {
       display: grid;
-      grid-template-columns: 200px 200px 200px;
+      grid-template-columns: 200px 200px 200px;   通过这种写法显式的指定3列的网格，但并没有显式的指定行，最好行列都用显式指定的方式
     }
+    
+    定义一个网格时使用的单位
+    
+    We  can  use  lengths and percentages  and fr  to creating   grids.(length、percentags、fr)。再使用fr单位来定义一个网格：
     ```
-  * 定义一个网格时使用的单位
+    
+  * 然后使用Line-Based方法在网格中放置元素（这是mdn官网的例子）
   
-    We  can  use  lengths and percentages  and fr  to creating   grids.(length、percentags、fr)
+    ![img](images/grid.png)
+  
+    ```html
+    <div class="container">
+      <header>Header</header>
+      <main>
+        <h1>Main</h1>
+        <p>Main content…</p>
+      </main>
+      <aside>
+        <h2>Aside</h2>
+        <p>Related content</p>
+      </aside>
+      <footer>footer</footer>
+    </div>
+    
+    ```
+  
+    ```css
+    .container {
+      font-family: sans-serif;
+      display: grid;
+      grid-template-columns: 1fr 3fr;    /* div的容器设定为2列，第一列占四分之一，第二列占四分之三*，这一行代码显式的指定了列数，下边应该再有一行代码显式的指定行数*/  
+      gap: 20px;
+    }
+    header,
+    footer {
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rebeccapurple;
+      color: whitesmoke;
+      text-align: center;
+    }
+    
+    aside {
+      border-right: 1px solid rebeccapurple;
+    }
+    
+    header {
+      grid-column: 1 / 3;  /*  header部分是从第一根线开始到第三根线结束，也就是占满2列*/
+      grid-row: 1;         /*这种写法直接指定行号，第一行*/
+    }
+    
+    main {
+      grid-column: 2;    /*第二列*/
+      grid-row: 2;      /*第二行*  ，也即是main部分占据第二行、第二列*/
+    }
+    
+    aside {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    footer {
+      grid-column: 1 / 3;    /*从第一根线开始、到第三根线结束，也即是占满2列*/
+      grid-row: 3;
+    }
+    
+    ```
+  
+    
+  
+    ```
+    
+    +-----------------------+-----------------------+
+    |                       |                       |
+    |   grid-column: 1 / 3  |  （跨两列，从线1到线3）   |
+    |                       |                       |
+    +-----------+-----------+-----------------------+
+    |           |           |                       |
+    | 1 / 2     | 2 / 3     |                       |
+    | (第1列)    | (第2列)    |                       |
+    +-----------+-----------+-----------------------+
+    ```
+  
+    
   
   * [grid framework](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#grid_frameworks)
   
@@ -658,3 +737,31 @@ A common approach when using Media Queries is to create a simple single-column l
 ##### 响应式设计技术
 
 默认情况下，flexbox、grid、multiple-column布局是支持响应式设计的。
+
+#### 总结一下CSS的主要知识点
+
+* 元素选择器的各种写法
+  * element  name |  type 
+  * class-name 
+  * id
+  * list
+  * `+`   近邻
+  * ` `  空格表示类似目录树的层级
+
+* 各种属性和值的应用
+
+  选择了要装饰的元素之后，就是各种属性和值的应用
+
+* Box  Model
+  * 盒子的四个要素：content、padding、border、margin 
+  * 盒子尺寸的计算方法
+    * 加法： content+ `2*padding` + `2*border`   ,而margin 不属于盒子本身的尺寸，是用来和保持其他元素的间距
+    * 减法：在给定了宽度和高度之后，减去border，减去padding ，最后就是content的尺寸。
+* 布局方式
+  * flow
+  * float
+  * position
+  * flex
+  * grid 
+
+在每个元素都具有盒子模型的几个元素，然后根据应用场景使用合适的布局方式，这是整体的概念，要熟悉每种布局方式，当然要多做项目。
