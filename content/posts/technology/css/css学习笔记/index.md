@@ -217,9 +217,9 @@ selector-name  {
   
   * box的显示类型
   
-    * inner display type  指得是盒子内部元素的显示方式，使用display属性来设置，默认是block和inline。可以设置为flex(display: flex),则盒子内部的元素按照flex的项目布局显示。也可以设置盒子内部的显示类型为grid。
+    * inner display type  指得是盒子内部元素的显示方式，使用display属性来设置，默认是block和inline。可以设置为flex(display: flex),则盒子内部的元素按照flex的项目布局显示。也可以设置盒子内部的显示类型为grid。感觉这个概念是对容器元素的设置，设置容器内部的元素的排列方式。
   
-    * outer  display  type  是指盒子本身在网页的显示方式，使用display属性来设置
+    * outer  display  type  是指盒子本身在网页的显示方式，使用display属性来设置。是设置同级别的
   
       * block
   
@@ -244,6 +244,7 @@ selector-name  {
   
 ```
 总结一下：设置display为block或者inline，是设置盒子本身在容器中的布局。而设置为flex，则是对容器中的元素的设置显示方式。前者是元素自身的显示方式，后者是容器中元素的显示方式。一个是外部的，一个是内部的。
+还有一种叫做inline-block，实际上取两个样式的中间，可以称作是`行内的block`,或者叫做不换行的block。
 ```
 * 背景和边框
 
@@ -753,10 +754,26 @@ A common approach when using Media Queries is to create a simple single-column l
   选择了要装饰的元素之后，就是各种属性和值的应用
 
 * Box  Model
-  * 盒子的四个要素：content、padding、border、margin 
-  * 盒子尺寸的计算方法
-    * 加法： 给定的宽度和高度是content的尺寸。content+ `2*padding` + `2*border`   ,而margin 不属于盒子本身的尺寸，是用来和保持其他元素的间距
-    * 减法：给定的宽度和高度是盒子的整体尺寸，减去border，减去padding ，最后就是content的尺寸。
+  
+  * 标准盒子模型
+    * 这个模型下，给定的宽度和高度是content的尺寸。content+ `2*padding` + `2*border`   ,而margin 不属于盒子本身的尺寸，是用来和保持其他元素的间距
+  
+  * 替代的盒子模型
+    * 这个模型下，给定的宽度和高度是盒子的整体尺寸，减去border，减去padding ，最后就是content的尺寸。
+  
+* 盒子的显示方式（display）
+
+  * block
+    * 独占一行
+    * 高度和宽度可
+    * xxx
+    * xxxx
+  * inline
+    * xxxx
+    * xxxx
+    * xxxxxx
+  * inline-block
+
 * 布局方式
   * flow
   * float
