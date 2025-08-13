@@ -765,9 +765,9 @@ A common approach when using Media Queries is to create a simple single-column l
 
   * block
     * 独占一行
-    * 高度和宽度可
-    * xxx
-    * xxxx
+    * 高度和宽度可设置
+    * Padding, margin and border 让盒子之间保持距离
+    * 如果没有指定width数值, 盒子在行内方向上会填满所属容器的空间
   * inline
     * xxxx
     * xxxx
