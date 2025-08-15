@@ -1,0 +1,70 @@
+<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Hugo博客迁移重新部署 | 技术博客</title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel=stylesheet><style>:root{--nav-height:60px;--toc-width:280px;--content-padding:40px;--primary-color:#3498db;--text-color:#333;--light-gray:#f5f5f5;--border-color:#eaeaea}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;color:var(--text-color);line-height:1.6;padding-top:var(--nav-height);overflow-x:hidden}.top-nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height);background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);display:flex;align-items:center;padding:0 30px;z-index:1000}.nav-container{width:100%;max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.site-title{font-size:1.4rem;font-weight:700;color:var(--primary-color);text-decoration:none}.nav-links{display:flex;gap:25px}.nav-links a{color:var(--text-color);text-decoration:none;font-size:1rem;transition:color .3s}.nav-links a:hover{color:var(--primary-color)}.main-container{display:flex;max-width:1400px;margin:0 auto;padding:20px}.toc-container{position:sticky;top:calc(var(--nav-height) + 20px);align-self:flex-start;width:var(--toc-width);padding:20px;margin-right:30px;max-height:calc(100vh - var(--nav-height) - 40px);overflow-y:auto;background:var(--light-gray);border-radius:8px;scroll-behavior:auto;overscroll-behavior:contain}.toc-title{font-size:1.2rem;margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid var(--primary-color)}.toc ul{list-style:none;padding-left:15px}.toc li{margin-bottom:8px;position:relative}.toc a{color:var(--text-color);text-decoration:none;display:block;padding:5px 0 5px 10px;transition:all .2s;font-size:.95rem;border-left:2px solid transparent}.toc a:hover{color:var(--primary-color);transform:translateX(5px)}.toc a.active{color:var(--primary-color);font-weight:700;border-left:3px solid var(--primary-color);background:rgba(52,152,219,5%);transform:translateX(5px)}.content-container{flex:1;background:#fff;padding:var(--content-padding);border-radius:8px;box-shadow:0 2px 15px rgba(0,0,0,5%)}.article-header{margin-bottom:30px;border-bottom:1px solid var(--border-color);padding-bottom:20px}.article-title{font-size:2rem;margin-bottom:10px;color:#2c3e50}.article-meta{display:flex;gap:20px;color:#7f8c8d;font-size:.9rem;margin-bottom:15px}.article-content{line-height:1.8}.article-content h2{font-size:1.6rem;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-color);scroll-margin-top:calc(var(--nav-height) + 20px)}.article-content h3{font-size:1.3rem;margin:1.5rem 0 .8rem;scroll-margin-top:calc(var(--nav-height) + 20px)}.article-content img{max-width:100%;height:auto;border-radius:6px;margin:1.5rem 0;box-shadow:0 3px 10px rgba(0,0,0,.1)}.article-content pre{position:relative;background:#f7f7f7;color:#242424;border-left:4px solid #04b04f;border-radius:8px;padding:1.5rem 1rem 1rem;margin:1.5rem 0;overflow:auto;box-shadow:0 1px 3px rgba(0,0,0,.1);max-height:40vh;white-space:pre-wrap;font-family:fira code,Menlo,Monaco,Consolas,monospace;font-size:.9rem;line-height:1.5;scrollbar-width:thin;scrollbar-color:#c4c4c4 #f7f7f7}.article-content code{font-family:inherit;color:inherit !important;background:0 0 !important;padding:0;text-shadow:none !important;font-size:.9rem}.hljs-meta,.hljs-built_in{color:#04b04f}.hljs-attribute{color:#e91e63}.hljs-string{color:#2e7d32}.hljs-number{color:#2196f3}.article-content pre::-webkit-scrollbar{width:12px;height:12px}.article-content pre::-webkit-scrollbar{width:12px;height:12px}.article-content pre::-webkit-scrollbar-thumb{background:#04b04f;opacity:.6;border:3px solid #f7f7f7}.article-content pre::-webkit-scrollbar-track{background:#f7f7f7;border-radius:6px}.copy-code{position:absolute;top:10px;right:15px;background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.2);color:#242424;border-radius:4px;padding:3px 8px;font-size:.8rem;cursor:pointer;transition:all .3s;opacity:0;z-index:10}pre:hover .copy-code{opacity:1}.copy-code:hover{background:rgba(0,0,0,.2)}.copy-code.copied{background:#28a745;color:#fff;border-color:#28a745}@media(max-width:1024px){.toc-container{width:240px;padding:15px}.content-container{padding:25px}}@media(max-width:768px){.main-container{flex-direction:column}.toc-container{position:static;width:100%;margin-right:0;margin-bottom:30px;max-height:none}.article-title{font-size:1.8rem}.article-content pre{max-height:50vh;padding-right:10px}}</style></head><body><nav class=top-nav><div class=nav-container><a href=/ class=site-title>技术博客</a><div class=nav-links><a href=/>首页</a>
+<a href=/posts/>所有文章</a>
+<a href=/categories/>分类</a>
+<a href=/tags/>标签</a></div></div></nav><div class=main-container><aside class=toc-container><h3 class=toc-title>目录</h3><div class=toc><nav id=TableOfContents><ul><li><a href=#原有hugo博客项目迁移后重新部署>原有Hugo博客项目迁移后重新部署</a><ul><li><a href=#使用git--clone--备份usernamegithubio仓库>使用git clone 备份username.github.io仓库</a></li><li><a href=#删除usernamegithubio仓库>删除username.github.io仓库</a></li><li><a href=#新建一个usernamegithubio空仓>新建一个username.github.io空仓</a></li><li><a href=#设置usernamegithubio仓库的github-pages参数>设置username.github.io仓库的GitHub Pages参数</a></li><li><a href=#对现有的博客系统内容更新后重新部署到usernamegithubio>对现有的博客系统内容更新后重新部署到username.github.io</a><ul><li><a href=#方案-1手动构建并推送-public适合简单部署推荐新手时期>方案 1：手动构建并推送 public/（适合简单部署，推荐新手时期）</a></li><li><a href=#方案2直接推送-hugo-源码需-github-actions-自动构建>方案2：直接推送 Hugo 源码（需 GitHub Actions 自动构建）</a></li></ul></li></ul></li></ul></nav></div></aside><article class=content-container><header class=article-header><h1 class=article-title>Hugo博客迁移重新部署</h1><div class=article-meta><span>📅 2025年7月30日</span>
+<span>📁 <a href=/categories/technology>technology</a></span></div></header><div class=article-content><h2 id=原有hugo博客项目迁移后重新部署>原有Hugo博客项目迁移后重新部署</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>1、git cone  git@github.com:username/username.github.io.git
+</span></span><span class=line><span class=cl>2、删除username.github.io仓库
+</span></span><span class=line><span class=cl>3、新建空仓username.github.io
+</span></span><span class=line><span class=cl>4、设置GitHub Pages。
+</span></span><span class=line><span class=cl>5、博客目录和内容更新完成后，从本地推送到username.github.io，利用workflow目录下的deploy.yml自动化部署脚本完整站点发布
+</span></span></code></pre></div><h3 id=使用git--clone--备份usernamegithubio仓库>使用git clone 备份username.github.io仓库</h3><p>使用git cloe 把当前的username.github.io仓库内容下载到本地，然后删除username.github.io仓库</p><p>我现有的博客站点从旧内容迁移到新的主题，先做好备份，然后再删除。如果是全新的博客项目，就不需要第一、二步骤，直接进入第三步骤。</p><h3 id=删除usernamegithubio仓库>删除username.github.io仓库</h3><ul><li><p>选择username.github.io仓库的settings，在页面的最下面选择删除仓库</p><pre><code>**Delete this repository**.      `Once you delete a repository, there is no going back. Please be certain.    `
+</code></pre></li></ul><h3 id=新建一个usernamegithubio空仓>新建一个username.github.io空仓</h3><p>点击github下的账号名称，点击Repositories,再点击右侧的<code>New </code>，弹出新建仓库界面。输入仓库名称为username.github.io,下面的仓库类型选择public,剩下的几个选项none,不要选择<code>Add a Readme file</code>，总之，这些项目保持默认就好。</p><p><img src=images/NewRepository.png alt=新建仓库></p><p><img src=images/CreateRepository.png alt=新建仓库></p><h3 id=设置usernamegithubio仓库的github-pages参数>设置username.github.io仓库的GitHub Pages参数</h3><ul><li>选择仓库的settings，再选择pages进入GitHub Pages页面</li><li>build and deployment的source选择为 deploy from branch ,branch 选项选择gh-pages，路径选择根目录&rsquo;/&rsquo;，点击保存。</li><li>如果设置有自定义域名，要设置下面的Custom domain。我这里暂时没设置，以后尝试设置，自己当时买了自定义的域名的，而且还用过一年</li></ul><h3 id=对现有的博客系统内容更新后重新部署到usernamegithubio>对现有的博客系统内容更新后重新部署到username.github.io</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>git  add .
+</span></span><span class=line><span class=cl>git  commit -m  &#34;udpate&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#push an existing repository from the command line
+</span></span><span class=line><span class=cl>git remote add origin git@github.com:lsgxs/lsgxs.github.io.git
+</span></span><span class=line><span class=cl>git branch -M main
+</span></span><span class=line><span class=cl>git push -u origin main
+</span></span></code></pre></div><p>如果是 Hugo 项目，需要注意GitHub Pages 默认部署的是 静态文件（public/ 目录），而不是 Hugo 源码。所以有两种选择：</p><h4 id=方案-1手动构建并推送-public适合简单部署推荐新手时期>方案 1：手动构建并推送 public/（适合简单部署，推荐新手时期）</h4><pre><code>#在本地生成静态文件：
+hugo
+
+#进入 public/ 目录：
+cd public
+
+#初始化 Git 并强制推送：
+git init
+git add .
+git commit -m &quot;Deploy Hugo site&quot;
+git remote add origin git@github.com:lsgxs/lsgxs.github.io.git
+git branch -M main
+git push -u origin main --force
+</code></pre><p>作用：直接推送静态文件，绕过 GitHub Actions 和 Jekyll，&ndash;force 是必要的，因为 public/ 可能之前没有关联到远程仓库。</p><h4 id=方案2直接推送-hugo-源码需-github-actions-自动构建>方案2：直接推送 Hugo 源码（需 GitHub Actions 自动构建）</h4><p>确保 .github/workflows/hugo.yaml 存在（GitHub Actions 配置）， 推送源码到 main 分支，GitHub 会自动构建并部署。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>name: Deploy Hugo Site to GitHub Pages
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>on:
+</span></span><span class=line><span class=cl>  push:
+</span></span><span class=line><span class=cl>    branches: [&#34;main&#34;]  # 仅在 main 分支推送时触发
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>permissions:
+</span></span><span class=line><span class=cl>  contents: write       # 确保 Actions 有写入权限。如果部署失败，检查是否缺少 permissions 声明（尤其是私有仓库）
+</span></span><span class=line><span class=cl>  pages: write          # 允许写入 GitHub Pages
+</span></span><span class=line><span class=cl>  id-token: write       # 用于身份验证（可选，但推荐）
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>jobs:
+</span></span><span class=line><span class=cl>  deploy:
+</span></span><span class=line><span class=cl>    runs-on: ubuntu-latest
+</span></span><span class=line><span class=cl>    steps:
+</span></span><span class=line><span class=cl>      - name: Checkout 代码
+</span></span><span class=line><span class=cl>        uses: actions/checkout@v4
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          submodules: true  # 如果使用子模块（如 PaperMod 主题）
+</span></span><span class=line><span class=cl>          fetch-depth: 0    # 获取完整历史记录
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: 设置 Hugo 环境
+</span></span><span class=line><span class=cl>        uses: peaceiris/actions-hugo@v2
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          hugo-version: &#39;latest&#39;
+</span></span><span class=line><span class=cl>          extended: true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: 构建站点
+</span></span><span class=line><span class=cl>        run: hugo --minify  # 生成静态文件到 ./public
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: 部署到 GitHub Pages
+</span></span><span class=line><span class=cl>        uses: peaceiris/actions-gh-pages@v3
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          github_token: ${{ secrets.GITHUB_TOKEN }}  # Actions 推送代码到仓库的权限钥匙。无需手动创建，GitHub 会自动处理其生成和失效。 
+</span></span><span class=line><span class=cl>          publish_dir: ./public       # Hugo 默认输出目录
+</span></span><span class=line><span class=cl>          publish_branch: gh-pages    # 部署到 gh-pages 分支
+</span></span><span class=line><span class=cl>          force_orphan: true          # 清空 gh-pages 历史记录
+</span></span><span class=line><span class=cl>          user_name: &#39;github-actions[bot]&#39;
+</span></span><span class=line><span class=cl>          user_email: &#39;github-actions[bot]@users.noreply.github.com&#39;
+</span></span></code></pre></div></div></article></div><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("pre code").forEach(e=>{hljs.highlightElement(e);const t=document.createElement("button");t.className="copy-code",t.textContent="Copy",t.addEventListener("click",()=>{navigator.clipboard.writeText(e.textContent).then(()=>{t.textContent="Copied!",t.classList.add("copied"),setTimeout(()=>{t.textContent="Copy",t.classList.remove("copied")},2e3)})}),e.parentElement.prepend(t)});const o=document.querySelectorAll(".article-content h2[id], .article-content h3[id]"),i=document.querySelectorAll('.toc a[href^="#"]'),a=document.querySelector(".top-nav").offsetHeight,n=document.querySelector(".toc-container"),e=[];o.forEach(t=>{e.push({id:t.id,top:t.offsetTop-a-20})});function s(){const s=window.scrollY;let t="";for(let n=e.length-1;n>=0;n--)if(e[n].top<=s+50){t=e[n].id;break}i.forEach(e=>{const s=e.getAttribute("href")===`#${t}`;if(e.classList.toggle("active",s),s){const t=e.offsetTop-n.clientHeight/2;n.scrollTop=t}})}let t=!1;window.addEventListener("scroll",()=>{t||(window.requestAnimationFrame(()=>{s(),t=!1}),t=!0)}),s()})</script></body></html>
