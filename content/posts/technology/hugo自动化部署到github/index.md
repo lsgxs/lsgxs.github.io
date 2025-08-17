@@ -26,7 +26,7 @@ description: "部署静态博客站点到github一般有三种方法，第一种
 
 ####  使用github的actions workflow把hugo博客自动化部署到github
 
-部署静态博客站点到github一般有三种方法，第一种是使用git命令手动部署到github仓库；第二种是使用github自带的actions workflow自动部署到默认的gh-pages分支；第三种是在一个仓库的两个分支之间完成自动化发布，同时是使用actions workflow。
+部署静态博客站点到github一般有三种方法，第一种是使用git命令手动部署到github仓库；第二种是使用github自带的actions workflow自动部署到默认的gh-pages分支；第三种是在一个仓库的两个分支之间完成自动化发布，使用actions workflow。
 
 ##### 使用git命令手动推送到github仓库
 
