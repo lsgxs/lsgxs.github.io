@@ -32,3 +32,12 @@ description: "在接下来的两年内，主要的任务是把时间花在读书
 - [ ] [html教程](https://wangdoc.com/html/)
 
 - [ ] [PHP The Right Way](https://phptherightway.com/)
+
+#### 2025年至2026年行动
+
+- [ ] 学习和使用hugo 
+- [ ] 学习和使用eleventy
+- [ ] 学习和使用react 
+- [ ] 学习和使用vite
+- [ ] 学习和使用python 
+- [ ] 学习和使用java
