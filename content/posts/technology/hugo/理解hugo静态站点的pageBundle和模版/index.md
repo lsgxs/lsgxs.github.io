@@ -317,3 +317,38 @@ Page{
   <p>Author: {{ .name }}</p>
 {{ end }}
 ```
+
+#### `.Site`和`.Params`对象引用的写法
+
+`.Site`是hugo提供的站点级别的全局变量，`.Params` 是 `page` 对象的直接属性，在 页面模板（如 `single.html`、`list.html`）中，当前上下文默认就是 `.Page`，所以可以直接用 `.Params` 访问页面的 Front Matter 参数。
+
+```
+{{ .Params.display_related }} <!-- 等价于 .Page.Params.display_related -->
+{{ .Params.author.name }}    <!-- 直接访问，因为上下文是 .Page -->
+```
+
+**`.Site` 是全局对象**，不属于 `.Page` 的属性，而是 Hugo 提供的独立全局变量。无论当前上下文是什么（`.Page`、`.Section`、`.Taxonomy` 等），**访问 `.Site` 必须显式写出**。
+
+ **为什么需要 `.`**
+
+Go Template 是**显式访问**数据的语言，`.` 的作用是明确告诉引擎：
+
+- **“从当前上下文开始，查找 `Site` 对象”**。
+- 如果省略 `.`（例如直接写 `{{ Site.Params.subtitle }}`），Hugo 会报错，因为它无法确定 `Site` 的起始位置。
+
+```
+{{ .Site.Title }}       <!-- 正确：显式访问全局对象 -->
+{{ .Page.Site.Title }}  <!-- 冗余但合法（不推荐） -->
+{{ Site.Title }}        <!-- 错误！在模板中必须加 . -->
+```
+
+**关键区别**：`.Params` 是 **页面级数据**（存储在 Front Matter 中）;`.Site` 是 **站点级数据**（存储在 `config.toml` 或全局配置中）
+
+ **如何避免混淆？**
+
+记住默认上下文：
+
+- 在 `single.html` 或 `list.html` 中，`.` 默认指向 `.Page`。
+- 在 `layouts/_default/baseof.html` 中，`.` 可能指向不同对象（需根据模板类型判断）。
+
+总之一条，`.`代表的上下文环境会在全局和局部之间切换，比如在`range`  、`with`、`if`等语句中，`.`会重新绑定到当前的局部环境。
