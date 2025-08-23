@@ -1,13 +1,15 @@
 ---
-title: " 理解hugo静态站点的pageBundle组织方法和模版基础"
-slug: "hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97"
-date: 2025-08-23T17:50:29+08:00
+title: "理解hugo静态站点的pageBundle和模版"
+slug: "%E7%90%86%E8%A7%A3hugo%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9%E7%9A%84pagebundle%E5%92%8C%E6%A8%A1%E7%89%88"
+date: 2025-08-23T15:33:26+08:00
 draft: false
-categories: ["hugo"]
-tags: [hugo,github]
+categories: ["默认分类"]
+tags: ["默认标签"]
 toc: true
+description: "1.理解hugo静态站点的pageBundle组织目录的方式，通过文档所在目录的位置来确定页面的Kind，从而匹配对应的模版类型
+2.hugo把markdown的各种要素封装为一个page对象，把这个对象传递给模版
+3.在模版中使用.来访问page对象的各个元素，最终完成渲染并生成html文件"
 thumbnail: "images/block-main-define.png"
-description: " 理解hugo静态站点的pageBundle组织方法和模版基础"
 ---
 
 ## 理解hugo静态站点的pageBundle组织方法和模版基础
