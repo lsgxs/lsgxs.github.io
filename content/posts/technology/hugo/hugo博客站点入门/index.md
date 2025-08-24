@@ -1,5 +1,5 @@
 ---
-title: "快速重建hugo博客站点"
+title: "hugo博客站点入门"
 date: 2023-07-09T22:11:22+08:00
 draft: false
 # weight: 2
