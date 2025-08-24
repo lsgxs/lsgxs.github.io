@@ -352,3 +352,133 @@ Go Template 是**显式访问**数据的语言，`.` 的作用是明确告诉引
 - 在 `layouts/_default/baseof.html` 中，`.` 可能指向不同对象（需根据模板类型判断）。
 
 总之一条，`.`代表的上下文环境会在全局和局部之间切换，比如在`range`  、`with`、`if`等语句中，`.`会重新绑定到当前的局部环境。
+
+### **Hugo 的数据流动流程**
+
+1. **Markdown 文件解析**
+    Hugo 读取 `content/` 下的 Markdown 文件，自动分离 **Front Matter**（YAML/TOML）和 **Content**。
+2. **构建 Page 对象**
+    每个 Markdown 文件会被转换为 `Page` 对象（Go 的结构体），Front Matter 字段和内容存储在对象的属性中。
+3. **模板渲染**
+    Hugo 的 Go 模板引擎通过 `.Page` 变量访问页面数据，结合布局（`layouts/`）生成 HTML
+
+#### **关键目录结构**
+
+```
+my-hugo-site/
+├── content/
+│   └── posts/
+│       └── hello-world.md    # Markdown 源文件
+├── layouts/
+│   ├── _default/
+│   │   └── single.html       # 单页模板
+│   └── partials/             # 可选：模板片段
+└── data/                     # 可选：全局数据文件
+```
+
+#### **2. 模板文件示例**
+
+`layouts/_default/single.html`
+
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}</title>
+</head>
+<body>
+    <h1>{{ .Title }}</h1>
+    <p>Date: {{ .Date.Format "2006-01-02" }}</p>
+    <ul>
+        {{ range .Params.tags }}
+            <li>{{ . }}</li>
+        {{ end }}
+    </ul>
+    <div>{{ .Content }}</div>
+</body>
+</html>
+```
+
+#### **3. Hugo 内部如何处理数据？**
+
+ Hugo 是二进制工具（无显式代码），以下是等效的逻辑说明：
+
+##### **(1) 解析 Markdown 并构建 Page 对象**
+
+Hugo 在底层会执行类似以下操作（Go 伪代码）：
+
+```
+type Page struct {
+    Title    string
+    Date     time.Time
+    Params   map[string]interface{} // Front Matter 中的自定义字段（如 tags）
+    Content  string                // 渲染后的 HTML 内容
+    File     FileInfo              // 文件元数据
+}
+
+func parseMarkdown(file string) Page {
+    // 1. 读取文件并分离 Front Matter 和内容
+    frontMatter, content := splitFrontMatter(file)
+    
+    // 2. 解析 Front Matter（YAML/TOML）
+    params := parseFrontMatter(frontMatter)
+    
+    // 3. 渲染 Markdown 内容为 HTML
+    htmlContent := markdownRender(content)
+    
+    // 4. 构建 Page 对象
+    return Page{
+        Title:   params["title"].(string),
+        Date:    params["date"].(time.Time),
+        Params:  params,
+        Content: htmlContent,
+    }
+}
+```
+
+##### **(2) 模板渲染**
+
+Hugo 的 Go 模板引擎通过 `.Page` 变量暴露数据：
+
+```
+<!-- 访问 Page 对象的字段 -->
+<h1>{{ .Title }}</h1>          <!-- Front Matter 中的 title -->
+<p>{{ .Content }}</p>         <!-- 渲染后的 Markdown 内容 -->
+
+<!-- 访问自定义 Front Matter 字段 -->
+<p>Tags: {{ delimit .Params.tags ", " }}</p>
+```
+
+#### **4. 实际数据流动示例**
+
+假设用户访问 `/posts/hello-world/`，Hugo 的处理流程：
+
+1. **路由匹配**：找到 `content/posts/hello-world.md`。
+2. **构建 Page 对象**：
+
+```
+page := Page{
+    Title:   "Hello Hugo",
+    Date:    time.Date(2023, 10, 1, 0, 0, 0, 0, time.UTC),
+    Params:  map[string]interface{}{"tags": []string{"hugo", "static-site"}},
+    Content: "<p>This is a post rendered by <strong>Hugo</strong>.</p>",
+}
+```
+
+3.**选择模板**：使用 `layouts/_default/single.html`。
+
+4.**渲染输出**：将 `page` 对象注入模板，生成最终 HTML。
+
+**总结一下数据流动过程**
+
+```
+1、用户访问指定的markdown.md文件
+2、解析markdown.md文件的front-matter部分和content
+3、创建一个page对象，将解析的markdown.md文件的属性保存在page对象的属性里
+4、选择对相应的模版文件
+5、通过.page对象传递数据给模版文件，模板文件里使用模板语言访问这些数据，形成最终的html文件
+6、浏览器对html文件完成渲染
+###  page成为markdown文件和模版文件之间传递数据的对象
+```
+
