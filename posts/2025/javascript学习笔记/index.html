@@ -1,0 +1,180 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Javascript学习笔记 | 技术博客</title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel=stylesheet><style>:root{--nav-height:60px;--toc-width:280px;--content-padding:40px;--primary-color:#3498db;--text-color:#333;--light-gray:#f5f5f5;--border-color:#eaeaea}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;color:var(--text-color);line-height:1.6;padding-top:var(--nav-height);overflow-x:hidden}.top-nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height);background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);display:flex;align-items:center;padding:0 30px;z-index:1000}.nav-container{width:100%;max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.site-title{font-size:1.4rem;font-weight:700;color:var(--primary-color);text-decoration:none}.nav-links{display:flex;gap:25px}.nav-links a{color:var(--text-color);text-decoration:none;font-size:1rem;transition:color .3s}.nav-links a:hover{color:var(--primary-color)}.main-container{display:flex;max-width:1400px;margin:0 auto;padding:20px}.toc-container{position:sticky;top:calc(var(--nav-height) + 20px);align-self:flex-start;width:var(--toc-width);padding:20px;margin-right:30px;max-height:calc(100vh - var(--nav-height) - 40px);overflow-y:auto;background:var(--light-gray);border-radius:8px;scroll-behavior:auto;overscroll-behavior:contain}.toc-title{font-size:1.2rem;margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid var(--primary-color)}.toc ul{list-style:none;padding-left:15px}.toc li{margin-bottom:8px;position:relative}.toc a{color:var(--text-color);text-decoration:none;display:block;padding:5px 0 5px 10px;transition:all .2s;font-size:.95rem;border-left:2px solid transparent}.toc a:hover{color:var(--primary-color);transform:translateX(5px)}.toc a.active{color:var(--primary-color);font-weight:700;border-left:3px solid var(--primary-color);background:rgba(52,152,219,5%);transform:translateX(5px)}.content-container{flex:1;background:#fff;padding:var(--content-padding);border-radius:8px;box-shadow:0 2px 15px rgba(0,0,0,5%)}.article-header{margin-bottom:30px;border-bottom:1px solid var(--border-color);padding-bottom:20px}.article-title{font-size:2rem;margin-bottom:10px;color:#2c3e50}.article-meta{display:flex;gap:20px;color:#7f8c8d;font-size:.9rem;margin-bottom:15px}.article-content{line-height:1.8}.article-content h2{font-size:1.6rem;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-color);scroll-margin-top:calc(var(--nav-height) + 20px)}.article-content h3{font-size:1.3rem;margin:1.5rem 0 .8rem;scroll-margin-top:calc(var(--nav-height) + 20px)}.article-content img{max-width:100%;height:auto;border-radius:6px;margin:1.5rem 0;box-shadow:0 3px 10px rgba(0,0,0,.1)}.article-content pre{position:relative;background:#f7f7f7;color:#242424;border-left:4px solid #04b04f;border-radius:8px;padding:1.5rem 1rem 1rem;margin:1.5rem 0;overflow:auto;box-shadow:0 1px 3px rgba(0,0,0,.1);max-height:40vh;white-space:pre-wrap;font-family:fira code,Menlo,Monaco,Consolas,monospace;font-size:.9rem;line-height:1.5;scrollbar-width:thin;scrollbar-color:#c4c4c4 #f7f7f7}.article-content code{font-family:inherit;color:inherit !important;background:0 0 !important;padding:0;text-shadow:none !important;font-size:.9rem}.hljs-meta,.hljs-built_in{color:#04b04f}.hljs-attribute{color:#e91e63}.hljs-string{color:#2e7d32}.hljs-number{color:#2196f3}.article-content pre::-webkit-scrollbar{width:12px;height:12px}.article-content pre::-webkit-scrollbar{width:12px;height:12px}.article-content pre::-webkit-scrollbar-thumb{background:#04b04f;opacity:.6;border:3px solid #f7f7f7}.article-content pre::-webkit-scrollbar-track{background:#f7f7f7;border-radius:6px}.copy-code{position:absolute;top:10px;right:15px;background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.2);color:#242424;border-radius:4px;padding:3px 8px;font-size:.8rem;cursor:pointer;transition:all .3s;opacity:0;z-index:10}pre:hover .copy-code{opacity:1}.copy-code:hover{background:rgba(0,0,0,.2)}.copy-code.copied{background:#28a745;color:#fff;border-color:#28a745}@media(max-width:1024px){.toc-container{width:240px;padding:15px}.content-container{padding:25px}}@media(max-width:768px){.main-container{flex-direction:column}.toc-container{position:static;width:100%;margin-right:0;margin-bottom:30px;max-height:none}.article-title{font-size:1.8rem}.article-content pre{max-height:50vh;padding-right:10px}}</style></head><body><nav class=top-nav><div class=nav-container><a href=/ class=site-title>技术博客</a><div class=nav-links><a href=/>首页</a>
+<a href=/posts/>所有文章</a>
+<a href=/categories/>分类</a>
+<a href=/tags/>标签</a></div></div></nav><div class=main-container><aside class=toc-container><h3 class=toc-title>目录</h3><div class=toc><nav id=TableOfContents><ul><li><ul><li><a href=#javascript学习笔记>javaScript学习笔记</a><ul><li><a href=#变量>变量</a></li><li><a href=#数据类型>数据类型</a></li><li><a href=#变量的命名规则>变量的命名规则</a></li><li><a href=#字符串>字符串</a></li><li><a href=#javascript语句块>Javascript语句块</a></li><li><a href=#javascript--对象>javascript 对象</a></li><li><a href=#prototype>prototype</a></li><li><a href=#在javascript中动态创建html-element的基本方法>在javascript中动态创建HTML element的基本方法：</a></li><li><a href=#异步编程asynchronous>异步编程（asynchronous）</a></li><li><a href=#javascript和browser-apis第三方api及其他javascript工具之间的关系>javascript和Browser APIs、第三方API及其他javascript工具之间的关系</a></li><li><a href=#表单及组件>表单及组件</a></li></ul></li></ul></li></ul></nav></div></aside><article class=content-container><header class=article-header><h1 class=article-title>Javascript学习笔记</h1><div class=article-meta><span>📅 2025年8月14日</span>
+<span>📁 <a href=/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB>默认分类</a></span></div></header><div class=article-content><h3 id=javascript学习笔记>javaScript学习笔记</h3><h4 id=变量>变量</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>We</span> <span class=n>say</span> <span class=n>variables</span> <span class=n>contain</span> <span class=n>values</span><span class=o>.</span> <span class=n>This</span> <span class=n>is</span> <span class=n>an</span> <span class=n>important</span> <span class=n>distinction</span> <span class=n>to</span> <span class=n>make</span><span class=o>.</span> <span class=n>Variables</span> <span class=n>aren</span><span class=s1>&#39;t the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.</span>
+</span></span></code></pre></div><p>变量的名称就是一段内存地址的名称，变量的值就是这段内存地址保存的内容。就好像一个盒子和盒子里面装的东西。</p><h4 id=数据类型>数据类型</h4><pre><code>* number（integer  or  float  or double）
+</code></pre><ul><li>string</li><li>boolean</li><li>array</li><li>object 通过对现实世界对象特征的数据抽象组成一个具体的对象。这些特征通过{attribute: values，..}的数据结构来描述。
+理解javascript的数据类型：和其他类似C语言的数据类型不同，javascript使用动态数据类型，在声明变量时不必指定具体的数据类型，而是由编译器根据变量初始化时保存的值来动态判断变量所属的类型。比如：
+let myName = &ldquo;What is your name&rdquo;;
+let lengthBox = 43;
+let isCar = true;</li></ul><p>&mdash;&ndash; c like &mdash;-
+int ibox= 43;
+目前标准的js使用let 来声明变量，早期使用的是var。</p><h4 id=变量的命名规则>变量的命名规则</h4><ul><li>首字符非数字和下划线(下划线是js内部保留使用)</li><li>使用具有一定语义的单词缩写组合来表示一个变量，首单词小写、后续单词首字母大写的驼峰结构</li></ul><h4 id=字符串>字符串</h4><ul><li>可以一致的使用双引号或者单引号来表示字符串。在你的代码中，根据自己的习惯选择统一使用双引号或者单引号，而不是两者的混合。 \</li><li>反引号backstick可以用来在字符串中引用变量或者表达式，被称作模版字符串（template literal），通常用${}来包含变量或者表达式。反引号字符串可以自然书写，扩充到多行字符串，browser会认可换行符。如果要用常规的双引号或者单引号表示多行字符串换行，需要在对应的位置加转义字符\n表示换行符。</li><li>字符串的连接
+a.常规的连接使用+号，如果是数值和字符串的直接链接，会自动转换为字符串再链接。
+b.可以使用template literal ，${}包含变量来实现连接字符串</li><li>使用转义字符\来表示引号是普通的文本。</li><li>使用string()和number（）两个函数在数值和字符串之间转换类型。</li></ul><h4 id=javascript语句块>Javascript语句块</h4><pre><code>        （一）  条件语句。三种常用的条件语句
+           1、if   ()   {}  elseif{}  else {}
+           2、switch ()   {  case:  ...}
+           3、三元运算符     conditon  ?   code1  :code2;
+          (二）四种循环语句
+         1、for  (a;b;c)
+         2、for  of
+         3、 while （）  
+         4、do  while   和while()循环不同，至少执行一次循环体代码  
+          5、break   ：调出循环语句块，执行循环代码块的下一条语句。
+          6、continue： 跳过continue后边的语句，直接开始下一次循环。
+  六、函数
+        1、函数和方法
+        2、函数声明的提升
+        3、匿名函数和箭头函数
+        4、函数变量的作用域和if {}、for{}变量作用域的差异
+  七、事件
+        1、HTML元素构建的用户界面，通过事件响应和处理实现良好的交互。大部分HTML  element都有一定的事件响应方法。比如button ，用户通过鼠标单击、双击、划过、划出等动作，编写对应的事件相应代码实现特定的功能。前面说过，一般是三个步骤实现事件响应处理：
+       a.   const  btn = doument.querySelector(&quot;element-selector-name&quot;);  声明一个变量来引用指定的html  element。
+       b.   btn.addEventListener(&quot;event-name&quot;,event-handler)         ；调用element的addEventListener方法，注册事件handler。
+       c.    function   event-handler {}     ；编写事件响应处理代码。
+       2、事件对象
+         在事件响应句柄（事件响应方法function）中，可以使用event/evt/e等任意名称的事件对象作为参数，在事件处理代码中可以处理响应事件的element的更多信息。比如一下代码：
+          const textBox = document.querySelector(&quot;#textBox&quot;);
+          const output = document.querySelector(&quot;#output&quot;);
+          textBox.addEventListener(&quot;keydown&quot;, (event) =&gt; {
+              output.textContent = `You pressed &quot;${event.key}&quot;.`;
+          });
+       3、事件冒泡与事件捕获
+          在多层嵌套的html元素中，如果这些元素都有相同的事件响应处理，默认会从最内层向最外层冒泡。如果需要阻止向外层的冒泡，在某个指定的html  element的事件中调用stopPropagation阻止向外层element冒泡。
+          事件捕获则是正好相反，从最外层向内层。默认是冒泡机制，要使用捕获机制的话，则要在事件句柄注册时加上第三个参数：{capture:true}。比如：
+                 document.body.addEventListener(&quot;click&quot;, handleClick, { capture: true });
+                 container.addEventListener(&quot;click&quot;, handleClick, { capture: true });
+                 button.addEventListener(&quot;click&quot;, handleClick);
+        4、事件句柄  event  handler  
+            实际上就是事件响应的函数名，在addEventListener(&quot;event-name&quot;,event-handler)时不用带后面的一对圆括号（），否则就会在加载文件时直接调用了这个事件处理函数。
+</code></pre><h4 id=javascript--对象>javascript 对象</h4><ul><li><p>对象是属性和方法的集成块，向外界提供一定的功能。普通的变量和函数包装在对象里就称为属性和方法。这些属性的值可以是任何javascript类型的变量值，当然也可以是一个对象。</p></li><li><p>javascript对象的创建和传统的oop不同，不需要从类开始，而是声明一个对象直接初始化就好，添加需要的属性、方法。
+const person = {
+name: [&ldquo;Bob&rdquo;, &ldquo;Smith&rdquo;],
+age: 32,
+bio() {
+console.log(<code>${this.name[0]} ${this.name[1]} is ${this.age} years old.</code>);
+},
+introduceSelf() {
+console.log(<code>Hi! I'm ${this.name[0]}.</code>);
+},
+};</p></li><li><p>引用对象属性的两种方法dot notation和bracket notation（[ ]）。前者直接、可读性强。后者可以接受变量级别的引用。</p></li><li><p>构造函数的两个版本</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>a</span><span class=o>.</span>  <span class=n>function</span> <span class=n>createPerson</span><span class=p>(</span><span class=n>name</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>const</span> <span class=n>obj</span> <span class=o>=</span> <span class=p>{};</span>
+</span></span><span class=line><span class=cl>                <span class=n>obj</span><span class=o>.</span><span class=n>name</span> <span class=o>=</span> <span class=n>name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>obj</span><span class=o>.</span><span class=n>introduceSelf</span> <span class=o>=</span> <span class=n>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>console</span><span class=o>.</span><span class=n>log</span><span class=p>(</span><span class=err>`</span><span class=n>Hi</span><span class=o>!</span> <span class=n>I</span><span class=s1>&#39;m ${this.name}.`);</span>
+</span></span><span class=line><span class=cl>                <span class=p>};</span>
+</span></span><span class=line><span class=cl>               <span class=k>return</span> <span class=n>obj</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>           <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=n>b</span><span class=o>.</span>  <span class=n>function</span> <span class=n>Person</span><span class=p>(</span><span class=n>name</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                  <span class=n>this</span><span class=o>.</span><span class=n>name</span> <span class=o>=</span> <span class=n>name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                 <span class=n>this</span><span class=o>.</span><span class=n>introduceSelf</span> <span class=o>=</span> <span class=n>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                 <span class=n>console</span><span class=o>.</span><span class=n>log</span><span class=p>(</span><span class=err>`</span><span class=n>Hi</span><span class=o>!</span> <span class=n>I</span><span class=s1>&#39;m ${this.name}.`);</span>
+</span></span><span class=line><span class=cl>                  <span class=p>};</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   <span class=k>const</span> <span class=n>salva</span> <span class=o>=</span> <span class=n>new</span> <span class=n>Person</span><span class=p>(</span><span class=s2>&#34;Salva&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>   <span class=n>salva</span><span class=o>.</span><span class=n>name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   <span class=n>salva</span><span class=o>.</span><span class=n>introduceSelf</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>   <span class=o>//</span> <span class=s2>&#34;Hi! I&#39;m Salva.&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>const</span> <span class=n>frankie</span> <span class=o>=</span> <span class=n>new</span> <span class=n>Person</span><span class=p>(</span><span class=s2>&#34;Frankie&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=n>frankie</span><span class=o>.</span><span class=n>name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=n>frankie</span><span class=o>.</span><span class=n>introduceSelf</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=o>//</span> <span class=s2>&#34;Hi! I&#39;m Frankie.&#34;</span>
+</span></span></code></pre></div><h4 id=prototype>prototype</h4><pre><code>    a.每个javascript对象都有一个prototype属性，通过这个属性来设置该对象的原型，而这个prototype属性的值也是一个对象，这个对象也要自己的prototype，从而可以构建完整的原型链。
+    b.通过Object.create和Object.assign两种常见方法来设置对象的原型。后者是把要创建的对象的构造函数和另外一个对象关联起来，从而拥有关联对象的原型。
+      b1. Object.create(other-object)
+        const personPrototype = {
+            greet() {
+            console.log(&quot;hello!&quot;);
+          },
+         };
+
+      const carl = Object.create(personPrototype);
+      carl.greet(); // hello!
+
+      b2.  Object.assign
+        const personPrototype = {
+          greet() {
+          console.log(`hello, my name is ${this.name}!`);
+          },
+        };
+
+  function Person(name) {
+
+       this.name = name;
+  }
+
+Object.assign(Person.prototype, personPrototype);  构造函数Person的prototype属性（首字母大写的函数为构造函数）
+</code></pre></li></ul><p>===============</p><h4 id=在javascript中动态创建html-element的基本方法>在javascript中动态创建HTML element的基本方法：</h4><p>Here we first create an h1 element with createElement(), set its textContent to equal the squadName property of the object, then append it to the header using appendChild()。 We then do a very similar operation with a paragraph: create it, set its text content and append it to the header.</p><p>=================</p><h4 id=异步编程asynchronous>异步编程（asynchronous）</h4><pre><code>    主线程调佣另外一个函数时，如果不需要等待就可以继续完成主线程接下里的工作，caller和被调用的函数就是同时进行的，这个过程称作为异步。
+   1、callback
+   2、promiser
+        const fetchPromise =fetch(
+             &quot;https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json&quot;,
+              );
+
+         console.log(fetchPromise);
+
+         fetchPromise.then((response) =&gt; {
+          console.log(`Received response: ${response.status}`);
+          });
+
+          console.log(&quot;Started request…&quot;);
+
+                fetch  作为一个异步调用函数，返回一个promise对象。初步学习理解，自己感觉是由这个promise对象来链接异步执行的线程，保存异步线程的状态，最后调佣promise.then()这个函数与主线程通信。从设计的思想理解，是在主线程和子线程之间使用第三方promise来保持相互的通信。
+
+   3、worker
+</code></pre><h4 id=javascript和browser-apis第三方api及其他javascript工具之间的关系>javascript和Browser APIs、第三方API及其他javascript工具之间的关系</h4><ul><li>javascript是内置于browser的编程语言</li><li>browser API：是内置于浏览器的、在javascript之上的API。第三方公司开放的API的工作方式类似</li><li>javascript library :包含自定义函数的javascript文件，由开发者调用library中的函数实现特定功能。常见的有 jQuery, Mootools and React</li><li>使用FrameWork:和library的工作方式相反，这些设定好的javascript framework,是有自己的一套工作流程，开发者编写的一部分代码被这些框架调用完成整个APP的功能。</li></ul><p>Your code interacts with APIs using one or more JavaScript objects, which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods) 使用Browser API实际上通过browser API中的对象，调用对象的方法和数据实现应用功能。
+第三方API的使用一般有几个步骤
+a.在第三方的站点注册并取得API Key
+b.在自己的代码中链接第三方的js文件
+c.使用第三方API对象方法编程</p><pre><code>     使用browser  api操作HTML 元素的基本思路
+       const  btn   =   document.querySelecor(&quot;xxx&quot;);
+       btn.xxxxxx
+
+       const   inputxx=  document.createElement(&quot;&quot;)
+        inputxxx.aut   设置新建的元素的属性
+        把元素添加到父容器元素中
+
+
+
+          javascript动态操作html element的css样式有两种方法，参考链接：（https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#manipulating_styles）
+
+
+          1、设置html  element元素的style属性
+
+          2、在.css文件中编辑sheetstyle表，然后使用代码动态添加(调用元素的setAttribute方法关联设置好的样式表)：
+                       para.setAttribute(&quot;class&quot;, “element-class-namexxxx&quot;);
+</code></pre><p>​<br>​ Elsewhere in the MDN learning area, we talked about the difference between static sites and dynamic sites. Most major modern websites are dynamic — they store data on the server using some kind of database (server-side storage), then run server-side code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user&rsquo;s browser.</p><h4 id=表单及组件>表单及组件</h4><pre><code>   1、&lt;form action=&quot;/my-handling-form-page&quot; method=&quot;post&quot;&gt;…&lt;/form&gt;
+   2、&lt;form&gt;中的小组件都有一个name 属性，通过用户的输入，最终形成name :value的数据，通过form组件submit中的post方法传递到后台的处理程序（javascript 、php、python 、ruby、java等）3、通过&lt;fieldset&gt;  和&lt;legend&gt;对表单组件进行合理分组，美化&lt;form&gt;的布局
+   4、&lt;lable&gt;组件通过设置 for 属性为&lt;input    type=&quot;text&quot;  id=&quot;name1‘’&gt;的id值，把&lt;lable&gt;和指定的&lt;input&gt;关联起来。可以在鼠标单击&lt;lable&gt;的时候切换到&lt;input&gt;组件，对于比较小的单选和复选按钮就比较方便，单击旁边的label就可以选择。
+        &lt; div&gt;
+           &lt;label for=&quot;username&quot;&gt;Name: &lt;span aria-label=&quot;required&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+           &lt;input id=&quot;username&quot; type=&quot;text&quot; name=&quot;username&quot; required /&gt;
+        &lt;/div&gt;
+        //可以在&lt;label&gt;组件后添加*号，表示这&lt;input&gt;是必须要输入的数据项。
+
+         As you can see in the examples, it's common practice to wrap a label and its widget with a &lt;li&gt; element within a &lt;ul&gt; or &lt;ol&gt; list. &lt;p&gt; and &lt;div&gt; elements are also commonly used. Lists are recommended for structuring multiple checkboxes or radio buttons.
+对于一组单选或者复选按钮，可以使用&lt;fieldset&gt;+&lt;legend&gt;进行分组；对于一组的checkbox 或者radiobutton，&lt;input name=&quot;share-one-name&quot;&gt;,name属性要相同。 对于分散性的表单组件，可以使用&lt;p&gt;  或者&lt;div&gt;来分组
+
+   表单组件的美化
+  1、text和button两类组件容易使用css设置样式
+  2、列表类、日期、颜色、文件选择器不容易设置样式和彻底设置样式
+  3、对表form数据的有效性验证( validation)、关闭浏览器默认的验证、设置自定义的验证等。
+  4、表单数据的提交
+       a. &lt;form   action=&quot;url&quot;   method=&quot;GET&quot;&gt;  
+            &lt;input  type=&quot;text&quot; id=&quot;key1&quot; value=&quot;val1&quot;&gt;
+            &lt;input  type=&quot;text&quot; id=&quot;key2&quot;  value=&quot;val2&quot;&gt;
+          &lt;/form&gt;
+          通过GET方法提交的表单中数据，是通过键值对的形式附加在URL的后边，比如：http://www.foo.com?key1=val1&amp;key2=val2
+           (The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (?) followed by the name/value pairs, each one separated by an ampersand (&amp;). In this case, we are passing two pieces of data to the server:)
+            Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a header that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request
+            The GET method is the method used by the browser to ask the server to send back a given resource: &quot;Hey server, I want to get this resource.&quot; In this case, the browser sends an empty body. Because the body is empty, if a form is sent using this method the data sent to the server is appended to the URL.
+
+
+       b.  &lt;form   action=&quot;url&quot;   method=&quot;POST&quot;&gt; 
+            &lt;/form&gt;
+</code></pre><p>​<br>http请求分为两段:header 和body 。当使用get方法时，body就为空，数据以键值对的形式附加在url的后边发送到web服务器。如果要传送大一点的数据则要使用post方法，数据会附加在http请求的body部分。
+先记录大概的思路，细节以后补齐，参考这个链接（https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#on_the_client_side_defining_how_to_send_the_data），简单理解表单数据的传送路径是没问题的，要更深入可以参考tcp/ip协议。
+c.关于http的总体认识：https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview</p></div></article></div><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("pre code").forEach(e=>{hljs.highlightElement(e);const t=document.createElement("button");t.className="copy-code",t.textContent="Copy",t.addEventListener("click",()=>{navigator.clipboard.writeText(e.textContent).then(()=>{t.textContent="Copied!",t.classList.add("copied"),setTimeout(()=>{t.textContent="Copy",t.classList.remove("copied")},2e3)})}),e.parentElement.prepend(t)});const o=document.querySelectorAll(".article-content h2[id], .article-content h3[id]"),i=document.querySelectorAll('.toc a[href^="#"]'),a=document.querySelector(".top-nav").offsetHeight,n=document.querySelector(".toc-container"),e=[];o.forEach(t=>{e.push({id:t.id,top:t.offsetTop-a-20})});function s(){const s=window.scrollY;let t="";for(let n=e.length-1;n>=0;n--)if(e[n].top<=s+50){t=e[n].id;break}i.forEach(e=>{const s=e.getAttribute("href")===`#${t}`;if(e.classList.toggle("active",s),s){const t=e.offsetTop-n.clientHeight/2;n.scrollTop=t}})}let t=!1;window.addEventListener("scroll",()=>{t||(window.requestAnimationFrame(()=>{s(),t=!1}),t=!0)}),s()})</script></body></html>
