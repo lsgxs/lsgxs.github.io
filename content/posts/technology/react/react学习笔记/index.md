@@ -298,3 +298,19 @@ render(element, container); // 最终生成 <div class="box">Hello</div>
   
     
 
+###  JSX实践
+
+**JSX is a powerful syntax extension for JavaScript that enables  developers to write UI components with a familiar HTML-like structure  while seamlessly integrating dynamic JavaScript logic through embedded  expressions (`{}`).** Unlike traditional templates, JSX compiles to React.createElement()  calls, allowing it to leverage the full power of JavaScript for  rendering logic, conditional statements, and loops. Its  component-centric design promotes reusability and modularity, while  automatic escaping of embedded content ensures security against XSS  attacks. By blending declarative markup with  JavaScript, JSX  bridges the gap between design and functionality, making it the  cornerstone of React’s efficient, virtual DOM-driven rendering pipeline.
+
+#### React如何使用javascript
+
+React使用了javascript的大部分模式，但是最大的不同就是使用了jsx语法。JSX扩展了javascript语法，让类HTML代码可以和javascript代码一起工作。比如：
+
+```
+const heading = <h1>Mozilla Developer Network</h1>;
+```
+
+`heading`常量叫做JSX表达式，React可以在我们的程序中渲染`<h1>`元素
+
+
+
