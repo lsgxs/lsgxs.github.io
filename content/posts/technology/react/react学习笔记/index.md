@@ -93,7 +93,11 @@ createRoot(document.getElementById("root")).render(
 * 类似HTML标签的写法，不过这里App首字母大写，表示自定义，标准的HTML标签是小写
 * `App`是一个自定义的component，是一个独立的文件，同时又是组件里的函数名称。
 
-这里的`<App />`书写方法还可以带参数，类似`html`标签里的属性和值的写法一样，下面的代码会显示这一特征。
+​       这里的`<App />`书写方法还可以带参数，类似`html`标签里的属性和值的写法一样，下面的代码会显示这一特征。
+
+* By writing `<App />` as this JSX expression, we're telling React to call the `App()` *function*, which renders the `App` *component* inside the root node.
+
+  [我的翻译-通过把<App />作为jsx表达式传递给render作为参数，告诉 React调用App（）函数在root节点下渲染App组件。]
 
 ##### App.jsx
 
