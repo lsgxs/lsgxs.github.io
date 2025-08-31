@@ -6,8 +6,8 @@ draft: false
 categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
-description: " "
-thumbnail: "images/"
+description: "jsx是javascript和HTML的混合体，将类XML标签语言和javascript组合在一起，以标签语言的书写形式，融入了javascript的变量和表达式、函数实现动态的界面构建技术，以熟悉的方式高效构建动态可复用的用户界面。每个组件函数返回jsx表示的用户界面，由Bable/Parcel编译，通过对React.createElement（）函数的调用，生成虚拟的DOM（内存中的 JavaScript 对象），并通过Diffing技术实现真实DOM的渲染"
+thumbnail: "images/jsx.png"
 ---
 
 ### 构建一个简单的react项目
@@ -405,4 +405,6 @@ function App() {
   ```
   
   props在React中是以javascript对象的形式保存数据的，通过标签书写形式（其中的props则是类似属性和值的写法）完成父组件对子组件的调用，数据是通过props对象传递给子组件的函数参数。
+
+###  React  Component
 
