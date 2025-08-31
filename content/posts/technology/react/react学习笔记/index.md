@@ -310,7 +310,99 @@ React使用了javascript的大部分模式，但是最大的不同就是使用�
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-`heading`常量叫做JSX表达式，React可以在我们的程序中渲染`<h1>`元素
+`heading`常量叫做JSX表达式，React可以在我们的程序中渲染`<h1>`元素，这是单个元素的写法。再看看多个元素嵌套的写法：
 
+```
+const header = (
+  <header>
+    <h1>Mozilla Developer Network</h1>
+  </header>
+);
+```
 
+这里的括号是可选的，是提高代码阅读性加的，但是更推荐这种带括号的写法，避免不必要的错误产生。
+
+这种写法和HTML标签的写法类似，JSX是HTML和javascript的混合体，只要熟悉HTMl的写法，很快熟悉jsx的写法，轻松直观的编写用户界面。
+
+浏览器并不能直接识别jsx代码，需要用Babel/Parcel进行编译，最终转换为标准的的javascript代码，如下所示：
+
+```
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Mozilla Developer Network"),
+);
+```
+
+jsx表达式中的标签都会转换为React.createElement的调用，返回一个javascript对象，结构如下：
+
+```
+{
+  type: "header",
+  props: {
+    children: {
+      type: "h1",
+      props: { children: "Mozilla Developer Network" }
+    }
+  }
+}
+```
+
+这个对象是虚拟 DOM 的最小单位，React 会将这些 React 元素组成的树状结构（虚拟 DOM）与真实的 DOM 进行对比（通过 Diffing 算法），然后高效地更新真实 DOM。虚拟 DOM 本身不是浏览器 DOM，而是一个轻量级的 JavaScript 对象表示。与真实 DOM 的区别：
+
+- 真实 DOM 是浏览器提供的 API（如 `document.createElement("header")` 返回的对象），操作成本较高。
+- React 元素（虚拟 DOM）是纯 JS 对象，创建和对比的开销极小。
+
+**通过对jsx表达式的编译，转为对React.createElement（）函数的调用，最终生成的是虚拟的DOM树状结构对象，通过Diffing算法，渲染真实的DOM。**
+
+#### 在JSX中应用变量、表达式
+
+* 在标签的内容部分应用变量和表达式
+
+  `<h1> content-area</h1> `
+
+在这里所示的`content-area`部分使用`{}`书写变量，会取变量的值进行渲染。
+
+```
+const subject = "React";
+function App() {
+  // code omitted for brevity
+}
+
+//{subject}会读取变量subject的值，最终呈现的是<h1> Hello ,React</h1>
+<h1>Hello, {subject}</h1>
+```
+
+* props（在标签的属性部分书写属性和值）
+
+  props是jsx中在组件之间传递数据的一种方式。书写方式和HTML标签中的属性和值的写法相同。两者的不同之处在于传递数据的对象不同，HTML标签中的属性和值的写法是给HTML element传递数据，而jsx中的props是在组件之间传递数据，通常是父组件给子组件传递数据。比如`prop="value"。
+
+  打开项目程序`/src/main.jsx`，在主程序中加入下面的jsx元素
+  
+  ```
+  
+  <App subject="Clarice" />
+  
+  ```
+  
+  这样的写法，是在main.jsx程序中调用App组件，并以`prop=value`的形式给App组件传递数据,这里是`subject="Clarice"`。
+  
+  接下来就要在App组件中给App函数添加接收数据的props参数：
+  
+  ```
+  function App(props) {
+    return (
+      <>
+        <header>
+          <h1>Hello, {props.subject}!</h1>
+          <button type="button" className="primary">
+            Click me!
+          </button>
+        </header>
+      </>
+    );
+  }
+  ```
+  
+  props在React中是以javascript对象的形式保存数据的，通过标签书写形式（其中的props则是类似属性和值的写法）完成父组件对子组件的调用，数据是通过props对象传递给子组件的函数参数。
 
