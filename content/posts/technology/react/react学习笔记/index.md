@@ -65,6 +65,11 @@ LearnReact
 ```
 
 * `<script type="module" src="/src/main.jsx"></script>`。在index.html文件中加载了项目根目录下src目录下的main.jsx文件。然后main.jsx文件里又加载了App.jsx文件，App.jsx文件又可以使用子组件，比如components下的组件。加载这样就形成了一个完整的调佣链条：`index.html`，`main.jsx`、`App.jsx`、childComponentsxxx.jsx
+
+  ```
+  index.html is the most important top-level file. Vite injects your code into this file so that  browser can run it.
+  ```
+  
 * `<div  id=""root></div>`  这句是表示了这个`<div>  </div>`是整个虚拟dom的根元素，为后面动态添加子元素用的吧，我是这么理解。
 
 ##### main.jsx
@@ -407,4 +412,14 @@ function App() {
   props在React中是以javascript对象的形式保存数据的，通过标签书写形式（其中的props则是类似属性和值的写法）完成父组件对子组件的调用，数据是通过props对象传递给子组件的函数参数。
 
 ###  React  Component
+
+[  ]  todolist 
+
+**Componentizing the  app**
+
+ components are either obvious pieces of UI, reused pieces of UI
+
+这句话多看几遍：在React  todo App的【React  events  and  state】部分
+
+Instead, we can write a function in `<App />` that will expect some data from our form as an input, then pass that function to `<Form />` as a prop. This function-as-a-prop is called a **callback prop**. Once we have our callback prop, we can call it inside `<Form />` to send the right data to `<App />`.
 
