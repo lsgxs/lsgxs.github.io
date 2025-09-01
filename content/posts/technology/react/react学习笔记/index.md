@@ -153,7 +153,27 @@ export default App;
 * function  App()   初始化本地的数据[count,setCount]=useState，然后用return语句返回一个<> </>包裹的jsx表达式，这个jsx表达式类似HTML中的元素，可是单个按钮，可以是整个form组件和其包裹的所有子元素，甚至整个页面的DOM树。
 
   * App是一个react  compotent，它的名称使用upper camel case样式，名称中多个单词的首字母大写，比如HelloWorld。如果把这函数名称写成小写的`app`，浏览器就会报错。
+
   * return 返回的jsx表达式类似标准的HTML元素，表示了在浏览器渲染的界面。但是它不是HTML元素，是jsx表达式，最后是由Babel编译，每一个jsx元素都被转换为React.createElement()函数的调用，多个元素嵌套的话，就会转为React.createElement()函数的嵌套调用。
+
+    * return  `<> jsx expression </>` 。当返回的同级元素多于一个时就要用jsx  fragmen（`<> </>`）包裹。
+
+      ```
+      #如果返回的是单个元素则不需要<> </>包裹
+      <h1>one expression</h1>  
+      #如果返回的是多个同级元素，要用<> </>包裹
+      <>
+        <p>first  paragraph  </p>
+        <p2>second  paragraph</p>
+      </>
+      #最外层是一个元素的嵌套多个元素，也不需要<> </>包裹
+      <div>
+         <span> one  </span>
+         <span>  two </span>
+      </div>
+      ```
+
+      
 
 * export  default  App
 
