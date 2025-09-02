@@ -443,3 +443,24 @@ function App() {
 
 Instead, we can write a function in `<App />` that will expect some data from our form as an input, then pass that function to `<Form />` as a prop. This function-as-a-prop is called a **callback prop**. Once we have our callback prop, we can call it inside `<Form />` to send the right data to `<App />`.
 
+### jsx中的注意事项
+
+#### 几个特别的属性
+
+* className
+
+* htmlfor
+
+* boolean  atribution
+
+  ```
+  Because JSX is JavaScript, there's a gotcha to be aware of with boolean attributes: writing defaultChecked="false" will set a string value of "false" rather than a boolean value. Non-empty strings are truthy, so React will consider defaultChecked to be true and check the checkbox by default. This is not what we want, so we should avoid it.
+  
+  If you'd like, you can practice writing boolean attributes with another attribute you may have seen before, hidden, which prevents elements from being rendered on the page. Try adding hidden to the <h1> element in App.jsx to see what happens, then try explicitly setting its value to {false}. Note, again, that writing hidden="false" results in a truthy value so the <h1> will hide. Don't forget to remove this code when you're done.
+  ```
+
+  比如说hidder="false",在javascript中，布尔值有true 和false。其他值可以通过是否为空来判断，非空为真值。所以及时hidden=“false”，以为"false"是一个字符串，非空，所以最终还是hidden =  true ,偏离了本意。
+
+
+
+  
