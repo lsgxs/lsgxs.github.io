@@ -430,6 +430,16 @@ function App() {
   ```
   
   props在React中是以javascript对象的形式保存数据的，通过标签书写形式（其中的props则是类似属性和值的写法）完成父组件对子组件的调用，数据是通过props对象传递给子组件的函数参数。
+  
+  **简单理解JSX的基本思想：把XML-HTML类的标签语言引入到javascript，把这些标签组成的UI作为变量、表达式这些可编程元素来构建动态UI。所谓的动态是让标签的内容部分和属性部分引用javascript变量、表达式、函数，真正实现了动态的标签。**这就是javascript和html的相互融合。而要理解React组价的核心，主要是component、props、state。要通过实例慢慢熟悉这些设计思想，只有充分理解了这些设计思想，才能真正掌握这些技术。
+  
+  ```
+  1. 模块调用标签化  <App      />的写法
+  2. 函数返回标签化   return( <> )
+  3. 数据传递标签  各种props的扩展
+  ```
+  
+  
 
 ###  React  Component
 
@@ -461,6 +471,35 @@ Instead, we can write a function in `<App />` that will expect some data from ou
 
   比如说hidder="false",在javascript中，布尔值有true 和false。其他值可以通过是否为空来判断，非空为真值。所以及时hidden=“false”，以为"false"是一个字符串，非空，所以最终还是hidden =  true ,偏离了本意。
 
+#### reuse  of  component
 
+```
+Make a unique <Todo />
 
-  
+Components are powerful because they let us re-use pieces of our UI, and refer to one place for the source of that UI. The problem is, we don't typically want to reuse all of each component; we want to reuse most parts, and change small pieces. This is where props come in.
+```
+
+```
+What's in a name?
+
+In order to track the names of tasks we want to complete, we should ensure that each <Todo /> component renders a unique name.
+In App.jsx, give each <Todo /> a name prop. Let's use the names of our tasks that we had before:
+jsx
+
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" />
+  <Todo name="Sleep" />
+  <Todo name="Repeat" />
+</ul>
+```
+
+```
+Once again, we want to reuse most of the UI that makes up a <Todo /> component, but change one thing. That's a good job for another prop
+```
+
+整体的思路，在复用一个组件时要修改UI的一部分，重复利用props来给子组件传递参数，来定制jsx element的显示或者行为：**通过传递props来动态设置jsx元素**。
+
+ 
