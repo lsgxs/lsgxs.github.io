@@ -74,6 +74,8 @@ params:
     imageHeight: 120
     imageTitle: 我的头像
     buttons:
+      - name: todo
+        url: /posts/todo/
       - name: 阅读
         url: /posts/read/
       - name: 技术
