@@ -170,8 +170,54 @@ We say variables contain values. This is an important distinction to make. Varia
 Here we first create an h1 element with createElement(), set its textContent to equal the squadName property of the object, then append it to the header using appendChild()。 We then do a very similar operation with a paragraph: create it, set its text content and append it to the header. 
 
 =================
+
 #### 异步编程（asynchronous）
-        主线程调佣另外一个函数时，如果不需要等待就可以继续完成主线程接下里的工作，caller和被调用的函数就是同时进行的，这个过程称作为异步。
+
+下面这段文章是MDN文档里介绍Node和Express的相关内容，复制在这里理解异步编程。
+
+### [Using asynchronous APIs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#using_asynchronous_apis)
+
+JavaScript code frequently uses asynchronous rather than  synchronous APIs for operations that may take some time to complete. A  synchronous API is one in which each operation must complete before the  next operation can start. For example, the following log functions are  synchronous, and will print the text to the console in order (First,  Second).
+
+​          js                                                                  
+
+```
+console.log("First");
+console.log("Second");
+```
+
+By contrast, an asynchronous API is one in which the API will start  an operation and immediately return (before the operation is complete).  Once the operation finishes, the API will use some mechanism to perform  additional operations. For example, the code below will print out  "Second, First" because even though `setTimeout()` method is called first, and returns immediately, the operation doesn't complete for several seconds.
+
+​          js                                                                  
+
+```
+setTimeout(() => {
+  console.log("First");
+}, 3000);
+console.log("Second");
+```
+
+Using non-blocking asynchronous APIs is even more important on Node than in the browser because *Node* applications are often written as a single-threaded event-driven  execution environment. "Single threaded" means that all requests to the  server are run on the same thread (rather than being spawned off into  separate processes). This model is extremely efficient in terms of speed and server resources. However, it does mean that if any of your  functions call synchronous methods that take a long time to complete,  they will block not only the current request, but every other request  being handled by your web application.
+
+There are multiple ways for an asynchronous API to notify your  application that it has completed. Historically, the approach used was  to register a callback function when invoking the asynchronous API,  **which (这个非限制性定语从句的which是指代前边的先行词callback  funtion)**is then called when **the operation completes（这里指的是异步API的操作完成）** (this is the approach  used above).
+
+```
+意思是传统的方法是在调用异步API时注册一个回调函数（作为参数），当异步API的操作完成之后回调函数会被调用。
+```
+
+
+
+**Note:** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order, because this  results in multiple levels of nested callbacks. This problem is commonly known as "callback hell".
+
+**Note:** A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your *callback functions* is an error value, while subsequent arguments contain success data.  There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (fredkschott.com).
+
+Modern JavaScript code more commonly uses [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to manage asynchronous program flow. You should use promises where possible. If working with code that uses callbacks, you can use the Node.js [`utils.promisify`](https://nodejs.org/api/util.html#utilpromisifyoriginal) function to handle the callback → Promise conversion ergonomically.
+
+  个人总结的关于异步编程的思想
+   需要等待时间和资源的操作都可以设计为异步操作，不用等待异步API完成就直接返回主线程运行后边的的任务，而执行异步API调用时带有函数作为参数时，这个参数就是回调函数，异步API并不直接调用这个作为参数的回调函数，而是启动异步API的时候注册回调函数，由Javascript引擎通过事件队列来管理回调函数，等这个异步API的操作完成后就在主线程空闲时调用这个回调函数。
+
+​    比如请求网络资源和读写文件的操作，都是需要一定时间等待，此时就可以调用异步API来完成操作，等这个操作完成后会由系统调用回调函数。运行异步API并把回调函数作为参数，就会注册这个回调函数，由系统决定何时调用这个回调函数。这种方法是传统的使用异步编程的方式，现在大多使用Promises和[async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) 来实现。可以继续深入学习相关的知识。
+
        1、callback
        2、promiser
             const fetchPromise =fetch(
@@ -189,6 +235,8 @@ Here we first create an h1 element with createElement(), set its textContent to 
                     fetch  作为一个异步调用函数，返回一个promise对象。初步学习理解，自己感觉是由这个promise对象来链接异步执行的线程，保存异步线程的状态，最后调佣promise.then()这个函数与主线程通信。从设计的思想理解，是在主线程和子线程之间使用第三方promise来保持相互的通信。
     
        3、worker
+       
+    
 #### javascript和Browser APIs、第三方API及其他javascript工具之间的关系
 
 * javascript是内置于browser的编程语言
@@ -221,7 +269,6 @@ Your code interacts with APIs using one or more JavaScript objects, which serve 
                            para.setAttribute("class", “element-class-namexxxx");
 
 
-​    
 ​           Elsewhere in the MDN learning area, we talked about the difference between static sites and dynamic sites. Most major modern websites are dynamic — they store data on the server using some kind of database (server-side storage), then run server-side code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user's browser.
 
 #### 表单及组件
@@ -260,6 +307,6 @@ Your code interacts with APIs using one or more JavaScript objects, which serve 
 
 
 ​    
-              http请求分为两段:header  和body  。当使用get方法时，body就为空，数据以键值对的形式附加在url的后边发送到web服务器。如果要传送大一点的数据则要使用post方法，数据会附加在http请求的body部分。
-              先记录大概的思路，细节以后补齐，参考这个链接（https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#on_the_client_side_defining_how_to_send_the_data），简单理解表单数据的传送路径是没问题的，要更深入可以参考tcp/ip协议。
-           c.关于http的总体认识：https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+​              http请求分为两段:header  和body  。当使用get方法时，body就为空，数据以键值对的形式附加在url的后边发送到web服务器。如果要传送大一点的数据则要使用post方法，数据会附加在http请求的body部分。
+​              先记录大概的思路，细节以后补齐，参考这个链接（https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#on_the_client_side_defining_how_to_send_the_data），简单理解表单数据的传送路径是没问题的，要更深入可以参考tcp/ip协议。
+​           c.关于http的总体认识：https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
