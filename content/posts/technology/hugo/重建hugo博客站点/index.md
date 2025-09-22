@@ -1,7 +1,7 @@
 ---
-title: "Hugo建立博客系统"
+title: "重建Hugo博客系统"
 slug: "hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97"
-date: 2025-09-2217:50:29+08:00
+date: 2025-09-2218:50:29+08:00
 draft: false
 categories: ["默认分类"]
 tags: [hugo,github]
