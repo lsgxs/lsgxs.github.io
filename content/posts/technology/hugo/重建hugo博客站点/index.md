@@ -1,14 +1,17 @@
 ---
-title: "重建Hugo博客系统"
-slug: "hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97"
-date: 2025-09-2218:50:29+08:00
+title: "重建hugo博客站点"
+slug: "%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9"
+date: 2025-09-22T22:19:34+08:00
 draft: false
 categories: ["默认分类"]
-tags: [hugo,github]
+tags: ["默认标签"]
 toc: true
 thumbnail: "images/settings.jpg"
 description: "因为系统重装等原因需要重新布置博客系统，时间久了不记得有些关键步骤的细节，要重新学习以前做过的内容，有时候发现当时的学习更深入更专注，所以最好在专注学习之后及时做好笔记 "
+
 ---
+
+
 
 
 ###  重建HuGo博客站点
@@ -235,4 +238,3 @@ git push origin  main
 # git  pull origin 
 # push到github的hugo仓库后，有自动的hugo编译器脚本自动把markdown文档转换为html文件，利用github pages组织成博客站点。
 ```
-
