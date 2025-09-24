@@ -7,7 +7,7 @@ categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
 description: " 有点喜欢梅森罐的样子，还可以在家方便的制作泡菜和食品罐头，利用开水煮罐可以安全的制作西红柿等食品罐头，喜欢这个就是这三个理由：样子好看、制作泡菜、制作西红柿罐头"
-thumbnail: "images/masonjar.png"
+thumbnail: "images/冰山.jpg"
 ---
 
 #### mason jar的选择
