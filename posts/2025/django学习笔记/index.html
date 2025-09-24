@@ -1,0 +1,130 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Django学习笔记 | 技术博客</title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel=stylesheet><style>:root{--nav-height:60px;--toc-width:280px;--content-padding:40px;--primary-color:#3498db;--text-color:#333;--light-gray:#f5f5f5;--border-color:#eaeaea}*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;color:var(--text-color);line-height:1.6;padding-top:var(--nav-height);overflow-x:hidden}.top-nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height);background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);display:flex;align-items:center;padding:0 30px;z-index:1000}.nav-container{width:100%;max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.site-title{font-size:1.4rem;font-weight:700;color:var(--primary-color);text-decoration:none}.nav-links{display:flex;gap:25px}.nav-links a{color:var(--text-color);text-decoration:none;font-size:1rem;transition:color .3s}.nav-links a:hover{color:var(--primary-color)}.main-container{display:flex;max-width:1400px;margin:0 auto;padding:20px}.toc-container{position:sticky;top:calc(var(--nav-height) + 20px);align-self:flex-start;width:var(--toc-width);padding:20px;margin-right:30px;max-height:calc(100vh - var(--nav-height) - 40px);overflow-y:auto;background:var(--light-gray);border-radius:8px;scroll-behavior:auto;overscroll-behavior:contain}.toc-title{font-size:1.2rem;margin-bottom:15px;padding-bottom:10px;border-bottom:2px solid var(--primary-color)}.toc ul{list-style:none;padding-left:15px}.toc li{margin-bottom:8px;position:relative}.toc a{color:var(--text-color);text-decoration:none;display:block;padding:5px 0 5px 10px;transition:all .2s;font-size:.95rem;border-left:2px solid transparent}.toc a:hover{color:var(--primary-color);transform:translateX(5px)}.toc a.active{color:var(--primary-color);font-weight:700;border-left:3px solid var(--primary-color);background:rgba(52,152,219,5%);transform:translateX(5px)}.content-container{flex:1;background:#fff;padding:var(--content-padding);border-radius:8px;box-shadow:0 2px 15px rgba(0,0,0,5%)}.article-header{margin-bottom:30px;border-bottom:1px solid var(--border-color);padding-bottom:20px}.article-title{font-size:2rem;margin-bottom:10px;color:#2c3e50}.article-meta{display:flex;gap:20px;color:#7f8c8d;font-size:.9rem;margin-bottom:15px}.article-content{line-height:1.8}.article-content h2{font-size:1.6rem;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-color);scroll-margin-top:calc(var(--nav-height) + 20px)}.article-content h3{font-size:1.3rem;margin:1.5rem 0 .8rem;scroll-margin-top:calc(var(--nav-height) + 20px)}.article-content img{max-width:100%;height:auto;border-radius:6px;margin:1.5rem 0;box-shadow:0 3px 10px rgba(0,0,0,.1)}.article-content pre{position:relative;background:#f7f7f7;color:#242424;border-left:4px solid #04b04f;border-radius:8px;padding:1.5rem 1rem 1rem;margin:1.5rem 0;overflow:auto;box-shadow:0 1px 3px rgba(0,0,0,.1);max-height:40vh;white-space:pre-wrap;font-family:fira code,Menlo,Monaco,Consolas,monospace;font-size:.9rem;line-height:1.5;scrollbar-width:thin;scrollbar-color:#c4c4c4 #f7f7f7}.article-content code{font-family:inherit;color:inherit!important;background:0 0!important;padding:0;text-shadow:none!important;font-size:.9rem}.hljs-meta,.hljs-built_in{color:#04b04f}.hljs-attribute{color:#e91e63}.hljs-string{color:#2e7d32}.hljs-number{color:#2196f3}.article-content pre::-webkit-scrollbar{width:12px;height:12px}.article-content pre::-webkit-scrollbar{width:12px;height:12px}.article-content pre::-webkit-scrollbar-thumb{background:#04b04f;opacity:.6;border:3px solid #f7f7f7}.article-content pre::-webkit-scrollbar-track{background:#f7f7f7;border-radius:6px}.copy-code{position:absolute;top:10px;right:15px;background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.2);color:#242424;border-radius:4px;padding:3px 8px;font-size:.8rem;cursor:pointer;transition:all .3s;opacity:0;z-index:10}pre:hover .copy-code{opacity:1}.copy-code:hover{background:rgba(0,0,0,.2)}.copy-code.copied{background:#28a745;color:#fff;border-color:#28a745}@media(max-width:1024px){.toc-container{width:240px;padding:15px}.content-container{padding:25px}}@media(max-width:768px){.main-container{flex-direction:column}.toc-container{position:static;width:100%;margin-right:0;margin-bottom:30px;max-height:none}.article-title{font-size:1.8rem}.article-content pre{max-height:50vh;padding-right:10px}}</style></head><body><nav class=top-nav><div class=nav-container><a href=/ class=site-title>技术博客</a><div class=nav-links><a href=/>首页</a>
+<a href=/posts/>所有文章</a>
+<a href=/categories/>分类</a>
+<a href=/tags/>标签</a></div></div></nav><div class=main-container><aside class=toc-container><h3 class=toc-title>目录</h3><div class=toc><nav id=TableOfContents><ul><li><ul><li><a href=#django项目模型>django项目模型</a></li><li><a href=#mvt结构中的难点><code>MVT</code>结构中的难点</a></li><li><a href=#url-mapping>URL Mapping</a><ul><li><a href=#项目结构示例>项目结构示例</a></li><li><a href=#1-定义阶段建立url映射>1. 定义阶段：建立URL映射</a></li><li><a href=#2-django内部建立的映射表>2. Django内部建立的映射表</a></li><li><a href=#3-用户访问流程正向解析>3. 用户访问流程（正向解析）</a></li><li><a href=#4-模板中使用反向解析>4. 模板中使用（反向解析）</a></li><li><a href=#5-python代码中使用反向解析>5. Python代码中使用反向解析</a></li><li><a href=#6-修改url时的优势>6. 修改URL时的优势</a></li><li><a href=#总结url-mapping的核心要点>总结：URL Mapping的核心要点</a></li></ul></li></ul></li></ul></nav></div></aside><article class=content-container><header class=article-header><h1 class=article-title>Django学习笔记</h1><div class=article-meta><span>📅 2025年9月24日</span>
+<span>📁 <a href=/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB>默认分类</a></span></div></header><div class=article-content><h3 id=django项目模型>django项目模型</h3><p>首先从总体上理解django项目的几个主要特征：</p><ul><li><p><strong>URL maps</strong></p></li><li><p><strong>Views</strong></p></li><li><p><strong>Model</strong></p></li><li><p><strong>Templates</strong></p></li></ul><p>从上面的一句中可以归纳出后端开发框架<code>django</code>的基本要素：<code>URLs-Mapping（URL-Router）</code>、<code>View</code>、<code>Model</code>、<code>Template</code>。借用<code>django</code>的<code>LocalLibrary</code>项目实践的这幅图，清晰的说明了这四个要素之间的关系和数据流动。</p><p>1、<strong><code>URLs-Mapping</code></strong>。客户通过浏览器发送<code>http</code>请求，web服务器接接收到这个请求后获取URL，调用程序的<code>URLs-Mapping </code>模块程序。</p><p>2、<strong><code>View</code></strong><code>。URLs-Mapping</code>的代码中会把<code>http</code>请求的URL关联到指定的View。</p><p>3、<strong><code>View-Model</code></strong><code>。View</code>是软件的控制中心，使用Model提供的数据、方法从数据库中获取指定的数据。</p><p>4、<strong><code>View-Template</code></strong>。View再把从数据库中获取的数据传递给写好的<code>Template</code>,并调用render方法把模板、数据最终生成<code>HTML</code>页面通过<code>respone</code>对象回传给客户端的浏览器渲染。</p><p>这个框架的基本结构被称作<code>MVT</code>（<code>Model-View-Template</code>），还有另外一个基于<code>javascript</code>的后端框架<code>Express</code>，它的基本结构被称作<code>MVC</code>（<code>Model-View-Control</code>）。个人感觉这个结构里都省略了<code>URLs-Mapping</code>这个环节，在Express里可能叫做<code>URLs-Router</code>。尽管叫法不同，但是都是对<code>https</code>请求路径的调度，把请求的传递给软件的控制中心，有控制中心获取数据，把数据再传递给模板，最终生成<code>HTML页</code>面回传客户浏览器。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>  1、URL映射器将提取编码后的信息并传递给视图，视图会动态确定从数据库获取哪些信息。通过将信息编码在URL中，我们可以使用单一的一组URL映射、视图和模板来处理所有模型。
+</span></span><span class=line><span class=cl>  2、视图是一个处理HTTP请求的函数，它从数据库中获取所需数据，使用HTML模板将这些数据渲染成HTML页面，然后在HTTP响应中返回生成的HTML内容，以便向用户显示页面。通过URL mappers关联到匹配的views后,Views通过Model查询数据库获得请求需要的数据，然后把这些数据通过变量传递给模板里的占位符，经过自定义的模板扩展和覆盖，由Views的render完成模板数据的填充和渲染，把生成的html文件编码在response对象中返回给客户端渲染。
+</span></span><span class=line><span class=cl>  3、模型是一个定义了数据结构的Python类，它通常对应数据库中的一张表。模型的每个属性都表示数据库表中的一个字段，Django根据模型类自动生成数据库 schema。通过这种映射，模型提供了创建、检索、更新和删除数据库中记录的高级Python接口，从而封装并简化了所有数据操作逻辑。
+</span></span><span class=line><span class=cl>  4、模板是一个包含基础HTML结构和特殊占位符的文本文件。它定义了网站的页面布局和外观，但允许动态内容填充。视图在处理请求时，会将从数据库获取的特定数据（称为“上下文”）传递给模板引擎。模板引擎随后将模板中的占位符替换为实际的动态数据，最终生成一个完整的、纯HTML页面返回给用户。
+</span></span></code></pre></div><p>可以参照MDN上关于django实现<a href=https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Home_page/basic-django.png>MVT</a> 四个要素的图片描述,说明了四个要素之间的关系和数据流向。</p><h3 id=mvt结构中的难点><code>MVT</code>结构中的难点</h3><p>传统上基于数据操作的应用程序都是直接使用<code>SQL</code>语言实现对数据库的建增删查改（crud），但是现在的后端框架是在数据库之上又加了一层应用，程序不是直接使用<code>SQL</code>语言提交给数据库完成数据的操作，而是用框架自己的编程语言建立了库，实现两个层面的工作，一个底层的数据库驱动库，一个是面向编程开发的API，开发者可以通过调用API，让开发者不必去关心特定的数据库特性，用python的面向对象技术实现对数据库的操作，这些封装模型在django中称为<code>Model</code>。从django和数据库交互的方式来看，这个模型叫做<code>ORM</code>,<code>object relation model</code>。具体的细节可以进一步扩展学习。</p><p>从概念上习惯了<code>SQL</code>语言的操作方法，增删改查的四个类型简单明了，你的极限只在于你对复杂<code>SQL</code>语言的掌控和灵活运用，但是这个<code>ORM</code>又多了一层概念，只有通过项目实践才能理解并熟练运用。</p><h3 id=url-mapping>URL Mapping</h3><h4 id=项目结构示例>项目结构示例</h4><p>text</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>myproject/
+</span></span><span class=line><span class=cl>    📁 bookstore/
+</span></span><span class=line><span class=cl>        📄 views.py       # 视图函数
+</span></span><span class=line><span class=cl>        📄 urls.py        # URL配置
+</span></span><span class=line><span class=cl>        📁 templates/     # 模板文件
+</span></span></code></pre></div><h4 id=1-定义阶段建立url映射>1. 定义阶段：建立URL映射</h4><h5 id=-bookstoreviewspy>📄 bookstore/views.py</h5><p>python</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>from django.shortcuts import render, get_object_or_404
+</span></span><span class=line><span class=cl>from django.http import HttpResponse
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>def home(request):
+</span></span><span class=line><span class=cl>    &#34;&#34;&#34;首页视图&#34;&#34;&#34;
+</span></span><span class=line><span class=cl>    return HttpResponse(&#34;欢迎来到书店首页！&#34;)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>def book_list(request):
+</span></span><span class=line><span class=cl>    &#34;&#34;&#34;图书列表视图&#34;&#34;&#34;
+</span></span><span class=line><span class=cl>    return HttpResponse(&#34;这里是所有图书列表&#34;)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>def book_detail(request, book_id):
+</span></span><span class=line><span class=cl>    &#34;&#34;&#34;图书详情视图&#34;&#34;&#34;
+</span></span><span class=line><span class=cl>    return HttpResponse(f&#34;这是图书 {book_id} 的详情页面&#34;)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>def search_books(request, category, keyword):
+</span></span><span class=line><span class=cl>    &#34;&#34;&#34;搜索图书视图&#34;&#34;&#34;
+</span></span><span class=line><span class=cl>    return HttpResponse(f&#34;在 {category} 分类中搜索: {keyword}&#34;)
+</span></span></code></pre></div><h5 id=-bookstoreurlspy>📄 bookstore/urls.py</h5><p>python</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>from django.urls import path
+</span></span><span class=line><span class=cl>from . import views  # 导入当前目录的views模块
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>urlpatterns = [
+</span></span><span class=line><span class=cl>    # 基本URL映射
+</span></span><span class=line><span class=cl>    path(&#39;&#39;, views.home, name=&#39;home&#39;),
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    # 列表页面
+</span></span><span class=line><span class=cl>    path(&#39;books/&#39;, views.book_list, name=&#39;book-list&#39;),
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    # 带参数的详情页面
+</span></span><span class=line><span class=cl>    path(&#39;book/&lt;int:book_id&gt;/&#39;, views.book_detail, name=&#39;book-detail&#39;),
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    # 多个参数的复杂URL
+</span></span><span class=line><span class=cl>    path(&#39;search/&lt;str:category&gt;/&lt;slug:keyword&gt;/&#39;, views.search_books, name=&#39;book-search&#39;),
+</span></span><span class=line><span class=cl>]
+</span></span></code></pre></div><h4 id=2-django内部建立的映射表>2. Django内部建立的映射表</h4><p>python</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># 概念上的内部数据结构
+</span></span><span class=line><span class=cl>URL_MAPPINGS = {
+</span></span><span class=line><span class=cl>    &#39;home&#39;: {
+</span></span><span class=line><span class=cl>        &#39;pattern&#39;: &#39;&#39;,
+</span></span><span class=line><span class=cl>        &#39;view&#39;: views.home,
+</span></span><span class=line><span class=cl>        &#39;parameters&#39;: []
+</span></span><span class=line><span class=cl>    },
+</span></span><span class=line><span class=cl>    &#39;book-list&#39;: {
+</span></span><span class=line><span class=cl>        &#39;pattern&#39;: &#39;books/&#39;,
+</span></span><span class=line><span class=cl>        &#39;view&#39;: views.book_list, 
+</span></span><span class=line><span class=cl>        &#39;parameters&#39;: []
+</span></span><span class=line><span class=cl>    },
+</span></span><span class=line><span class=cl>    &#39;book-detail&#39;: {
+</span></span><span class=line><span class=cl>        &#39;pattern&#39;: &#39;book/&lt;int:book_id&gt;/&#39;,
+</span></span><span class=line><span class=cl>        &#39;view&#39;: views.book_detail,
+</span></span><span class=line><span class=cl>        &#39;parameters&#39;: [&#39;book_id&#39;]
+</span></span><span class=line><span class=cl>    },
+</span></span><span class=line><span class=cl>    &#39;book-search&#39;: {
+</span></span><span class=line><span class=cl>        &#39;pattern&#39;: &#39;search/&lt;str:category&gt;/&lt;slug:keyword&gt;/&#39;,
+</span></span><span class=line><span class=cl>        &#39;view&#39;: views.search_books,
+</span></span><span class=line><span class=cl>        &#39;parameters&#39;: [&#39;category&#39;, &#39;keyword&#39;]
+</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></div><h4 id=3-用户访问流程正向解析>3. 用户访问流程（正向解析）</h4><h5 id=场景1用户访问首页>场景1：用户访问首页</h5><p>text</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>用户输入URL: http://example.com/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Django处理流程:
+</span></span><span class=line><span class=cl>1. 收到请求路径: &#34;&#34;
+</span></span><span class=line><span class=cl>2. 匹配URL模式: path(&#39;&#39;, ...) ✓ 匹配成功
+</span></span><span class=line><span class=cl>3. 调用对应视图: views.home(request)
+</span></span><span class=line><span class=cl>4. 返回响应: &#34;欢迎来到书店首页！&#34;
+</span></span></code></pre></div><h5 id=场景2用户访问图书详情>场景2：用户访问图书详情</h5><p>text</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>用户输入URL: http://example.com/book/42/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Django处理流程:
+</span></span><span class=line><span class=cl>1. 收到请求路径: &#34;book/42/&#34;
+</span></span><span class=line><span class=cl>2. 匹配URL模式: path(&#39;book/&lt;int:book_id&gt;/&#39;, ...) ✓ 匹配成功
+</span></span><span class=line><span class=cl>3. 提取参数: book_id = 42 (自动转换为整数)
+</span></span><span class=line><span class=cl>4. 调用视图: views.book_detail(request, book_id=42)
+</span></span><span class=line><span class=cl>5. 返回响应: &#34;这是图书 42 的详情页面&#34;
+</span></span></code></pre></div><h4 id=4-模板中使用反向解析>4. 模板中使用（反向解析）</h4><h5 id=-templatesbasehtml>📄 templates/<a href=https://base.html>base.html</a></h5><p>html</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;!DOCTYPE html&gt;
+</span></span><span class=line><span class=cl>&lt;html&gt;
+</span></span><span class=line><span class=cl>&lt;head&gt;
+</span></span><span class=line><span class=cl>    &lt;title&gt;书店&lt;/title&gt;
+</span></span><span class=line><span class=cl>&lt;/head&gt;
+</span></span><span class=line><span class=cl>&lt;body&gt;
+</span></span><span class=line><span class=cl>    &lt;nav&gt;
+</span></span><span class=line><span class=cl>        &lt;!-- 使用名称生成URL --&gt;
+</span></span><span class=line><span class=cl>        &lt;a href=&#34;{% url &#39;home&#39; %}&#34;&gt;首页&lt;/a&gt;
+</span></span><span class=line><span class=cl>        &lt;a href=&#34;{% url &#39;book-list&#39; %}&#34;&gt;所有图书&lt;/a&gt;
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        &lt;!-- 带参数的URL --&gt;
+</span></span><span class=line><span class=cl>        &lt;a href=&#34;{% url &#39;book-detail&#39; book_id=42 %}&#34;&gt;查看图书42&lt;/a&gt;
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        &lt;!-- 多个参数的URL --&gt;
+</span></span><span class=line><span class=cl>        &lt;a href=&#34;{% url &#39;book-search&#39; category=&#39;fiction&#39; keyword=&#39;django&#39; %}&#34;&gt;
+</span></span><span class=line><span class=cl>            搜索小说类Django相关书籍
+</span></span><span class=line><span class=cl>        &lt;/a&gt;
+</span></span><span class=line><span class=cl>    &lt;/nav&gt;
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    {% block content %}{% endblock %}
+</span></span><span class=line><span class=cl>&lt;/body&gt;
+</span></span><span class=line><span class=cl>&lt;/html&gt;
+</span></span></code></pre></div><h5 id=渲染后的html结果>渲染后的HTML结果：</h5><p>html</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;a href=&#34;/&#34;&gt;首页&lt;/a&gt;
+</span></span><span class=line><span class=cl>&lt;a href=&#34;/books/&#34;&gt;所有图书&lt;/a&gt;
+</span></span><span class=line><span class=cl>&lt;a href=&#34;/book/42/&#34;&gt;查看图书42&lt;/a&gt;
+</span></span><span class=line><span class=cl>&lt;a href=&#34;/search/fiction/django/&#34;&gt;搜索小说类Django相关书籍&lt;/a&gt;
+</span></span></code></pre></div><h4 id=5-python代码中使用反向解析>5. Python代码中使用反向解析</h4><h5 id=-bookstoreviewspy-1>📄 bookstore/views.py</h5><p>python</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>from django.urls import reverse
+</span></span><span class=line><span class=cl>from django.shortcuts import redirect
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>def some_view(request):
+</span></span><span class=line><span class=cl>    # 在Python代码中生成URL
+</span></span><span class=line><span class=cl>    home_url = reverse(&#39;home&#39;)  # 返回: &#34;/&#34;
+</span></span><span class=line><span class=cl>    book_list_url = reverse(&#39;book-list&#39;)  # 返回: &#34;/books/&#34;
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    # 带参数的反向解析
+</span></span><span class=line><span class=cl>    book_detail_url = reverse(&#39;book-detail&#39;, kwargs={&#39;book_id&#39;: 42})  # 返回: &#34;/book/42/&#34;
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    # 重定向到其他页面
+</span></span><span class=line><span class=cl>    return redirect(&#39;book-list&#39;)  # 直接使用名称重定向
+</span></span></code></pre></div><h4 id=6-修改url时的优势>6. 修改URL时的优势</h4><h5 id=修改前>修改前：</h5><p>python</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># 旧URL配置
+</span></span><span class=line><span class=cl>path(&#39;all-books/&#39;, views.book_list, name=&#39;book-list&#39;)
+</span></span></code></pre></div><h5 id=修改后>修改后：</h5><p>python</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl># 新URL配置（业务需求变更）
+</span></span><span class=line><span class=cl>path(&#39;books-collection/&#39;, views.book_list, name=&#39;book-list&#39;)
+</span></span></code></pre></div><p><strong>自动更新效果：</strong></p><ul><li>所有<code>{% url 'book-list' %}</code>自动生成<code>/books-collection/</code></li><li>所有<code>reverse('book-list')</code>自动返回<code>/books-collection/</code></li><li>*<em>无需修改任何模板或Python代码</em></li></ul><h4 id=总结url-mapping的核心要点>总结：URL Mapping的核心要点</h4><table><thead><tr><th>步骤</th><th>作用</th><th>示例</th></tr></thead><tbody><tr><td><strong>1. 定义映射</strong></td><td>建立URL模式与视图的关联</td><td><code>path('books/', views.book_list, name='book-list')</code></td></tr><tr><td><strong>2. 正向解析</strong></td><td>用户访问URL → 调用对应视图</td><td><code>/books/</code> → <code>views.book_list()</code></td></tr><tr><td><strong>3. 反向解析</strong></td><td>通过名称生成URL</td><td><code>{% url 'book-list' %}</code> → <code>/books/</code></td></tr><tr><td><strong>4. 参数处理</strong></td><td>提取和验证URL参数</td><td><code>/book/42/</code> → <code>book_id=42</code></td></tr><tr><td><strong>5. 维护优势</strong></td><td>修改URL不影响代码逻辑</td><td>改路径只需更新<code>urls.py</code></td></tr></tbody></table><p>这个机制确保了URL管理的<strong>灵活性</strong>和<strong>可维护性</strong>，是Django框架设计的精华所在</p></div></article></div><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("pre code").forEach(e=>{hljs.highlightElement(e);const t=document.createElement("button");t.className="copy-code",t.textContent="Copy",t.addEventListener("click",()=>{navigator.clipboard.writeText(e.textContent).then(()=>{t.textContent="Copied!",t.classList.add("copied"),setTimeout(()=>{t.textContent="Copy",t.classList.remove("copied")},2e3)})}),e.parentElement.prepend(t)});const o=document.querySelectorAll(".article-content h2[id], .article-content h3[id]"),i=document.querySelectorAll('.toc a[href^="#"]'),a=document.querySelector(".top-nav").offsetHeight,n=document.querySelector(".toc-container"),e=[];o.forEach(t=>{e.push({id:t.id,top:t.offsetTop-a-20})});function s(){const s=window.scrollY;let t="";for(let n=e.length-1;n>=0;n--)if(e[n].top<=s+50){t=e[n].id;break}i.forEach(e=>{const s=e.getAttribute("href")===`#${t}`;if(e.classList.toggle("active",s),s){const t=e.offsetTop-n.clientHeight/2;n.scrollTop=t}})}let t=!1;window.addEventListener("scroll",()=>{t||(window.requestAnimationFrame(()=>{s(),t=!1}),t=!0)}),s()})</script></body></html>
