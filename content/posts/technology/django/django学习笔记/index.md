@@ -12,15 +12,15 @@ thumbnail: "images/django.png"
 
 
 
-### django项目的基本结构
+### django项目模型
 
+首先从总体上理解django项目的几个主要特征：
 
+* **URL maps **
 
-
-
-![img](images/django.png)
-
- we'll gain practical experience in writing **basic URL maps and views, getting records from the database, and using templates**.
+* **Views **
+* **Model**
+* **Templates**
 
 从上面的一句中可以归纳出后端开发框架`django`的基本要素：`URLs-Mapping（URL-Router）`、`View`、`Model`、`Template`。借用`django`的`LocalLibrary`项目实践的这幅图，清晰的说明了这四个要素之间的关系和数据流动。
 
@@ -35,24 +35,19 @@ thumbnail: "images/django.png"
 这个框架的基本结构被称作`MVT`（`Model-View-Template`），还有另外一个基于`javascript`的后端框架`Express`，它的基本结构被称作`MVC`（`Model-View-Control`）。个人感觉这个结构里都省略了`URLs-Mapping`这个环节，在Express里可能叫做`URLs-Router`。尽管叫法不同，但是都是对`https`请求路径的调度，把请求的传递给软件的控制中心，有控制中心获取数据，把数据再传递给模板，最终生成`HTML页`面回传客户浏览器。
 
 ```
-The URL mapper will extract the encoded information and pass it to the view, and the view will dynamically determine what information to get from the database. By encoding the information in the URL we will use a single set of a URL mapping, a view, and a template to handle all books (or authors).
+  1、URL映射器将提取编码后的信息并传递给视图，视图会动态确定从数据库获取哪些信息。通过将信息编码在URL中，我们可以使用单一的一组URL映射、视图和模板来处理所有模型。
+  2、视图是一个处理HTTP请求的函数，它从数据库中获取所需数据，使用HTML模板将这些数据渲染成HTML页面，然后在HTTP响应中返回生成的HTML内容，以便向用户显示页面。通过URL mappers关联到匹配的views后,Views通过Model查询数据库获得请求需要的数据，然后把这些数据通过变量传递给模板里的占位符，经过自定义的模板扩展和覆盖，由Views的render完成模板数据的填充和渲染，把生成的html文件编码在response对象中返回给客户端渲染。
+  3、模型是一个定义了数据结构的Python类，它通常对应数据库中的一张表。模型的每个属性都表示数据库表中的一个字段，Django根据模型类自动生成数据库 schema。通过这种映射，模型提供了创建、检索、更新和删除数据库中记录的高级Python接口，从而封装并简化了所有数据操作逻辑。
+  4、模板是一个包含基础HTML结构和特殊占位符的文本文件。它定义了网站的页面布局和外观，但允许动态内容填充。视图在处理请求时，会将从数据库获取的特定数据（称为“上下文”）传递给模板引擎。模板引擎随后将模板中的占位符替换为实际的动态数据，最终生成一个完整的、纯HTML页面返回给用户。
 ```
 
-```
-A view is a function that processes an HTTP request, fetches the required data from the database, renders the data in an HTML page using an HTML template, and then returns the generated HTML in an HTTP response to display the page to the user.
-```
-
-```
-Along the way we learned fundamental information about URL mappers, views, querying the database with models, passing information to a template from a view, and creating and extending templates.
-```
+可以参照MDN上关于django实现[MVT](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Home_page/basic-django.png) 四个要素的图片描述,说明了四个要素之间的关系和数据流向。
 
 ### `MVT`结构中的难点
 
 传统上基于数据操作的应用程序都是直接使用`SQL`语言实现对数据库的建增删查改（crud），但是现在的后端框架是在数据库之上又加了一层应用，程序不是直接使用`SQL`语言提交给数据库完成数据的操作，而是用框架自己的编程语言建立了库，实现两个层面的工作，一个底层的数据库驱动库，一个是面向编程开发的API，开发者可以通过调用API，让开发者不必去关心特定的数据库特性，用python的面向对象技术实现对数据库的操作，这些封装模型在django中称为`Model`。从django和数据库交互的方式来看，这个模型叫做`ORM`,`object relation  model`。具体的细节可以进一步扩展学习。
 
 从概念上习惯了`SQL`语言的操作方法，增删改查的四个类型简单明了，你的极限只在于你对复杂`SQL`语言的掌控和灵活运用，但是这个`ORM`又多了一层概念，只有通过项目实践才能理解并熟练运用。
-
-
 
 ### URL Mapping
 
