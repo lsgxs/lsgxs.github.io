@@ -290,7 +290,7 @@ path('books-collection/', views.book_list, name='book-list')
 
 - 所有`{% url 'book-list' %}`自动生成`/books-collection/`
 - 所有`reverse('book-list')`自动返回`/books-collection/`
-- **无需修改任何模板或Python代码！**
+- **无需修改任何模板或Python代码*
 
 #### 总结：URL Mapping的核心要点
 
