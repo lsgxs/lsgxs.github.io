@@ -6,8 +6,8 @@ draft: false
 categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
-description: " we'll gain practical experience in writing basic URL maps and views, getting records from the database, and using templates. "
-thumbnail: "images/django.png"
+description: " URL-Maps forward http request  to views, then views  getting records from the database, and using templates,eventually  render the  template and encode the html page in  response  returned  to   users."
+thumbnail: "images/tree_water.jpg"
 ---
 
 
