@@ -16,9 +16,9 @@ thumbnail: "images/tree_water.jpg"
 
 首先从总体上理解django项目的几个主要特征：
 
-* **URL maps **
+* **URL maps** 
+* **Views**
 
-* **Views **
 * **Model**
 * **Templates**
 
