@@ -306,6 +306,8 @@ path('books-collection/', views.book_list, name='book-list')
 ```
 1、URL解析：逐段匹配、路径映射
 2、分发机制：include()的多级路由、剩余URL传递。
+
+从http的request对象的URL里解析，通过路由的设置，传递给views里指定的文件的函数，实现动态数据的获取（models）、传递(template)，最终回传response对象给客户端浏览器渲染。（从URL的字符串分析，通path分发到匹配的views.py文件实现函数调用,在views里调度models和template：url-urlpatterns-views.py-models&templates).
 ```
 
 在Django中，`include()` 函数是用来包含其他URL配置模块的重要工具，它让项目的URL配置更加模块化和可维护。让我详细讲解它的工作原理：
