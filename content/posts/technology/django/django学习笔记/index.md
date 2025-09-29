@@ -41,6 +41,8 @@ thumbnail: "images/tree_water.jpg"
   4、模板是一个包含基础HTML结构和特殊占位符的文本文件。它定义了网站的页面布局和外观，但允许动态内容填充。视图在处理请求时，会将从数据库获取的特定数据（称为“上下文”）传递给模板引擎。模板引擎随后将模板中的占位符替换为实际的动态数据，最终生成一个完整的、纯HTML页面返回给用户。
 ```
 
+一句话总结：djang项目包括主要的四大模块：urls、views、models、templates。在urls模块中通过path()函数来吧http的url接通views的函数，让views的函数取调用models和template完成数据的读取、操作和网页组装。
+
 可以参照MDN上关于django实现[MVT](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Home_page/basic-django.png) 四个要素的图片描述,说明了四个要素之间的关系和数据流向。
 
 ### `MVT`结构中的难点
