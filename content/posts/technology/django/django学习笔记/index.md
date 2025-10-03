@@ -211,7 +211,7 @@ Django处理流程:
 
 
 
-#### 4. 模板中使用（反向解析）
+ 4. 模板中使用（反向解析）
 
  📄 templates/[base.html](https://base.html)
 
@@ -258,7 +258,7 @@ html
 
 
 
-#### 5. Python代码中使用反向解析
+ 5. Python代码中使用反向解析
 
  📄 bookstore/views.py
 
