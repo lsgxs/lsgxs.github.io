@@ -12,11 +12,11 @@ thumbnail: "images/冰山.jpg"
 
 
 
-#### what is  docker 
+### what is  docker 
 
 docker is a virtual platform for  developer  to pack  the application and the environment  together as  container ,and finally delivery  the docker  container  to customer to use . 
 
-#### how  to install  docker on windows system
+### how  to install  docker on windows system
 
 - prerequisite（docker  is originally from  `linux` ,so you must  install  windows  subsystem  for  `linux`）
   - enable the two  options of `wsl`  and  virtual machine platform within  program function in  control  panel of windows.
@@ -26,7 +26,7 @@ docker is a virtual platform for  developer  to pack  the application and the en
 - start   `wsl `  
   - you  should  use windows `powershell` to  run  `wsl`  command ,and then  run  into the shell of  `wsl` . remember  not  to  run  ubuntu  directly   which is installed  from   `microsoft`  store.    you should  use  `wsl2`  rather  than wsl1.if  you open the  ubuntu from windows  start  menu,the default  version  is `wsl1`,so you'd  better  run wsl  within  windows  powershell.
 
-#### the core  concepts of  docker 
+### the core  concepts of  docker 
 
 *  image
 
@@ -58,5 +58,5 @@ docker is a virtual platform for  developer  to pack  the application and the en
   
   
 
-#### 使用docker构建基于`mysql`，`nginx`、`wordpress`的个人站点
+### 使用docker构建基于`mysql`，`nginx`、`wordpress`的个人站点
 
