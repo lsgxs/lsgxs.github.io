@@ -35,6 +35,28 @@ docker is a virtual platform for  developer  to pack  the application and the en
 * container
 
   be a  instance  of  the configuration  template of the application and  environment .
+  
+  ```
+  1. 镜像 (Image) = 产品设计图
+  
+      包含应用程序和运行环境
+  
+      标准化、不可变的模板
+  
+  2. 容器 (Container) = 产品实例
+  
+      根据设计图创建的运行实例
+  
+      每个实例都是独立的
+  
+  3. Docker Compose = 装配说明书
+  
+      定义多个产品如何组装成完整系统
+  
+      管理实例间的协作关系
+  ```
+  
+  
 
 #### 使用docker构建基于`mysql`，`nginx`、`wordpress`的个人站点
 
