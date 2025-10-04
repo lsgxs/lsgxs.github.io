@@ -10,7 +10,9 @@ description: " docker is an platform for  developer  to pack  the application an
 thumbnail: "images/冰山.jpg"
 ---
 
+
 ### Docker学习笔记
+
 
 #### docker 基本概念
 
@@ -21,10 +23,9 @@ docker is a virtual platform for  developer  to pack  the application and the en
 - prerequisite（docker  is originally from  `linux` ,so you must  install  windows  subsystem  for  `linux`）
   - enable the two  options of `wsl`  and  virtual machine platform within  program function in  control  panel of windows.
   - reboot  windows
-- install    `ubuntu` of the  newest ·`lts` version   from microsoft  store .please  refer  to  how to  install   [wsl](https://learn.microsoft.com/en-us/windows/wsl/install)
-- install docker. get Docker Desktop  installation package from [docker]([https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-win-amd64&_gl=1*1hkhqbw*_gcl_au*MTM2NzYzMzM0MC4xNzU5NTMwMDg3*_ga*MzU1OTI0ODI2LjE3NTk1MzAwOTk.*_ga_XJWPQMJYHQ*czE3NTk1Njg0NjQkbzgkZzEkdDE3NTk1Njg0NzEkajUzJGwwJGgw](https://desktop.docker.com/win/main/amd64/Docker Desktop Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-win-amd64&_gl=1*1hkhqbw*_gcl_au*MTM2NzYzMzM0MC4xNzU5NTMwMDg3*_ga*MzU1OTI0ODI2LjE3NTk1MzAwOTk.*_ga_XJWPQMJYHQ*czE3NTk1Njg0NjQkbzgkZzEkdDE3NTk1Njg0NzEkajUzJGwwJGgw))。after download the installation execution file ,double the file to run setup ，remember to select the option of Use `WSL 2` instead of Hyper-V (recommended) and don't select the option of" Allow Windows Containers to be used with this installation",because we need to run docker under `wsl`.
+- install    `ubuntu` of the  newest ·`lts` version   from `microsoft`  store .please  refer  to  the `microsoft`  document  on how to  install `wsl`.  after download the installation execution file ,double the file to run setup ，remember to select the option of Use `WSL 2` instead of Hyper-V (recommended) and don't select the option of" Allow Windows Containers to be used with this installation",because we need to run docker under `wsl`.
 - start   `wsl `  
-  - you  should  use windows `powershell` to  run  `wsl`  command ,and then  run  into the shell of  `wsl` . remember  not  to  run  ubuntu  directly   which is installed  from   `microsoft`  store.    you should  use  `wsl2`  rather  than wsl1.if  you open the  ubuntu from windows  start  menu,the default  version  is `wsl1`,so you'd  better  run wsl  within  windows  powershell.
+  - you  should  use windows `powershell` to  run  `wsl`  command ,and then  run  into the shell of  `wsl` . remember  not  to  run  `ubuntu`  directly   which is installed  from   `microsoft`  store.    you should  use  `wsl2`  rather  than `wsl1`.if  you open the ` ubuntu` from windows  start  menu,the default  version  is `wsl1`,so you'd  better  run `wsl`  within  windows ` powershell`.
 
 #### the core  concepts of  docker 
 
