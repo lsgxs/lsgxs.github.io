@@ -1,33 +1,33 @@
 ---
 title: "Docker学习笔记"
 slug: "docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"
-date: 2025-10-04T17:41:41+08:00
+date: 2025-10-04T18:24:13+08:00
 draft: false
 categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
-description: " docker is an platform for  developer  to pack  the application and the environment  together ,and finally delivery  the docker  container  to customer to use. "
-thumbnail: "images/冰山.jpg"
+description: "docker is an platform for  developer  to pack  the application and the environment  together ,and finally delivery  the docker  container  to customer to use "
+thumbnail: "images/"
 ---
 
-
-### Docker学习笔记
-
-
-#### docker 基本概念
+### 什么是docker
 
 docker is a virtual platform for  developer  to pack  the application and the environment  together as  container ,and finally delivery  the docker  container  to customer to use . 
 
-#### how  to install  docker on windows system
+### 准备工作
 
-- prerequisite（docker  is originally from  `linux` ,so you must  install  windows  subsystem  for  `linux`）
-  - enable the two  options of `wsl`  and  virtual machine platform within  program function in  control  panel of windows.
-  - reboot  windows
+prerequisite（docker  is originally from  `linux` ,so you must  install  windows  subsystem  for  `linux`）
+
+- enable the two  options of `wsl`  and  virtual machine platform within  program function in  control  panel of windows.
+- reboot  windows
+
+### 如何安装docker
+
 - install    `ubuntu` of the  newest ·`lts` version   from `microsoft`  store .please  refer  to  the `microsoft`  document  on how to  install `wsl`.  after download the installation execution file ,double the file to run setup ，remember to select the option of Use `WSL 2` instead of Hyper-V (recommended) and don't select the option of" Allow Windows Containers to be used with this installation",because we need to run docker under `wsl`.
 - start   `wsl `  
   - you  should  use windows `powershell` to  run  `wsl`  command ,and then  run  into the shell of  `wsl` . remember  not  to  run  `ubuntu`  directly   which is installed  from   `microsoft`  store.    you should  use  `wsl2`  rather  than `wsl1`.if  you open the ` ubuntu` from windows  start  menu,the default  version  is `wsl1`,so you'd  better  run `wsl`  within  windows ` powershell`.
 
-#### the core  concepts of  docker 
+the core  concepts of  docker 
 
 *  image
 
@@ -60,4 +60,3 @@ docker is a virtual platform for  developer  to pack  the application and the en
   
 
 #### 使用docker构建基于`mysql`，`nginx`、`wordpress`的个人站点
-
