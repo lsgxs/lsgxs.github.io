@@ -7,7 +7,7 @@ categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
 description: "docker is an platform for  developer  to pack  the application and the environment  together ,and finally delivery  the docker  container  to customer to use "
-thumbnail: "images/"
+thumbnail: "images/grass_sky.jpg"
 ---
 
 ### 什么是docker
