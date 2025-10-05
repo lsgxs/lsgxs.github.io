@@ -236,7 +236,7 @@ Hugo 会按以下顺序查找模板，使用它找到的第一个匹配项：
 - 决定了默认的 `Type`
 - 通过目录结构自动定义
 
-#### 实际查找示例
+ 实际查找示例
 
 bash
 
@@ -252,7 +252,7 @@ content/
 - ✅ `Kind` 决定"找什么类型"的模板文件
 - ✅ `Section` 是物理目录结构的基础约定
 
-### 核心流程总结
+ 核心流程总结
 
 1. **Kind 决定模板类型** → 确定要找什么文件（`single.html`、`list.html`、`home.html`等）
 2. **Type 决定查找位置** → 确定在哪个目录中查找这个文件
@@ -285,4 +285,379 @@ text
 1、模板文件。通过kind决定找那个模板文件，比如single.html、list.html
 2、所在目录。通过type（实际上逻辑的目录名称）来决定在哪个目录下寻找这个模板文件
 ```
+
+### Hugo中约定大于配置的设计
+
+ 1. 页面种类（Kind）的约定
+
+Hugo 通过文件在项目结构中的位置和名称自动确定页面的 Kind，具体如下：
+
+- **home**: 根目录下的 `_index.md` 文件（即 `content/_index.md`）
+- **section**: 每个内容目录（如 `content/blog`）下的 `_index.md` 文件
+- **page**: 任何目录下的普通 Markdown 文件（不包括 `_index.md`）
+- **taxonomy**: 在 `content/<taxonomy_name>/_index.md` 文件（例如 `content/tags/_index.md`）
+- **term**: 在 `content/<taxonomy_name>/<term_name>/_index.md` 文件（例如 `content/tags/hugo/_index.md`）
+
+ 2. 模板查找的约定
+
+模板文件存放在 `layouts` 目录下，Hugo 按照特定的顺序查找模板，这个顺序基于页面的 Kind 和 Type：
+
+- 首先，Hugo 根据 Kind 确定需要查找的模板类型（如 `single.html`, `list.html` 等）
+- 然后，按照以下优先级查找模板：
+  1. 与 Type 同名的目录下的模板（如 `layouts/posts/single.html`）
+  2. 与 Kind 同名的目录下的模板（如 `layouts/section/list.html`）
+  3. 默认目录下的模板（如 `layouts/_default/single.html`）
+
+ 3. 内容组织（Bundle）的约定
+
+Hugo 通过目录结构来区分 Leaf Bundle 和 Branch Bundle：
+
+- **Branch Bundle**: 包含 `_index.md` 文件的目录，可以包含其他页面和资源，用于表示章节、分类等。例如：
+
+  text
+
+```
+content/
+  blog/          # Branch Bundle (section)
+    _index.md    # 分支捆绑的索引文件
+    post-1.md    # 属于该分支的页面
+    post-2.md
+```
+
+
+
+**Leaf Bundle**: 一个目录中包含一个与目录同名的 Markdown 文件（或其他内容文件）以及相关资源。例如：
+
+text
+
+```
+content/
+  blog/
+    my-post/     # Leaf Bundle
+      index.md   # 叶子捆绑的内容文件
+      image.jpg  # 该页面的资源
+```
+
+
+
+- 注意：也可以使用非 `index.md` 的同名文件，如 `my-post.md` 并放在 `my-post` 目录中，但这种方式不常见。
+
+ 4. 章节（Section）的约定
+
+章节由内容目录自动生成，目录名即为章节名。例如：
+
+- `content/blog/` -> 章节名为 "blog"
+- `content/news/` -> 章节名为 "news"
+
+章节的层级结构由目录层级决定，例如 `content/blog/2021/_index.md` 表示一个嵌套的章节。
+
+ 5. 分类法（Taxonomy）的约定
+
+分类法通过 `config.toml`（或类似配置文件）中定义，但具体的内容页面由目录结构约定：
+
+- 分类法列表页：`content/<taxonomy_name>/_index.md`
+- 分类术语页：`content/<taxonomy_name>/<term_name>/_index.md`
+
+例如，定义了一个分类法 "tags"，则：
+
+- 所有标签列表页：`content/tags/_index.md`
+- 特定标签 "hugo" 的页面：`content/tags/hugo/_index.md`
+
+ 6. 静态资源的约定
+
+静态资源可以放在 `static` 目录下的任何位置，也可以放在 Leaf Bundle 或 Branch Bundle 中。放在 Bundle 中的资源可以通过 `.Resources` 访问，而放在 `static` 中的资源则直接复制到输出目录。
+
+ 7. 数据文件的约定
+
+数据文件可以放在 `data` 目录下，支持多种格式（如 JSON、YAML、TOML），并通过站点数据机制自动加载。
+
+ 8. 主题的约定
+
+主题可以覆盖项目的默认布局和静态资源。主题的查找顺序为：
+
+1. 项目本身的 `layouts` 和 `static` 目录
+2. 主题的 `layouts` 和 `static` 目录
+
+ 总结
+
+Hugo 的“约定大于配置”体现在：
+
+- 通过固定的目录结构（如 `content`、`layouts`、`static`、`data`）来组织内容、模板、静态资源和数据。
+- 通过特定的文件名（如 `_index.md`）来标识分支捆绑和特殊页面（如首页、章节页、分类页等）。
+- 模板的查找顺序由页面的 Kind 和 Type 自动确定，无需配置。
+- 内容捆绑（Bundle）通过目录结构来区分叶子捆绑和分支捆绑，便于资源管理。
+
+这些约定使得 Hugo 项目结构清晰，同时减少了配置的复杂性
+
+#### 约定大于配置的具体实例
+
+ 1. **模板系统的约定**
+
+ Kind 的自动识别
+
+bash
+
+```
+content/
+├── _index.md           # 自动识别为 home kind
+├── blog/
+│   ├── _index.md       # 自动识别为 section kind
+│   ├── post-1.md       # 自动识别为 page kind
+│   └── post-2.md
+└── tags/
+    ├── _index.md       # 自动识别为 taxonomy kind
+    └── hugo.md         # 自动识别为 term kind
+```
+
+
+
+ 模板查找约定
+
+bash
+
+```
+layouts/
+├── _default/           # 默认回退模板
+├── blog/               # 基于 type 的模板
+├── section/            # 基于 kind 的模板
+└── partials/           # 可重用组件
+```
+
+
+
+2. **内容组织的约定**
+
+ Bundle 类型自动确定
+
+bash
+
+```
+content/
+├── posts/
+│   ├── my-article/     # Leaf Bundle (目录 + index.md)
+│   │   ├── index.md
+│   │   ├── image1.jpg
+│   │   └── cover.png
+│   └── another-post.md # 普通页面文件
+└── projects/
+    ├── _index.md       # Branch Bundle
+    ├── project-1/
+    │   └── index.md
+    └── project-2/
+        └── index.md
+```
+
+
+
+ Section 自动划分
+
+bash
+
+```
+content/
+├── blog/               # section = "blog"
+├── projects/           # section = "projects"  
+└── about.md            # section = "" (根级)
+```
+
+
+
+ 3. **URL 结构的约定**
+
+ 基于目录结构的 URL
+
+bash
+
+```
+content/
+├── blog/
+│   ├── post-1.md      # → /blog/post-1/
+│   └── post-2.md      # → /blog/post-2/
+└── about.md           # → /about/
+```
+
+
+
+ 4. **数据加载的约定**
+
+ 自动数据加载
+
+bash
+
+```
+data/
+├── authors.json       # 自动加载到 .Site.Data.authors
+├── settings/
+│   └── config.yaml    # 自动加载到 .Site.Data.settings.config
+└── events/            # 支持子目录组织
+    └── 2024.yaml
+```
+ 5. **资源管理的约定**
+
+ 资源目录结构
+
+bash
+
+```
+assets/
+├── css/
+│   └── main.scss      # 支持 SCSS 处理
+├── js/
+│   └── app.js         # 支持 JS 打包
+└── images/            # 图片资源
+static/
+└── favicon.ico        # 直接复制到输出
+```
+
+
+
+ 6. **配置的约定**
+
+ 配置层级
+
+bash
+
+```
+config.toml                    # 主配置
+config/
+├── _default/                 # 默认配置
+│   ├── config.toml
+│   └── menus.en.toml
+├── production/               # 环境特定配置
+│   └── config.toml
+└── development/
+    └── config.toml
+```
+
+
+
+ 7. **主题系统的约定**
+
+ 主题覆盖机制
+
+bash
+
+```
+my-site/
+├── layouts/                  # 项目模板（覆盖主题）
+├── content/                  # 项目内容
+└── themes/
+    └── my-theme/            # 主题文件
+        ├── layouts/
+        └── static/
+```
+
+
+
+ 8. **多语言支持的约定**
+
+ 语言内容组织
+
+bash
+
+```
+content/
+├── _index.en.md             # 英语首页
+├── _index.fr.md             # 法语首页
+└── blog/
+    ├── _index.en.md
+    ├── _index.fr.md
+    ├── post-1.en.md
+    └── post-1.fr.md
+```
+
+ 设计哲学总结
+
+Hugo 的"约定大于配置"设计体现在：
+
+1. **基于位置的身份**：文件在目录结构中的位置决定其角色
+2. **命名约定**：特定文件名（`_index.md`）有特殊含义
+3. **目录即结构**：目录层级直接映射到网站结构
+4. **自动发现**：系统自动识别内容类型和关系
+5. **合理回退**：从具体到通用的模板查找机制
+6. **环境感知**：基于环境的配置自动切换
+
+这种设计让开发者可以专注于内容创作，而不需要大量配置，同时保持了项目的结构清晰和可维护性
+
+### branch bundel 和leaf  bundle  
+
+#### Bundle概念
+
+Hugo中的Bundle是一种组织内容和相关资源（如图片、PDF等）的方式。Bundle分为两种：Leaf Bundle和Branch Bundle。
+
+##### Leaf Bundle（叶子包）
+
+**定义**：Leaf Bundle是一个**内容目录**，其中包含一个`index.md`（或`index.html`等）文件以及与该内容相关的资源文件。它代表一个单独的内容页面，并且不能有下级页面（即不能包含其他内容页面）。
+
+**典型结构**：
+
+text
+
+```
+content/
+└── blog
+    └── my-post
+        ├── index.md
+        ├── image1.jpg
+        └── image2.png
+```
+
+
+
+**特点**：
+
+- 必须包含`index.md`（或其它支持的内容格式文件）作为内容文件。
+- 可以包含任意数量的资源文件（如图片、文档等）。
+- 在站点中生成一个页面，URL为`/blog/my-post/`。
+- 资源可以通过`Resources`变量在模板中访问。
+
+**使用场景**：用于单个页面，并且该页面有专属的资源（如图片、下载文件等）。
+
+##### Branch Bundle（分支包）
+
+**定义**：Branch Bundle是一个**章节目录**，其中包含一个`_index.md`文件（可选）以及该章节的页面（Leaf Bundle或普通页面）和资源。它代表一个章节（Section）并可以包含子页面。
+
+**典型结构**：
+
+text
+
+```
+content/
+└── blog
+    ├── _index.md
+    ├── post-1
+    │   ├── index.md
+    │   └── photo.jpg
+    └── post-2
+        ├── index.md
+        └── image.png
+```
+
+
+
+**特点**：
+
+- 必须包含`_index.md`（可选，但通常用于提供该章节的元数据和内容）来代表分支包本身。
+- 可以包含多个子页面（Leaf Bundle或普通页面）和资源。
+- 在站点中生成一个章节页面（列表页），URL为`/blog/`，并且该章节下的每个页面也会生成对应的URL。
+- 分支包本身的资源可以通过`.Resources`访问，但通常分支包更常用于组织子页面。
+
+**使用场景**：用于组织一个章节（如博客、产品目录等），该章节包含多个页面，并且章节本身可能有自己的资源和元数据。
+
+总结对比
+
+| 特性       | Leaf Bundle              | Branch Bundle              |
+| ---------- | ------------------------ | -------------------------- |
+| 内容文件   | `index.md`               | `_index.md`（可选）        |
+| 资源       | 有，属于该页面           | 有，属于该章节             |
+| 子页面     | 不能有                   | 可以有                     |
+| 生成的页面 | 单个页面                 | 章节页面（列表页）和子页面 |
+| 典型用途   | 文章、产品详情等独立页面 | 博客、章节首页等           |
+
+ 约定
+
+- **Leaf Bundle**：使用`index.md`命名的目录，代表一个叶子节点。
+- **Branch Bundle**：使用`_index.md`的目录，代表一个分支节点，可以包含子节点。
+
+通过这种约定，Hugo可以自动识别页面类型并正确处理资源和页面关系
 
