@@ -439,3 +439,19 @@ docker-compose exec web python manage.py migrate
 后边的项目细节来自和deepseek的对话
 ```
 
+##  国内可用 Docker镜像源（registry-mirrors）
+ "registry-mirrors": [
+        "https://tkcnyb3h.mirror.aliyuncs.com",
+        "https://registry.docker-cn.com",
+        "https://docker.mirrors.ustc.edu.cn",
+        "https://hub-mirror.c.163.com",
+        "https://mirror.baidubce.com",
+        "https://ccr.ccs.tencentyun.com"，
+        "https://docker.m.daocloud.io",
+        "https://docker.udayun.com", 
+        "https://noohub.ru", 
+        "https://huecker.io",
+        "https://dockerhub.timeweb.cloud" 
+    ]
+
+如果使用   docker pull命令时无法正常拉取docker  image，可以试着更换国内可用的docker镜像源。
