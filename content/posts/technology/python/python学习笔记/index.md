@@ -261,6 +261,16 @@ description: "作为流行的脚本语音，借助于人工智能场景的需要
 
 为了避免出现自己的module和第三方module的标识符冲突，建议直接使用import的引用形式，使用是使用module_name.object_name。这样就相当于有扩大了名称空间，不会出现变量、函数、对象等标识符重复的现象。就好像给学生的名字加了前缀：某校.某班级.学生姓名，这样就不会重复，如果重复，那就继续扩大引用的名称空间。
 
+##### pip （package  install  for  python ）
+
+这是python 的包安装工具，如果安装的是python官方的python软件包，默认是安装了pip的。
+
+`python  -m  pip install  <package_name> `使用这个命令来安装package。也可以直接使用 `pip install <package_name>`
+
+##### PyPi (python package  index)
+
+一个在线仓库、一个网站，是 Python 编程语言的软件仓库,存储了数以万计的 Python 软件包,供全世界的开发者下载和使用。使用 `pip install` 命令时，`pip` 默认就是去 `PyPI` 上查找并下载指定的包。它的官网是 **https://pypi.org/，可以在上面搜索任何 Python 包，查看其文档、版本和下载统计等信息。
+
 ####  数据结构(data  structure)
 
 除了基本的数值类型和字符串类型之外，在python中提供了四种数据复合的数据结构，分别是list、tuple、dictionary、set。其中前边三种数据类型都是有序的(sequence)，可以进行index(下标从0开始)和slice操作，也经常会使用for   x  in   sequences  语句进行遍历实现各种操作。
