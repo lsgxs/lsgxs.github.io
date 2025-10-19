@@ -12,7 +12,7 @@ thumbnail: "images/wsgi.png"
 
 ### WSGI()
 
-初学Flask，遇到WSGI的概念，以前一直以为web app的基础架构就是三层模型：client、webserver  、app。现在知道了更完善的web app是四层,多了一层wsgi，也就是web  server  gate interface： client  、webserver、wsgi、app。(下面的内容大部分是我和deepkseek的咨询内容，因为我懒，记录下来以后可以总结精炼)
+初学Flask，遇到WSGI的概念，以前一直以为web app的基础架构就是三层模型：client、webserver  、app。现在知道了更完善的web app是四层,多了一层WSGI（web  server  gate interface）： client  、webserver、wsgi、app。(下面的内容大部分是deepkseek的问答，因为我懒，记录下来以后可以总结精炼)
 
 
 
