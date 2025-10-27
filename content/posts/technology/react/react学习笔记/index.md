@@ -550,7 +550,7 @@ Notice that `<MyButton />` starts with a capital letter. That’s how you know i
 
 - [ ] useSate概念
 
-###  React
+###  Next.js
 
 react 是一个基于视图层的实现组件复用的javascript库，如果想要一个全功能的框架，还要继续学习Next.js。其他的框架就暂时不看了，根本学不完（^-^）。
 
