@@ -554,3 +554,68 @@ Notice that `<MyButton />` starts with a capital letter. That’s how you know i
 
 react 是一个基于视图层的实现组件复用的javascript库，如果想要一个全功能的框架，还要继续学习Next.js。其他的框架就暂时不看了，根本学不完（^-^）。
 
+### React bootStrap
+
+#### **React Bootstrap 是什么**
+
+- **定义**：React Bootstrap 是 **Bootstrap 框架的 React 实现版本**，将 Bootstrap 的 CSS 样式与 React 的声明式组件深度结合，提供开箱即用的 UI 组件（如按钮、表单、导航栏等）。
+- **特点**：
+  - **不依赖 jQuery**：完全用 React 重构 Bootstrap 的交互逻辑，避免传统 Bootstrap 对 jQuery 的依赖。
+  - **组件化开发**：通过 React 组件（如 `<Button>`、`<Navbar>`）封装 Bootstrap 的 HTML 结构，简化 DOM 操作。
+  - **响应式设计**：内置 Bootstrap 的网格系统和媒体查询，确保界面自适应不同设备。
+
+#### **如何使用 React Bootstrap？**
+
+ **1. 安装依赖**
+
+```bash
+#bash
+npm install react-bootstrap bootstrap 
+# 或 
+yarn add react-bootstrap bootstrap
+```
+
+- **`react-bootstrap`**：React 组件库。
+- **`bootstrap`**：提供 CSS 样式文件（必需）。
+
+ **2. 导入组件**
+
+- **按需导入**（推荐）：
+
+  ```jsx
+  import { Button, Form } from 'react-bootstrap';
+  ```
+
+- 避免全量导入，减少打包体积。
+
+ **3. 使用组件**
+
+- **JSX 中调用**（首字母大写）：
+
+  ```
+  function MyApp() { 
+    return ( 
+      <Button variant="primary">Click Me</Button> 
+      <Form> 
+        <Form.Control type="text" placeholder="Input" /> 
+      </Form> 
+    ); 
+  ```
+  
+  **`variant`**：替代传统 Bootstrap 的 `class`（如 `btn-primary`），通过属性控制样式。
+  
+  注意首字母大写的标签是来自react-bootstrap的元素，如果是小写的标签元素，就是html原生的标签。
+
+
+
+ **4. 引入 CSS**
+
+- 在项目入口文件（如 `src/index.js`）中全局引入：
+
+  ```
+     import 'bootstrap/dist/css/bootstrap.min.css';
+  ```
+
+  
+
+更多的组件和使用可以参考[react  bootstrap官网](https://react-bootstrap.github.io/)
