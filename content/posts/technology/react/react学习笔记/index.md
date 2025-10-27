@@ -564,7 +564,7 @@ react 是一个基于视图层的实现组件复用的javascript库，如果想�
   - **组件化开发**：通过 React 组件（如 `<Button>`、`<Navbar>`）封装 Bootstrap 的 HTML 结构，简化 DOM 操作。
   - **响应式设计**：内置 Bootstrap 的网格系统和媒体查询，确保界面自适应不同设备。
 
-#### **如何使用 React Bootstrap？**
+#### **如何使用 React Bootstrap**
 
  **1. 安装依赖**
 
@@ -619,3 +619,17 @@ yarn add react-bootstrap bootstrap
   
 
 更多的组件和使用可以参考[react  bootstrap官网](https://react-bootstrap.github.io/)
+
+### 关于React整体思路的总结：
+
+1、通过组件实现模块化，每个组件只作一件事，如果有重复那就把它独立出去作为一个单独的组件，然后在spa总应用程序里调用这个组件。
+
+2、component就是一个javascript函数，在函数里完成变量、表达式、函数的加工，最终要返回一个jsx元素，也就是返回一个html的UI，这个jsx元素可以小到一个按钮、编辑框，大到一个窗体、页面。
+
+3、在总的App里完成多个组件的组装，实现期望的html页面布局，把这个App保存为一个.js文件
+
+4、组件之间通过标签式的写法（首字母大写的组件名作为标签）实现调用，并通过props作为参数传递数据。
+
+5、在站点的inde.html里通过`<script  src="xxx.js"></script>>`来调用这个javascrip的App文件，当用户通过浏览器打开index.html时，会把这个.js文件下载到本地的缓存，然后这个程序就是web应用的启动点
+
+以后 有时间和兴趣的化再深入学习和实践
