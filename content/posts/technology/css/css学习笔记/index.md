@@ -7,10 +7,8 @@ tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true
-draft: false
 disableHLJS: true # to disable highlightjs
 disableShare: false
-disableHLJS: false
 hideSummary: false
 searchHidden: false
 ShowBreadCrumbs: true
