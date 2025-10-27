@@ -7,7 +7,6 @@ tags: ["first"]
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: true
-draft: false
 comments: false
 canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
