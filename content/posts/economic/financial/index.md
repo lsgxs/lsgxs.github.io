@@ -8,13 +8,10 @@ tags: ["first"]
 showToc: true
 TocOpen: true
 draft: false
-hidemeta: false
 comments: false
-description: "Desc Text."
 canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
-disableHLJS: false
 hideSummary: false
 searchHidden: false
 ShowBreadCrumbs: true
