@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on 技术博客</title>
+    <link>http://lsgxs.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 30 Jul 2025 17:50:29 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo建立博客系统</title>
+      <link>http://lsgxs.github.io/posts/2025/hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Wed, 30 Jul 2025 17:50:29 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97/</guid>
+      <description>这篇文档主要记录使用Hugo建立博客系统的详细步骤，主要内容包含下面6个主题。 1、使用Hugo轻松建立个人博客站点 2、博客站点目录详细介绍 3、博客站点的内容组织 4、Hugo博客系统是如何工作的 5、博客系统的部署 6、使用PaperMod主题 </description>
+    </item>
+    <item>
+      <title>hugo博客站点入门</title>
+      <link>http://lsgxs.github.io/posts/2023/hugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Sun, 09 Jul 2023 22:11:22 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/hugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E5%85%A5%E9%97%A8/</guid>
+      <description>Create a Hugo site in minutes. In this tutorial you will: Create a site Add content Configure the site Publish the site Prerequisites Before you begin this tutorial : Install Hugo (extended or extended/deploy edition, v0.128.0 or later) Install Git</description>
+    </item>
+    <item>
+      <title>Hugo自动化部署到github</title>
+      <link>http://lsgxs.github.io/posts/2022/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
+      <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
+      <description>部署静态博客站点到github一般有三种方法，第一种是使用git命令手动部署到github仓库；第二种是使用github自带的actions workflow自动部署到默认的gh-pages分支；第三种是在一个仓库的两个分支之间完成自动化发布，同时是使用actions workflow</description>
+    </item>
+    <item>
+      <title>Hugo Post中的图像资源引用方法</title>
+      <link>http://lsgxs.github.io/posts/2022/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 01 Nov 2022 22:04:29 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>hugo博客系统，使用PaperMod主题，在Markdown中引用图片资源的多种不同方法</description>
+    </item>
+  </channel>
+</rss>

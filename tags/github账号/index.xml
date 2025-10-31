@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github账号 on 技术博客</title>
+    <link>http://lsgxs.github.io/tags/github%E8%B4%A6%E5%8F%B7/</link>
+    <description>Recent content in Github账号 on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Nov 2022 22:03:27 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/tags/github%E8%B4%A6%E5%8F%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在一台计算机上用git管理多个github账号</title>
+      <link>http://lsgxs.github.io/posts/2022/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>
+      <pubDate>Tue, 01 Nov 2022 22:03:27 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</guid>
+      <description>如果你在本地电脑上有两个不同的博客系统，在github上创建了两个账户，就可以采用这个方法同时管理多个github账号</description>
+    </item>
+  </channel>
+</rss>

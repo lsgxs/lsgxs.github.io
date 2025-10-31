@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>部署 on 技术博客</title>
+    <link>http://lsgxs.github.io/tags/%E9%83%A8%E7%BD%B2/</link>
+    <description>Recent content in 部署 on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 13 Nov 2022 21:53:09 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/tags/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo自动化部署到github</title>
+      <link>http://lsgxs.github.io/posts/2022/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
+      <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
+      <description>部署静态博客站点到github一般有三种方法，第一种是使用git命令手动部署到github仓库；第二种是使用github自带的actions workflow自动部署到默认的gh-pages分支；第三种是在一个仓库的两个分支之间完成自动化发布，同时是使用actions workflow</description>
+    </item>
+  </channel>
+</rss>

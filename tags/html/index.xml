@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Html on 技术博客</title>
+    <link>http://lsgxs.github.io/tags/html/</link>
+    <description>Recent content in Html on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 28 Nov 2022 22:04:58 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Html简要学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2022/html%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/html%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>The HTML head is the contents of the &amp;lt;head&amp;gt; element. Unlike the contents of the &amp;lt;body&amp;gt; element (which are displayed on the page when loaded in a browser), the head&amp;#39;s content is not displayed on the page. Instead, the head&amp;#39;s job is to contain metadata about the document. </description>
+    </item>
+  </channel>
+</rss>
