@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>运动类 on 技术博客</title>
+    <link>http://lsgxs.github.io/posts/sport/</link>
+    <description>Recent content in 运动类 on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Oct 2025 06:55:45 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/posts/sport/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>跳绳</title>
+      <link>http://lsgxs.github.io/posts/2025/%E8%B7%B3%E7%BB%B3/</link>
+      <pubDate>Mon, 06 Oct 2025 06:55:45 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E8%B7%B3%E7%BB%B3/</guid>
+      <description> 减持每周两次到三次有氧运动，比如大步走5公里，还可以再补充练习鼻吸鼻-跳绳500-1000次。运动不要过量，合适为宜</description>
+    </item>
+  </channel>
+</rss>

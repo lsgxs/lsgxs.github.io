@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>默认标签 on 技术博客</title>
+    <link>http://lsgxs.github.io/tags/%E9%BB%98%E8%AE%A4%E6%A0%87%E7%AD%BE/</link>
+    <description>Recent content in 默认标签 on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Nov 2025 19:50:11 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/tags/%E9%BB%98%E8%AE%A4%E6%A0%87%E7%AD%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自己在家制作甜柿子</title>
+      <link>http://lsgxs.github.io/posts/2025/%E8%87%AA%E5%B7%B1%E5%9C%A8%E5%AE%B6%E5%88%B6%E4%BD%9C%E7%94%9C%E6%9F%BF%E5%AD%90/</link>
+      <pubDate>Thu, 06 Nov 2025 19:50:11 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E8%87%AA%E5%B7%B1%E5%9C%A8%E5%AE%B6%E5%88%B6%E4%BD%9C%E7%94%9C%E6%9F%BF%E5%AD%90/</guid>
+      <description>自己以前在家里做过一次，用40度左右的温水加碱面，把生柿子放在温水里浸泡2天左右就可以让柿子脱涩了，挺好吃的。 这次没有把握好水温，两天了还是有点涩 </description>
+    </item>
+    <item>
+      <title>Flask学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/flask%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 19 Oct 2025 21:49:15 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/flask%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description> 初学Flask，遇到WSGI的概念，以前一直以为web app的基础架构就是三层模型：client、webserver  、app。现在知道了更完善的web app是四层,多了一层WSGI(web  server  gate interface)： client  、webserver、wsgi、app</description>
+    </item>
+    <item>
+      <title>跳绳</title>
+      <link>http://lsgxs.github.io/posts/2025/%E8%B7%B3%E7%BB%B3/</link>
+      <pubDate>Mon, 06 Oct 2025 06:55:45 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E8%B7%B3%E7%BB%B3/</guid>
+      <description> 减持每周两次到三次有氧运动，比如大步走5公里，还可以再补充练习鼻吸鼻-跳绳500-1000次。运动不要过量，合适为宜</description>
+    </item>
+    <item>
+      <title>理解hugo的模板</title>
+      <link>http://lsgxs.github.io/posts/2025/%E7%90%86%E8%A7%A3hugo%E7%9A%84%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Sun, 05 Oct 2025 09:52:54 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E7%90%86%E8%A7%A3hugo%E7%9A%84%E6%A8%A1%E6%9D%BF/</guid>
+      <description>Hugo 是一个通过目录结构和模板查找规则来驱动内容渲染的静态站点生成器。理解这些概念的关键在于理解Hugo的“约定优于配置” 原则。 </description>
+    </item>
+    <item>
+      <title>Docker学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 04 Oct 2025 18:24:13 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>docker is an platform for  developer  to pack  the application and the environment  together ,and finally delivery  the docker  container  to customer to use </description>
+    </item>
+    <item>
+      <title>投资中的哑铃策略</title>
+      <link>http://lsgxs.github.io/posts/2025/%E6%8A%95%E8%B5%84%E4%B8%AD%E7%9A%84%E5%93%91%E9%93%83%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Fri, 03 Oct 2025 21:27:07 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E6%8A%95%E8%B5%84%E4%B8%AD%E7%9A%84%E5%93%91%E9%93%83%E7%AD%96%E7%95%A5/</guid>
+      <description> 整体的投资策略采用哑铃式的配置方案，一边是债券等固收类资产，另外一边是科技、资源等成长类的股票或者基金，中间是现金、黄金类的防守缓冲资产。在上升周期里配置大比例的科技、资源等成长股，在高估值或者泡沫时减持兑现，并配置高股息股；在下降周期里则发相操作</description>
+    </item>
+    <item>
+      <title>MasonJar</title>
+      <link>http://lsgxs.github.io/posts/2025/masonjar/</link>
+      <pubDate>Wed, 24 Sep 2025 20:25:39 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/masonjar/</guid>
+      <description> 有点喜欢梅森罐的样子，还可以在家方便的制作泡菜和食品罐头，利用开水煮罐可以安全的制作西红柿等食品罐头，喜欢这个就是这三个理由：样子好看、制作泡菜、制作西红柿罐头</description>
+    </item>
+    <item>
+      <title>Django学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 24 Sep 2025 06:48:48 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description> URL-Maps forward http request  to views, then views  getting records from the database, and using templates,eventually  render the  template and encode the html page in  response  returned  to   users.</description>
+    </item>
+    <item>
+      <title>重建hugo博客站点</title>
+      <link>http://lsgxs.github.io/posts/2025/%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9/</link>
+      <pubDate>Mon, 22 Sep 2025 22:19:34 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9/</guid>
+      <description>因为系统重装等原因需要重新布置博客系统，时间久了不记得有些关键步骤的细节，要重新学习以前做过的内容，有时候发现当时的学习更深入更专注，所以最好在专注学习之后及时做好笔记 </description>
+    </item>
+    <item>
+      <title>React学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 29 Aug 2025 18:48:48 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>jsx是javascript和HTML的混合体，将类XML标签语言和javascript组合在一起，以标签语言的书写形式，融入了javascript的变量和表达式、函数实现动态的界面构建技术，以熟悉的方式高效构建动态可复用的用户界面。每个组件函数返回jsx表示的用户界面，由Bable/Parcel编译，通过对React.createElement（）函数的调用，生成虚拟的DOM（内存中的 JavaScript 对象），并通过Diffing技术实现真实DOM的渲染</description>
+    </item>
+    <item>
+      <title>理解hugo静态站点的pageBundle和模版</title>
+      <link>http://lsgxs.github.io/posts/2025/%E7%90%86%E8%A7%A3hugo%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9%E7%9A%84pagebundle%E5%92%8C%E6%A8%A1%E7%89%88/</link>
+      <pubDate>Sat, 23 Aug 2025 15:33:26 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E7%90%86%E8%A7%A3hugo%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9%E7%9A%84pagebundle%E5%92%8C%E6%A8%A1%E7%89%88/</guid>
+      <description>1.理解hugo静态站点的pageBundle组织目录的方式，通过文档所在目录的位置来确定页面的Kind，从而匹配对应的模版类型 2.hugo把markdown的各种要素封装为一个page对象，把这个对象传递给模版 3.在模版中使用.来访问page对象的各个元素，最终完成渲染并生成html文件</description>
+    </item>
+    <item>
+      <title>Javascript学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 14 Aug 2025 07:00:32 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description> 变量的名称就是一段内存地址的名称，变量的值就是这段内存地址保存的内容。就好像一个盒子和盒子里面装的东西。 </description>
+    </item>
+    <item>
+      <title>汽车知识</title>
+      <link>http://lsgxs.github.io/posts/2025/%E6%B1%BD%E8%BD%A6%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Thu, 07 Aug 2025 13:48:59 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E6%B1%BD%E8%BD%A6%E7%9F%A5%E8%AF%86/</guid>
+      <description>在行车电脑的组织下，各个子系统协同工作，通过油、电、气三个子系统的的相互配合完成能量转换，从汽油燃烧产生的能量通过活塞、曲轴、飞轮等部件转换为机械能，并通过变速箱、传动轴、差速器等部件实现轮胎的转动，驱动车辆行驶 </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>计算机技术 on 技术博客</title>
+    <link>http://lsgxs.github.io/posts/technology/</link>
+    <description>Recent content in 计算机技术 on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 19 Oct 2025 21:49:15 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/posts/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PaperMod QuickStart</title>
+      <link>http://lsgxs.github.io/posts/2022/papermod-quickstart/</link>
+      <pubDate>Thu, 24 Nov 2022 17:42:04 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/papermod-quickstart/</guid>
+      <description>简单的入门Huog&#43;PaperMod主题，构建自己的本地博客</description>
+    </item>
+    <item>
+      <title>Learning  The Unix Operating System</title>
+      <link>http://lsgxs.github.io/posts/2024/learning-the-unix-operating-system/</link>
+      <pubDate>Mon, 29 Apr 2024 14:32:47 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/learning-the-unix-operating-system/</guid>
+      <description> Unix的主要两个分支 基于AT&amp;amp;T的System V商用版本Unix和基于BSD的开源版本Unix。商业版本包括SunOS、Solaris、SCO Unix、AIX、HP/UX和 ULTRIX 等，开源版本包括FreeBSD、NetBSD、Linux等。</description>
+    </item>
+    <item>
+      <title>Flask学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/flask%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 19 Oct 2025 21:49:15 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/flask%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description> 初学Flask，遇到WSGI的概念，以前一直以为web app的基础架构就是三层模型：client、webserver  、app。现在知道了更完善的web app是四层,多了一层WSGI(web  server  gate interface)： client  、webserver、wsgi、app</description>
+    </item>
+    <item>
+      <title>理解hugo的模板</title>
+      <link>http://lsgxs.github.io/posts/2025/%E7%90%86%E8%A7%A3hugo%E7%9A%84%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Sun, 05 Oct 2025 09:52:54 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E7%90%86%E8%A7%A3hugo%E7%9A%84%E6%A8%A1%E6%9D%BF/</guid>
+      <description>Hugo 是一个通过目录结构和模板查找规则来驱动内容渲染的静态站点生成器。理解这些概念的关键在于理解Hugo的“约定优于配置” 原则。 </description>
+    </item>
+    <item>
+      <title>Docker学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 04 Oct 2025 18:24:13 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>docker is an platform for  developer  to pack  the application and the environment  together ,and finally delivery  the docker  container  to customer to use </description>
+    </item>
+    <item>
+      <title>Django学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 24 Sep 2025 06:48:48 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description> URL-Maps forward http request  to views, then views  getting records from the database, and using templates,eventually  render the  template and encode the html page in  response  returned  to   users.</description>
+    </item>
+    <item>
+      <title>重建hugo博客站点</title>
+      <link>http://lsgxs.github.io/posts/2025/%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9/</link>
+      <pubDate>Mon, 22 Sep 2025 22:19:34 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E9%87%8D%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9/</guid>
+      <description>因为系统重装等原因需要重新布置博客系统，时间久了不记得有些关键步骤的细节，要重新学习以前做过的内容，有时候发现当时的学习更深入更专注，所以最好在专注学习之后及时做好笔记 </description>
+    </item>
+    <item>
+      <title>React学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 29 Aug 2025 18:48:48 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>jsx是javascript和HTML的混合体，将类XML标签语言和javascript组合在一起，以标签语言的书写形式，融入了javascript的变量和表达式、函数实现动态的界面构建技术，以熟悉的方式高效构建动态可复用的用户界面。每个组件函数返回jsx表示的用户界面，由Bable/Parcel编译，通过对React.createElement（）函数的调用，生成虚拟的DOM（内存中的 JavaScript 对象），并通过Diffing技术实现真实DOM的渲染</description>
+    </item>
+    <item>
+      <title>理解hugo静态站点的pageBundle和模版</title>
+      <link>http://lsgxs.github.io/posts/2025/%E7%90%86%E8%A7%A3hugo%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9%E7%9A%84pagebundle%E5%92%8C%E6%A8%A1%E7%89%88/</link>
+      <pubDate>Sat, 23 Aug 2025 15:33:26 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/%E7%90%86%E8%A7%A3hugo%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9%E7%9A%84pagebundle%E5%92%8C%E6%A8%A1%E7%89%88/</guid>
+      <description>1.理解hugo静态站点的pageBundle组织目录的方式，通过文档所在目录的位置来确定页面的Kind，从而匹配对应的模版类型 2.hugo把markdown的各种要素封装为一个page对象，把这个对象传递给模版 3.在模版中使用.来访问page对象的各个元素，最终完成渲染并生成html文件</description>
+    </item>
+    <item>
+      <title>Javascript学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2025/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 14 Aug 2025 07:00:32 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/javascript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description> 变量的名称就是一段内存地址的名称，变量的值就是这段内存地址保存的内容。就好像一个盒子和盒子里面装的东西。 </description>
+    </item>
+    <item>
+      <title>Hugo建立博客系统</title>
+      <link>http://lsgxs.github.io/posts/2025/hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Wed, 30 Jul 2025 17:50:29 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2025/hugo%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E6%8C%87%E5%8D%97/</guid>
+      <description>这篇文档主要记录使用Hugo建立博客系统的详细步骤，主要内容包含下面6个主题。 1、使用Hugo轻松建立个人博客站点 2、博客站点目录详细介绍 3、博客站点的内容组织 4、Hugo博客系统是如何工作的 5、博客系统的部署 6、使用PaperMod主题 </description>
+    </item>
+    <item>
+      <title>Pull Request</title>
+      <link>http://lsgxs.github.io/posts/2024/pull-request/</link>
+      <pubDate>Tue, 28 May 2024 11:05:47 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/pull-request/</guid>
+      <description>从其他作者的仓库Fork一个项目到自己的github仓库，然后git clone到本地，对项目修后git  push 到github上自己的仓库，在仓库中创建一个叫做Pull Request，请求作者拉去自己的修改到原仓库，当然是否最终拉取要看原作者的决定</description>
+    </item>
+    <item>
+      <title>LearnNetBsd</title>
+      <link>http://lsgxs.github.io/posts/2024/learnnetbsd/</link>
+      <pubDate>Wed, 15 May 2024 17:13:30 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/learnnetbsd/</guid>
+      <description>学习了NetBSD官方文档，记录一部分自己学习的内容，从基础的web知识开始</description>
+    </item>
+    <item>
+      <title>Amazon海外购注册及设置</title>
+      <link>http://lsgxs.github.io/posts/2024/amazon%E6%B5%B7%E5%A4%96%E8%B4%AD%E6%B3%A8%E5%86%8C%E5%8F%8A%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Thu, 09 May 2024 09:59:12 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/amazon%E6%B5%B7%E5%A4%96%E8%B4%AD%E6%B3%A8%E5%86%8C%E5%8F%8A%E8%AE%BE%E7%BD%AE/</guid>
+      <description>尝试在国外的亚马逊网站购买原版书籍，未知的领域让人好奇，同时又有不确定的困惑，在网上搜了相对简单的方法，这里记录一下</description>
+    </item>
+    <item>
+      <title>Excel计算两个日期之间的月数</title>
+      <link>http://lsgxs.github.io/posts/2024/excel%E8%AE%A1%E7%AE%97%E4%B8%A4%E4%B8%AA%E6%97%A5%E6%9C%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E6%9C%88%E6%95%B0/</link>
+      <pubDate>Thu, 25 Apr 2024 17:35:36 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/excel%E8%AE%A1%E7%AE%97%E4%B8%A4%E4%B8%AA%E6%97%A5%E6%9C%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E6%9C%88%E6%95%B0/</guid>
+      <description>使用Excel的函数计算两个日期之间的月数，感觉很简单，可是用的函数不对的话，计算会差别很大</description>
+    </item>
+    <item>
+      <title>TCP/IP</title>
+      <link>http://lsgxs.github.io/posts/2024/tcp/ip/</link>
+      <pubDate>Thu, 07 Mar 2024 20:20:04 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/tcp/ip/</guid>
+      <description>The Internet layer responds to service requests from the transport layer (typically TCP or UDP) and issues service requests to the network access layer. The various Internet layer modules provide: Translation between logical addresses and physical addresses Routing from the source to the destination computer Managing traffic problems, such as switching, routing, and controlling the congestion of data packets Maintaining the quality of service requested by the transport layer</description>
+    </item>
+    <item>
+      <title>Curl</title>
+      <link>http://lsgxs.github.io/posts/2024/curl/</link>
+      <pubDate>Wed, 06 Mar 2024 10:02:19 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/curl/</guid>
+      <description>Curl is a command line tool for transferring files with URL syntax, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload,proxies, cookies, user&#43;password authentication , file transfer resume, proxy tunneling and a busload of otheruseful tricks.</description>
+    </item>
+    <item>
+      <title>Http学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2024/http%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 01 Mar 2024 20:40:15 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/http%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>现有的网络技术是在TCP/IP协议的基础上运行的，HTTP协议是其中的一个子集。按照 TCP/IP协议四层模型的划分方法，HTTP协议在应用层，其他三层分别是传输层、网络层、链路层</description>
+    </item>
+    <item>
+      <title>Python学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2024/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 09 Feb 2024 09:49:02 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2024/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>作为流行的脚本语音，借助于人工智能场景的需要，python越来广泛的应用，值得我沉下心来学习python编程及其应用，先从最简单的基本概念开始</description>
+    </item>
+    <item>
+      <title>Go学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2023/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 31 Dec 2023 22:49:04 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>The Go programming language is an open source project to make programmers more productive. Go is expressive, concise, clean, and efficient. Its concurrency mechanisms make it easy to write programs that get the most out of multicore and networked machines, while its novel type system enables flexible and modular program construction. Go compiles quickly to machine code yet has the convenience of garbage collection and the power of run-time reflection. It&amp;#39;s a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language. </description>
+    </item>
+    <item>
+      <title>MySQL学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2023/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 25 Dec 2023 20:14:00 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>简单记录MySQL的初步学习过程，从基础的软件包版本选择和下载，了解不同操作系统下的软件包选择，到最后的Windows平台的安装和数据库登录、学习初步的SQL基本语言，创建数据库和表，熟悉SQL语言</description>
+    </item>
+    <item>
+      <title>bootstrap学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2023/bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 16 Dec 2023 17:33:35 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Bootstrap 是一个基于 HTML/CSS/JavaScript 的开源前端框架，通过提供预置的响应式组件（如导航栏、卡片、表单）、标准化的样式类（如网格系统、间距、颜色变量）和跨浏览器兼容性支持，帮助开发者快速构建美观且适配多设备的界面。适合后端服务就绪后需快速验证功能的测试场景（如内部管理后台）、简单业务页面（如活动报名、数据展示）或非前端团队临时开发需求，能显著缩短开发周期，但不适合高度定制化设计或复杂交互的长期项目。</description>
+    </item>
+    <item>
+      <title>CSS  学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2023/css-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 16 Dec 2023 17:33:35 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/css-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>CSS对HTML文档构建的元素进行装饰，通过类似ID、CLASS这种选择器，先选择HTML文档中各种各样元素，然后再给元素内在属性赋值，达到自己希望要的样式。先选择，再装饰。所以基本的概念就是要熟悉各类选择器，再熟悉各类元素的属性和不同属性对公的特征，在不断调试中熟悉CSS和HTML的相互作用</description>
+    </item>
+    <item>
+      <title>Github Connection</title>
+      <link>http://lsgxs.github.io/posts/2023/github-connection/</link>
+      <pubDate>Sat, 16 Dec 2023 17:32:35 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/github-connection/</guid>
+      <description>在连接github时，经常会遇到速度慢或者无法连接的情况，这是在cmd命令窗口下使用ping命令找出具体的Ip地址，把这些显示的IP地址添加在本地的hosts文件中，可以一定程度缓解连接github的问题</description>
+    </item>
+    <item>
+      <title>Windows局域网共享打印机</title>
+      <link>http://lsgxs.github.io/posts/2023/windows%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA/</link>
+      <pubDate>Wed, 13 Dec 2023 16:02:02 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/windows%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E6%89%93%E5%8D%B0%E6%9C%BA/</guid>
+      <description>首先把要访问的印机设置为共享打印机。然后启用网络发现、启用文件和打印机共享这几个选项。最后在控制面板的管理工具中，打开本地策略，点击【安全选项】，在右侧底部列表中选择开启guest。</description>
+    </item>
+    <item>
+      <title>Getting Started With Web</title>
+      <link>http://lsgxs.github.io/posts/2023/getting-started-with-web/</link>
+      <pubDate>Sun, 13 Aug 2023 12:14:15 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/getting-started-with-web/</guid>
+      <description>当前Web应用的架构模式,主要是前端的html&#43;css&#43;javascript构建前端界面，通过WEB服务器（Apache等）和MySQL等系列的数据库打交道，形成基于Web的数据库应用。可以把自己的web项目部署到web服务器的目录下，当用户通过浏览器发送请求时，后端的Web服务器在自己的webapps目下加载web应用的网页。访问和操作数据库的逻辑都是封装在web服务器端。</description>
+    </item>
+    <item>
+      <title>Excel使用技巧</title>
+      <link>http://lsgxs.github.io/posts/2023/excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Wed, 02 Aug 2023 06:06:51 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>学好Excel中的Vlookup函数，可以提高工作效率。理解了查询的基本原理，使用起来才能融会贯通</description>
+    </item>
+    <item>
+      <title>批处理设置IE安全区域注册表项</title>
+      <link>http://lsgxs.github.io/posts/2023/%E6%89%B9%E5%A4%84%E7%90%86%E8%AE%BE%E7%BD%AEie%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E6%B3%A8%E5%86%8C%E8%A1%A8%E9%A1%B9/</link>
+      <pubDate>Fri, 28 Jul 2023 21:55:53 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/%E6%89%B9%E5%A4%84%E7%90%86%E8%AE%BE%E7%BD%AEie%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E6%B3%A8%E5%86%8C%E8%A1%A8%E9%A1%B9/</guid>
+      <description>单位现在的业务系统大部分基于Windows IE浏览器的应用，设置好IE浏览器的各项参数，客户端通过浏览器链接到服务端打开应用。但是浏览器经常出现各种小问题，需要重新配置。由于IE的安全标签可信站点自定义选项很多，手动设置有时候会出错，而且效率低，因此就考虑用批处理自动化设置。</description>
+    </item>
+    <item>
+      <title>统信UOS系统的安装</title>
+      <link>http://lsgxs.github.io/posts/2023/%E7%BB%9F%E4%BF%A1uos%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 24 Jul 2023 19:56:18 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/%E7%BB%9F%E4%BF%A1uos%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85/</guid>
+      <description>十年前玩过linux,感觉熟悉了基本的玩法，但是并没有做笔记的习惯，发现好多以前了解比较深入和细致的知识点，现在好多都忘记了，甚至要从新再拾起来。工作中也许有机会更换到linux平台。先记录个最基本的入门知识，安装linux的发行版统信UOS，一个国产Linux发行版，是收购了Deepin Linux之后的发行版。</description>
+    </item>
+    <item>
+      <title>hugo博客站点入门</title>
+      <link>http://lsgxs.github.io/posts/2023/hugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Sun, 09 Jul 2023 22:11:22 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/hugo%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E5%85%A5%E9%97%A8/</guid>
+      <description>Create a Hugo site in minutes. In this tutorial you will: Create a site Add content Configure the site Publish the site Prerequisites Before you begin this tutorial : Install Hugo (extended or extended/deploy edition, v0.128.0 or later) Install Git</description>
+    </item>
+    <item>
+      <title>手动制作winpe</title>
+      <link>http://lsgxs.github.io/posts/2023/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9Cwinpe/</link>
+      <pubDate>Sun, 02 Jul 2023 13:29:48 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9Cwinpe/</guid>
+      <description>了解Winpe的基本原理，并动手实践，从最基础的winpe做起，逐步添加使用的软件.用来维护Windows系统</description>
+    </item>
+    <item>
+      <title>使用wimBuilder2制作winpe</title>
+      <link>http://lsgxs.github.io/posts/2023/%E4%BD%BF%E7%94%A8wimbuilder2%E5%88%B6%E4%BD%9Cwinpe/</link>
+      <pubDate>Sat, 17 Jun 2023 17:43:45 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/%E4%BD%BF%E7%94%A8wimbuilder2%E5%88%B6%E4%BD%9Cwinpe/</guid>
+      <description>在了解手动制作winpe之后，可以借助第三方的自动化工具来制作winpe，提高工作效率</description>
+    </item>
+    <item>
+      <title>使用远程桌面连接在Window10和Hyper-V虚拟机之间传送文件</title>
+      <link>http://lsgxs.github.io/posts/2023/%E4%BD%BF%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5%E5%9C%A8window10%E5%92%8Chyper-v%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B9%8B%E9%97%B4%E4%BC%A0%E9%80%81%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Sun, 11 Jun 2023 08:00:43 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/%E4%BD%BF%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5%E5%9C%A8window10%E5%92%8Chyper-v%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B9%8B%E9%97%B4%E4%BC%A0%E9%80%81%E6%96%87%E4%BB%B6/</guid>
+      <description>使用Win10自带的Hyper-V来管理虚拟机，并学会在虚拟机和宿主机器之间传送文件</description>
+    </item>
+    <item>
+      <title>用WindowsADK创建WinPE</title>
+      <link>http://lsgxs.github.io/posts/2023/%E7%94%A8windowsadk%E5%88%9B%E5%BB%BAwinpe/</link>
+      <pubDate>Thu, 08 Jun 2023 07:13:44 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/%E7%94%A8windowsadk%E5%88%9B%E5%BB%BAwinpe/</guid>
+      <description>下载并安装 Windows ADK
+Windows 评估和部署工具包 (Windows ADK) 及 Windows PE 附加组件提供对 Windows 映像进行部署定制所需的工具。 Windows ADK 中包括部署工具，比如 Windows PE、Sysprep 和其他可自定义和部署Windows11映像的工具。</description>
+    </item>
+    <item>
+      <title>Install Apache PHP MySQL Manually</title>
+      <link>http://lsgxs.github.io/posts/2022/install-apache-php-mysql-manually/</link>
+      <pubDate>Wed, 21 Dec 2022 17:09:58 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/install-apache-php-mysql-manually/</guid>
+      <description>安装Apache、PHP、MySQL、phpMyAdmin、WordPress，如实学习和使用WordPress</description>
+    </item>
+    <item>
+      <title>在本地计算机安装WordPress</title>
+      <link>http://lsgxs.github.io/posts/2022/%E5%9C%A8%E6%9C%AC%E5%9C%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E8%A3%85wordpress/</link>
+      <pubDate>Fri, 16 Dec 2022 22:23:57 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E5%9C%A8%E6%9C%AC%E5%9C%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E8%A3%85wordpress/</guid>
+      <description> 通过Xampp安装WordPress及其所需要的各种软件非常方便，帮助你快速上手WordPress，构建出自己喜欢的个人站点。也可以完全手动安装Apache、php、mysql、WordPress这些软件，手动配置各项参数，可以更加了解这些软件是如何协同工作的</description>
+    </item>
+    <item>
+      <title>Nginx QuickStart</title>
+      <link>http://lsgxs.github.io/posts/2022/nginx-quickstart/</link>
+      <pubDate>Wed, 07 Dec 2022 17:08:24 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/nginx-quickstart/</guid>
+      <description>Nginx 是一款开源的高性能 Web 服务器 和 反向代理/负载均衡器，以 异步非阻塞架构 实现高并发（支持数万连接），具有 低内存占用、高可靠性（热部署）和 灵活配置 等特性。核心应用场景包括：托管静态资源、反向代理隐藏后端服务、负载均衡分发流量，以及支持 SSL 终止、动静分离 和 WebSocket 代理，是现代高并发架构中的关键组件。</description>
+    </item>
+    <item>
+      <title>Caddy QuickStart</title>
+      <link>http://lsgxs.github.io/posts/2022/caddy-quickstart/</link>
+      <pubDate>Fri, 02 Dec 2022 21:31:59 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/caddy-quickstart/</guid>
+      <description>Caddy 是一个功能强大、可扩展的平台，用于服务网站、服务和应用程序，使用 Go 语言编写。</description>
+    </item>
+    <item>
+      <title>正向代理和反向代理</title>
+      <link>http://lsgxs.github.io/posts/2022/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Thu, 01 Dec 2022 13:01:08 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
+      <description>外部的计算机通过互联网只能访问到公司内部服务器的代理，由这台代理服务调度外部的服务请求，这样的应用模式叫做反向代理。反向代理是公司内部一组服务器的代理，通过这个代理服务器，把内部的服务开放给互联网用户。</description>
+    </item>
+    <item>
+      <title>FileBrowser</title>
+      <link>http://lsgxs.github.io/posts/2022/filebrowser/</link>
+      <pubDate>Wed, 30 Nov 2022 21:03:15 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/filebrowser/</guid>
+      <description>利用caddy的反向代理功能，就可以使用FileBrowser在本地的局域网建立一个网盘</description>
+    </item>
+    <item>
+      <title>Html简要学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2022/html%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/html%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>The HTML head is the contents of the &amp;lt;head&amp;gt; element. Unlike the contents of the &amp;lt;body&amp;gt; element (which are displayed on the page when loaded in a browser), the head&amp;#39;s content is not displayed on the page. Instead, the head&amp;#39;s job is to contain metadata about the document. </description>
+    </item>
+    <item>
+      <title>善用github之Pull Request</title>
+      <link>http://lsgxs.github.io/posts/2022/%E5%96%84%E7%94%A8github%E4%B9%8Bpull-request/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E5%96%84%E7%94%A8github%E4%B9%8Bpull-request/</guid>
+      <description>通过pull request在github上查看修改明细，修改了哪几个文件，每个文件修改了什么内容，在编辑框左边显示&#43;或者-号表示增加或者删除（大概是这意思，我猜测，看官方文档再理解</description>
+    </item>
+    <item>
+      <title>ExampleSite</title>
+      <link>http://lsgxs.github.io/posts/2022/examplesite/</link>
+      <pubDate>Fri, 18 Nov 2022 23:06:19 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/examplesite/</guid>
+      <description>&lt;h4 id=&#34;关于themes中自带examplesite的使用方法&#34;&gt;关于Themes中自带ExampleSite的使用方法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;学习一个新的hugo博客站点主题，可以使用主题中自带的ExampleSite站点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ mkdir your-site
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd your-site
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ mkdir themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/repository-url.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cp -r themes-name/exampleSite/** ../    --把ExampleSite站点目录下的所有内容复制到你的站点根目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cd ..
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ hugo serve   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;如果你的站点已经是一个git 仓库项目了，可以使用git submoudle 的方法添加这个主题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; git submodule add https://github.com/repository-name   themes/theme-name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; hugo serve -t  hugo-theme-name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; http://localhost:1313                 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://lsgxs.github.io/posts/2022/examplesite/images/%E4%BA%91%E5%B1%B1%E9%9B%BE%E7%BB%95.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在github基于个人或公司GitHub Pages部署hugo博客之二</title>
+      <link>http://lsgxs.github.io/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8github-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</link>
+      <pubDate>Tue, 15 Nov 2022 20:02:48 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8github-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BA%8C/</guid>
+      <description>实现博客项目的自动化部署有多种方法，可以尝试一下有什么不同点。这个是在一个仓库的两个分支之间实现自动化部署，通过自己的实践记录一下</description>
+    </item>
+    <item>
+      <title>在github基于个人或公司GitHub Pages部署hugo博客之一</title>
+      <link>http://lsgxs.github.io/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8github-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</link>
+      <pubDate>Mon, 14 Nov 2022 22:47:45 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E4%B8%AA%E4%BA%BA%E6%88%96%E5%85%AC%E5%8F%B8github-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%80/</guid>
+      <description>学习使用github pages自带actions操作方法：进入该仓库，选择settings-pages,在Build and Deployment 的Source部分选择GitHub Actions，直接进入hugo.yml编辑界面，直接点击右侧的commit就可以在仓库新建hugo.yml文件，路径是.github\workflows\hugo.yml&amp;#39;，什么有没有修改，可以实现自动发布。</description>
+    </item>
+    <item>
+      <title>Hugo自动化部署到github</title>
+      <link>http://lsgxs.github.io/posts/2022/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</link>
+      <pubDate>Sun, 13 Nov 2022 21:53:09 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/hugo%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0github/</guid>
+      <description>部署静态博客站点到github一般有三种方法，第一种是使用git命令手动部署到github仓库；第二种是使用github自带的actions workflow自动部署到默认的gh-pages分支；第三种是在一个仓库的两个分支之间完成自动化发布，同时是使用actions workflow</description>
+    </item>
+    <item>
+      <title>在github基于项目GitHub Pages部署hugo博客</title>
+      <link>http://lsgxs.github.io/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithub-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 12 Nov 2022 16:43:00 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E5%9C%A8github%E5%9F%BA%E4%BA%8E%E9%A1%B9%E7%9B%AEgithub-pages%E9%83%A8%E7%BD%B2hugo%E5%8D%9A%E5%AE%A2/</guid>
+      <description>在github上建立一个项目类型的空白仓库,不要选择readme文件初始化仓库,不要选择下面的两项参数，保持默认的空值</description>
+    </item>
+    <item>
+      <title>Hugo Post中的图像资源引用方法</title>
+      <link>http://lsgxs.github.io/posts/2022/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 01 Nov 2022 22:04:29 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/hugo-post%E4%B8%AD%E7%9A%84%E5%9B%BE%E5%83%8F%E8%B5%84%E6%BA%90%E5%BC%95%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>hugo博客系统，使用PaperMod主题，在Markdown中引用图片资源的多种不同方法</description>
+    </item>
+    <item>
+      <title>在一台计算机上用git管理多个github账号</title>
+      <link>http://lsgxs.github.io/posts/2022/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</link>
+      <pubDate>Tue, 01 Nov 2022 22:03:27 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E5%9C%A8%E4%B8%80%E5%8F%B0%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8A%E7%94%A8git%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/</guid>
+      <description>如果你在本地电脑上有两个不同的博客系统，在github上创建了两个账户，就可以采用这个方法同时管理多个github账号</description>
+    </item>
+  </channel>
+</rss>

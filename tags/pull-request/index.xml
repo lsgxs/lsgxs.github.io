@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pull Request on 技术博客</title>
+    <link>http://lsgxs.github.io/tags/pull-request/</link>
+    <description>Recent content in Pull Request on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Nov 2022 16:36:14 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/tags/pull-request/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>善用github之Pull Request</title>
+      <link>http://lsgxs.github.io/posts/2022/%E5%96%84%E7%94%A8github%E4%B9%8Bpull-request/</link>
+      <pubDate>Sun, 27 Nov 2022 16:36:14 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E5%96%84%E7%94%A8github%E4%B9%8Bpull-request/</guid>
+      <description>通过pull request在github上查看修改明细，修改了哪几个文件，每个文件修改了什么内容，在编辑框左边显示&#43;或者-号表示增加或者删除（大概是这意思，我猜测，看官方文档再理解</description>
+    </item>
+  </channel>
+</rss>

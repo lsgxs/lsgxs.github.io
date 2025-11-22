@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>todo-list on 技术博客</title>
+    <link>http://lsgxs.github.io/posts/todo/</link>
+    <description>Recent content in todo-list on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 28 Nov 2022 10:11:27 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/posts/todo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Todolist</title>
+      <link>http://lsgxs.github.io/posts/2022/todolist/</link>
+      <pubDate>Mon, 28 Nov 2022 10:11:27 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/todolist/</guid>
+      <description>在接下来的两年内，主要的任务是把时间花在读书和技术实践上，把时间花在哪里，你的收获就会在哪里。</description>
+    </item>
+  </channel>
+</rss>

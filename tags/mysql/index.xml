@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mysql on 技术博客</title>
+    <link>http://lsgxs.github.io/tags/mysql/</link>
+    <description>Recent content in Mysql on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Dec 2023 20:14:00 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2023/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 25 Dec 2023 20:14:00 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2023/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>简单记录MySQL的初步学习过程，从基础的软件包版本选择和下载，了解不同操作系统下的软件包选择，到最后的Windows平台的安装和数据库登录、学习初步的SQL基本语言，创建数据库和表，熟悉SQL语言</description>
+    </item>
+  </channel>
+</rss>

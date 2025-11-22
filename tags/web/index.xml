@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web on 技术博客</title>
+    <link>http://lsgxs.github.io/tags/web/</link>
+    <description>Recent content in Web on 技术博客</description>
+    <image>
+      <title>技术博客</title>
+      <url>http://lsgxs.github.io/images/site-cover.jpg</url>
+      <link>http://lsgxs.github.io/images/site-cover.jpg</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Dec 2022 13:01:08 +0800</lastBuildDate>
+    <atom:link href="http://lsgxs.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>正向代理和反向代理</title>
+      <link>http://lsgxs.github.io/posts/2022/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Thu, 01 Dec 2022 13:01:08 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
+      <description>外部的计算机通过互联网只能访问到公司内部服务器的代理，由这台代理服务调度外部的服务请求，这样的应用模式叫做反向代理。反向代理是公司内部一组服务器的代理，通过这个代理服务器，把内部的服务开放给互联网用户。</description>
+    </item>
+    <item>
+      <title>Html简要学习笔记</title>
+      <link>http://lsgxs.github.io/posts/2022/html%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 28 Nov 2022 22:04:58 +0800</pubDate>
+      <guid>http://lsgxs.github.io/posts/2022/html%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>The HTML head is the contents of the &amp;lt;head&amp;gt; element. Unlike the contents of the &amp;lt;body&amp;gt; element (which are displayed on the page when loaded in a browser), the head&amp;#39;s content is not displayed on the page. Instead, the head&amp;#39;s job is to contain metadata about the document. </description>
+    </item>
+  </channel>
+</rss>
