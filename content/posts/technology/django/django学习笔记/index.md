@@ -1569,3 +1569,198 @@ html
 - 现代Web应用已经演变为 **“运行在浏览器中的桌面软件”** ，其核心是一个（由Vue/React构建的）前端应用，通过与后端API交互数据来驱动整个界面。
 - 理解这种架构演变，对于**维护旧系统**和**规划新系统**都具有至关重要的指导意义
 
+### Django入门
+
+跟随Django官网教程制作一个简单的投票应用。
+
+#### 目录结构规划
+
+* djangotutorial   用来保存django的项目的目录
+
+* mysite   用来保存投票应用的项目目录
+
+* poll  具体的poll应用目录
+
+  |-----------djangotutorial     django项目目录
+
+  ​     |-------myenv   python虚拟环境    
+
+  ​     |-------mysite   项目根目录
+
+  ​            |----poll     应用目录
+
+#### 项目创建
+
+* 创建项目目录
+  * mkdir   djangotutorial
+  * cd djangotutorial
+
+* 创建python虚拟环境
+
+  * python3  -m   venv   myenv      （或者python  -m  venv   myenv）
+
+  * source  myenv/bin/activate
+
+    ```
+    # Windows (命令提示符)
+    ...\> venv\Scripts\activate.bat
+    # Windows (PowerShell)
+    ...\> venv\Scripts\Activate.ps1
+    
+    # Linux/macOS
+    $ source venv/bin/activate
+    ```
+
+    
+
+* 在当前的虚拟环境下安装django
+
+  * pip3  install  Django      （这是在win10的wsl下，使用python3 、pip3）
+
+* 创建项目
+
+  django-admin  startproject  mysite     这时项目的目录结构如下图所示：
+
+  ```
+   djangotutorial
+    ├── myenv      (python虚拟环境)
+    └── mysite   （项目目录）
+        ├── manage.py
+        └── mysite  （同名的项目配置目录）
+            ├── __init__.py
+            ├── asgi.py
+            ├── settings.py
+            ├── urls.py
+            └── wsgi.py 
+  ```
+
+  
+
+* 创建具体的应用
+  * cd  mysite 
+  *  python3  manage.py  startapp  polls  
+
+这时项目的目录结构如下图所示：
+
+```
+djangotutorial
+├── myenv    (python虚拟环境)
+└── mysite   (项目目录)
+    ├── manage.py
+    ├── mysite
+    │   ├── __init__.py
+    │   ├── __pycache__
+    │   │   ├── __init__.cpython-310.pyc
+    │   │   └── settings.cpython-310.pyc
+    │   ├── asgi.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   └── wsgi.py
+    └── polls
+        ├── __init__.py
+        ├── admin.py
+        ├── apps.py
+        ├── migrations
+        │   └── __init__.py
+        ├── models.py
+        ├── tests.py
+        └── views.py
+
+```
+
+开始一个django项目的步骤总结
+
+```
+# 1. 创建项目总目录
+mkdir myproject
+cd myproject
+
+# 2. 创建虚拟环境
+python -m venv venv
+
+# 3. 激活虚拟环境
+# Windows:
+venv\Scripts\activate
+# Linux/Mac:
+source venv/bin/activate
+
+# 4. 安装Django
+pip install Django
+
+# 5. 创建Django项目（两种布局任选）
+
+# 布局A：项目在总目录内
+django-admin startproject mysite .
+
+# 布局B：项目作为子目录
+django-admin startproject mysite
+cd mysite
+
+# 6. 创建应用
+python manage.py startapp myapp
+
+# 7. 启动开发服务器
+python manage.py runserver
+```
+
+
+
+#### Django项目四个主要模块之间的通讯路线图
+
+项目创建之后，在mysite根目录下有一个settings.py文件，里边是各种参数配置，包括项目下的各种应用，使用的数据库、模板等。其中的
+
+`ROOT_URLCONF = 'mysite.urls'`用来指定最初的URL分发起始点，这里的其实位置是`mysite`目录下的urls.py文件，在创建项目之初，它的内容如下：
+
+```
+
+"""
+URL configuration for mysite project.
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/5.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+
+urlpatterns = [
+    #http://127.0.0.1:8000/admin
+    path('admin/', admin.site.urls),
+]
+
+```
+
+这是主站点的URL路径。
+
+在创建polls应用之后，在polls应用的目录之下也建立要urls.py文件，这个urls.py文件里写的是polls应用的网页匹径。那如何在项目的主站点链接上子应用的网页路径呢，就需要在主站点的urls.py中包含子应用的urls.py（使用inclue()）。如下图：
+
+```
+#mysite/urls.py
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    #通过polls.urls这种点状链接的路径写法对应于目录系统的文件夹和文件的写法：polls/urls.py
+    #把二级url解析传递给polls目录下的urls.py文件，最终由polls下urls.py的path()表来匹配并运行指定views的function
+    #这些function的返回结果是从model中获得数据并得以渲染的网页
+    #http://127.0.0.1:8000/polls/
+    path("polls/", include("polls.urls")),   
+    path("admin/", admin.site.urls),
+]
+```
+
+##### url到view的解析路径
+
+在浏览器的地址栏输入`http://127.0.0.1:8000/admin`时，根据mysite/settings.py文件仲的`ROOT_URLCONF = 'mysite.urls'`,加载`mysite/urls.py`,通过path()指定的路由表，可以看到路由表匹配的是admin.site.urls，最终打开的是django自带的admin界面；在浏览器的地址栏输入`http://127.0.0.1:8000/polls`时,匹配的是include("polls.urls"),这个实际上就是二级路由，通过include()加载polls目录下的urls.py文件，最终的匹配结果再polls/urls.py的path()中指定最终的views.function,完成对浏览器请求的回应。
+
+也就是说，在浏览器的地址栏能输入哪些url，是由mysite/目录下的urls.py和子应用polls下的urls.py的path()指定的路由表决定的，不在这个路由表里的url都不会正确回应。可以通过故意输入错误的文件名或者地址，浏览器的调试信息会显示很多有用的内容，比如把这个加载路线图里某个模板名称或者视图函数的名称写错，然后浏览器就会显示更详细的错误信息，让你对内部流程更清晰。
+
