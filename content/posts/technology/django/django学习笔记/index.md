@@ -1709,7 +1709,7 @@ python manage.py runserver
 
 项目创建之后，在mysite根目录下有一个settings.py文件，里边是各种参数配置，包括项目下的各种应用，使用的数据库、模板等。其中的
 
-`ROOT_URLCONF = 'mysite.urls'`用来指定最初的URL分发起始点，这里的其实位置是`mysite`目录下的urls.py文件，在创建项目之初，它的内容如下：
+`ROOT_URLCONF = 'mysite.urls'`用来指定最初的URL分发起始点，这里的开始位置是`mysite`目录下的urls.py文件，在创建项目之初，它的内容如下：
 
 ```
 
