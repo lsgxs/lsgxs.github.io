@@ -140,14 +140,3 @@ menu:
 
 pygmentsUseClasses: true
 
-caches:
-  assets: 
-    maxAge: -1
-  getjson:
-    maxAge: -1
-  getcsv:
-    maxAge: -1
-  images:
-    maxAge: -1
-  modules:
-    maxAge: -1
