@@ -7,7 +7,7 @@ categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
 description: " "
-thumbnail: "images/"
+thumbnail: "images/维特拉宣传图.png"
 ---
 
 
