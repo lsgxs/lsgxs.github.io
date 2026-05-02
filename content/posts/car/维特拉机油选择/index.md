@@ -6,11 +6,9 @@ draft: false
 categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
-description: " "
+description: "国六带 GPF 选 C 系列（低灰分），国五不带 GPF 选 A/B 系列（高灰分）；粘度取向看发动机设计：省油选低粘度（A5/B5 / C2），高保护选高粘度（A3/B4 / C3） "
 thumbnail: "images/维特拉宣传图.png"
 ---
-
-
 
 
 
@@ -132,5 +130,13 @@ thumbnail: "images/维特拉宣传图.png"
 
 4、ilsac   gf-6    
 
-**简答总结：国六以后的新车选择ACEA 的c系列，c2低灰分低粘度，c3低灰分高粘度，国五的车子就选A/B系列，A5/B5高灰分低粘度，A3/B4高灰分高粘度。**
+***
+
+
+
+**简答总结：**
+
+> **国六带颗粒捕捉器 → ACEA C 系列（低灰分）**
+> **国五不带颗粒捕捉器 → ACEA A/B 系列（高灰分）**
+> **粘度选择看发动机手册**
 
