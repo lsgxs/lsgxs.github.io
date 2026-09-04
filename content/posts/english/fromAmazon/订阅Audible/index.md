@@ -7,7 +7,7 @@ categories: ["english"]
 tags: ["默认标签"]
 toc: true
 description: " "
-thumbnail: "images/"
+thumbnail: "images/冰山.jpg"
 ---
 
 # 获取与转换 Audible 有声书完整记录
