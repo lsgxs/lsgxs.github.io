@@ -1,6 +1,5 @@
 ---
-title: "梅森罐制作醪糟"
-slug: "%E6%A2%85%E6%A3%AE%E7%BD%90%E5%88%B6%E4%BD%9C%E9%86%AA%E7%B3%9F"
+title: "梅森罐制作醪糟"
 date: 2026-06-15T22:49:35+08:00
 draft: false
 categories: ["默认分类"]
