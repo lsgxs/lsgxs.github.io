@@ -80,7 +80,7 @@ params:
         url: /posts/read/
       - name: 技术
         url: /posts/technology/
-      - name: english
+      - name: 用英语
         url: /posts/english
       - name: 财经
         url: /posts/economic/
