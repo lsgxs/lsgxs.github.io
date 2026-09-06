@@ -1,5 +1,5 @@
 ---
-title: "亚马逊购物学英语"
+title: "亚马逊购物学英语之一"
 slug: "%E4%BA%9A%E9%A9%AC%E9%80%8A%E8%B4%AD%E7%89%A9%E5%AD%A6%E8%8B%B1%E8%AF%AD"
 date: 2026-09-04T16:11:10+08:00
 draft: false
