@@ -7,7 +7,7 @@ categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
 description: " "
-thumbnail: "images/冰山.jpg"
+thumbnail: "images/冰山.png"
 ---
 
 
