@@ -7,7 +7,7 @@ categories: ["默认分类"]
 tags: ["默认标签"]
 toc: true
 description: "签收时发现商品破损，当时拒收退回，在亚马逊站点申请了退款，但是好长时间发现退款处于申请状态，并没有处理，只能联系人工客服了，结果很顺利，直接就完成退款了，3小时内到账。 "
-thumbnail: "images/冰山.png"
+thumbnail: "images/冰山.jpg"
 ---
 
 
