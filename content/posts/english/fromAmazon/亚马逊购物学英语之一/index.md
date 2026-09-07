@@ -12,9 +12,33 @@ thumbnail: "images/order.png"
 
 
 
-
-
 ## 亚马逊购物学英语之一：订单两周未发货，联系亚马逊客服及时发货
+
+
+
+如果需要联系人工客服才能解决的问题，需要在主页底部右下角的HELP打开帮助界面，如下所示：
+
+![img](images/Help.png)
+
+![img](images/helpWithSomethingElse.png)
+
+这里选择【Help with something else】
+
+![img](images/SomethingElse.png)
+
+这里选择右下角的[Something  else]
+
+![img](images/NeedMoreHelp.png)
+
+这里选择【I need more help】
+
+![img](images/ChatWithUs.png)
+
+这里选择Chat with us ，点击Start chatting  now 开始进入在线聊天界面。刚开始可能是机器人，但是最终通过你的选择会联系到人工客服，用简单的语言来描述需要处理的问题。下面记录下来聊天的内容：
+
+
+
+
 
 沟通日期：2026年9月4日
 客服代表：Abhinav
